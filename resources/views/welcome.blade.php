@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Laravel</title>
-
+        <link href="{{asset('css/app.css')}}" rel="stylesheet" type="text/css">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
@@ -81,9 +81,10 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    <div id="example"></div>
+Laravel
                 </div>
-
+                <button id="click_di"> click di</button>
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>
@@ -95,5 +96,7 @@
                 </div>
             </div>
         </div>
+        <script src="{{asset('js/app.js')}}" ></script>
+        <script src="{{asset('js/my.js')}}" ></script>
     </body>
 </html>

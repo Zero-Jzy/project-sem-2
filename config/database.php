@@ -15,6 +15,7 @@ return [
     |
     */
 
+
     'default' => env('DB_CONNECTION', 'pgsql'),
 
     /*
@@ -77,6 +78,21 @@ return [
             'schema' => 'public',
             'sslmode' => 'prefer',
         ],
+
+//        'pgsql' => [
+//            'driver' => 'pgsql',
+//            'url' => '',
+//            'host' => '127.0.0.1',
+//            'port' => '5432',
+//            'database' => 'laravel',
+//            'username' => 'postgres',
+//            'password' => 'kjkfvrt5',
+//            'charset' => 'utf8',
+//            'prefix' => '',
+//            'prefix_indexes' => true,
+//            'schema' => 'public',
+//            'sslmode' => 'prefer',
+//        ],
 
         'sqlsrv' => [
             'driver' => 'sqlsrv',

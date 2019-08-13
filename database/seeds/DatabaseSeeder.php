@@ -12,5 +12,14 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
+
+        $this->call([
+            UserSeeder::class,
+            ProfileSeeder::class
+        ]);
+
+        DB::statement("ALTER SEQUENCE users_id_seq RESTART WITH 1001");
+        DB::statement("ALTER SEQUENCE profiles_id_seq RESTART WITH 1001");
+
     }
 }
