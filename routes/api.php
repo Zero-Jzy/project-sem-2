@@ -22,11 +22,16 @@ Route::post('/login', 'Api\AuthAdController@login');
 Route::post('/test', function (){
     return \App\Admin::all();
 });
+Route::get('/data', 'Api\UserController@getDataStock');
 
 Route::group(['middleware' => 'jwt.auth'], function () {
 
+
+
     Route::resource('/user', 'Api\UserController');
     Route::post('/logout', 'Api\AuthAdController@logout');
+//    Route::get('/dataStock', 'Api\UserController@getDataStock');
+
 
 });
 

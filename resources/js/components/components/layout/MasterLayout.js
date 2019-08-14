@@ -127,7 +127,6 @@ class MasterLayout extends Component {
                                 style={{
                                     margin: '24px 16px',
                                     padding: 24,
-                                    background: '#fff',
                                     minHeight: 200,
                                     overflow: 'initial'
                                 }}

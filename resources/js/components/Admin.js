@@ -10,7 +10,9 @@ import UserTable from './components/table/UserTable'
 import UserDetail from './components/UserDetail';
 import FormTest from './components/FormTest'
 import LoginForm from "./components/auth/Login";
-import { setCurrentUser } from './redux/actions/authAction'
+
+import Dashboard from "./components/dashboard";
+import { setCurrentUser, logoutUser } from './redux/actions/authAction'
 
 import 'antd/dist/antd.css'
 import './App.css'
@@ -23,9 +25,9 @@ if (localStorage.myToken) {
 
     const currentTime = Date.now() / 1000;
     if (decoded.exp < currentTime) {
-        // store.dispatch(logoutUser());
+        store.dispatch(logoutUser());
         // store.dispatch(clearCurrentProfile());
-        window.location.href = '/ad/login';
+        // window.location.href = '/ad/login';
     }
 }
 
@@ -44,7 +46,7 @@ export default class Admin extends React.Component {
                         </Route>
                         <Route exact path={['/ad', '/ad/user', '/ad/form', '/ad/user/:id']}>
                             <MasterLayout>
-                                <PrivateRoute exact path="/ad" component={() => (<div>alo</div>)}/>
+                                <PrivateRoute exact path="/ad" component={Dashboard}/>
                                 <PrivateRoute exact path="/ad/user" component={UserTable}/>
                                 <PrivateRoute exact path="/ad/form" component={FormTest}/>
                                 <PrivateRoute exact path="/ad/user/:id" component={UserDetail}/>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
@@ -66,6 +67,14 @@ class UserController extends Controller
         $res['users'] = $users->get();
 
         return response(json_encode($res));
+    }
+
+    public function getDataStock(){
+//        $data = User::select('create_at')->take(10)->get();
+        $data = User::all();
+
+        return response(json_encode($data));
+
     }
 
     /**
