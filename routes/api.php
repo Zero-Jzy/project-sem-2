@@ -19,9 +19,10 @@ Route::post('/register', 'Api\AuthAdController@register');
 
 Route::post('/login', 'Api\AuthAdController@login');
 
-Route::post('/test', function (){
-    return \App\Admin::all();
-});
+//Route::get('/test', function (){
+//    return \App\User::with('profile')->where('username','sbumphreyci')->get();
+//});
+
 Route::get('/data', 'Api\UserController@getDataStock');
 
 Route::group(['middleware' => 'jwt.auth'], function () {

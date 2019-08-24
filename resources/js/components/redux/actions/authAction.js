@@ -14,7 +14,7 @@ export const loginUser = (user, history) => dispatch => {
 
             var decode = jwt_decode(token);
             dispatch(setCurrentUser(decode));
-            history.push('/ad/')
+            history.push('/ad')
         })
         .catch(err => {
             alert(err)

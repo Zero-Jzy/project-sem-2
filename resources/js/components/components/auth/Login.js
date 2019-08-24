@@ -20,7 +20,7 @@ class Login extends React.Component {
 
     componentDidMount() {
         if(this.props.auth.isAuthenticated){
-            this.props.history.push('/ad/')
+            this.props.history.push('/ad')
         }
     }
 

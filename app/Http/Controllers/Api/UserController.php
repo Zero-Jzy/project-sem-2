@@ -19,17 +19,24 @@ class UserController extends Controller
     public function index()
     {
         $data = Input::all();
-        Log::info($data);
+//        Log::info($data);
         $results = $data['results'] ?? false;
         $sortField = $data['sortField'] ?? false;
         $sortOrder = $data['sortOrder'] ?? false;
         $filterDate = json_decode($data['filterDate'] ?? '{}', true);
+        $filterAddress = $data['filterAddress'] ?? false;
+
+
         $filters = [json_decode($data['filters'] ?? '{}', true)][0];
 //        Log::info('filter' ,$filters);
         $page = ($data['page'] ?? 1) - 1;
 
 
         $users = User::join('profiles as profile', 'profile.user_id', '=', 'users.id');
+
+        if($filterAddress){
+            $users->where('address','like', $filterAddress.'%' );
+        }
 
         if(!empty($filterDate)){
 //            Log::info(gettype($filterDate));
@@ -42,7 +49,6 @@ class UserController extends Controller
         if (!empty($filters)) {
 //            Log::info($filters);
             foreach ($filters as $key => $values) {
-
                 if (!empty($values)) {
                     if ($key === 'status' || $key === 'gender') {
                         $users->whereIn($key , $values);
@@ -61,8 +67,11 @@ class UserController extends Controller
 
         $res['totalCount'] = $users->count();
 
-        $users->skip($page * $results)->take($results);
+        $res['keys'] = $users->get()->map(function ($values){
+            return $values->id;
+        });
 
+        $users->skip($page * $results)->take($results);
 
         $res['users'] = $users->get();
 

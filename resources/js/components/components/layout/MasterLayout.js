@@ -1,9 +1,10 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {logoutUser} from '../../redux/actions/authAction'
-import {Layout, Menu, Icon, Dropdown, Avatar, Badge, Breadcrumb} from 'antd'
+import {Layout, Menu, Icon, Dropdown, Avatar, Badge, Breadcrumb, Switch} from 'antd'
 import {Link} from 'react-router-dom'
 import {withRouter} from "react-router"
+import classnames from 'classnames'
 
 import logo from "../../logo.png";
 
@@ -22,14 +23,11 @@ const notification = (
 
 class MasterLayout extends Component {
 
-    menu = (
-        <Menu>
-            <Menu.Item key="1" onClick={this.props.logoutUser}>logout</Menu.Item>
-        </Menu>
-    );
+    menu = (<Menu><Menu.Item key="1" onClick={this.props.logoutUser}>logout</Menu.Item></Menu>);
 
     state = {
-        collapsed: false
+        collapsed: false,
+        theme: 'light'
     };
 
     toggle = () => {
@@ -43,23 +41,23 @@ class MasterLayout extends Component {
         {name: 'Dashboard', icon: 'dashboard'}
     ];
 
-    header = React.createRef();
-
-    componentDidMount() {
-        console.log(this.header.current)
-    }
-
+    SwitchChangeHandle = checked => {
+        this.setState({
+            theme: checked ? 'dark' : 'light'
+        })
+    };
 
     render() {
         return (
             <div>
                 <Layout>
-                    <Sider theme="light" width='250' trigger={null} collapsible collapsed={this.state.collapsed}
+                    <Sider theme={this.state.theme} width='250' trigger={null} collapsible
+                           collapsed={this.state.collapsed}
                            style={{minHeight: '100vh', minWidth: 400}}>
-                        <div className="logo">
-                            <img src={logo} width='64px' alt='Logo'/>
+                        <div className={classnames('logo', this.state.theme)}>
+                            <span style={{fontSize: 24, fontWeight: 700, color: '#2b90ff'}}>LOGO</span>
                         </div>
-                        <Menu className="menu-sidebar" mode="inline"
+                        <Menu theme={this.state.theme} className="menu-sidebar" mode="inline"
                               defaultSelectedKeys={[this.props.location.pathname.slice(1)]}>
                             <Menu.Item key="ad">
                                 <Link to="/ad">
@@ -92,9 +90,21 @@ class MasterLayout extends Component {
                                 <Menu.Item key="7">Bill</Menu.Item>
                             </SubMenu>
                         </Menu>
+                        <div className="switch-theme-box">
+                            <span style={{color: '#666'}}>
+                                <Icon type='bulb'/>
+                                <span className="ml-1" style={{fontSize: 12}}>Switch theme</span>
+                            </span>
+                            <Switch
+                                defaultChecked={false}
+                                checkedChildren={'Dark'}
+                                unCheckedChildren={'Light'}
+                                onChange={this.SwitchChangeHandle}
+                            />
+                        </div>
                     </Sider>
                     <Layout className="right-page">
-                        <Header className="header" ref={this.header}>
+                        <Header className="header">
                             <Icon
                                 className="trigger"
                                 type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
@@ -117,16 +127,14 @@ class MasterLayout extends Component {
                             </div>
                         </Header>
                         <div>
-                            <Breadcrumb style={{margin: '24px 0 0 16px'}}>
-                                <Breadcrumb.Item><Icon type='dashboard'/> Dashboard</Breadcrumb.Item>
-                                {this.props.location.pathname.slice(1).split('/').map(e => {
-                                    return <Breadcrumb.Item key={e}><Icon type={e}/> {e}</Breadcrumb.Item>
+                            <Breadcrumb style={{margin: '25px 0 0 25px',}}>
+                                <Breadcrumb.Item><Icon type='dashboard'/><span>Dashboard</span></Breadcrumb.Item>
+                                {this.props.location.pathname.slice(4).split('/').map(e => {
+                                    return <Breadcrumb.Item key={e}><Icon type={e}/><span>{e}</span></Breadcrumb.Item>
                                 })}
                             </Breadcrumb>
                             <Content
                                 style={{
-                                    margin: '24px 16px',
-                                    padding: 24,
                                     minHeight: 200,
                                     overflow: 'initial'
                                 }}
@@ -150,6 +158,6 @@ class MasterLayout extends Component {
 
 const mapStateToProps = state => ({
     user: state.auth.user
-})
+});
 
 export default connect(mapStateToProps, {logoutUser})(withRouter(MasterLayout));

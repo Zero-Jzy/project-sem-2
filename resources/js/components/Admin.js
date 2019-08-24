@@ -32,10 +32,6 @@ if (localStorage.myToken) {
 }
 
 export default class Admin extends React.Component {
-    state = {
-        login: false
-    };
-
     render() {
         return (
             <Provider store={store}>
