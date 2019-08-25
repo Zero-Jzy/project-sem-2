@@ -19,11 +19,11 @@ class CreateProfilesTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('first_name');
             $table->string('last_name');
-            $table->string('avatar');
-            $table->string('phone');
-            $table->integer('age');
-            $table->enum('gender', ['M', 'F', 'O']);
-            $table->text('address');
+            $table->string('avatar')->nullable();
+            $table->string('phone')->nullable();
+            $table->integer('age')->nullable();
+            $table->enum('gender', ['M', 'F', 'O'])->nullable();
+            $table->text('address')->nullable();
             $table->longText('created_at')->default(\Carbon\Carbon::now()->valueOf());
             $table->longText('updated_at')->nullable();
         });

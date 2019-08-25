@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProductsTable extends Migration
+class Admins extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,15 @@ class CreateProductsTable extends Migration
      */
     public function up()
     {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::create('admins', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->decimal('price');
-            $table->timestamps();
+            $table->string('avatar');
+            $table->string('email');
+            $table->string('password');
+            $table->rememberToken();
+            $table->longText('created_at')->default(\Carbon\Carbon::now()->valueOf());
+            $table->longText('updated_at')->nullable();
         });
     }
 
@@ -28,6 +32,6 @@ class CreateProductsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('admins');
     }
 }
