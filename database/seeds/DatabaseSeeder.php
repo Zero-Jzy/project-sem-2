@@ -14,13 +14,12 @@ class DatabaseSeeder extends Seeder
         // $this->call(UsersTableSeeder::class);
 
         $this->call([
+            AdminSeeder::class,
             UserSeeder::class,
-            ProfileSeeder::class,
-            AdminSeeder::class
+            ProfileSeeder::class
         ]);
 
         DB::statement("ALTER SEQUENCE users_id_seq RESTART WITH 1001");
         DB::statement("ALTER SEQUENCE profiles_id_seq RESTART WITH 1001");
-
     }
 }
