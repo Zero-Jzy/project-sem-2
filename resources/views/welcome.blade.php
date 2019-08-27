@@ -89,5 +89,5 @@
     <br>
     <br><d></d>
 
-@section('content')
+@endsection
 

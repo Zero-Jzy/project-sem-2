@@ -53,11 +53,11 @@
                     <nav class="menu">
                         <ul class="main_menu">
                             <li>
-                                <a href="index.html">Home</a>
+                                <a href="{{route('home')}}">Home</a>
                             </li>
 
                             <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown">
+                                <a class="dropdown-toggle" href="{{route('menu')}}" data-toggle="dropdown">
                                     <span>Menu</span>
                                 </a>
                                 <div class="dropdown-menu">
@@ -100,35 +100,40 @@
                     {{--        </div>--}}
                     {{--    @endif--}}
 
-                        @if (Route::has('login'))
-                            <ul class="top-right links">
-                                @auth
-                                    <a class="dropdown-toggle" data-toggle="dropdown">
-                                        <span>Pato Test</span>
-                                        <img class="avatar"
-                                             src="https://i.pinimg.com/564x/5d/b8/a1/5db8a1d8d5da7010902c7d636766c5b9.jpg"
-                                             alt="">
-
+                    @if (Route::has('login'))
+                        <ul class="top-right links">
+                            @auth
+                                <a class="dropdown-toggle" data-toggle="dropdown">
+                                    <span>Pato Test</span>
+                                    <img class="avatar"
+                                         src="https://i.pinimg.com/564x/5d/b8/a1/5db8a1d8d5da7010902c7d636766c5b9.jpg"
+                                         alt="">
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#"><i class="fal fa-id-card-alt"></i> <span>My profile</span></a>
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        <i class="fal fa-sign-out-alt"></i> <span>Logout</span>
                                     </a>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#"><i class="fal fa-id-card-alt"></i> <span>My profile</span></a>
-                                        <a class="dropdown-item" href="#"><i class="fal fa-sign-out-alt"></i> <span>Logout</span></a>
-                                    </div>
-                                @else
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                          style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            @else
+                                <li>
+                                    <a href="{{ route('login') }}">Login</a>
+                                </li>
+
+                                @if (Route::has('register'))
                                     <li>
-                                        <a href="{{ route('login') }}">Login</a>
-                                    </li>
-
-                                    @if (Route::has('register'))
-                                        <li>
                                         <a href="{{ route('register') }}">Register</a>
-                                        </li>
-                                    @endif
-                                @endauth
-                            </ul>
-                        @endif
-
-
+                                    </li>
+                                @endif
+                            @endauth
+                        </ul>
+                    @endif
                 </div>
             </div>
         </div>

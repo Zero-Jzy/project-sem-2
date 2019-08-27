@@ -17,8 +17,8 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', function (){
-    return view('welcome',['data'=>'jhhhj']);
-});
+    return view('welcome');
+})->name('home');
 
 Route::get('/ad', function (){
     return view('admin');
@@ -29,12 +29,10 @@ Route::view('/ad/{any}', 'admin')
 
 Route::resource('/user','UserController');
 
+Route::get('/menu', function (){
+    return view('menu');
+})->name('menu');
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/test', function (){
-    return view('layouts.master');
-});
 
 //Route::group(['prefix' => 'admin'], function () {
 //  Route::get('/login', 'AdminAuth\LoginController@showLoginForm')->name('login');
