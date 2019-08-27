@@ -32,6 +32,10 @@ Route::resource('/user','UserController');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/test', function (){
+    return view('layouts.master');
+});
+
 //Route::group(['prefix' => 'admin'], function () {
 //  Route::get('/login', 'AdminAuth\LoginController@showLoginForm')->name('login');
 //  Route::post('/login', 'AdminAuth\LoginController@login');

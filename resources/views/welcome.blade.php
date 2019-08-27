@@ -1,103 +1,93 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.master')
+@section('content')
 
-    <title>Laravel</title>
-    <link href="{{asset('css/app.css')}}" rel="stylesheet" type="text/css">
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <section class="section-slide">
+        <div class="wrap-slick1">
+            <div class="slick1">
+                <div class="item-slick1 item1-slick1" style="background-image: url({{asset('/template/images/slide1-01.jpg')}});">
+                    <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+    						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
+    							Welcome to
+    						</span>
 
-    <!-- Styles -->
-    <style>
-        html, body {
-            background-color: #fff;
-            color: #636b6f;
-            font-family: 'Nunito', sans-serif;
-            font-weight: 200;
-            height: 100vh;
-            margin: 0;
-        }
+                        <h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
+                            Pato Place
+                        </h2>
 
-        .full-height {
-            height: 100vh;
-        }
+                        <div class="wrap-btn-slide1 animated visible-false" data-appear="zoomIn">
+                            <!-- Button1 -->
+                            <a href="menu.html" class="btn1 flex-c-m size1 txt3 trans-0-4">
+                                Look Menu
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-        .flex-center {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
+                <div class="item-slick1 item2-slick1" style="background-image: url({{asset('/template/images/master-slides-02.jpg')}});">
+                    <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+    						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="rollIn">
+    							Welcome to
+    						</span>
 
-        .position-ref {
-            position: relative;
-        }
+                        <h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="lightSpeedIn">
+                            Pato Place
+                        </h2>
 
-        .top-right {
-            position: absolute;
-            right: 10px;
-            top: 18px;
-        }
+                        <div class="wrap-btn-slide1 animated visible-false" data-appear="slideInUp">
+                            <!-- Button1 -->
+                            <a href="menu.html" class="btn1 flex-c-m size1 txt3 trans-0-4">
+                                Look Menu
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-        .content {
-            text-align: center;
-        }
+                <div class="item-slick1 item3-slick1" style="background-image: url({{asset('/template/images/master-slides-01.jpg')}});">
+                    <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+    						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="rotateInDownLeft">
+    							Welcome to
+    						</span>
 
-        .title {
-            font-size: 84px;
-        }
+                        <h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="rotateInUpRight">
+                            Pato Place
+                        </h2>
 
-        .links > a {
-            color: #636b6f;
-            padding: 0 25px;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: .1rem;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
+                        <div class="wrap-btn-slide1 animated visible-false" data-appear="rotateIn">
+                            <!-- Button1 -->
+                            <a href="menu.html" class="btn1 flex-c-m size1 txt3 trans-0-4">
+                                Look Menu
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-        .m-b-md {
-            margin-bottom: 30px;
-        }
-    </style>
-</head>
-<body>
-<div class="flex-center position-ref full-height">
-    @if (Route::has('login'))
-        <div class="top-right links">
-            @auth
-                <a href="{{ url('/home') }}">Home</a>
-            @else
-                <a href="{{ route('login') }}">Login</a>
+            </div>
 
-                @if (Route::has('register'))
-                    <a href="{{ route('register') }}">Register</a>
-                @endif
-            @endauth
+            <div class="wrap-slick1-dots"></div>
         </div>
-    @endif
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br><d></d>
 
-    <div class="content">
-        <div class="title m-b-md">
-            <div id="example"></div>
-            <h1>Laravel</h1>
-        </div>
-        <button id="click_di"> click di</button>
-        <div class="links">
-            <a href="https://laravel.com/docs">Docs</a>
-            <a href="https://laracasts.com">Laracasts</a>
-            <a href="https://laravel-news.com">News</a>
-            <a href="https://blog.laravel.com">Blog</a>
-            <a href="https://nova.laravel.com">Nova</a>
-            <a href="https://forge.laravel.com">Forge</a>
-            <a href="https://github.com/laravel/laravel">GitHub</a>
-        </div>
-    </div>
-</div>
-<script src="{{asset('js/app.js')}}"></script>
-<script src="{{asset('js/my.js')}}"></script>
+@section('content')
 
-</body>
-</html>
