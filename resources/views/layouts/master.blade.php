@@ -33,6 +33,10 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{asset('/fontawesome/css/all.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('/css/custom.css')}}">
+    <style>
+
+
+    </style>
 </head>
 <body class="animsition">
 <header>
@@ -42,7 +46,7 @@
             <div class="wrap_header trans-0-3">
                 <!-- Logo -->
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="{{route('home')}}">
                         <img src="{{asset('/template/images/icons/logo2.png')}}" alt="IMG-LOGO"
                              data-logofixed="{{asset('/template/images/icons/logo2.png')}}">
                     </a>
@@ -53,37 +57,20 @@
                     <nav class="menu">
                         <ul class="main_menu">
                             <li>
-                                <a href="{{route('home')}}">Home</a>
+                                <a class="{{Request::is('/') ? 'active' : ''}}" href="{{route('home')}}">Home</a>
                             </li>
-
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" href="{{route('menu')}}" data-toggle="dropdown">
-                                    <span>Menu</span>
-                                </a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Dishs</a>
-                                    <a class="dropdown-item" href="#">Sets</a>
-                                </div>
-                            </li>
-
                             <li>
-                                <a href="about.html">About</a>
+                                <a class="{{Request::is('menu') ? 'active' : ''}}"  href="{{route('menu')}}">Menu</a>
                             </li>
-
                             <li>
-                                <a href="contact.html">Contact</a>
+                                <a class="{{Request::is('about-us') ? 'active' : ''}}"  href="{{route('about-us')}}">About</a>
                             </li>
-
-
                             <li>
-
+                                <a class="{{Request::is('contact') ? 'active' : ''}}"  href="{{route('contact')}}">Contact</a>
                             </li>
-
-
                         </ul>
                     </nav>
                 </div>
-
                 <!-- Right Navbar -->
                 <div class="right-navbar">
                     {{--    @if (Route::has('login'))--}}

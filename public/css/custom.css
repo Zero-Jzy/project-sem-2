@@ -1,3 +1,8 @@
+
+.active {
+    color: red !important;
+}
+
 .wrap_menu a,.wrap_menu li a {
     color: black;
 }

@@ -33,6 +33,14 @@ Route::get('/menu', function (){
     return view('menu');
 })->name('menu');
 
+Route::get('/about-us', function (){
+    return view('about-us');
+})->name('about-us');
+
+Route::get('/contact', function (){
+    return view('contact');
+})->name('contact');
+
 
 //Route::group(['prefix' => 'admin'], function () {
 //  Route::get('/login', 'AdminAuth\LoginController@showLoginForm')->name('login');
