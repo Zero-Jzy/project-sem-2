@@ -4,7 +4,7 @@
 }
 
 .wrap_menu a,.wrap_menu li a {
-    color: black;
+    /*color: black;*/
 }
 
 .wrap-menu-header {
@@ -31,6 +31,10 @@
 
 .right-navbar ul li {
     padding-right: 20px;
+}
+
+.right-navbar ul li a{
+    color: white;
 }
 
 .right-navbar .dropdown-menu {
