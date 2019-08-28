@@ -1,24 +1,10 @@
 @extends('layouts.master', ['title' => 'Contact'])
 
 @section('content')
-                <!-- Social -->
-                <div class="social flex-w flex-l-m p-r-20">
-                    <a href="#"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-facebook m-l-21" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-twitter m-l-21" aria-hidden="true"></i></a>
-
-                    <button class="btn-show-sidebar m-l-33 trans-0-4"></button>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-<!-- Sidebar -->
 
 
 <!-- Title Page -->
-<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url(https://thegioiamthuc.com/wp-content/uploads/2017/08/com-thit-bo-xao-hanh-tay-kieu-Nhat.jpg);">
+<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url(https://www.dethitienganh.net/wp-content/uploads/2016/06/tu-vung-tieng-anh-ve-mon-an-viet-nam1.jpg);">
     <h2 class="tit6 t-center">
         Contact
     </h2>
