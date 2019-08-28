@@ -2,12 +2,8 @@
 
 @section('content')
 
-
-
-
-
 <!-- Title Page -->
-<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url('https://media-cdn.tripadvisor.com/media/photo-w/17/cb/0d/9c/photo0jpg.jpg'); background-position: center">
+<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url('https://media-cdn.tripadvisor.com/media/photo-w/17/cb/0d/9d/photo1jpg.jpg'); background-position: center">
     <h2 class="tit6 t-center">
         About Us
     </h2>

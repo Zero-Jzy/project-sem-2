@@ -1,8 +1,6 @@
 @extends('layouts.master')
 
 @section('content')
-
-
                 <!-- Social -->
                 <div class="social flex-w flex-l-m p-r-20">
                     <a href="#"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>

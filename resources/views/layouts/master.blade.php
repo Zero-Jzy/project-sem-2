@@ -47,7 +47,7 @@
                 <!-- Logo -->
                 <div class="logo">
                     <a href="{{route('home')}}">
-                        <img src="{{asset('/template/images/icons/logo2.png')}}" alt="IMG-LOGO"
+                        <img src="{{asset('/template/images/icons/logo.png')}}" alt="IMG-LOGO"
                              data-logofixed="{{asset('/template/images/icons/logo2.png')}}">
                     </a>
                 </div>
