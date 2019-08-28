@@ -126,7 +126,10 @@
         </div>
     </div>
 </header>
+
 @yield('content')
+
+
 <!-- Header -->
 <!-- Sidebar -->
 {{--<aside class="sidebar trans-0-4">--}}
