@@ -1,9 +1,11 @@
 @extends('layouts.master')
+@extends('layouts.thucdon')
+
 
 @section('content')
     <aside style="overflow: inherit" class="sidebar trans-0-4">
         <!-- Button Hide sidebar -->
-        {{--        <button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>--}}
+                <button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>
         <button id="btn-control-sidebar" class="btn-show-sidebar m-l-33 trans-0-4" style="
         position: absolute;
         left: -80px;
@@ -11,8 +13,7 @@
         width: 50px;
         height: 50px;
         background: white;
-        border: 1px solid black;
-">
+        border: 1px solid black;">
             <i class="fal fa-shopping-bag"></i>
         </button>
 
@@ -31,3 +32,5 @@
         </div>
     </aside>
 @endsection
+
+
