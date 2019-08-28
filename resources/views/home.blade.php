@@ -5,7 +5,7 @@
     <section class="section-slide">
         <div class="wrap-slick1">
             <div class="slick1">
-                <div class="item-slick1 item1-slick1" style="background-image: url(https://www.wybostonlakes.co.uk/media/1410/the-olive-restaurant-4-custom.jpg?anchor=center&mode=crop&width=2000&height=1200&rnd=132023089560000000);">
+                <div class="item-slick1 item1-slick1" style="background-image: url(http://file.brillianthotel.vn/brilliant_NHAHANG10444917032018.jpg);">
                     <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
 							Welcome to
@@ -24,7 +24,7 @@
                     </div>
                 </div>
 
-                <div class="item-slick1 item2-slick1" style="background-image: url(https://mk0hotellenouveowyay.kinstacdn.com/wp-content/uploads/2019/01/restaurant-7-mers-bandeau.jpg);">
+                <div class="item-slick1 item2-slick1" style="background-image: url(http://file.brillianthotel.vn/brilliant_NHAHANG10444917032018.jpg);">
                     <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="rollIn">
 							Welcome to
@@ -43,7 +43,7 @@
                     </div>
                 </div>
 
-                <div class="item-slick1 item3-slick1" style="background-image: url(https://customshouse.com.au/wp-content/uploads/2018/08/restaurant-banner.jpg);">
+                <div class="item-slick1 item3-slick1" style="background-image: url(http://file.brillianthotel.vn/brilliant_NHAHANG10444917032018.jpg);">
                     <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="rotateInDownLeft">
 							Welcome to
