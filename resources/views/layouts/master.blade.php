@@ -34,17 +34,19 @@
     <link rel="stylesheet" type="text/css" href="{{asset('/fontawesome/css/all.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('/css/custom.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('/css/menu.css')}}">
+    <script type="text/javascript" src="{{asset('/template/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
+
 </head>
 <body class="animsition">
 <header>
     <!-- Header desktop -->
-    <div class="wrap-menu-header gradient1 trans-0-4">
+    <div class="wrap-menu-header {{Request::is(['/','contact','about-us']) ? 'gradient1' : ''}}  trans-0-4">
         <div class="container h-full">
             <div class="wrap_header trans-0-3">
                 <!-- Logo -->
                 <div class="logo">
                     <a href="{{route('home')}}">
-                        <img src="{{asset('/template/images/icons/logo.png')}}" alt="IMG-LOGO"
+                        <img src="{{asset(Request::is(['/','contact','about-us']) ? '/template/images/icons/logo.png' : '/template/images/icons/logo2.png')}}" alt="IMG-LOGO"
                              data-logofixed="{{asset('/template/images/icons/logo2.png')}}">
                     </a>
                 </div>
@@ -87,24 +89,27 @@
                     @if (Route::has('login'))
                         <ul class="top-right links">
                             @auth
-                                <a class="dropdown-toggle" data-toggle="dropdown">
-                                    <span>Pato Test</span>
-                                    <img class="avatar"
-                                         src="https://i.pinimg.com/564x/5d/b8/a1/5db8a1d8d5da7010902c7d636766c5b9.jpg"
-                                         alt="">
-                                </a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#"><i class="fal fa-id-card-alt"></i> <span>My profile</span></a>
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        <i class="fal fa-sign-out-alt"></i> <span>Logout</span>
+                                <li>
+                                    <a class="dropdown-toggle" data-toggle="dropdown">
+                                        <span>Pato Test</span>
+                                        <img class="avatar"
+                                             src="https://i.pinimg.com/564x/5d/b8/a1/5db8a1d8d5da7010902c7d636766c5b9.jpg"
+                                             alt="">
                                     </a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                          style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#"><i class="fal fa-id-card-alt"></i> <span>My profile</span></a>
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                           onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            <i class="fal fa-sign-out-alt"></i> <span>Logout</span>
+                                        </a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                              style="display: none;">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                </li>
+
                             @else
                                 <li>
                                     <a href="{{ route('login') }}">Login</a>
@@ -123,6 +128,7 @@
         </div>
     </div>
 </header>
+
 @yield('content')
 
 <footer class="bg1">
@@ -292,10 +298,20 @@
     </div>
 </footer>
 
+<script>
+
+    var itemHeader =  $('.wrap_menu a, .wrap_menu li a');
+    var rightNavbar =  $('.right-navbar a');
+    var path = window.location.pathname;
+
+    if(['/menu','/login','/register'].indexOf(path) !== -1){
+        itemHeader.css('color','black');
+        rightNavbar.css('color','#000')
+    }
+</script>
 
 
 <!--===============================================================================================-->
-<script type="text/javascript" src="{{asset('/template/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
 <!--===============================================================================================-->
 <script type="text/javascript" src="{{asset('/template/vendor/animsition/js/animsition.min.js')}}"></script>
 <!--===============================================================================================-->
