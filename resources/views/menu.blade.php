@@ -411,7 +411,7 @@
         <div data-open-on-mouseover="" data-tab-active="1" data-effect-option="yes"
              class="kc-elm kc-css-410377 kc_tabs group tabs_thucdon">
             <div class="kc_wrapper ui-tabs kc_clearfix">
-                <ul class="kc_tabs_nav ui-tabs-nav kc_clearfix" style="display: flex;
+                <ul class="kc_tabs_nav ui-tabs-nav kc_clearfix container" style="display: flex;
     justify-content: space-between;
     margin-top: 50px;
     padding: 0 150px;">
