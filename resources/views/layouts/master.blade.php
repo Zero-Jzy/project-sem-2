@@ -123,7 +123,9 @@
         </div>
     </div>
 </header>
+
 @yield('content')
+
 <footer class="bg1">
     <div class="container p-t-40 p-b-70">
         <div class="row">
