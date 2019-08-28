@@ -61,7 +61,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <div class="wrap-slick1-dots"></div>
