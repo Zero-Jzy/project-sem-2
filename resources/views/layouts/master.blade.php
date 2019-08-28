@@ -33,6 +33,7 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{asset('/fontawesome/css/all.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('/css/custom.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('/css/menu.css')}}">
 </head>
 <body class="animsition">
 <header>
