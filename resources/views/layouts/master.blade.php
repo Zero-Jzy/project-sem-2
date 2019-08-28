@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Home</title>
+    <title>{{$title}}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
@@ -33,10 +33,6 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{asset('/fontawesome/css/all.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('/css/custom.css')}}">
-    <style>
-
-
-    </style>
 </head>
 <body class="animsition">
 <header>
@@ -60,13 +56,13 @@
                                 <a class="{{Request::is('/') ? 'active' : ''}}" href="{{route('home')}}">Home</a>
                             </li>
                             <li>
-                                <a class="{{Request::is('menu') ? 'active' : ''}}"  href="{{route('menu')}}">Menu</a>
+                                <a class="{{Request::is('menu') ? 'active' : ''}}" href="{{route('menu')}}">Menu</a>
                             </li>
                             <li>
-                                <a class="{{Request::is('about-us') ? 'active' : ''}}"  href="{{route('about-us')}}">About</a>
+                                <a class="{{Request::is('about-us') ? 'active' : ''}}" href="{{route('about-us')}}">About</a>
                             </li>
                             <li>
-                                <a class="{{Request::is('contact') ? 'active' : ''}}"  href="{{route('contact')}}">Contact</a>
+                                <a class="{{Request::is('contact') ? 'active' : ''}}" href="{{route('contact')}}">Contact</a>
                             </li>
                         </ul>
                     </nav>

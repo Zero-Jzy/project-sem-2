@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.master', ['title' => 'Menu'])
 
 @section('content')
     <aside style="overflow: inherit" class="sidebar trans-0-4">
