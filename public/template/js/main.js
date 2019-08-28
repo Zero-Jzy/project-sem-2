@@ -23,7 +23,7 @@
         overlayParentElement : 'html',
         transition: function(url){ window.location.href = url; }
     });
-    
+
     /*[ Back to top ]
     ===========================================================*/
     var windowH = $(window).height()/2;
@@ -61,18 +61,18 @@
     var myCalendar = $('.my-calendar');
     var isClick = 0;
 
-    $(window).on('click',function(){ 
+    $(window).on('click',function(){
         isClick = 0;
     });
 
-    $(myCalendar).on('apply.daterangepicker',function(){ 
+    $(myCalendar).on('apply.daterangepicker',function(){
         isClick = 0;
     });
 
-    $('.btn-calendar').on('click',function(e){ 
+    $('.btn-calendar').on('click',function(e){
         e.stopPropagation();
 
-        if(isClick == 1) isClick = 0;   
+        if(isClick == 1) isClick = 0;
         else if(isClick == 0) isClick = 1;
 
         if (isClick == 1) {
@@ -80,12 +80,12 @@
         }
     });
 
-    $(myCalendar).on('click',function(e){ 
+    $(myCalendar).on('click',function(e){
         e.stopPropagation();
         isClick = 1;
     });
 
-    $('.daterangepicker').on('click',function(e){ 
+    $('.daterangepicker').on('click',function(e){
         e.stopPropagation();
     });
 
@@ -99,14 +99,14 @@
 
         setTimeout(function(){
             $('.video-mo-01').css('opacity','1');
-        },300);      
+        },300);
     });
 
     $('[data-dismiss="modal"]').on('click',function(){
         $('.video-mo-01').children('iframe')[0].src = srcOld;
         $('.video-mo-01').css('opacity','0');
     });
-    
+
 
     /*[ Fixed Header ]
     ===========================================================*/
@@ -125,31 +125,61 @@
             $(header).removeClass('header-fixed');
             $(logo).attr('src',linkLogo1);
         }
-        
+
     });
 
     /*[ Show/hide sidebar ]
     ===========================================================*/
     $('body').append('<div class="overlay-sidebar trans-0-4"></div>');
     var ovlSideBar = $('.overlay-sidebar');
-    var btnShowSidebar = $('.btn-show-sidebar');
-    var btnHideSidebar = $('.btn-hide-sidebar');
+    var btnControlSidebar = $('#btn-control-sidebar');
     var sidebar = $('.sidebar');
+    var show = false;
 
-    $(btnShowSidebar).on('click', function(){
-        $(sidebar).addClass('show-sidebar');
-        $(ovlSideBar).addClass('show-overlay-sidebar');
-    })
+    $(btnControlSidebar).on('click', function () {
 
-    $(btnHideSidebar).on('click', function(){
+        if (show) {
+            $(sidebar).removeClass('show-sidebar');
+            $(ovlSideBar).removeClass('show-overlay-sidebar');
+            show = false;
+            $(this).css('top','15%');
+            $(this).html('<i class="fal fa-shopping-bag"></i>')
+        } else {
+            $(sidebar).addClass('show-sidebar');
+            $(ovlSideBar).addClass('show-overlay-sidebar');
+            show = true;
+            $(this).css('top','0%');
+            $(this).html('<i class="fas fa-times"></i>')
+        }
+    });
+
+    ovlSideBar.click(function () {
         $(sidebar).removeClass('show-sidebar');
         $(ovlSideBar).removeClass('show-overlay-sidebar');
-    })
+        $(btnControlSidebar).css('top','15%');
+        $(btnControlSidebar).html('<i class="fal fa-shopping-bag"></i>')
+        show = false;
+    });
 
-    $(ovlSideBar).on('click', function(){
-        $(sidebar).removeClass('show-sidebar');
-        $(ovlSideBar).removeClass('show-overlay-sidebar');
-    })
+    // var ovlSideBar = $('.overlay-sidebar');
+    // var btnShowSidebar = $('.btn-show-sidebar');
+    // var btnHideSidebar = $('.btn-hide-sidebar');
+    // var sidebar = $('.sidebar');
+    //
+    // $(btnShowSidebar).on('click', function(){
+    //     $(sidebar).addClass('show-sidebar');
+    //     $(ovlSideBar).addClass('show-overlay-sidebar');
+    // })
+    //
+    // $(btnHideSidebar).on('click', function(){
+    //     $(sidebar).removeClass('show-sidebar');
+    //     $(ovlSideBar).removeClass('show-overlay-sidebar');
+    // })
+    //
+    // $(ovlSideBar).on('click', function(){
+    //     $(sidebar).removeClass('show-sidebar');
+    //     $(ovlSideBar).removeClass('show-overlay-sidebar');
+    // })
 
 
     /*[ Isotope ]
@@ -163,7 +193,7 @@
             var filterValue = $(this).attr('data-filter');
             $topeContainer.isotope({filter: filterValue});
         });
-        
+
     });
 
     // init Isotope
@@ -192,6 +222,6 @@
         });
     });
 
-    
+
 
 })(jQuery);
