@@ -1,5 +1,5 @@
 
-.active {
+.wrap_menu .active {
     color: red !important;
 }
 
@@ -71,4 +71,50 @@
     pointer-events: none;
 }
 
+.my-fill-tab ul{
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
 
+.my-fill-tab ul li a{
+    font-size: 16px;
+    padding: 10px;
+}
+
+.my-fill-tab .active{
+    color: red;
+    border-bottom: 2px solid red;
+}
+
+.tab-content{
+
+}
+
+.dish-item{
+    margin: 10px;
+    border: 1px solid rgba(0,0,0,0.25);
+    display: flex;
+    justify-content: stretch;
+    border-radius: 35px;
+    overflow: hidden;
+}
+
+.dish-item .img-box img{
+    border-radius: 35px;
+}
+
+.dish-item .left-content{
+    margin: 0 10px;
+}
+
+
+.dish-item .content{
+    display: flex;
+    padding: 10px;
+}
+
+/*.dish-item .content{*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*}*/
