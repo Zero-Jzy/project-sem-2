@@ -44,4 +44,10 @@ return [
         ],
     ],
 
+    'facebook' => [
+        'client_id' => '478961626221827',
+        'client_secret' => '05078392b8c5ac9b079ed8ba3a50decb',
+        'redirect' => 'https://www.anhson.com/callback',
+    ],
+
 ];

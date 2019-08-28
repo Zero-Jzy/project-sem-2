@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.master')
 
 @section('content')
-<div class="container">
+<div class="container" style="padding-top: 120px">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -39,20 +39,19 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
+                        <div class="row">
+                                    <div class="col-md-5" style="text-align: right">
+                                        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                    </div>
+                                    <div class="col-md-6" style="text-align: left">
+                                        <label class="form-check-label" for="remember" >
+                                            {{ __('Remember Me') }}
+                                        </label>
+                                    </div>
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
+                        <div class="row" style="margin-bottom: 10px">
+                            <div class="col-md-12" style="text-align: center">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
@@ -63,6 +62,30 @@
                                     </a>
                                 @endif
                             </div>
+                        </div>
+                        <div style="text-align: center; margin-bottom: 10px">
+                            <span style="text-align: center">Or login with </span>
+                        </div>
+                        <div class="row" style="margin-bottom: 10px">
+                            <div class="col-md-3"></div>
+                            <button class="col-md-6" style="background: #3B5998; text-align: center;color: white;border-radius: 4px;">
+                                    <i class="fab fa-facebook-square" href="#"></i>
+                            </button>
+                            <div class="col-md-3"></div>
+                        </div>
+                        <div class="row" style="margin-bottom: 10px">
+                            <div class="col-md-3"></div>
+                            <button class="col-md-6" style="background: #dd4b39; text-align: center;color: white;border-radius: 4px;">
+                                <i class="fab fa-google-plus"></i>
+                            </button>
+                            <div class="col-md-3"></div>
+                        </div>
+                        <div class="row" style="margin-bottom: 10px">
+                            <div class="col-md-3"></div>
+                            <button class="col-md-6" style="background: #55ACEE; text-align: center;color: white;border-radius: 4px;">
+                                <i class="fab fa-twitter-square"></i>
+                            </button>
+                            <div class="col-md-3"></div>
                         </div>
                     </form>
                 </div>
