@@ -3,6 +3,7 @@
 *{
 padding:0;
 }
+
 body {
     font-family: Sriracha;
 }
@@ -28,7 +29,11 @@ body.kc-css-system .kc-css-246869 .divider_inner {
     padding: 0 20px;
 }
 
+<<<<<<< HEAD
 ul.products > li {
+=======
+.kc_tab_content > ul > li {
+>>>>>>> d1b8e5dd12e20758e89bece0eae984988f1dfc67
     margin-bottom: 30px;
 }
 
