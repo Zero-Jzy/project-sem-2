@@ -71,6 +71,7 @@
 {{--            </div>--}}
 {{--        </div>--}}
 {{--    </aside>--}}
+
     <div class="kc-col-container">
         <div class="kc-elm kc-css-246869 divider_line blogs_title" style="text-align: center;
     display: block;
