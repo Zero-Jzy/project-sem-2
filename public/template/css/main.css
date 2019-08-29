@@ -581,7 +581,10 @@ input[type="date" i] {
   padding: 15px;
 }
 
-.header-fixed .main_menu > li > a {
+.header-fixed .main_menu > li > a,
+.header-fixed .right-navbar .top-right > a,
+.header-fixed .right-navbar .top-right li > a
+{
   color: #222222;
 }
 
