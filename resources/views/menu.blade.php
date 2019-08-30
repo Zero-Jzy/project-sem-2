@@ -1,4 +1,5 @@
-@extends('layouts.master')
+@extends('layouts.master' , ['title' => 'Menu'])
+
 @section('content')
     <style>
         @import url('https://fonts.googleapis.com/css?family=Sriracha&display=swap');

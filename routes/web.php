@@ -41,6 +41,10 @@ Route::get('/contact', function (){
     return view('contact');
 })->name('contact');
 
+Route::get('/profile', function (){
+    return view('profile-user');
+})->name('profile');
+
 
 //Route::group(['prefix' => 'admin'], function () {
 //  Route::get('/login', 'AdminAuth\LoginController@showLoginForm')->name('login');
