@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.master', ['title' => 'Menu'])
 @section('content')
     <aside style="overflow: inherit" class="sidebar trans-0-4">
         <!-- Button Hide sidebar -->
@@ -16,294 +16,291 @@
         </button>
 
         <!-- - -->
-        <div class="my-fill-tab">
-            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                <li class="nav-item">
-                    <a class="active"
-                       id="pills-dish-tab"
-                       data-toggle="pill"
-                       href="#pills-dish"
-                       role="tab"
-                       aria-controls="pills-dish"
-                       aria-selected="true">
-                        Dishs
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class=""
-                       id="pills-set-tab"
-                       data-toggle="pill"
-                       href="#pills-set"
-                       role="tab"
-                       aria-controls="pills-set"
-                       aria-selected="false">
-                        Sets
-                    </a>
-                </li>
-            </ul>
-        </div>
+            <div class="my-fill-tab">
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="active"
+                           id="pills-dish-tab"
+                           data-toggle="pill"
+                           href="#pills-dish"
+                           role="tab"
+                           aria-controls="pills-dish"
+                           aria-selected="true">
+                            Dishs
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class=""
+                           id="pills-set-tab"
+                           data-toggle="pill"
+                           href="#pills-set"
+                           role="tab"
+                           aria-controls="pills-set"
+                           aria-selected="false">
+                            Sets
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
-        <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-dish" role="tabpanel" aria-labelledby="pills-dish-tab">
-                <div class="list-dish scrollbar">
-                    <div class="dish-item">
-                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                            </div>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-dish" role="tabpanel" aria-labelledby="pills-dish-tab">
+                    <div class="list-dish scrollbar">
+                        <div class="dish-item">
+                            <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                                <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                    <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                                </div>
 
-                            <div class="text-blo3 flex-col-l-m">
-                                <a href="#" class="txt19 m-b-3">
-                                    Duis massa
-                                </a>
+                                <div class="text-blo3 flex-col-l-m">
+                                    <a href="#" class="txt19 m-b-3">
+                                        Duis massa
+                                    </a>
 
-                                <span class="txt10 m-t-20">
+                                    <span class="txt10 m-t-20">
 								$12.75
 							</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                            </div>
+                            <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                                <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                    <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                                </div>
 
-                            <div class="text-blo3 flex-col-l-m">
-                                <a href="#" class="txt19 m-b-3">
-                                    Duis massa
-                                </a>
+                                <div class="text-blo3 flex-col-l-m">
+                                    <a href="#" class="txt19 m-b-3">
+                                        Duis massa
+                                    </a>
 
-                                <span class="txt10 m-t-20">
+                                    <span class="txt10 m-t-20">
 								$12.75
 							</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                            </div>
+                            <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                                <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                    <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                                </div>
 
-                            <div class="text-blo3 flex-col-l-m">
-                                <a href="#" class="txt19 m-b-3">
-                                    Duis massa
-                                </a>
+                                <div class="text-blo3 flex-col-l-m">
+                                    <a href="#" class="txt19 m-b-3">
+                                        Duis massa
+                                    </a>
 
-                                <span class="txt10 m-t-20">
+                                    <span class="txt10 m-t-20">
 								$12.75
 							</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                            </div>
+                            <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                                <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                    <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                                </div>
 
-                            <div class="text-blo3 flex-col-l-m">
-                                <a href="#" class="txt19 m-b-3">
-                                    Duis massa
-                                </a>
+                                <div class="text-blo3 flex-col-l-m">
+                                    <a href="#" class="txt19 m-b-3">
+                                        Duis massa
+                                    </a>
 
-                                <span class="txt10 m-t-20">
+                                    <span class="txt10 m-t-20">
 								$12.75
 							</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                            </div>
+                            <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                                <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                    <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                                </div>
 
-                            <div class="text-blo3 flex-col-l-m">
-                                <a href="#" class="txt19 m-b-3">
-                                    Duis massa
-                                </a>
+                                <div class="text-blo3 flex-col-l-m">
+                                    <a href="#" class="txt19 m-b-3">
+                                        Duis massa
+                                    </a>
 
-                                <span class="txt10 m-t-20">
+                                    <span class="txt10 m-t-20">
 								$12.75
 							</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                            </div>
+                            <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                                <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                    <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                                </div>
 
-                            <div class="text-blo3 flex-col-l-m">
-                                <a href="#" class="txt19 m-b-3">
-                                    Duis massa
-                                </a>
+                                <div class="text-blo3 flex-col-l-m">
+                                    <a href="#" class="txt19 m-b-3">
+                                        Duis massa
+                                    </a>
 
-                                <span class="txt10 m-t-20">
+                                    <span class="txt10 m-t-20">
 								$12.75
 							</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                            </div>
+                            <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                                <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                    <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                                </div>
 
-                            <div class="text-blo3 flex-col-l-m">
-                                <a href="#" class="txt19 m-b-3">
-                                    Duis massa
-                                </a>
+                                <div class="text-blo3 flex-col-l-m">
+                                    <a href="#" class="txt19 m-b-3">
+                                        Duis massa
+                                    </a>
 
-                                <span class="txt10 m-t-20">
+                                    <span class="txt10 m-t-20">
 								$12.75
 							</span>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="total-box">
+                        <div style="height: 30px">
+                            <h4 class="text-center text-uppercase" style="line-height: 50px">Total</h4>
+                        </div>
+                        <div class="total-content">
+                            <div class="row ml-0">
+                                <div class="col-6">
+                                    <br>
+                                </div>
+                                <div class="col-6">
+                                    <br>
+                                </div>
+                                <div class="col-6">
+                                    <br>
+                                </div>
+                                <div class="col-6">
+                                    <br>
+                                </div>
+                                <div class="col-6">
+                                    <br>
+                                </div>
+                            </div>
+
+                        </div>
+                        <button type="submit" class="btn-incard btn3 flex-c-m size18 txt11 trans-0-4 m-10 m-auto">
+                            Create set
+                        </button>
                     </div>
                 </div>
-                <div class="total-box">
-                    <div style="height: 50px">
-                        <h4 class="text-center text-uppercase" style="line-height: 50px">Total</h4>
-                    </div>
-                    <div class="total-content">
-                        <div class="row ml-0">
-                            <div class="col-6">
-                                <br>
+                <div class="tab-pane fade" id="pills-set" role="tabpanel" aria-labelledby="pills-set-tab">
+                    <div class="list-set scrollbar">
+                        <div class="dish-item">
+                            <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                                <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                    <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                                </div>
+
+                                <div class="text-blo3 flex-col-l-m">
+                                    <a href="#" class="txt19 m-b-3">
+                                        Duis massa
+                                    </a>
+
+                                    <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                                </div>
                             </div>
-                            <div class="col-6">
-                                <br>
+                            <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                                <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                    <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                                </div>
+
+                                <div class="text-blo3 flex-col-l-m">
+                                    <a href="#" class="txt19 m-b-3">
+                                        Duis massa
+                                    </a>
+
+                                    <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                                </div>
                             </div>
-                            <div class="col-6">
-                                <br>
+                            <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                                <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                    <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                                </div>
+
+                                <div class="text-blo3 flex-col-l-m">
+                                    <a href="#" class="txt19 m-b-3">
+                                        Duis massa
+                                    </a>
+
+                                    <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                                </div>
                             </div>
-                            <div class="col-6">
-                                <br>
+                            <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                                <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                    <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                                </div>
+
+                                <div class="text-blo3 flex-col-l-m">
+                                    <a href="#" class="txt19 m-b-3">
+                                        Duis massa
+                                    </a>
+
+                                    <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                                </div>
                             </div>
-                            <div class="col-6">
-                                <br>
+                            <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                                <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                    <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                                </div>
+
+                                <div class="text-blo3 flex-col-l-m">
+                                    <a href="#" class="txt19 m-b-3">
+                                        Duis massa
+                                    </a>
+
+                                    <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                                </div>
+                            </div>
+                            <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                                <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                    <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                                </div>
+
+                                <div class="text-blo3 flex-col-l-m">
+                                    <a href="#" class="txt19 m-b-3">
+                                        Duis massa
+                                    </a>
+
+                                    <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                                </div>
+                            </div>
+                            <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                                <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                    <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                                </div>
+
+                                <div class="text-blo3 flex-col-l-m">
+                                    <a href="#" class="txt19 m-b-3">
+                                        Duis massa
+                                    </a>
+
+                                    <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                                </div>
                             </div>
                         </div>
-
                     </div>
-
-                </div>
-                <div class="btn-button-card-box">
-                    <button type="submit" class="btn3 flex-c-m size18 txt11 trans-0-4 m-10 m-auto">
-                        Create set
-                    </button>
+                    <div class="btn-checkout-box">
+                        <button type="submit" class="btn-incard btn3 flex-c-m size18 txt11 trans-0-4 m-10 m-auto">
+                            Checkout
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="pills-set" role="tabpanel" aria-labelledby="pills-set-tab">
 
-                <div class="scrollbar">
-                    <div class="dish-item">
-                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                            </div>
-
-                            <div class="text-blo3 flex-col-l-m">
-                                <a href="#" class="txt19 m-b-3">
-                                    Duis massa
-                                </a>
-
-                                <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                            </div>
-                        </div>
-                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                            </div>
-
-                            <div class="text-blo3 flex-col-l-m">
-                                <a href="#" class="txt19 m-b-3">
-                                    Duis massa
-                                </a>
-
-                                <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                            </div>
-                        </div>
-                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                            </div>
-
-                            <div class="text-blo3 flex-col-l-m">
-                                <a href="#" class="txt19 m-b-3">
-                                    Duis massa
-                                </a>
-
-                                <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                            </div>
-                        </div>
-                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                            </div>
-
-                            <div class="text-blo3 flex-col-l-m">
-                                <a href="#" class="txt19 m-b-3">
-                                    Duis massa
-                                </a>
-
-                                <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                            </div>
-                        </div>
-                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                            </div>
-
-                            <div class="text-blo3 flex-col-l-m">
-                                <a href="#" class="txt19 m-b-3">
-                                    Duis massa
-                                </a>
-
-                                <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                            </div>
-                        </div>
-                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                            </div>
-
-                            <div class="text-blo3 flex-col-l-m">
-                                <a href="#" class="txt19 m-b-3">
-                                    Duis massa
-                                </a>
-
-                                <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                            </div>
-                        </div>
-                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                            </div>
-
-                            <div class="text-blo3 flex-col-l-m">
-                                <a href="#" class="txt19 m-b-3">
-                                    Duis massa
-                                </a>
-
-                                <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="btn-button-card-box">
-                    <button type="submit" class="btn3 flex-c-m size18 txt11 trans-0-4 m-10 m-auto">
-                        Check out
-                    </button>
-                </div>
-            </div>
-        </div>
     </aside>
 
     <div class="kc-col-container">
