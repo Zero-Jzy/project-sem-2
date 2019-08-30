@@ -1,393 +1,311 @@
-@extends('layouts.master')
+@extends('layouts.master' , ['title' => 'Menu'])
+
 @section('content')
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Sriracha&display=swap');
+    <aside style="overflow: inherit" class="sidebar trans-0-4">
+        <!-- Button Hide sidebar -->
+        {{--        <button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>--}}
+        <button id="btn-control-sidebar" class="btn-show-sidebar m-l-33 trans-0-4" style="
+        position: absolute;
+        left: -83px;
+        top: 15%;
+        width: 50px;
+        height: 50px;
+        background: cadetblue;
+        border: none;
+">
+            <i class="fal fa-shopping-bag"></i>
+        </button>
 
-        body {
-            font-family: Sriracha;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        body.kc-css-system .kc-css-246869 .divider_inner {
-            width: 30%;
-        }
+        <!-- - -->
+        <div class="my-fill-tab">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="active"
+                       id="pills-dish-tab"
+                       data-toggle="pill"
+                       href="#pills-dish"
+                       role="tab"
+                       aria-controls="pills-dish"
+                       aria-selected="true">
+                        Dishs
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class=""
+                       id="pills-set-tab"
+                       data-toggle="pill"
+                       href="#pills-set"
+                       role="tab"
+                       aria-controls="pills-set"
+                       aria-selected="false">
+                        Sets
+                    </a>
+                </li>
+            </ul>
+        </div>
 
-        .blogs_title .divider_inner {
-            height: 3px;
-            background: url('https://www.pizzaexpress.vn/wp-content/themes/dinhcode/img/line_title.png');
-        }
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-dish" role="tabpanel" aria-labelledby="pills-dish-tab">
+                <div class="list-dish scrollbar">
+                    <div class="dish-item">
+                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                            </div>
 
-        .divider_line2 i, .divider_line3 .line_text {
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            position: absolute;
-            background: #fff;
-            padding: 0 20px;
-        }
+                            <div class="text-blo3 flex-col-l-m">
+                                <a href="#" class="txt19 m-b-3">
+                                    Duis massa
+                                </a>
 
-        ul.products > li {
-            margin-bottom: 30px;
-        }
+                                <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                            </div>
+                        </div>
+                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                            </div>
 
-        .kc_wrapper.ui-tabs.kc_clearfix ul li a {
-            padding-top: 60px;
-            display: inline-block;
-            font-size: 30px;
-            color: #c00a27;
-            font-family: Sriracha;
-        }
+                            <div class="text-blo3 flex-col-l-m">
+                                <a href="#" class="txt19 m-b-3">
+                                    Duis massa
+                                </a>
 
-        .product_item {
-            position: relative;
-            border: 1px solid #e2e2e2;
-            height: 100%;
+                                <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                            </div>
+                        </div>
+                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                            </div>
 
-        }
+                            <div class="text-blo3 flex-col-l-m">
+                                <a href="#" class="txt19 m-b-3">
+                                    Duis massa
+                                </a>
 
-        .product_item .product_hover {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            opacity: 0;
-            background: #FFF;
-            transition: 0.4s;
-            width: 100%;
-            height: 100%;
-            border: 1px solid red;
-            text-align: center;
-        }
+                                <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                            </div>
+                        </div>
+                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                            </div>
 
-        .product_item .product_hover:hover {
-            opacity: 0.9;
-        }
+                            <div class="text-blo3 flex-col-l-m">
+                                <a href="#" class="txt19 m-b-3">
+                                    Duis massa
+                                </a>
 
-        .product_item .product_img img {
-            width: 100%;
-            height: auto;
-        }
+                                <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                            </div>
+                        </div>
+                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                            </div>
 
-        ul.dc_columns li .product_item .cart {
-            width: 100%;
-            float: left;
-            display: block;
-            clear: both;
-            margin-bottom: 0;
-            position: relative;
-            z-index: 9999;
-            padding: 0 10px;
-        }
+                            <div class="text-blo3 flex-col-l-m">
+                                <a href="#" class="txt19 m-b-3">
+                                    Duis massa
+                                </a>
 
-        ul.dc_columns li .product_item .variations_form.cart table.variations {
-            width: 100%;
-            background: #f5f5f5;
-            border-radius: 25px;
-            font-size: 12px;
-            padding: 5px 0 5px 10px;
-            line-height: 15px;
-        }
+                                <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                            </div>
+                        </div>
+                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                            </div>
 
-        ul.dc_columns li .product_item .variations_form.cart table.variations .label {
-            width: 30px;
-        }
+                            <div class="text-blo3 flex-col-l-m">
+                                <a href="#" class="txt19 m-b-3">
+                                    Duis massa
+                                </a>
 
-        ul.dc_columns li .product_item .variations_form.cart table.variations {
-            width: 100%;
-            background: #f5f5f5;
-            border-radius: 25px;
-            font-size: 12px;
-            padding: 5px 0 5px 10px;
-            line-height: 15px;
-        }
+                                <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                            </div>
+                        </div>
+                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                            </div>
 
-        ul.dc_columns li .product_item .woocommerce-loop-product__title {
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            text-align: center;
-            margin: 20px 0 10px;
-            padding: 0;
-            color: #000;
-            width: 100%;
-            float: left;
-        }
+                            <div class="text-blo3 flex-col-l-m">
+                                <a href="#" class="txt19 m-b-3">
+                                    Duis massa
+                                </a>
 
-        ul.dc_columns li .product_item span.price {
-            font-weight: 600 !important;
-            color: #c00a27 !important;
-            font-size: 14px;
-            display: block;
-            float: left;
-            width: 100%;
-            clear: both;
-            text-align: center;
-            margin-bottom: 12px;
-        }
+                                <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="total-box">
+                    <div style="height: 50px">
+                        <h4 class="text-center text-uppercase" style="line-height: 50px">Total</h4>
+                    </div>
+                    <div class="total-content">
+                        <div class="row ml-0">
+                            <div class="col-6">
+                                <br>
+                            </div>
+                            <div class="col-6">
+                                <br>
+                            </div>
+                            <div class="col-6">
+                                <br>
+                            </div>
+                            <div class="col-6">
+                                <br>
+                            </div>
+                            <div class="col-6">
+                                <br>
+                            </div>
+                        </div>
 
-        select {
-            -webkit-writing-mode: horizontal-tb !important;
-            text-rendering: auto;
-            color: black;
-            letter-spacing: normal;
-            word-spacing: normal;
-            text-transform: none;
-            text-indent: 0px;
-            text-shadow: none;
-            display: inline-block;
-            text-align: start;
-            -webkit-appearance: menulist;
-            box-sizing: border-box;
-            align-items: center;
-            white-space: pre;
-            -webkit-rtl-ordering: logical;
-            background-color: rgb(248, 248, 248);
-            cursor: default;
-            margin: 0em;
-            font: 400 11px system-ui;
-            border-radius: 5px;
-            border-width: 1px;
-            border-style: solid;
-            border-color: rgb(166, 166, 166);
-            border-image: initial;
-        }
+                    </div>
 
-        option {
-            font-weight: normal;
-            display: block;
-            white-space: pre;
-            min-height: 1.2em;
-            padding: 0px 2px 1px;
-        }
+                </div>
+                <div class="btn-button-card-box">
+                    <button type="submit" class="btn3 flex-c-m size18 txt11 trans-0-4 m-10 m-auto">
+                        Create set
+                    </button>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-set" role="tabpanel" aria-labelledby="pills-set-tab">
 
-        ul.dc_columns li.product_item .variations_form.cart table.variations .value ul {
-            margin: 0;
-            padding: 0;
-            float: left;
-            background: #FFF;
-        }
+                <div class="scrollbar">
+                    <div class="dish-item">
+                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                            </div>
 
-        ul.dc_columns li .product_item .variations_form.cart table.variations .value ul li {
-            float: left;
-            width: 20px;
-            text-align: center;
-            color: #959595;
-            padding-top: 2px;
-            padding-bottom: 2px;
-            cursor: pointer;
-        }
+                            <div class="text-blo3 flex-col-l-m">
+                                <a href="#" class="txt19 m-b-3">
+                                    Duis massa
+                                </a>
 
-        .woocommerce .products ul li, .woocommerce ul.products li {
-            list-style: none outside;
-        }
+                                <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                            </div>
+                        </div>
+                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                            </div>
 
-        .label label {
-            display: inline-block;
-            margin: 0;
-            padding-left: 10px;
-        }
+                            <div class="text-blo3 flex-col-l-m">
+                                <a href="#" class="txt19 m-b-3">
+                                    Duis massa
+                                </a>
 
-        ul.dc_columns li .product_item .variations_form.cart table.variations .value ul {
-            margin: 0;
-            padding: 0;
-            float: left;
-            background: #FFF;
-            margin: 5px 0;
-            margin-left: 10px;
-        }
+                                <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                            </div>
+                        </div>
+                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                            </div>
 
-        ul.dc_columns li .product_item .variations_form.cart .single_variation_wrap {
-            display: block;
-            position: relative;
-        }
+                            <div class="text-blo3 flex-col-l-m">
+                                <a href="#" class="txt19 m-b-3">
+                                    Duis massa
+                                </a>
 
-        ul.dc_columns li .product_item .variations_form.cart .woocommerce-variation-add-to-cart {
-            text-align: center;
-        }
+                                <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                            </div>
+                        </div>
+                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                            </div>
 
-        ul.dc_columns li .product_item .variations_form.cart .single_variation_wrap .quantity {
-            position: absolute;
-            top: -25px;
-            right: 18px;
-        }
+                            <div class="text-blo3 flex-col-l-m">
+                                <a href="#" class="txt19 m-b-3">
+                                    Duis massa
+                                </a>
 
-        ul.dc_columns li .product_item .variations_form.cart .single_variation_wrap .screen-reader-text {
-            position: relative !important;
-            font-size: 12px;
-        }
+                                <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                            </div>
+                        </div>
+                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                            </div>
 
-        ul.dc_columns li .product_item .variations_form.cart .single_variation_wrap .quantity .dc_quantity_input {
-            display: inline-block;
-            line-height: 1.2;
-        }
+                            <div class="text-blo3 flex-col-l-m">
+                                <a href="#" class="txt19 m-b-3">
+                                    Duis massa
+                                </a>
 
-        ul.dc_columns li .product_item .cart .quantity .dc_quantity_input {
-            display: inline-block;
-            background: #fff;
-            padding: 0 5px;
-        }
+                                <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                            </div>
+                        </div>
+                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                            </div>
 
-        .dc_quantity_input .minus, .dc_quantity_input .plus {
-            border: none;
-            background: none;
-            margin: 0;
-            padding: 0;
-        }
+                            <div class="text-blo3 flex-col-l-m">
+                                <a href="#" class="txt19 m-b-3">
+                                    Duis massa
+                                </a>
 
-        ul.dc_columns li .product_item .variations_form.cart .single_variation_wrap .quantity .qty {
-            width: 20px;
-            height: 10px;
-            border: none;
-            text-align: center;
-        }
+                                <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                            </div>
+                        </div>
+                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                            </div>
 
-        ul.dc_columns li .product_item .variations_form.cart .woocommerce-variation-add-to-cart .button {
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
+                            <div class="text-blo3 flex-col-l-m">
+                                <a href="#" class="txt19 m-b-3">
+                                    Duis massa
+                                </a>
 
-        ul.dc_columns li .product_item .variations_form.cart .button {
-            float: inherit;
-        }
-
-        ul.dc_columns li .product_item .cart button.button {
-            font-size: 12px;
-            background: #b9b9b9;
-            color: #fff;
-            font-weight: 400;
-            border-radius: 25px;
-            opacity: 1;
-        }
-
-        .product_item button[type=submit] {
-            padding: 5px 10px;
-            /*display: block;*/
-        }
-        .kc-main-combo {
-            background: transparent url(https://www.pizzaexpress.vn/wp-content/uploads/2018/06/combo_bg.jpg) center center/cover no-repeat scroll;
-            padding-top: 60px;
-            padding-bottom: 60px;
-            margin: 30px 0;
-        }
-        .combo_title {
-            width: 100%;
-            display: block;
-            float: left;
-            text-align: center;
-        }
-        .combo_title .combo_text {
-            display: inline-block;
-            margin: auto;
-            padding: 0 10px;
-            font-size: 18px;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: #FFF;
-            position: relative;
-        }
-        .combo_title .combo_text:before, .combo_title .combo_text:after {
-            content: '';
-            position: absolute;
-            width: 105px;
-            height: 100%;
-            right: 100%;
-            top: 0;
-            background: url(https://www.pizzaexpress.vn/wp-content/themes/dinhcode/img/line_title.png) center center repeat-x;
-        }
-        .combo_title .combo_text:after {
-            right: inherit;
-            left: 100%;
-        }
-        .kc_title {
-            color: #ff9c00;
-            font-family: Sriracha;
-            font-size: 40px;
-            font-weight: 400;
-            text-align: center;
-            margin-top: 20px;
-            margin-bottom: 55px;
-        }
-
-        .kc-item .combo_title_addcart {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            float: left;
-            padding: 20px 0;
-            border-bottom: 1px solid #626262;
-            margin-bottom: 20px;
-        }
-        .kc-item .combo_title_addcart h3 {
-            display: block;
-            float: left;
-            font-size: 30px;
-            font-weight: 400;
-            color: #FFF;
-            font-family: Sriracha;
-            margin: 0;
-            padding: 0;
-        }
-        .kc-item .combo_title_addcart > a {
-            border: none;
-            background: #c00a27;
-            color: #FFF;
-            font-size: 12px;
-            padding: 5px 10px;
-            border-radius: 25px;
-            /*float: right;*/
-            position: relative;
-        }
-        .kc-item .combo_info_price {
-            width: 100%;
-            display: block;
-            float: left;
-            font-size: 18px;
-            color: #FFF;
-            margin-bottom: 20px;
-            padding: 0 15px 0 0;
-        }
-
-        .kc-item .combo_info_price span.woocommerce-Price-amount {
-            display: block;
-            float: right;
-            font-size: 24px;
-            font-family: Sriracha;
-            color: #fff600;
-            line-height: 1;
-        }
-        .kc-item .combo_desc {
-            display: block;
-            clear: both;
-            color: #FFF;
-            font-size: 14px;
-        }
-        .kc-blog .home_blog_des {
-            text-align: justify;
-            margin-bottom: 20px;
-            font-size: 14px;
-            padding-top: 15px;
-        }
-        .home_blog_info {
-            display: table;
-            table-layout: auto;
-            width: 100%;
-            font-size: 12px;
-        }
-        .home_blog_info .home_blog_cell {
-            display: table-cell;
-            vertical-align: middle;
-            width: 30%;
-        }
-        .kc-list-blog > ul > li h3 a {
-            margin: 0 0 20px;
-            font-weight: 600;
-            text-transform: uppercase;
-            line-height: 0;
-        }
-    </style>
+                                <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-button-card-box">
+                    <button type="submit" class="btn3 flex-c-m size18 txt11 trans-0-4 m-10 m-auto">
+                        Check out
+                    </button>
+                </div>
+            </div>
+        </div>
+    </aside>
 
     <div class="kc-col-container">
         <div class="kc-elm kc-css-246869 divider_line blogs_title" style="text-align: center;
@@ -463,8 +381,9 @@
                                                                sizes="(max-width: 260px) 100vw, 260px"/></noscript>
                                             </div>
                                             <div class="product_hover">
-                                                <div class="product_hover_cont"><h3 class="woocommerce-loop-product__title"
-                                                                                    style="">
+                                                <div class="product_hover_cont"><h3
+                                                        class="woocommerce-loop-product__title"
+                                                        style="">
                                                         P1. Beefy Pizza</h3>
                                                     <p><strong>Thành phần</strong></p>
                                                     <p>Thịt bò xay, ngô, sốt BBQ, pho mai.</p>
@@ -496,7 +415,8 @@
                                                             data-was-processed="true">
                                                     <noscript><img class="alignnone wp-image-346 size-full"
                                                                    src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                                   alt="Pizza Size L" width="25" height="25"/></noscript>&nbsp;
+                                                                   alt="Pizza Size L" width="25" height="25"/>
+                                                    </noscript>&nbsp;
                                                     Size L / 30cm / 140.000đ</p></div>
                                             </div>
                                             <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
@@ -511,7 +431,8 @@
                                                     <tr>
                                                         <td class="label"><label for="pa_size">Size</label></td>
                                                         <td class="value woo-variation-items-wrapper">
-                                                            <select name="" id="" class="value woo-variation-items-wrapper"
+                                                            <select name="" id=""
+                                                                    class="value woo-variation-items-wrapper"
                                                                     style="display: none">
                                                                 <option value="">Chọn một tùy chọn</option>
                                                                 <option value="s" class="attached enabled">S</option>
@@ -542,14 +463,17 @@
                                                 <div class="single_variation_wrap">
                                                     <div class="woocommerce-variation single_variation"
                                                          style="display: none"></div>
-                                                    <div class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
+                                                    <div
+                                                        class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
                                                         <div class="quantity">
-                                                            <label class="screen-reader-text" for="quantity_5d659bfc5c52e">
+                                                            <label class="screen-reader-text"
+                                                                   for="quantity_5d659bfc5c52e">
                                                                 Số lượng </label>
                                                             <div class="dc_quantity_input">
                                                                 <input class="minus" type="button" value="-">
                                                                 <input type="number" id="quantity_5d659bfc5c52e"
-                                                                       class="input-text qty text" step="1" min="1" max=""
+                                                                       class="input-text qty text" step="1" min="1"
+                                                                       max=""
                                                                        name="quantity" value="1" title="SL" size="4"
                                                                        pattern="[0-9]*" inputmode="numeric"
                                                                        aria-labelledby="P1. Beefy Pizza số lượng">
@@ -591,8 +515,9 @@
                                                                sizes="(max-width: 260px) 100vw, 260px"/></noscript>
                                             </div>
                                             <div class="product_hover">
-                                                <div class="product_hover_cont"><h3 class="woocommerce-loop-product__title"
-                                                                                    style="">
+                                                <div class="product_hover_cont"><h3
+                                                        class="woocommerce-loop-product__title"
+                                                        style="">
                                                         P1. Beefy Pizza</h3>
                                                     <p><strong>Thành phần</strong></p>
                                                     <p>Thịt bò xay, ngô, sốt BBQ, pho mai.</p>
@@ -624,7 +549,8 @@
                                                             data-was-processed="true">
                                                     <noscript><img class="alignnone wp-image-346 size-full"
                                                                    src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                                   alt="Pizza Size L" width="25" height="25"/></noscript>&nbsp;
+                                                                   alt="Pizza Size L" width="25" height="25"/>
+                                                    </noscript>&nbsp;
                                                     Size L / 30cm / 140.000đ</p></div>
                                             </div>
                                             <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
@@ -639,7 +565,8 @@
                                                     <tr>
                                                         <td class="label"><label for="pa_size">Size</label></td>
                                                         <td class="value woo-variation-items-wrapper">
-                                                            <select name="" id="" class="value woo-variation-items-wrapper"
+                                                            <select name="" id=""
+                                                                    class="value woo-variation-items-wrapper"
                                                                     style="display: none">
                                                                 <option value="">Chọn một tùy chọn</option>
                                                                 <option value="s" class="attached enabled">S</option>
@@ -670,14 +597,17 @@
                                                 <div class="single_variation_wrap">
                                                     <div class="woocommerce-variation single_variation"
                                                          style="display: none"></div>
-                                                    <div class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
+                                                    <div
+                                                        class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
                                                         <div class="quantity">
-                                                            <label class="screen-reader-text" for="quantity_5d659bfc5c52e">
+                                                            <label class="screen-reader-text"
+                                                                   for="quantity_5d659bfc5c52e">
                                                                 Số lượng </label>
                                                             <div class="dc_quantity_input">
                                                                 <input class="minus" type="button" value="-">
                                                                 <input type="number" id="quantity_5d659bfc5c52e"
-                                                                       class="input-text qty text" step="1" min="1" max=""
+                                                                       class="input-text qty text" step="1" min="1"
+                                                                       max=""
                                                                        name="quantity" value="1" title="SL" size="4"
                                                                        pattern="[0-9]*" inputmode="numeric"
                                                                        aria-labelledby="P1. Beefy Pizza số lượng">
@@ -719,8 +649,9 @@
                                                                sizes="(max-width: 260px) 100vw, 260px"/></noscript>
                                             </div>
                                             <div class="product_hover">
-                                                <div class="product_hover_cont"><h3 class="woocommerce-loop-product__title"
-                                                                                    style="">
+                                                <div class="product_hover_cont"><h3
+                                                        class="woocommerce-loop-product__title"
+                                                        style="">
                                                         P1. Beefy Pizza</h3>
                                                     <p><strong>Thành phần</strong></p>
                                                     <p>Thịt bò xay, ngô, sốt BBQ, pho mai.</p>
@@ -752,7 +683,8 @@
                                                             data-was-processed="true">
                                                     <noscript><img class="alignnone wp-image-346 size-full"
                                                                    src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                                   alt="Pizza Size L" width="25" height="25"/></noscript>&nbsp;
+                                                                   alt="Pizza Size L" width="25" height="25"/>
+                                                    </noscript>&nbsp;
                                                     Size L / 30cm / 140.000đ</p></div>
                                             </div>
                                             <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
@@ -767,7 +699,8 @@
                                                     <tr>
                                                         <td class="label"><label for="pa_size">Size</label></td>
                                                         <td class="value woo-variation-items-wrapper">
-                                                            <select name="" id="" class="value woo-variation-items-wrapper"
+                                                            <select name="" id=""
+                                                                    class="value woo-variation-items-wrapper"
                                                                     style="display: none">
                                                                 <option value="">Chọn một tùy chọn</option>
                                                                 <option value="s" class="attached enabled">S</option>
@@ -798,14 +731,17 @@
                                                 <div class="single_variation_wrap">
                                                     <div class="woocommerce-variation single_variation"
                                                          style="display: none"></div>
-                                                    <div class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
+                                                    <div
+                                                        class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
                                                         <div class="quantity">
-                                                            <label class="screen-reader-text" for="quantity_5d659bfc5c52e">
+                                                            <label class="screen-reader-text"
+                                                                   for="quantity_5d659bfc5c52e">
                                                                 Số lượng </label>
                                                             <div class="dc_quantity_input">
                                                                 <input class="minus" type="button" value="-">
                                                                 <input type="number" id="quantity_5d659bfc5c52e"
-                                                                       class="input-text qty text" step="1" min="1" max=""
+                                                                       class="input-text qty text" step="1" min="1"
+                                                                       max=""
                                                                        name="quantity" value="1" title="SL" size="4"
                                                                        pattern="[0-9]*" inputmode="numeric"
                                                                        aria-labelledby="P1. Beefy Pizza số lượng">
@@ -847,8 +783,9 @@
                                                                sizes="(max-width: 260px) 100vw, 260px"/></noscript>
                                             </div>
                                             <div class="product_hover">
-                                                <div class="product_hover_cont"><h3 class="woocommerce-loop-product__title"
-                                                                                    style="">
+                                                <div class="product_hover_cont"><h3
+                                                        class="woocommerce-loop-product__title"
+                                                        style="">
                                                         P1. Beefy Pizza</h3>
                                                     <p><strong>Thành phần</strong></p>
                                                     <p>Thịt bò xay, ngô, sốt BBQ, pho mai.</p>
@@ -880,7 +817,8 @@
                                                             data-was-processed="true">
                                                     <noscript><img class="alignnone wp-image-346 size-full"
                                                                    src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                                   alt="Pizza Size L" width="25" height="25"/></noscript>&nbsp;
+                                                                   alt="Pizza Size L" width="25" height="25"/>
+                                                    </noscript>&nbsp;
                                                     Size L / 30cm / 140.000đ</p></div>
                                             </div>
                                             <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
@@ -895,7 +833,8 @@
                                                     <tr>
                                                         <td class="label"><label for="pa_size">Size</label></td>
                                                         <td class="value woo-variation-items-wrapper">
-                                                            <select name="" id="" class="value woo-variation-items-wrapper"
+                                                            <select name="" id=""
+                                                                    class="value woo-variation-items-wrapper"
                                                                     style="display: none">
                                                                 <option value="">Chọn một tùy chọn</option>
                                                                 <option value="s" class="attached enabled">S</option>
@@ -926,14 +865,17 @@
                                                 <div class="single_variation_wrap">
                                                     <div class="woocommerce-variation single_variation"
                                                          style="display: none"></div>
-                                                    <div class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
+                                                    <div
+                                                        class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
                                                         <div class="quantity">
-                                                            <label class="screen-reader-text" for="quantity_5d659bfc5c52e">
+                                                            <label class="screen-reader-text"
+                                                                   for="quantity_5d659bfc5c52e">
                                                                 Số lượng </label>
                                                             <div class="dc_quantity_input">
                                                                 <input class="minus" type="button" value="-">
                                                                 <input type="number" id="quantity_5d659bfc5c52e"
-                                                                       class="input-text qty text" step="1" min="1" max=""
+                                                                       class="input-text qty text" step="1" min="1"
+                                                                       max=""
                                                                        name="quantity" value="1" title="SL" size="4"
                                                                        pattern="[0-9]*" inputmode="numeric"
                                                                        aria-labelledby="P1. Beefy Pizza số lượng">
@@ -975,8 +917,9 @@
                                                                sizes="(max-width: 260px) 100vw, 260px"/></noscript>
                                             </div>
                                             <div class="product_hover">
-                                                <div class="product_hover_cont"><h3 class="woocommerce-loop-product__title"
-                                                                                    style="">
+                                                <div class="product_hover_cont"><h3
+                                                        class="woocommerce-loop-product__title"
+                                                        style="">
                                                         P1. Beefy Pizza</h3>
                                                     <p><strong>Thành phần</strong></p>
                                                     <p>Thịt bò xay, ngô, sốt BBQ, pho mai.</p>
@@ -1008,7 +951,8 @@
                                                             data-was-processed="true">
                                                     <noscript><img class="alignnone wp-image-346 size-full"
                                                                    src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                                   alt="Pizza Size L" width="25" height="25"/></noscript>&nbsp;
+                                                                   alt="Pizza Size L" width="25" height="25"/>
+                                                    </noscript>&nbsp;
                                                     Size L / 30cm / 140.000đ</p></div>
                                             </div>
                                             <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
@@ -1023,7 +967,8 @@
                                                     <tr>
                                                         <td class="label"><label for="pa_size">Size</label></td>
                                                         <td class="value woo-variation-items-wrapper">
-                                                            <select name="" id="" class="value woo-variation-items-wrapper"
+                                                            <select name="" id=""
+                                                                    class="value woo-variation-items-wrapper"
                                                                     style="display: none">
                                                                 <option value="">Chọn một tùy chọn</option>
                                                                 <option value="s" class="attached enabled">S</option>
@@ -1054,14 +999,17 @@
                                                 <div class="single_variation_wrap">
                                                     <div class="woocommerce-variation single_variation"
                                                          style="display: none"></div>
-                                                    <div class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
+                                                    <div
+                                                        class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
                                                         <div class="quantity">
-                                                            <label class="screen-reader-text" for="quantity_5d659bfc5c52e">
+                                                            <label class="screen-reader-text"
+                                                                   for="quantity_5d659bfc5c52e">
                                                                 Số lượng </label>
                                                             <div class="dc_quantity_input">
                                                                 <input class="minus" type="button" value="-">
                                                                 <input type="number" id="quantity_5d659bfc5c52e"
-                                                                       class="input-text qty text" step="1" min="1" max=""
+                                                                       class="input-text qty text" step="1" min="1"
+                                                                       max=""
                                                                        name="quantity" value="1" title="SL" size="4"
                                                                        pattern="[0-9]*" inputmode="numeric"
                                                                        aria-labelledby="P1. Beefy Pizza số lượng">
@@ -1103,8 +1051,9 @@
                                                                sizes="(max-width: 260px) 100vw, 260px"/></noscript>
                                             </div>
                                             <div class="product_hover">
-                                                <div class="product_hover_cont"><h3 class="woocommerce-loop-product__title"
-                                                                                    style="">
+                                                <div class="product_hover_cont"><h3
+                                                        class="woocommerce-loop-product__title"
+                                                        style="">
                                                         P1. Beefy Pizza</h3>
                                                     <p><strong>Thành phần</strong></p>
                                                     <p>Thịt bò xay, ngô, sốt BBQ, pho mai.</p>
@@ -1136,7 +1085,8 @@
                                                             data-was-processed="true">
                                                     <noscript><img class="alignnone wp-image-346 size-full"
                                                                    src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                                   alt="Pizza Size L" width="25" height="25"/></noscript>&nbsp;
+                                                                   alt="Pizza Size L" width="25" height="25"/>
+                                                    </noscript>&nbsp;
                                                     Size L / 30cm / 140.000đ</p></div>
                                             </div>
                                             <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
@@ -1151,7 +1101,8 @@
                                                     <tr>
                                                         <td class="label"><label for="pa_size">Size</label></td>
                                                         <td class="value woo-variation-items-wrapper">
-                                                            <select name="" id="" class="value woo-variation-items-wrapper"
+                                                            <select name="" id=""
+                                                                    class="value woo-variation-items-wrapper"
                                                                     style="display: none">
                                                                 <option value="">Chọn một tùy chọn</option>
                                                                 <option value="s" class="attached enabled">S</option>
@@ -1182,14 +1133,17 @@
                                                 <div class="single_variation_wrap">
                                                     <div class="woocommerce-variation single_variation"
                                                          style="display: none"></div>
-                                                    <div class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
+                                                    <div
+                                                        class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
                                                         <div class="quantity">
-                                                            <label class="screen-reader-text" for="quantity_5d659bfc5c52e">
+                                                            <label class="screen-reader-text"
+                                                                   for="quantity_5d659bfc5c52e">
                                                                 Số lượng </label>
                                                             <div class="dc_quantity_input">
                                                                 <input class="minus" type="button" value="-">
                                                                 <input type="number" id="quantity_5d659bfc5c52e"
-                                                                       class="input-text qty text" step="1" min="1" max=""
+                                                                       class="input-text qty text" step="1" min="1"
+                                                                       max=""
                                                                        name="quantity" value="1" title="SL" size="4"
                                                                        pattern="[0-9]*" inputmode="numeric"
                                                                        aria-labelledby="P1. Beefy Pizza số lượng">
@@ -1231,8 +1185,9 @@
                                                                sizes="(max-width: 260px) 100vw, 260px"/></noscript>
                                             </div>
                                             <div class="product_hover">
-                                                <div class="product_hover_cont"><h3 class="woocommerce-loop-product__title"
-                                                                                    style="">
+                                                <div class="product_hover_cont"><h3
+                                                        class="woocommerce-loop-product__title"
+                                                        style="">
                                                         P1. Beefy Pizza</h3>
                                                     <p><strong>Thành phần</strong></p>
                                                     <p>Thịt bò xay, ngô, sốt BBQ, pho mai.</p>
@@ -1264,7 +1219,8 @@
                                                             data-was-processed="true">
                                                     <noscript><img class="alignnone wp-image-346 size-full"
                                                                    src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                                   alt="Pizza Size L" width="25" height="25"/></noscript>&nbsp;
+                                                                   alt="Pizza Size L" width="25" height="25"/>
+                                                    </noscript>&nbsp;
                                                     Size L / 30cm / 140.000đ</p></div>
                                             </div>
                                             <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
@@ -1279,7 +1235,8 @@
                                                     <tr>
                                                         <td class="label"><label for="pa_size">Size</label></td>
                                                         <td class="value woo-variation-items-wrapper">
-                                                            <select name="" id="" class="value woo-variation-items-wrapper"
+                                                            <select name="" id=""
+                                                                    class="value woo-variation-items-wrapper"
                                                                     style="display: none">
                                                                 <option value="">Chọn một tùy chọn</option>
                                                                 <option value="s" class="attached enabled">S</option>
@@ -1310,14 +1267,17 @@
                                                 <div class="single_variation_wrap">
                                                     <div class="woocommerce-variation single_variation"
                                                          style="display: none"></div>
-                                                    <div class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
+                                                    <div
+                                                        class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
                                                         <div class="quantity">
-                                                            <label class="screen-reader-text" for="quantity_5d659bfc5c52e">
+                                                            <label class="screen-reader-text"
+                                                                   for="quantity_5d659bfc5c52e">
                                                                 Số lượng </label>
                                                             <div class="dc_quantity_input">
                                                                 <input class="minus" type="button" value="-">
                                                                 <input type="number" id="quantity_5d659bfc5c52e"
-                                                                       class="input-text qty text" step="1" min="1" max=""
+                                                                       class="input-text qty text" step="1" min="1"
+                                                                       max=""
                                                                        name="quantity" value="1" title="SL" size="4"
                                                                        pattern="[0-9]*" inputmode="numeric"
                                                                        aria-labelledby="P1. Beefy Pizza số lượng">
@@ -1359,8 +1319,9 @@
                                                                sizes="(max-width: 260px) 100vw, 260px"/></noscript>
                                             </div>
                                             <div class="product_hover">
-                                                <div class="product_hover_cont"><h3 class="woocommerce-loop-product__title"
-                                                                                    style="">
+                                                <div class="product_hover_cont"><h3
+                                                        class="woocommerce-loop-product__title"
+                                                        style="">
                                                         P1. Beefy Pizza</h3>
                                                     <p><strong>Thành phần</strong></p>
                                                     <p>Thịt bò xay, ngô, sốt BBQ, pho mai.</p>
@@ -1392,7 +1353,8 @@
                                                             data-was-processed="true">
                                                     <noscript><img class="alignnone wp-image-346 size-full"
                                                                    src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                                   alt="Pizza Size L" width="25" height="25"/></noscript>&nbsp;
+                                                                   alt="Pizza Size L" width="25" height="25"/>
+                                                    </noscript>&nbsp;
                                                     Size L / 30cm / 140.000đ</p></div>
                                             </div>
                                             <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
@@ -1407,7 +1369,8 @@
                                                     <tr>
                                                         <td class="label"><label for="pa_size">Size</label></td>
                                                         <td class="value woo-variation-items-wrapper">
-                                                            <select name="" id="" class="value woo-variation-items-wrapper"
+                                                            <select name="" id=""
+                                                                    class="value woo-variation-items-wrapper"
                                                                     style="display: none">
                                                                 <option value="">Chọn một tùy chọn</option>
                                                                 <option value="s" class="attached enabled">S</option>
@@ -1438,14 +1401,17 @@
                                                 <div class="single_variation_wrap">
                                                     <div class="woocommerce-variation single_variation"
                                                          style="display: none"></div>
-                                                    <div class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
+                                                    <div
+                                                        class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
                                                         <div class="quantity">
-                                                            <label class="screen-reader-text" for="quantity_5d659bfc5c52e">
+                                                            <label class="screen-reader-text"
+                                                                   for="quantity_5d659bfc5c52e">
                                                                 Số lượng </label>
                                                             <div class="dc_quantity_input">
                                                                 <input class="minus" type="button" value="-">
                                                                 <input type="number" id="quantity_5d659bfc5c52e"
-                                                                       class="input-text qty text" step="1" min="1" max=""
+                                                                       class="input-text qty text" step="1" min="1"
+                                                                       max=""
                                                                        name="quantity" value="1" title="SL" size="4"
                                                                        pattern="[0-9]*" inputmode="numeric"
                                                                        aria-labelledby="P1. Beefy Pizza số lượng">
@@ -1487,8 +1453,9 @@
                                                                sizes="(max-width: 260px) 100vw, 260px"/></noscript>
                                             </div>
                                             <div class="product_hover">
-                                                <div class="product_hover_cont"><h3 class="woocommerce-loop-product__title"
-                                                                                    style="">
+                                                <div class="product_hover_cont"><h3
+                                                        class="woocommerce-loop-product__title"
+                                                        style="">
                                                         P1. Beefy Pizza</h3>
                                                     <p><strong>Thành phần</strong></p>
                                                     <p>Thịt bò xay, ngô, sốt BBQ, pho mai.</p>
@@ -1520,7 +1487,8 @@
                                                             data-was-processed="true">
                                                     <noscript><img class="alignnone wp-image-346 size-full"
                                                                    src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                                   alt="Pizza Size L" width="25" height="25"/></noscript>&nbsp;
+                                                                   alt="Pizza Size L" width="25" height="25"/>
+                                                    </noscript>&nbsp;
                                                     Size L / 30cm / 140.000đ</p></div>
                                             </div>
                                             <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
@@ -1535,7 +1503,8 @@
                                                     <tr>
                                                         <td class="label"><label for="pa_size">Size</label></td>
                                                         <td class="value woo-variation-items-wrapper">
-                                                            <select name="" id="" class="value woo-variation-items-wrapper"
+                                                            <select name="" id=""
+                                                                    class="value woo-variation-items-wrapper"
                                                                     style="display: none">
                                                                 <option value="">Chọn một tùy chọn</option>
                                                                 <option value="s" class="attached enabled">S</option>
@@ -1566,14 +1535,17 @@
                                                 <div class="single_variation_wrap">
                                                     <div class="woocommerce-variation single_variation"
                                                          style="display: none"></div>
-                                                    <div class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
+                                                    <div
+                                                        class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
                                                         <div class="quantity">
-                                                            <label class="screen-reader-text" for="quantity_5d659bfc5c52e">
+                                                            <label class="screen-reader-text"
+                                                                   for="quantity_5d659bfc5c52e">
                                                                 Số lượng </label>
                                                             <div class="dc_quantity_input">
                                                                 <input class="minus" type="button" value="-">
                                                                 <input type="number" id="quantity_5d659bfc5c52e"
-                                                                       class="input-text qty text" step="1" min="1" max=""
+                                                                       class="input-text qty text" step="1" min="1"
+                                                                       max=""
                                                                        name="quantity" value="1" title="SL" size="4"
                                                                        pattern="[0-9]*" inputmode="numeric"
                                                                        aria-labelledby="P1. Beefy Pizza số lượng">
@@ -1615,8 +1587,9 @@
                                                                sizes="(max-width: 260px) 100vw, 260px"/></noscript>
                                             </div>
                                             <div class="product_hover">
-                                                <div class="product_hover_cont"><h3 class="woocommerce-loop-product__title"
-                                                                                    style="">
+                                                <div class="product_hover_cont"><h3
+                                                        class="woocommerce-loop-product__title"
+                                                        style="">
                                                         P1. Beefy Pizza</h3>
                                                     <p><strong>Thành phần</strong></p>
                                                     <p>Thịt bò xay, ngô, sốt BBQ, pho mai.</p>
@@ -1648,7 +1621,8 @@
                                                             data-was-processed="true">
                                                     <noscript><img class="alignnone wp-image-346 size-full"
                                                                    src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                                   alt="Pizza Size L" width="25" height="25"/></noscript>&nbsp;
+                                                                   alt="Pizza Size L" width="25" height="25"/>
+                                                    </noscript>&nbsp;
                                                     Size L / 30cm / 140.000đ</p></div>
                                             </div>
                                             <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
@@ -1663,7 +1637,8 @@
                                                     <tr>
                                                         <td class="label"><label for="pa_size">Size</label></td>
                                                         <td class="value woo-variation-items-wrapper">
-                                                            <select name="" id="" class="value woo-variation-items-wrapper"
+                                                            <select name="" id=""
+                                                                    class="value woo-variation-items-wrapper"
                                                                     style="display: none">
                                                                 <option value="">Chọn một tùy chọn</option>
                                                                 <option value="s" class="attached enabled">S</option>
@@ -1694,14 +1669,17 @@
                                                 <div class="single_variation_wrap">
                                                     <div class="woocommerce-variation single_variation"
                                                          style="display: none"></div>
-                                                    <div class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
+                                                    <div
+                                                        class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
                                                         <div class="quantity">
-                                                            <label class="screen-reader-text" for="quantity_5d659bfc5c52e">
+                                                            <label class="screen-reader-text"
+                                                                   for="quantity_5d659bfc5c52e">
                                                                 Số lượng </label>
                                                             <div class="dc_quantity_input">
                                                                 <input class="minus" type="button" value="-">
                                                                 <input type="number" id="quantity_5d659bfc5c52e"
-                                                                       class="input-text qty text" step="1" min="1" max=""
+                                                                       class="input-text qty text" step="1" min="1"
+                                                                       max=""
                                                                        name="quantity" value="1" title="SL" size="4"
                                                                        pattern="[0-9]*" inputmode="numeric"
                                                                        aria-labelledby="P1. Beefy Pizza số lượng">
@@ -1743,8 +1721,9 @@
                                                                sizes="(max-width: 260px) 100vw, 260px"/></noscript>
                                             </div>
                                             <div class="product_hover">
-                                                <div class="product_hover_cont"><h3 class="woocommerce-loop-product__title"
-                                                                                    style="">
+                                                <div class="product_hover_cont"><h3
+                                                        class="woocommerce-loop-product__title"
+                                                        style="">
                                                         P1. Beefy Pizza</h3>
                                                     <p><strong>Thành phần</strong></p>
                                                     <p>Thịt bò xay, ngô, sốt BBQ, pho mai.</p>
@@ -1776,7 +1755,8 @@
                                                             data-was-processed="true">
                                                     <noscript><img class="alignnone wp-image-346 size-full"
                                                                    src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                                   alt="Pizza Size L" width="25" height="25"/></noscript>&nbsp;
+                                                                   alt="Pizza Size L" width="25" height="25"/>
+                                                    </noscript>&nbsp;
                                                     Size L / 30cm / 140.000đ</p></div>
                                             </div>
                                             <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
@@ -1791,7 +1771,8 @@
                                                     <tr>
                                                         <td class="label"><label for="pa_size">Size</label></td>
                                                         <td class="value woo-variation-items-wrapper">
-                                                            <select name="" id="" class="value woo-variation-items-wrapper"
+                                                            <select name="" id=""
+                                                                    class="value woo-variation-items-wrapper"
                                                                     style="display: none">
                                                                 <option value="">Chọn một tùy chọn</option>
                                                                 <option value="s" class="attached enabled">S</option>
@@ -1822,14 +1803,17 @@
                                                 <div class="single_variation_wrap">
                                                     <div class="woocommerce-variation single_variation"
                                                          style="display: none"></div>
-                                                    <div class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
+                                                    <div
+                                                        class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
                                                         <div class="quantity">
-                                                            <label class="screen-reader-text" for="quantity_5d659bfc5c52e">
+                                                            <label class="screen-reader-text"
+                                                                   for="quantity_5d659bfc5c52e">
                                                                 Số lượng </label>
                                                             <div class="dc_quantity_input">
                                                                 <input class="minus" type="button" value="-">
                                                                 <input type="number" id="quantity_5d659bfc5c52e"
-                                                                       class="input-text qty text" step="1" min="1" max=""
+                                                                       class="input-text qty text" step="1" min="1"
+                                                                       max=""
                                                                        name="quantity" value="1" title="SL" size="4"
                                                                        pattern="[0-9]*" inputmode="numeric"
                                                                        aria-labelledby="P1. Beefy Pizza số lượng">
@@ -1871,8 +1855,9 @@
                                                                sizes="(max-width: 260px) 100vw, 260px"/></noscript>
                                             </div>
                                             <div class="product_hover">
-                                                <div class="product_hover_cont"><h3 class="woocommerce-loop-product__title"
-                                                                                    style="">
+                                                <div class="product_hover_cont"><h3
+                                                        class="woocommerce-loop-product__title"
+                                                        style="">
                                                         P1. Beefy Pizza</h3>
                                                     <p><strong>Thành phần</strong></p>
                                                     <p>Thịt bò xay, ngô, sốt BBQ, pho mai.</p>
@@ -1904,7 +1889,8 @@
                                                             data-was-processed="true">
                                                     <noscript><img class="alignnone wp-image-346 size-full"
                                                                    src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                                   alt="Pizza Size L" width="25" height="25"/></noscript>&nbsp;
+                                                                   alt="Pizza Size L" width="25" height="25"/>
+                                                    </noscript>&nbsp;
                                                     Size L / 30cm / 140.000đ</p></div>
                                             </div>
                                             <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
@@ -1919,7 +1905,8 @@
                                                     <tr>
                                                         <td class="label"><label for="pa_size">Size</label></td>
                                                         <td class="value woo-variation-items-wrapper">
-                                                            <select name="" id="" class="value woo-variation-items-wrapper"
+                                                            <select name="" id=""
+                                                                    class="value woo-variation-items-wrapper"
                                                                     style="display: none">
                                                                 <option value="">Chọn một tùy chọn</option>
                                                                 <option value="s" class="attached enabled">S</option>
@@ -1950,14 +1937,17 @@
                                                 <div class="single_variation_wrap">
                                                     <div class="woocommerce-variation single_variation"
                                                          style="display: none"></div>
-                                                    <div class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
+                                                    <div
+                                                        class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
                                                         <div class="quantity">
-                                                            <label class="screen-reader-text" for="quantity_5d659bfc5c52e">
+                                                            <label class="screen-reader-text"
+                                                                   for="quantity_5d659bfc5c52e">
                                                                 Số lượng </label>
                                                             <div class="dc_quantity_input">
                                                                 <input class="minus" type="button" value="-">
                                                                 <input type="number" id="quantity_5d659bfc5c52e"
-                                                                       class="input-text qty text" step="1" min="1" max=""
+                                                                       class="input-text qty text" step="1" min="1"
+                                                                       max=""
                                                                        name="quantity" value="1" title="SL" size="4"
                                                                        pattern="[0-9]*" inputmode="numeric"
                                                                        aria-labelledby="P1. Beefy Pizza số lượng">
@@ -2005,7 +1995,9 @@
                                         </div>
                                         <div class="combo_title_addcart">
                                             <h3>Combo 01</h3>
-                                            <a href="/?add-to-cart=415" class="button add_to_cart_button product_type_simple ajax_add_to_cart">Mua hàng</a>
+                                            <a href="/?add-to-cart=415"
+                                               class="button add_to_cart_button product_type_simple ajax_add_to_cart">Mua
+                                                hàng</a>
                                         </div>
                                         <div class="combo_info_price"> Cho 2 người
                                             <span class="woocommerce-Price-amount amount">139.000
@@ -2024,7 +2016,9 @@
                                         </div>
                                         <div class="combo_title_addcart">
                                             <h3>Combo 01</h3>
-                                            <a href="/?add-to-cart=415" class="button add_to_cart_button product_type_simple ajax_add_to_cart">Mua hàng</a>
+                                            <a href="/?add-to-cart=415"
+                                               class="button add_to_cart_button product_type_simple ajax_add_to_cart">Mua
+                                                hàng</a>
                                         </div>
                                         <div class="combo_info_price"> Cho 2 người
                                             <span class="woocommerce-Price-amount amount">139.000
@@ -2043,7 +2037,9 @@
                                         </div>
                                         <div class="combo_title_addcart">
                                             <h3>Combo 01</h3>
-                                            <a href="/?add-to-cart=415" class="button add_to_cart_button product_type_simple ajax_add_to_cart">Mua hàng</a>
+                                            <a href="/?add-to-cart=415"
+                                               class="button add_to_cart_button product_type_simple ajax_add_to_cart">Mua
+                                                hàng</a>
                                         </div>
                                         <div class="combo_info_price"> Cho 2 người
                                             <span class="woocommerce-Price-amount amount">139.000
@@ -2062,7 +2058,9 @@
                                         </div>
                                         <div class="combo_title_addcart">
                                             <h3>Combo 01</h3>
-                                            <a href="/?add-to-cart=415" class="button add_to_cart_button product_type_simple ajax_add_to_cart">Mua hàng</a>
+                                            <a href="/?add-to-cart=415"
+                                               class="button add_to_cart_button product_type_simple ajax_add_to_cart">Mua
+                                                hàng</a>
                                         </div>
                                         <div class="combo_info_price"> Cho 2 người
                                             <span class="woocommerce-Price-amount amount">139.000
@@ -2089,9 +2087,13 @@
                     <ul class="row">
                         <li class="col-md-4">
                             <div class="home_blog_img">
-                                <img src="https://www.pizzaexpress.vn/wp-content/uploads/2018/11/Quick-Easy-Spaghetti-Bolognese2-1.jpg" alt="">
+                                <img
+                                    src="https://www.pizzaexpress.vn/wp-content/uploads/2018/11/Quick-Easy-Spaghetti-Bolognese2-1.jpg"
+                                    alt="">
                             </div>
-                            <h3><a href="https://www.pizzaexpress.vn/my-y/" title="Giới thiệu về các loại Mỳ đang được phục vụ bởi Pizza Express">Giới thiệu về các loại Mỳ đang được phục vụ bởi Pizza Express</a></h3>
+                            <h3><a href="https://www.pizzaexpress.vn/my-y/"
+                                   title="Giới thiệu về các loại Mỳ đang được phục vụ bởi Pizza Express">Giới thiệu về
+                                    các loại Mỳ đang được phục vụ bởi Pizza Express</a></h3>
                             <div class="home_blog_des">Mỳ ý sốt bò băm, mỳ ý sốt kem, mỳ ý sốt thịt bò, mỳ...</div>
                             <div class="home_blog_info">
                                 <div class="home_blog_cell">13/12/2018</div>
@@ -2105,9 +2107,13 @@
                         </li>
                         <li class="col-md-4">
                             <div class="home_blog_img">
-                                <img src="https://www.pizzaexpress.vn/wp-content/uploads/2018/11/Quick-Easy-Spaghetti-Bolognese2-1.jpg" alt="">
+                                <img
+                                    src="https://www.pizzaexpress.vn/wp-content/uploads/2018/11/Quick-Easy-Spaghetti-Bolognese2-1.jpg"
+                                    alt="">
                             </div>
-                            <h3><a href="https://www.pizzaexpress.vn/my-y/" title="Giới thiệu về các loại Mỳ đang được phục vụ bởi Pizza Express">Giới thiệu về các loại Mỳ đang được phục vụ bởi Pizza Express</a></h3>
+                            <h3><a href="https://www.pizzaexpress.vn/my-y/"
+                                   title="Giới thiệu về các loại Mỳ đang được phục vụ bởi Pizza Express">Giới thiệu về
+                                    các loại Mỳ đang được phục vụ bởi Pizza Express</a></h3>
                             <div class="home_blog_des">Mỳ ý sốt bò băm, mỳ ý sốt kem, mỳ ý sốt thịt bò, mỳ...</div>
                             <div class="home_blog_info">
                                 <div class="home_blog_cell">13/12/2018</div>
@@ -2121,9 +2127,13 @@
                         </li>
                         <li class="col-md-4">
                             <div class="home_blog_img">
-                                <img src="https://www.pizzaexpress.vn/wp-content/uploads/2018/11/Quick-Easy-Spaghetti-Bolognese2-1.jpg" alt="">
+                                <img
+                                    src="https://www.pizzaexpress.vn/wp-content/uploads/2018/11/Quick-Easy-Spaghetti-Bolognese2-1.jpg"
+                                    alt="">
                             </div>
-                            <h3><a href="https://www.pizzaexpress.vn/my-y/" title="Giới thiệu về các loại Mỳ đang được phục vụ bởi Pizza Express">Giới thiệu về các loại Mỳ đang được phục vụ bởi Pizza Express</a></h3>
+                            <h3><a href="https://www.pizzaexpress.vn/my-y/"
+                                   title="Giới thiệu về các loại Mỳ đang được phục vụ bởi Pizza Express">Giới thiệu về
+                                    các loại Mỳ đang được phục vụ bởi Pizza Express</a></h3>
                             <div class="home_blog_des">Mỳ ý sốt bò băm, mỳ ý sốt kem, mỳ ý sốt thịt bò, mỳ...</div>
                             <div class="home_blog_info">
                                 <div class="home_blog_cell">13/12/2018</div>

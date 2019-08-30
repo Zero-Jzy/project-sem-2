@@ -78,7 +78,7 @@ ul.dc_columns li .product_item .cart {
     clear: both;
     margin-bottom: 0;
     position: relative;
-    z-index: 9999;
+    z-index: 2;
     padding: 0 10px;
 }
 

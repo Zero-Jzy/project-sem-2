@@ -40,7 +40,7 @@
 <body class="animsition">
 <header>
     <!-- Header desktop -->
-    <div class="wrap-menu-header {{Request::is(['/','contact','about-us']) ? 'gradient1' : ''}}  trans-0-4">
+    <div class="wrap-menu-header {{Request::is(['/','contact','about-us']) ? 'gradient1' : 'box-shadow-header-custom'}}  trans-0-4">
         <div class="container h-full">
             <div class="wrap_header trans-0-3">
                 <!-- Logo -->
@@ -109,7 +109,6 @@
                                         </form>
                                     </div>
                                 </li>
-
                             @else
                                 <li>
                                     <a href="{{ route('login') }}">Login</a>
@@ -304,7 +303,7 @@
     var rightNavbar =  $('.right-navbar a');
     var path = window.location.pathname;
 
-    if(['/menu','/login','/register'].indexOf(path) !== -1){
+    if(['/menu','/login','/register','/profile'].indexOf(path) !== -1){
         itemHeader.css('color','black');
         rightNavbar.css('color','#000')
     }
