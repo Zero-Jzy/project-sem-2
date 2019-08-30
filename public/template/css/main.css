@@ -759,7 +759,7 @@ input[type="date" i] {
 
 .show-overlay-sidebar {
   visibility: visible;
-  background-color: rgba(0,0,0,0.65);
+  background-color: rgba(0,0,0,0.25);
 }
 
 /* ------------------------------------ */
