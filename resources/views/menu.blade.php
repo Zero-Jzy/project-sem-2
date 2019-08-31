@@ -1,4 +1,5 @@
 @extends('layouts.master', ['title' => 'Menu'])
+
 @section('content')
     <aside style="overflow: inherit" class="sidebar trans-0-4">
         <!-- Button Hide sidebar -->
@@ -9,298 +10,322 @@
         top: 15%;
         width: 50px;
         height: 50px;
-        background: cadetblue;
+box-shadow: -2px 0px 5px 0px rgba(0,0,0,0.25);
+border-radius: 10px 0px 0px 10px;
+background: white;
         border: none;
 ">
-            <i class="fal fa-shopping-bag"></i>
+            <span><i class="fal fa-shopping-bag"></i></span>
         </button>
 
         <!-- - -->
-            <div class="my-fill-tab">
-                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                    <li class="nav-item">
-                        <a class="active"
-                           id="pills-dish-tab"
-                           data-toggle="pill"
-                           href="#pills-dish"
-                           role="tab"
-                           aria-controls="pills-dish"
-                           aria-selected="true">
-                            Dishs
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class=""
-                           id="pills-set-tab"
-                           data-toggle="pill"
-                           href="#pills-set"
-                           role="tab"
-                           aria-controls="pills-set"
-                           aria-selected="false">
-                            Sets
-                        </a>
-                    </li>
-                </ul>
-            </div>
+        <div class="my-fill-tab">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="active"
+                       id="pills-dish-tab"
+                       data-toggle="pill"
+                       href="#pills-dish"
+                       role="tab"
+                       aria-controls="pills-dish"
+                       aria-selected="true">
+                        Dishs
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class=""
+                       id="pills-set-tab"
+                       data-toggle="pill"
+                       href="#pills-set"
+                       role="tab"
+                       aria-controls="pills-set"
+                       aria-selected="false">
+                        Sets
+                    </a>
+                </li>
+            </ul>
+        </div>
 
-            <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="pills-dish" role="tabpanel" aria-labelledby="pills-dish-tab">
-                    <div class="list-dish scrollbar">
-                        <div class="dish-item">
-                            <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                                <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                    <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                                </div>
-
-                                <div class="text-blo3 flex-col-l-m">
-                                    <a href="#" class="txt19 m-b-3">
-                                        Duis massa
-                                    </a>
-
-                                    <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                                </div>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-dish" role="tabpanel" aria-labelledby="pills-dish-tab">
+                <div class="list-dish scrollbar">
+                    <div class="dish-item">
+                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
                             </div>
-                            <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                                <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                    <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                                </div>
 
-                                <div class="text-blo3 flex-col-l-m">
-                                    <a href="#" class="txt19 m-b-3">
-                                        Duis massa
-                                    </a>
+                            <div class="text-blo3 flex-col-l-m">
+                                <a href="#" class="txt19 m-b-3">
+                                    Duis massa
+                                </a>
 
-                                    <span class="txt10 m-t-20">
+                                <span class="txt10 m-t-20">
 								$12.75
 							</span>
-                                </div>
-                            </div>
-                            <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                                <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                    <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                                </div>
-
-                                <div class="text-blo3 flex-col-l-m">
-                                    <a href="#" class="txt19 m-b-3">
-                                        Duis massa
-                                    </a>
-
-                                    <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                                </div>
-                            </div>
-                            <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                                <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                    <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                                </div>
-
-                                <div class="text-blo3 flex-col-l-m">
-                                    <a href="#" class="txt19 m-b-3">
-                                        Duis massa
-                                    </a>
-
-                                    <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                                </div>
-                            </div>
-                            <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                                <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                    <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                                </div>
-
-                                <div class="text-blo3 flex-col-l-m">
-                                    <a href="#" class="txt19 m-b-3">
-                                        Duis massa
-                                    </a>
-
-                                    <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                                </div>
-                            </div>
-                            <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                                <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                    <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                                </div>
-
-                                <div class="text-blo3 flex-col-l-m">
-                                    <a href="#" class="txt19 m-b-3">
-                                        Duis massa
-                                    </a>
-
-                                    <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                                </div>
-                            </div>
-                            <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                                <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                    <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                                </div>
-
-                                <div class="text-blo3 flex-col-l-m">
-                                    <a href="#" class="txt19 m-b-3">
-                                        Duis massa
-                                    </a>
-
-                                    <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="total-box">
-                        <div style="height: 30px">
-                            <h4 class="text-center text-uppercase" style="line-height: 50px">Total</h4>
-                        </div>
-                        <div class="total-content">
-                            <div class="row ml-0">
-                                <div class="col-6">
-                                    <br>
-                                </div>
-                                <div class="col-6">
-                                    <br>
-                                </div>
-                                <div class="col-6">
-                                    <br>
-                                </div>
-                                <div class="col-6">
-                                    <br>
-                                </div>
-                                <div class="col-6">
-                                    <br>
-                                </div>
+                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
                             </div>
 
+                            <div class="text-blo3 flex-col-l-m">
+                                <a href="#" class="txt19 m-b-3">
+                                    Duis massa
+                                </a>
+
+                                <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                            </div>
                         </div>
-                        <button type="submit" class="btn-incard btn3 flex-c-m size18 txt11 trans-0-4 m-10 m-auto">
-                            Create set
-                        </button>
+                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                            </div>
+
+                            <div class="text-blo3 flex-col-l-m">
+                                <a href="#" class="txt19 m-b-3">
+                                    Duis massa
+                                </a>
+
+                                <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                            </div>
+                        </div>
+                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                            </div>
+
+                            <div class="text-blo3 flex-col-l-m">
+                                <a href="#" class="txt19 m-b-3">
+                                    Duis massa
+                                </a>
+
+                                <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                            </div>
+                        </div>
+                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                            </div>
+
+                            <div class="text-blo3 flex-col-l-m">
+                                <a href="#" class="txt19 m-b-3">
+                                    Duis massa
+                                </a>
+
+                                <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                            </div>
+                        </div>
+                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                            </div>
+
+                            <div class="text-blo3 flex-col-l-m">
+                                <a href="#" class="txt19 m-b-3">
+                                    Duis massa
+                                </a>
+
+                                <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                            </div>
+                        </div>
+                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                            </div>
+
+                            <div class="text-blo3 flex-col-l-m">
+                                <a href="#" class="txt19 m-b-3">
+                                    Duis massa
+                                </a>
+
+                                <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="pills-set" role="tabpanel" aria-labelledby="pills-set-tab">
-                    <div class="list-set scrollbar">
-                        <div class="dish-item">
-                            <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                                <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                    <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                                </div>
-
-                                <div class="text-blo3 flex-col-l-m">
-                                    <a href="#" class="txt19 m-b-3">
-                                        Duis massa
-                                    </a>
-
-                                    <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                                </div>
+                <div class="total-box">
+                    <div style="height: 30px">
+                        <h5 class="text-center text-uppercase" style="line-height: 50px">Total</h5>
+                    </div>
+                    <div class="total-content">
+                        <div class="row ml-0">
+                            <div class="col-6">
+                                <br>
                             </div>
-                            <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                                <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                    <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                                </div>
-
-                                <div class="text-blo3 flex-col-l-m">
-                                    <a href="#" class="txt19 m-b-3">
-                                        Duis massa
-                                    </a>
-
-                                    <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                                </div>
+                            <div class="col-6">
+                                <br>
                             </div>
-                            <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                                <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                    <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                                </div>
-
-                                <div class="text-blo3 flex-col-l-m">
-                                    <a href="#" class="txt19 m-b-3">
-                                        Duis massa
-                                    </a>
-
-                                    <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                                </div>
+                            <div class="col-6">
+                                <br>
                             </div>
-                            <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                                <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                    <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                                </div>
-
-                                <div class="text-blo3 flex-col-l-m">
-                                    <a href="#" class="txt19 m-b-3">
-                                        Duis massa
-                                    </a>
-
-                                    <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                                </div>
+                            <div class="col-6">
+                                <br>
                             </div>
-                            <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                                <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                    <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                                </div>
-
-                                <div class="text-blo3 flex-col-l-m">
-                                    <a href="#" class="txt19 m-b-3">
-                                        Duis massa
-                                    </a>
-
-                                    <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                                </div>
+                            <div class="col-6">
+                                <br>
                             </div>
-                            <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                                <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                    <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                                </div>
+                        </div>
 
-                                <div class="text-blo3 flex-col-l-m">
-                                    <a href="#" class="txt19 m-b-3">
-                                        Duis massa
-                                    </a>
-
-                                    <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                                </div>
+                    </div>
+                    <button type="submit" class="btn-incard btn3 flex-c-m size18 txt11 trans-0-4 m-10 m-auto">
+                        Create set
+                    </button>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-set" role="tabpanel" aria-labelledby="pills-set-tab">
+                <div class="list-dish scrollbar">
+                    <div class="dish-item">
+                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
                             </div>
-                            <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                                <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                    <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                                </div>
 
-                                <div class="text-blo3 flex-col-l-m">
-                                    <a href="#" class="txt19 m-b-3">
-                                        Duis massa
-                                    </a>
+                            <div class="text-blo3 flex-col-l-m">
+                                <a href="#" class="txt19 m-b-3">
+                                    Duis massa
+                                </a>
 
-                                    <span class="txt10 m-t-20">
+                                <span class="txt10 m-t-20">
 								$12.75
 							</span>
-                                </div>
+                            </div>
+                        </div>
+                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                            </div>
+
+                            <div class="text-blo3 flex-col-l-m">
+                                <a href="#" class="txt19 m-b-3">
+                                    Duis massa
+                                </a>
+
+                                <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                            </div>
+                        </div>
+                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                            </div>
+
+                            <div class="text-blo3 flex-col-l-m">
+                                <a href="#" class="txt19 m-b-3">
+                                    Duis massa
+                                </a>
+
+                                <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                            </div>
+                        </div>
+                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                            </div>
+
+                            <div class="text-blo3 flex-col-l-m">
+                                <a href="#" class="txt19 m-b-3">
+                                    Duis massa
+                                </a>
+
+                                <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                            </div>
+                        </div>
+                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                            </div>
+
+                            <div class="text-blo3 flex-col-l-m">
+                                <a href="#" class="txt19 m-b-3">
+                                    Duis massa
+                                </a>
+
+                                <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                            </div>
+                        </div>
+                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                            </div>
+
+                            <div class="text-blo3 flex-col-l-m">
+                                <a href="#" class="txt19 m-b-3">
+                                    Duis massa
+                                </a>
+
+                                <span class="txt10 m-t-20">
+								$12.75
+							</span>
+                            </div>
+                        </div>
+                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
+                            </div>
+
+                            <div class="text-blo3 flex-col-l-m">
+                                <a href="#" class="txt19 m-b-3">
+                                    Duis massa
+                                </a>
+
+                                <span class="txt10 m-t-20">
+								$12.75
+							</span>
                             </div>
                         </div>
                     </div>
-                    <div class="btn-checkout-box">
-                        <button type="submit" class="btn-incard btn3 flex-c-m size18 txt11 trans-0-4 m-10 m-auto">
-                            Checkout
-                        </button>
+                </div>
+                <div class="total-box">
+                    <div style="height: 30px">
+                        <h5 class="text-center text-uppercase" style="line-height: 50px">Total</h5>
                     </div>
+                    <div class="total-content">
+                        <div class="row ml-0">
+                            <div class="col-6">
+                                <br>
+                            </div>
+                            <div class="col-6">
+                                <br>
+                            </div>
+                            <div class="col-6">
+                                <br>
+                            </div>
+                            <div class="col-6">
+                                <br>
+                            </div>
+                            <div class="col-6">
+                                <br>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button type="submit" class="btn-incard btn3 flex-c-m size18 txt11 trans-0-4 m-10 m-auto">
+                        Checkout
+                    </button>
                 </div>
             </div>
-
+        </div>
     </aside>
 
     <div class="kc-col-container">
@@ -322,13 +347,9 @@
                 <span class="line_text">Thực đơn</span>
             </div>
         </div>
-        <div data-open-on-mouseover="" data-tab-active="1" data-effect-option="yes"
-             class="kc-elm kc-css-410377 kc_tabs group tabs_thucdon">
+        <div class="container kc-elm kc-css-410377 kc_tabs group tabs_thucdon">
             <div class="kc_wrapper ui-tabs kc_clearfix">
-                <ul class="kc_tabs_nav ui-tabs-nav kc_clearfix" style="display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
-    padding: 0 150px;">
+                <ul class="kc_tabs_nav ui-tabs-nav kc_clearfix d-flex justify-content-between py-5 px-3">
                     <li class="ui-tabs-active"
                         style="background: url('https://www.pizzaexpress.vn/wp-content/themes/dinhcode/img/icon_pizza_active.png')center top 10px no-repeat;height: 100px;">
                         <a href="#pizza" data-prevent="scroll">Pizza</a>
@@ -416,11 +437,11 @@
                                                     Size L / 30cm / 140.000đ</p></div>
                                             </div>
                                             <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
-                                                    class="price">
+                                                class="price">
                                         <span class="woocommerce-Price-amount amount">80.000<span
-                                                    class="woocommerce-Price-currencySymbol">₫</span>
+                                                class="woocommerce-Price-currencySymbol">₫</span>
                                         </span> – <span class="woocommerce-Price-amount amount">140.000<span
-                                                            class="woocommerce-Price-currencySymbol">₫</span></span></span>
+                                                        class="woocommerce-Price-currencySymbol">₫</span></span></span>
                                             <form action="" class="variations_form cart">
                                                 <table class="variations">
                                                     <tbody>
@@ -439,17 +460,17 @@
                                                                 <li data-wvstooltip="S"
                                                                     class="variable-item button-variable-item button-variable-item-s"
                                                                     title="S" data-value="s"><span
-                                                                            class="variable-item-span variable-item-span-button">S</span>
+                                                                        class="variable-item-span variable-item-span-button">S</span>
                                                                 </li>
                                                                 <li data-wvstooltip="M"
                                                                     class="variable-item button-variable-item button-variable-item-m"
                                                                     title="M" data-value="m"><span
-                                                                            class="variable-item-span variable-item-span-button">M</span>
+                                                                        class="variable-item-span variable-item-span-button">M</span>
                                                                 </li>
                                                                 <li data-wvstooltip="L"
                                                                     class="variable-item button-variable-item button-variable-item-l"
                                                                     title="L" data-value="l"><span
-                                                                            class="variable-item-span variable-item-span-button">L</span>
+                                                                        class="variable-item-span variable-item-span-button">L</span>
                                                                 </li>
                                                             </ul>
                                                         </td>
@@ -550,11 +571,11 @@
                                                     Size L / 30cm / 140.000đ</p></div>
                                             </div>
                                             <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
-                                                    class="price">
+                                                class="price">
                                         <span class="woocommerce-Price-amount amount">80.000<span
-                                                    class="woocommerce-Price-currencySymbol">₫</span>
+                                                class="woocommerce-Price-currencySymbol">₫</span>
                                         </span> – <span class="woocommerce-Price-amount amount">140.000<span
-                                                            class="woocommerce-Price-currencySymbol">₫</span></span></span>
+                                                        class="woocommerce-Price-currencySymbol">₫</span></span></span>
                                             <form action="" class="variations_form cart">
                                                 <table class="variations">
                                                     <tbody>
@@ -573,17 +594,17 @@
                                                                 <li data-wvstooltip="S"
                                                                     class="variable-item button-variable-item button-variable-item-s"
                                                                     title="S" data-value="s"><span
-                                                                            class="variable-item-span variable-item-span-button">S</span>
+                                                                        class="variable-item-span variable-item-span-button">S</span>
                                                                 </li>
                                                                 <li data-wvstooltip="M"
                                                                     class="variable-item button-variable-item button-variable-item-m"
                                                                     title="M" data-value="m"><span
-                                                                            class="variable-item-span variable-item-span-button">M</span>
+                                                                        class="variable-item-span variable-item-span-button">M</span>
                                                                 </li>
                                                                 <li data-wvstooltip="L"
                                                                     class="variable-item button-variable-item button-variable-item-l"
                                                                     title="L" data-value="l"><span
-                                                                            class="variable-item-span variable-item-span-button">L</span>
+                                                                        class="variable-item-span variable-item-span-button">L</span>
                                                                 </li>
                                                             </ul>
                                                         </td>
@@ -684,11 +705,11 @@
                                                     Size L / 30cm / 140.000đ</p></div>
                                             </div>
                                             <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
-                                                    class="price">
+                                                class="price">
                                         <span class="woocommerce-Price-amount amount">80.000<span
-                                                    class="woocommerce-Price-currencySymbol">₫</span>
+                                                class="woocommerce-Price-currencySymbol">₫</span>
                                         </span> – <span class="woocommerce-Price-amount amount">140.000<span
-                                                            class="woocommerce-Price-currencySymbol">₫</span></span></span>
+                                                        class="woocommerce-Price-currencySymbol">₫</span></span></span>
                                             <form action="" class="variations_form cart">
                                                 <table class="variations">
                                                     <tbody>
@@ -707,17 +728,17 @@
                                                                 <li data-wvstooltip="S"
                                                                     class="variable-item button-variable-item button-variable-item-s"
                                                                     title="S" data-value="s"><span
-                                                                            class="variable-item-span variable-item-span-button">S</span>
+                                                                        class="variable-item-span variable-item-span-button">S</span>
                                                                 </li>
                                                                 <li data-wvstooltip="M"
                                                                     class="variable-item button-variable-item button-variable-item-m"
                                                                     title="M" data-value="m"><span
-                                                                            class="variable-item-span variable-item-span-button">M</span>
+                                                                        class="variable-item-span variable-item-span-button">M</span>
                                                                 </li>
                                                                 <li data-wvstooltip="L"
                                                                     class="variable-item button-variable-item button-variable-item-l"
                                                                     title="L" data-value="l"><span
-                                                                            class="variable-item-span variable-item-span-button">L</span>
+                                                                        class="variable-item-span variable-item-span-button">L</span>
                                                                 </li>
                                                             </ul>
                                                         </td>
@@ -818,11 +839,11 @@
                                                     Size L / 30cm / 140.000đ</p></div>
                                             </div>
                                             <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
-                                                    class="price">
+                                                class="price">
                                         <span class="woocommerce-Price-amount amount">80.000<span
-                                                    class="woocommerce-Price-currencySymbol">₫</span>
+                                                class="woocommerce-Price-currencySymbol">₫</span>
                                         </span> – <span class="woocommerce-Price-amount amount">140.000<span
-                                                            class="woocommerce-Price-currencySymbol">₫</span></span></span>
+                                                        class="woocommerce-Price-currencySymbol">₫</span></span></span>
                                             <form action="" class="variations_form cart">
                                                 <table class="variations">
                                                     <tbody>
@@ -841,17 +862,17 @@
                                                                 <li data-wvstooltip="S"
                                                                     class="variable-item button-variable-item button-variable-item-s"
                                                                     title="S" data-value="s"><span
-                                                                            class="variable-item-span variable-item-span-button">S</span>
+                                                                        class="variable-item-span variable-item-span-button">S</span>
                                                                 </li>
                                                                 <li data-wvstooltip="M"
                                                                     class="variable-item button-variable-item button-variable-item-m"
                                                                     title="M" data-value="m"><span
-                                                                            class="variable-item-span variable-item-span-button">M</span>
+                                                                        class="variable-item-span variable-item-span-button">M</span>
                                                                 </li>
                                                                 <li data-wvstooltip="L"
                                                                     class="variable-item button-variable-item button-variable-item-l"
                                                                     title="L" data-value="l"><span
-                                                                            class="variable-item-span variable-item-span-button">L</span>
+                                                                        class="variable-item-span variable-item-span-button">L</span>
                                                                 </li>
                                                             </ul>
                                                         </td>
@@ -952,11 +973,11 @@
                                                     Size L / 30cm / 140.000đ</p></div>
                                             </div>
                                             <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
-                                                    class="price">
+                                                class="price">
                                         <span class="woocommerce-Price-amount amount">80.000<span
-                                                    class="woocommerce-Price-currencySymbol">₫</span>
+                                                class="woocommerce-Price-currencySymbol">₫</span>
                                         </span> – <span class="woocommerce-Price-amount amount">140.000<span
-                                                            class="woocommerce-Price-currencySymbol">₫</span></span></span>
+                                                        class="woocommerce-Price-currencySymbol">₫</span></span></span>
                                             <form action="" class="variations_form cart">
                                                 <table class="variations">
                                                     <tbody>
@@ -975,17 +996,17 @@
                                                                 <li data-wvstooltip="S"
                                                                     class="variable-item button-variable-item button-variable-item-s"
                                                                     title="S" data-value="s"><span
-                                                                            class="variable-item-span variable-item-span-button">S</span>
+                                                                        class="variable-item-span variable-item-span-button">S</span>
                                                                 </li>
                                                                 <li data-wvstooltip="M"
                                                                     class="variable-item button-variable-item button-variable-item-m"
                                                                     title="M" data-value="m"><span
-                                                                            class="variable-item-span variable-item-span-button">M</span>
+                                                                        class="variable-item-span variable-item-span-button">M</span>
                                                                 </li>
                                                                 <li data-wvstooltip="L"
                                                                     class="variable-item button-variable-item button-variable-item-l"
                                                                     title="L" data-value="l"><span
-                                                                            class="variable-item-span variable-item-span-button">L</span>
+                                                                        class="variable-item-span variable-item-span-button">L</span>
                                                                 </li>
                                                             </ul>
                                                         </td>
@@ -1086,11 +1107,11 @@
                                                     Size L / 30cm / 140.000đ</p></div>
                                             </div>
                                             <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
-                                                    class="price">
+                                                class="price">
                                         <span class="woocommerce-Price-amount amount">80.000<span
-                                                    class="woocommerce-Price-currencySymbol">₫</span>
+                                                class="woocommerce-Price-currencySymbol">₫</span>
                                         </span> – <span class="woocommerce-Price-amount amount">140.000<span
-                                                            class="woocommerce-Price-currencySymbol">₫</span></span></span>
+                                                        class="woocommerce-Price-currencySymbol">₫</span></span></span>
                                             <form action="" class="variations_form cart">
                                                 <table class="variations">
                                                     <tbody>
@@ -1109,17 +1130,17 @@
                                                                 <li data-wvstooltip="S"
                                                                     class="variable-item button-variable-item button-variable-item-s"
                                                                     title="S" data-value="s"><span
-                                                                            class="variable-item-span variable-item-span-button">S</span>
+                                                                        class="variable-item-span variable-item-span-button">S</span>
                                                                 </li>
                                                                 <li data-wvstooltip="M"
                                                                     class="variable-item button-variable-item button-variable-item-m"
                                                                     title="M" data-value="m"><span
-                                                                            class="variable-item-span variable-item-span-button">M</span>
+                                                                        class="variable-item-span variable-item-span-button">M</span>
                                                                 </li>
                                                                 <li data-wvstooltip="L"
                                                                     class="variable-item button-variable-item button-variable-item-l"
                                                                     title="L" data-value="l"><span
-                                                                            class="variable-item-span variable-item-span-button">L</span>
+                                                                        class="variable-item-span variable-item-span-button">L</span>
                                                                 </li>
                                                             </ul>
                                                         </td>
@@ -1220,11 +1241,11 @@
                                                     Size L / 30cm / 140.000đ</p></div>
                                             </div>
                                             <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
-                                                    class="price">
+                                                class="price">
                                         <span class="woocommerce-Price-amount amount">80.000<span
-                                                    class="woocommerce-Price-currencySymbol">₫</span>
+                                                class="woocommerce-Price-currencySymbol">₫</span>
                                         </span> – <span class="woocommerce-Price-amount amount">140.000<span
-                                                            class="woocommerce-Price-currencySymbol">₫</span></span></span>
+                                                        class="woocommerce-Price-currencySymbol">₫</span></span></span>
                                             <form action="" class="variations_form cart">
                                                 <table class="variations">
                                                     <tbody>
@@ -1243,17 +1264,17 @@
                                                                 <li data-wvstooltip="S"
                                                                     class="variable-item button-variable-item button-variable-item-s"
                                                                     title="S" data-value="s"><span
-                                                                            class="variable-item-span variable-item-span-button">S</span>
+                                                                        class="variable-item-span variable-item-span-button">S</span>
                                                                 </li>
                                                                 <li data-wvstooltip="M"
                                                                     class="variable-item button-variable-item button-variable-item-m"
                                                                     title="M" data-value="m"><span
-                                                                            class="variable-item-span variable-item-span-button">M</span>
+                                                                        class="variable-item-span variable-item-span-button">M</span>
                                                                 </li>
                                                                 <li data-wvstooltip="L"
                                                                     class="variable-item button-variable-item button-variable-item-l"
                                                                     title="L" data-value="l"><span
-                                                                            class="variable-item-span variable-item-span-button">L</span>
+                                                                        class="variable-item-span variable-item-span-button">L</span>
                                                                 </li>
                                                             </ul>
                                                         </td>
@@ -1354,11 +1375,11 @@
                                                     Size L / 30cm / 140.000đ</p></div>
                                             </div>
                                             <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
-                                                    class="price">
+                                                class="price">
                                         <span class="woocommerce-Price-amount amount">80.000<span
-                                                    class="woocommerce-Price-currencySymbol">₫</span>
+                                                class="woocommerce-Price-currencySymbol">₫</span>
                                         </span> – <span class="woocommerce-Price-amount amount">140.000<span
-                                                            class="woocommerce-Price-currencySymbol">₫</span></span></span>
+                                                        class="woocommerce-Price-currencySymbol">₫</span></span></span>
                                             <form action="" class="variations_form cart">
                                                 <table class="variations">
                                                     <tbody>
@@ -1377,17 +1398,17 @@
                                                                 <li data-wvstooltip="S"
                                                                     class="variable-item button-variable-item button-variable-item-s"
                                                                     title="S" data-value="s"><span
-                                                                            class="variable-item-span variable-item-span-button">S</span>
+                                                                        class="variable-item-span variable-item-span-button">S</span>
                                                                 </li>
                                                                 <li data-wvstooltip="M"
                                                                     class="variable-item button-variable-item button-variable-item-m"
                                                                     title="M" data-value="m"><span
-                                                                            class="variable-item-span variable-item-span-button">M</span>
+                                                                        class="variable-item-span variable-item-span-button">M</span>
                                                                 </li>
                                                                 <li data-wvstooltip="L"
                                                                     class="variable-item button-variable-item button-variable-item-l"
                                                                     title="L" data-value="l"><span
-                                                                            class="variable-item-span variable-item-span-button">L</span>
+                                                                        class="variable-item-span variable-item-span-button">L</span>
                                                                 </li>
                                                             </ul>
                                                         </td>
@@ -1488,11 +1509,11 @@
                                                     Size L / 30cm / 140.000đ</p></div>
                                             </div>
                                             <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
-                                                    class="price">
+                                                class="price">
                                         <span class="woocommerce-Price-amount amount">80.000<span
-                                                    class="woocommerce-Price-currencySymbol">₫</span>
+                                                class="woocommerce-Price-currencySymbol">₫</span>
                                         </span> – <span class="woocommerce-Price-amount amount">140.000<span
-                                                            class="woocommerce-Price-currencySymbol">₫</span></span></span>
+                                                        class="woocommerce-Price-currencySymbol">₫</span></span></span>
                                             <form action="" class="variations_form cart">
                                                 <table class="variations">
                                                     <tbody>
@@ -1511,17 +1532,17 @@
                                                                 <li data-wvstooltip="S"
                                                                     class="variable-item button-variable-item button-variable-item-s"
                                                                     title="S" data-value="s"><span
-                                                                            class="variable-item-span variable-item-span-button">S</span>
+                                                                        class="variable-item-span variable-item-span-button">S</span>
                                                                 </li>
                                                                 <li data-wvstooltip="M"
                                                                     class="variable-item button-variable-item button-variable-item-m"
                                                                     title="M" data-value="m"><span
-                                                                            class="variable-item-span variable-item-span-button">M</span>
+                                                                        class="variable-item-span variable-item-span-button">M</span>
                                                                 </li>
                                                                 <li data-wvstooltip="L"
                                                                     class="variable-item button-variable-item button-variable-item-l"
                                                                     title="L" data-value="l"><span
-                                                                            class="variable-item-span variable-item-span-button">L</span>
+                                                                        class="variable-item-span variable-item-span-button">L</span>
                                                                 </li>
                                                             </ul>
                                                         </td>
@@ -1622,11 +1643,11 @@
                                                     Size L / 30cm / 140.000đ</p></div>
                                             </div>
                                             <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
-                                                    class="price">
+                                                class="price">
                                         <span class="woocommerce-Price-amount amount">80.000<span
-                                                    class="woocommerce-Price-currencySymbol">₫</span>
+                                                class="woocommerce-Price-currencySymbol">₫</span>
                                         </span> – <span class="woocommerce-Price-amount amount">140.000<span
-                                                            class="woocommerce-Price-currencySymbol">₫</span></span></span>
+                                                        class="woocommerce-Price-currencySymbol">₫</span></span></span>
                                             <form action="" class="variations_form cart">
                                                 <table class="variations">
                                                     <tbody>
@@ -1645,17 +1666,17 @@
                                                                 <li data-wvstooltip="S"
                                                                     class="variable-item button-variable-item button-variable-item-s"
                                                                     title="S" data-value="s"><span
-                                                                            class="variable-item-span variable-item-span-button">S</span>
+                                                                        class="variable-item-span variable-item-span-button">S</span>
                                                                 </li>
                                                                 <li data-wvstooltip="M"
                                                                     class="variable-item button-variable-item button-variable-item-m"
                                                                     title="M" data-value="m"><span
-                                                                            class="variable-item-span variable-item-span-button">M</span>
+                                                                        class="variable-item-span variable-item-span-button">M</span>
                                                                 </li>
                                                                 <li data-wvstooltip="L"
                                                                     class="variable-item button-variable-item button-variable-item-l"
                                                                     title="L" data-value="l"><span
-                                                                            class="variable-item-span variable-item-span-button">L</span>
+                                                                        class="variable-item-span variable-item-span-button">L</span>
                                                                 </li>
                                                             </ul>
                                                         </td>
@@ -1756,11 +1777,11 @@
                                                     Size L / 30cm / 140.000đ</p></div>
                                             </div>
                                             <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
-                                                    class="price">
+                                                class="price">
                                         <span class="woocommerce-Price-amount amount">80.000<span
-                                                    class="woocommerce-Price-currencySymbol">₫</span>
+                                                class="woocommerce-Price-currencySymbol">₫</span>
                                         </span> – <span class="woocommerce-Price-amount amount">140.000<span
-                                                            class="woocommerce-Price-currencySymbol">₫</span></span></span>
+                                                        class="woocommerce-Price-currencySymbol">₫</span></span></span>
                                             <form action="" class="variations_form cart">
                                                 <table class="variations">
                                                     <tbody>
@@ -1779,17 +1800,17 @@
                                                                 <li data-wvstooltip="S"
                                                                     class="variable-item button-variable-item button-variable-item-s"
                                                                     title="S" data-value="s"><span
-                                                                            class="variable-item-span variable-item-span-button">S</span>
+                                                                        class="variable-item-span variable-item-span-button">S</span>
                                                                 </li>
                                                                 <li data-wvstooltip="M"
                                                                     class="variable-item button-variable-item button-variable-item-m"
                                                                     title="M" data-value="m"><span
-                                                                            class="variable-item-span variable-item-span-button">M</span>
+                                                                        class="variable-item-span variable-item-span-button">M</span>
                                                                 </li>
                                                                 <li data-wvstooltip="L"
                                                                     class="variable-item button-variable-item button-variable-item-l"
                                                                     title="L" data-value="l"><span
-                                                                            class="variable-item-span variable-item-span-button">L</span>
+                                                                        class="variable-item-span variable-item-span-button">L</span>
                                                                 </li>
                                                             </ul>
                                                         </td>
@@ -1890,11 +1911,11 @@
                                                     Size L / 30cm / 140.000đ</p></div>
                                             </div>
                                             <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
-                                                    class="price">
+                                                class="price">
                                         <span class="woocommerce-Price-amount amount">80.000<span
-                                                    class="woocommerce-Price-currencySymbol">₫</span>
+                                                class="woocommerce-Price-currencySymbol">₫</span>
                                         </span> – <span class="woocommerce-Price-amount amount">140.000<span
-                                                            class="woocommerce-Price-currencySymbol">₫</span></span></span>
+                                                        class="woocommerce-Price-currencySymbol">₫</span></span></span>
                                             <form action="" class="variations_form cart">
                                                 <table class="variations">
                                                     <tbody>
@@ -1913,17 +1934,17 @@
                                                                 <li data-wvstooltip="S"
                                                                     class="variable-item button-variable-item button-variable-item-s"
                                                                     title="S" data-value="s"><span
-                                                                            class="variable-item-span variable-item-span-button">S</span>
+                                                                        class="variable-item-span variable-item-span-button">S</span>
                                                                 </li>
                                                                 <li data-wvstooltip="M"
                                                                     class="variable-item button-variable-item button-variable-item-m"
                                                                     title="M" data-value="m"><span
-                                                                            class="variable-item-span variable-item-span-button">M</span>
+                                                                        class="variable-item-span variable-item-span-button">M</span>
                                                                 </li>
                                                                 <li data-wvstooltip="L"
                                                                     class="variable-item button-variable-item button-variable-item-l"
                                                                     title="L" data-value="l"><span
-                                                                            class="variable-item-span variable-item-span-button">L</span>
+                                                                        class="variable-item-span variable-item-span-button">L</span>
                                                                 </li>
                                                             </ul>
                                                         </td>
@@ -2148,73 +2169,73 @@
 
     </div>
     {{--    <aside style="overflow: inherit" class="sidebar trans-0-4">--}}
-{{--        <!-- Button Hide sidebar -->--}}
-{{--        --}}{{--        <button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>--}}
-{{--        <button id="btn-control-sidebar" class="btn-show-sidebar m-l-33 trans-0-4" style="--}}
-{{--        position: absolute;--}}
-{{--        left: -83px;--}}
-{{--        top: 15%;--}}
-{{--        width: 50px;--}}
-{{--        height: 50px;--}}
-{{--        background: cadetblue;--}}
-{{--        border: none;--}}
-{{--">--}}
-{{--            <i class="fal fa-shopping-bag"></i>--}}
-{{--        </button>--}}
+    {{--        <!-- Button Hide sidebar -->--}}
+    {{--        --}}{{--        <button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>--}}
+    {{--        <button id="btn-control-sidebar" class="btn-show-sidebar m-l-33 trans-0-4" style="--}}
+    {{--        position: absolute;--}}
+    {{--        left: -83px;--}}
+    {{--        top: 15%;--}}
+    {{--        width: 50px;--}}
+    {{--        height: 50px;--}}
+    {{--        background: cadetblue;--}}
+    {{--        border: none;--}}
+    {{--">--}}
+    {{--            <i class="fal fa-shopping-bag"></i>--}}
+    {{--        </button>--}}
 
-{{--        <!-- - -->--}}
-{{--        <div class="my-fill-tab">--}}
-{{--            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">--}}
-{{--                <li>--}}
-{{--                    <a class="active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"--}}
-{{--                       aria-controls="pills-home" aria-selected="true">Dishs</a>--}}
-{{--                </li>--}}
-{{--                <li>--}}
-{{--                    <a id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"--}}
-{{--                       aria-controls="pills-profile" aria-selected="false">Sets</a>--}}
-{{--                </li>--}}
-{{--            </ul>--}}
-{{--        </div>--}}
+    {{--        <!-- - -->--}}
+    {{--        <div class="my-fill-tab">--}}
+    {{--            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">--}}
+    {{--                <li>--}}
+    {{--                    <a class="active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"--}}
+    {{--                       aria-controls="pills-home" aria-selected="true">Dishs</a>--}}
+    {{--                </li>--}}
+    {{--                <li>--}}
+    {{--                    <a id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"--}}
+    {{--                       aria-controls="pills-profile" aria-selected="false">Sets</a>--}}
+    {{--                </li>--}}
+    {{--            </ul>--}}
+    {{--        </div>--}}
 
-{{--        <div class="tab-content" id="pills-tabContent">--}}
-{{--            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">--}}
-{{--                <div class="list-dish">--}}
-{{--                    <div class="dish-item">--}}
-{{--                        <div class="img-box">--}}
-{{--                            <img width="70px"--}}
-{{--                                 src="https://i.pinimg.com/564x/c2/ff/3d/c2ff3d07a7abb23bc24c9f723d0cab75.jpg" alt="">--}}
-{{--                        </div>--}}
-{{--                        <div class="left-content">--}}
-{{--                            <h6>Name</h6>--}}
-{{--                            <p>price</p>--}}
-{{--                        </div>--}}
-{{--                        <div class="right-content">--}}
-{{--                            <p>calo</p>--}}
-{{--                            <p>dam</p>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="dish-item">--}}
-{{--                        <div class="img-box">--}}
-{{--                            <img width="70px"--}}
-{{--                                 src="https://i.pinimg.com/564x/c2/ff/3d/c2ff3d07a7abb23bc24c9f723d0cab75.jpg" alt="">--}}
-{{--                        </div>--}}
-{{--                        <div class="content">--}}
-{{--                            <div class="left-content">--}}
-{{--                                <h6>Name</h6>--}}
-{{--                                <p>price</p>--}}
-{{--                            </div>--}}
-{{--                            <div class="right-content">--}}
-{{--                                <h6>calo</h6>--}}
-{{--                                <p>dam</p>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
+    {{--        <div class="tab-content" id="pills-tabContent">--}}
+    {{--            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">--}}
+    {{--                <div class="list-dish">--}}
+    {{--                    <div class="dish-item">--}}
+    {{--                        <div class="img-box">--}}
+    {{--                            <img width="70px"--}}
+    {{--                                 src="https://i.pinimg.com/564x/c2/ff/3d/c2ff3d07a7abb23bc24c9f723d0cab75.jpg" alt="">--}}
+    {{--                        </div>--}}
+    {{--                        <div class="left-content">--}}
+    {{--                            <h6>Name</h6>--}}
+    {{--                            <p>price</p>--}}
+    {{--                        </div>--}}
+    {{--                        <div class="right-content">--}}
+    {{--                            <p>calo</p>--}}
+    {{--                            <p>dam</p>--}}
+    {{--                        </div>--}}
+    {{--                    </div>--}}
+    {{--                    <div class="dish-item">--}}
+    {{--                        <div class="img-box">--}}
+    {{--                            <img width="70px"--}}
+    {{--                                 src="https://i.pinimg.com/564x/c2/ff/3d/c2ff3d07a7abb23bc24c9f723d0cab75.jpg" alt="">--}}
+    {{--                        </div>--}}
+    {{--                        <div class="content">--}}
+    {{--                            <div class="left-content">--}}
+    {{--                                <h6>Name</h6>--}}
+    {{--                                <p>price</p>--}}
+    {{--                            </div>--}}
+    {{--                            <div class="right-content">--}}
+    {{--                                <h6>calo</h6>--}}
+    {{--                                <p>dam</p>--}}
+    {{--                            </div>--}}
+    {{--                        </div>--}}
 
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">--}}
-{{--                aaaaaaaaaaaaa--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </aside>--}}
+    {{--                    </div>--}}
+    {{--                </div>--}}
+    {{--            </div>--}}
+    {{--            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">--}}
+    {{--                aaaaaaaaaaaaa--}}
+    {{--            </div>--}}
+    {{--        </div>--}}
+    {{--    </aside>--}}
 @endsection
