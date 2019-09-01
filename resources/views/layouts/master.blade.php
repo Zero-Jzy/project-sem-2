@@ -111,12 +111,14 @@
                                 </li>
                             @else
                                 <li>
-                                    <a href="{{ route('login') }}">Login</a>
+{{--                                    <a href="{{ route('login') }}">Login</a>--}}
+                                    <a href="#0" class="cd-signin">Login</a>
                                 </li>
 
                                 @if (Route::has('register'))
                                     <li>
-                                        <a href="{{ route('register') }}">Register</a>
+{{--                                        <a href="{{ route('register') }}" class="cd-signup">Register</a>--}}
+                                        <a href="#0" class="cd-signup">Register</a>
                                     </li>
                                 @endif
                             @endauth
@@ -129,6 +131,7 @@
 </header>
 
 @yield('content')
+
 
 <footer class="bg1">
     <div class="container p-t-40 p-b-70">
@@ -297,6 +300,108 @@
     </div>
 </footer>
 
+{{-- =============================== MODAL ===============================--}}
+
+{{-- Modal Login --}}
+<div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
+    <div class="cd-user-modal-container"> <!-- this is the container wrapper -->
+        <ul class="cd-switcher">
+            <li><a href="#0">Sign in</a></li>
+            <li><a href="#0">Register</a></li>
+        </ul>
+
+        <div id="cd-login"> <!-- log in form -->
+            <form class="cd-form">
+                <p class="fieldset">
+                    <label class="image-replace cd-email" for="signin-email">E-mail</label>
+                    <input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
+                    <span class="cd-error-message">Error message here!</span>
+                </p>
+
+                <p class="fieldset">
+                    <label class="image-replace cd-password" for="signin-password">Password</label>
+                    <input class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="Password">
+                    <a href="#0" class="hide-password">Hide</a>
+                    <span class="cd-error-message">Error message here!</span>
+                </p>
+
+                <p class="fieldset">
+                    <input type="checkbox" id="remember-me" checked>
+                    <label for="remember-me">Remember me</label>
+                </p>
+
+                <p class="fieldset">
+                    <input class="full-width" type="submit" value="Login">
+                </p>
+            </form>
+
+            <p class="cd-form-bottom-message"><a href="#0">Forgot your password?</a></p>
+            <!-- <a href="#0" class="cd-close-form">Close</a> -->
+        </div> <!-- cd-login -->
+
+        <div id="cd-signup"> <!-- sign up form -->
+            <form class="cd-form">
+                <p class="fieldset">
+                    <label class="image-replace " for="signup-first-name">First name</label>
+                    <input class="full-width has-padding has-border" id="signup-first-name" type="text" placeholder="First Name">
+                    <span class="cd-error-message">Error message here!</span>
+                </p>
+
+                <p class="fieldset">
+                    <label class="image-replace " for="ignup-last-name">Last Name</label>
+                    <input class="full-width has-padding has-border" id="signup-last-name" type="text" placeholder="Last Name">
+                    <span class="cd-error-message">Error message here!</span>
+                </p>
+
+                <p class="fieldset">
+                    <label class="image-replace " for="signup-email">Email</label>
+                    <input class="full-width has-padding has-border" id="signup-email" type="email"  placeholder="Email">
+                    <span class="cd-error-message">Error message here!</span>
+                </p>
+
+                <p class="fieldset">
+                    <label class="image-replace " for="signup-password">Password</label>
+                    <input class="full-width has-padding has-border" id="signup-password" type="password"  placeholder="Password">
+                    <a href="#0" class="hide-password">Hide</a>
+                    <span class="cd-error-message">Error message here!</span>
+                </p>
+
+                <p class="fieldset">
+                    <label class="image-replace " for="signup-re-pass">Confirm Password</label>
+                    <input class="full-width has-padding has-border" id="signup-re-pass" type="password"  placeholder="Confirm Password">
+                    <a href="#0" class="hide-password">Hide</a>
+                    <span class="cd-error-message">Error message here!</span>
+                </p>
+                <p class="fieldset">
+                    <input class="full-width has-padding" type="submit" value="Register">
+                </p>
+            </form>
+
+            <!-- <a href="#0" class="cd-close-form">Close</a> -->
+        </div> <!-- cd-signup -->
+
+        <div id="cd-reset-password"> <!-- reset password form -->
+            <p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
+
+            <form class="cd-form">
+                <p class="fieldset">
+                    <label class="image-replace cd-email" for="reset-email">E-mail</label>
+                    <input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
+                    <span class="cd-error-message">Error message here!</span>
+                </p>
+
+                <p class="fieldset">
+                    <input class="full-width has-padding" type="submit" value="Reset password">
+                </p>
+            </form>
+
+            <p class="cd-form-bottom-message"><a href="#0">Back to log-in</a></p>
+        </div> <!-- cd-reset-password -->
+        <a href="#0" class="cd-close-form">Close</a>
+    </div> <!-- cd-user-modal-container -->
+</div> <!-- cd-user-modal -->
+{{-- =============================== END MODAL ===============================--}}
+
 <script>
 
     var itemHeader =  $('.wrap_menu a, .wrap_menu li a');
@@ -335,6 +440,7 @@
 <script type="text/javascript" src="{{asset('/template/vendor/lightbox2/js/lightbox.min.js')}}"></script>
 <!--===============================================================================================-->
 <script src="{{asset('/template/js/main.js')}}"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="{{asset('/js/my.js')}}"></script>
 </body>
 </html>
