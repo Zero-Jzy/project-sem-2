@@ -23,9 +23,9 @@ class CreateProfilesTable extends Migration
             $table->string('phone')->nullable();
             $table->integer('age')->nullable();
             $table->enum('gender', ['M', 'F', 'O'])->nullable();
-            $table->text('address')->nullable();
             $table->longText('created_at')->default(\Carbon\Carbon::now()->valueOf());
             $table->longText('updated_at')->nullable();
+            $table->integer('status')->default(1);
         });
     }
 

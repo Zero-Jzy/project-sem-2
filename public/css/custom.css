@@ -1,3 +1,7 @@
+
+.box-shadow-header-custom{
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
 /*Start scroll bar*/
 .scrollbar::-webkit-scrollbar {
     background-color: #fff;
@@ -28,7 +32,6 @@
 }
 
 .scrollbar {
-    height: 80vh;
     width: 100%;
     min-width: 150px;
     background: #fff;
@@ -133,28 +136,38 @@
 
 }
 
+
 .list-dish {
     height: 70vh;
     overflow-y: auto;
 }
 
-.dish-item {
+.list-dish{
+    overflow-y: auto;
     margin: 10px;
+    bottom: 200px;
+    top: 80px;
+    position: absolute;
 }
 
 .box-shadow-header-custom {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.total-box .total-content {
-
+.total-box{
+    height: 200px;
+    position: absolute;
+    padding: 0 20px;
+    width: 100%;
+    bottom: 0;
 }
 
-.btn-button-card-box {
-    position: absolute;
-    bottom: 4%;
+
+.btn-incard{
     left: 50%;
     transform: translateX(-50%);
+    position: absolute;
+    bottom: 10px;
 }
 
 

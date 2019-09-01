@@ -23,7 +23,10 @@ Route::post('/login', 'Api\AuthAdController@login');
 //    return \App\User::with('profile')->where('username','sbumphreyci')->get();
 //});
 
-Route::get('/data', 'Api\UserController@getDataStock');
+Route::get('/hanh-chinh-viet-nam', function (){
+    $path = storage_path() . "/json/hanhchinhvietnam.json";
+    return response(file_get_contents($path));
+});
 
 Route::group(['middleware' => 'jwt.auth'], function () {
 

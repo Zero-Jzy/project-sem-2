@@ -64,36 +64,36 @@ return [
             ]) : [],
         ],
 
-        'pgsql' => [
-            'driver' => 'pgsql',
-            'url' => 'postgres://cugbaylblkvdrk:fa5c069ca73f728c88f20012722b3d439e5f7c2841b562c8ce7f456ba00a703c@ec2-54-221-238-248.compute-1.amazonaws.com:5432/d6ct9atkjsosc7',
-            'host' => 'ec2-54-221-238-248.compute-1.amazonaws.com',
-            'port' => '5432',
-            'database' => 'd6ct9atkjsosc7',
-            'username' => 'cugbaylblkvdrk',
-            'password' => 'fa5c069ca73f728c88f20012722b3d439e5f7c2841b562c8ce7f456ba00a703c',
-            'charset' => 'utf8',
-            'prefix' => '',
-            'prefix_indexes' => true,
-            'schema' => 'public',
-            'sslmode' => 'prefer',
-        ],
-
-
 //        'pgsql' => [
 //            'driver' => 'pgsql',
-//            'url' => env('DATABASE_URL'),
-//            'host' => env('DB_HOST', '127.0.0.1'),
-//            'port' => env('DB_PORT', '5432'),
-//            'database' => env('DB_DATABASE', 'laravel'),
-//            'username' => env('DB_USERNAME', 'postgres'),
-//            'password' => env('DB_PASSWORD', 'abcD1234'),
+//            'url' => 'postgres://cugbaylblkvdrk:fa5c069ca73f728c88f20012722b3d439e5f7c2841b562c8ce7f456ba00a703c@ec2-54-221-238-248.compute-1.amazonaws.com:5432/d6ct9atkjsosc7',
+//            'host' => 'ec2-54-221-238-248.compute-1.amazonaws.com',
+//            'port' => '5432',
+//            'database' => 'd6ct9atkjsosc7',
+//            'username' => 'cugbaylblkvdrk',
+//            'password' => 'fa5c069ca73f728c88f20012722b3d439e5f7c2841b562c8ce7f456ba00a703c',
 //            'charset' => 'utf8',
 //            'prefix' => '',
 //            'prefix_indexes' => true,
 //            'schema' => 'public',
 //            'sslmode' => 'prefer',
 //        ],
+
+
+        'pgsql' => [
+            'driver' => 'pgsql',
+            'url' => env('DATABASE_URL'),
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'port' => env('DB_PORT', '5432'),
+            'database' => env('DB_DATABASE', 'laravel'),
+            'username' => env('DB_USERNAME', 'postgres'),
+            'password' => env('DB_PASSWORD', 'abcD1234'),
+            'charset' => 'utf8',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'schema' => 'public',
+            'sslmode' => 'prefer',
+        ],
 
         'sqlsrv' => [
             'driver' => 'sqlsrv',

@@ -15,6 +15,6 @@ class ProfileSeeder extends Seeder
         $path = storage_path() . "/json/profiles_data.json";
         $profiles = json_decode(file_get_contents($path), true);
         DB::table('profiles')->truncate();
-        DB::table('profiles')->insert($profiles);
+        DB::table('profiles')->insert([]);
     }
 }
