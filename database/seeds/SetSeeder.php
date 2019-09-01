@@ -13,6 +13,6 @@ class SetSeeder extends Seeder
     public function run()
     {
         DB::table('sets')->truncate();
-        DB::table('sets')->insert();
+        DB::table('sets')->insert([]);
     }
 }

@@ -13,6 +13,6 @@ class DishCategorySeeder extends Seeder
     public function run()
     {
         DB::table('dish_categories')->truncate();
-        DB::table('dish_categories')->insert();
+        DB::table('dish_categories')->insert([]);
     }
 }

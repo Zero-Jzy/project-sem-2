@@ -1,5 +1,6 @@
 <?php
 
+use App\User;
 use Illuminate\Http\Request;
 
 /*
@@ -29,13 +30,12 @@ Route::get('/hanh-chinh-viet-nam', function (){
 });
 
 Route::group(['middleware' => 'jwt.auth'], function () {
-
-
-
     Route::resource('/user', 'Api\UserController');
+//    Route::get('/data', function (){
+//        $data = ->get();
+//        return response($data);
+//    });
     Route::post('/logout', 'Api\AuthAdController@logout');
 //    Route::get('/dataStock', 'Api\UserController@getDataStock');
-
-
 });
 

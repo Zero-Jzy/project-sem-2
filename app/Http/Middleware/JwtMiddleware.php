@@ -4,7 +4,13 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-class JwtMiddleware
+use Illuminate\Support\Facades\Log;
+use Tymon\JWTAuth\Exceptions\JWTException;
+use Tymon\JWTAuth\Exceptions\TokenExpiredException;
+use Tymon\JWTAuth\Facades\JWTAuth;
+use Tymon\JWTAuth\Http\Middleware\BaseMiddleware;
+
+class JwtMiddleware extends BaseMiddleware
 {
     /**
      * Handle an incoming request.
@@ -15,21 +21,45 @@ class JwtMiddleware
      */
     public function handle($request, Closure $next)
     {
-        try {
-            $user = JWTAuth::toUser($request->input('token'));
-        } catch (\Exception $e) {
-            if ($e instanceof TokenInvalidException) {
-                return $next($request);
-                return response()->json(['error'=>'Token is Invalid']);
-            } else if ($e instanceof TokenExpiredException){
-                return $next($request);
-                return response()->json(['error'=>'Token is Expired']);
-            } else {
-                return $next($request);
-                return response()->json(['error'=>'Something is wrong']);
+        Log::info("chay den day");
+        try
+        {
+            if (! $user = JWTAuth::parseToken()->authenticate() )
+            {
+                return response()->json([
+                    'code'   => 101, // means auth error in the api,
+                   'response' => null // nothing to show
+                 ]);
             }
         }
+        catch (TokenExpiredException $e)
+        {
+            // If the token is expired, then it will be refreshed and added to the headers
+            try
+            {
+                $refreshed = JWTAuth::refresh(JWTAuth::getToken());
+                $user = JWTAuth::setToken($refreshed)->toUser();
+                header('Authorization: Bearer ' . $refreshed);
+            }
+            catch (JWTException $e)
+            {
+                return response()->json([
+                    'code'   => 103, // means not refreshable
+                   'response' => null // nothing to show
+                 ]);
+            }
+        }
+        catch (JWTException $e)
+        {
+            return response()->json([
+                'code'   => 101, // means auth error in the api,
+                'response' => null // nothing to show
+            ]);
+        }
 
-        return $next($request);
+        // Login the user instance for global usage
+        JWTAuth::login($user, false);
+
+        return  $next($request);
     }
 }

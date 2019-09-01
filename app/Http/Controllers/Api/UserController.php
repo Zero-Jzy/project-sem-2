@@ -19,7 +19,7 @@ class UserController extends Controller
     public function index()
     {
         $data = Input::all();
-//        Log::info($data);
+        Log::info($data);
         $results = $data['results'] ?? false;
         $sortField = $data['sortField'] ?? false;
         $sortOrder = $data['sortOrder'] ?? false;
@@ -32,10 +32,11 @@ class UserController extends Controller
         $page = ($data['page'] ?? 1) - 1;
 
 
-        $users = User::join('profiles as profile', 'profile.user_id', '=', 'users.id');
+        $users = User::join('profiles', 'users.id', '=', 'profiles.user_id')
+        ->join('addresses', 'addresses.profile_id', '=', 'profiles.id');
 
         if($filterAddress){
-            $users->where('address','like', $filterAddress.'%' );
+            $users->where('addressTxt','like', $filterAddress.'%' );
         }
 
         if(!empty($filterDate)){

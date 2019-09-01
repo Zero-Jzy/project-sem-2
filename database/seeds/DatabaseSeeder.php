@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             ProfileSeeder::class,
             AdminSeeder::class,
+            AddressSeeder::class,
             DishCategorySeeder::class,
             SetCategorySeeder::class,
             DishSeeder::class,

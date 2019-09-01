@@ -13,6 +13,6 @@ class SetCategorySeeder extends Seeder
     public function run()
     {
         DB::table('set_categories')->truncate();
-        DB::table('set_categories')->insert();
+        DB::table('set_categories')->insert([]);
     }
 }
