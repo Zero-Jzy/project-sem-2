@@ -16,7 +16,11 @@ class DatabaseSeeder extends Seeder
         $this->call([
             UserSeeder::class,
             ProfileSeeder::class,
-            AdminSeeder::class
+            AdminSeeder::class,
+            DishCategorySeeder::class,
+            SetCategorySeeder::class,
+            DishSeeder::class,
+            SetSeeder::class
         ]);
 
         DB::statement("ALTER SEQUENCE users_id_seq RESTART WITH 1001");

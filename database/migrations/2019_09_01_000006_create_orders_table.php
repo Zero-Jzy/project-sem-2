@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAddressesTable extends Migration
+class CreateOrdersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateAddressesTable extends Migration
      */
     public function up()
     {
-        Schema::create('addresses', function (Blueprint $table) {
+        Schema::create('orders', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('phone');
-            $table->integer('code');
-            $table->string('slug');
-            $table->string('addressTxt');
+            $table->bigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->longText('created_at')->default(\Carbon\Carbon::now()->valueOf());
             $table->longText('updated_at')->nullable();
             $table->integer('status')->default(1);
@@ -33,6 +30,6 @@ class CreateAddressesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('addresses');
+        Schema::dropIfExists('orders');
     }
 }

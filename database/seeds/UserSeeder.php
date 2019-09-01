@@ -16,6 +16,6 @@ class UserSeeder extends Seeder
         $path = storage_path() . "/json/users_data.json";
         $users = json_decode(file_get_contents($path), true);
         DB::table('users')->truncate();
-        DB::table('users')->insert($users);
+        DB::table('users')->insert([]);
     }
 }
