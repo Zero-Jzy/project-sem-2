@@ -14,5 +14,6 @@ class DishCategorySeeder extends Seeder
     {
         DB::table('dish_categories')->truncate();
         DB::table('dish_categories')->insert();
+
     }
 }
