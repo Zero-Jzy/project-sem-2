@@ -19,9 +19,9 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->enum('status', ['delete', 'active', 'banned', 'vip'])->default('vip');
-            $table->longText('create_at')->default(\Carbon\Carbon::now()->valueOf());
-            $table->longText('update_at')->nullable();
+            $table->integer('status')->default(1);
+            $table->longText('created_at')->default(\Carbon\Carbon::now()->valueOf());
+            $table->longText('updated_at')->nullable();
         });
     }
 

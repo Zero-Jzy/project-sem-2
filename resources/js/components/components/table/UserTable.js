@@ -145,10 +145,10 @@ class UserTable extends React.Component {
             });
 
         }).catch(err => {
-            if (err && err.response.status === 401) {
-                alert('Time out. Please login!');
-                this.props.logoutUser()
-            }
+            alert(err);
+            // if (err && err.response.status === 401) {
+            //     this.props.logoutUser()
+            // }
         });
     };
 
@@ -199,7 +199,7 @@ class UserTable extends React.Component {
         var re = hanhchinhvn.filter(p => {
             return p.value === hanhChArr[0]
         })[0];
-        var name = re.label;
+        var name = (re ? re.label : '');
         for (let i = 1; i < hanhChArr.length; i++) {
             re = re.children.filter(p2 => {
                 return p2.value === hanhChArr[i]
@@ -258,7 +258,7 @@ class UserTable extends React.Component {
             },
             {
                 title: 'Address',
-                dataIndex: 'address',
+                dataIndex: 'addressTxt',
                 render: address => (<p>{this.getName(address.split('@')[0])} <br/> {address.split('@')[1]}</p>)
             },
             {

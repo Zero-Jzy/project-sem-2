@@ -12,9 +12,9 @@ class ProfileSeeder extends Seeder
      */
     public function run()
     {
-        $path = storage_path() . "/json/profiles_data.json";
+        $path = storage_path() . "/json/profiles_pj_sem_2.json";
         $profiles = json_decode(file_get_contents($path), true);
         DB::table('profiles')->truncate();
-        DB::table('profiles')->insert([]);
+        DB::table('profiles')->insert($profiles);
     }
 }

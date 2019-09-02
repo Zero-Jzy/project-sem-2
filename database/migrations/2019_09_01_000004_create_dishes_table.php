@@ -20,11 +20,11 @@ class CreateDishesTable extends Migration
             $table->foreign('category_id')->references('id')->on('dish_categories');
             $table->decimal('price');
             $table->string('image');
-            $table->integer('kcal');
-            $table->integer('protein');
-            $table->integer('dietary_fiber');
-            $table->integer('carbohydrate');
-            $table->integer('fat');
+            $table->float('calo');
+            $table->float('protein');
+            $table->float('dietary_fiber');
+            $table->float('carbohydrate');
+            $table->float('fat');
             $table->string('vitamins');
             $table->string('minerals');
             $table->longText('created_at')->default(\Carbon\Carbon::now()->valueOf());

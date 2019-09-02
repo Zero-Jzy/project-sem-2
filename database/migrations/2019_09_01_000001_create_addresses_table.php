@@ -21,7 +21,7 @@ class CreateAddressesTable extends Migration
             $table->string('phone');
             $table->integer('code');
             $table->string('slug');
-            $table->string('addressTxt');
+            $table->text('addressTxt');
             $table->longText('created_at')->default(\Carbon\Carbon::now()->valueOf());
             $table->longText('updated_at')->nullable();
             $table->integer('status')->default(1);
