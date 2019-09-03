@@ -31,6 +31,7 @@ Route::get('/hanh-chinh-viet-nam', function (){
 
 Route::group(['middleware' => 'jwt.auth'], function () {
     Route::resource('/user', 'Api\UserController');
+    Route::resource('/dish', 'Api\DishController');
 //    Route::get('/data', function (){
 //        $data = ->get();
 //        return response($data);

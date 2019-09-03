@@ -34,10 +34,6 @@ class UserTable extends React.Component {
         this.fetch();
     }
 
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        console.log('component update');
-    }
-
     getColumnSearchProps = dataIndex => ({
         filterDropdown: ({setSelectedKeys, selectedKeys, confirm, clearFilters}) => (
             <div style={{padding: 8}}>
@@ -208,7 +204,6 @@ class UserTable extends React.Component {
         }
         return name
     }
-
 
     render() {
         console.log('component render');

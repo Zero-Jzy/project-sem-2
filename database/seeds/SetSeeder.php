@@ -13,6 +13,8 @@ class SetSeeder extends Seeder
     public function run()
     {
         DB::table('sets')->truncate();
-        DB::table('sets')->insert([]);
+        DB::table('sets')->insert([
+            ['id' => 1, 'name' => 'demo', 'category_id' => 1, 'image' => 'image']
+        ]);
     }
 }

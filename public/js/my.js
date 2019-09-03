@@ -7,7 +7,7 @@
 // Đã free cho ng ta rồi còn cho coppy thiếu dkm nó :)) ai mà ko biết fix thì ăn lol hết :)) vcc
 $(document).ready(function () {
 
-    let $form_modal = $('.cd-user-modal'),
+    let $form_modal = $('.cd-user-model'),
         $form_login = $form_modal.find('#cd-login'),
         $form_signup = $form_modal.find('#cd-signup'),
         $form_forgot_password = $form_modal.find('#cd-reset-password'),
@@ -64,7 +64,7 @@ $(document).ready(function () {
     //     }
     //
     // };
-    //open modal
+    //open model
     $main_nav.on('click', function (event) {
 
         if ($(event.target).is($main_nav)) {
@@ -73,7 +73,7 @@ $(document).ready(function () {
         } else {
             // on mobile close submenu
             $main_nav.children('ul').removeClass('is-visible');
-            //show modal layer
+            //show model layer
             $form_modal.addClass('is-visible');
             //show the selected form
             ($(event.target).is('.cd-signup')) ? signup_selected() : login_selected();
@@ -81,13 +81,13 @@ $(document).ready(function () {
 
     });
 
-    //close modal
+    //close model
     $form_modal.on('click', function (event) {
         if ($(event.target).is($form_modal) || $(event.target).is('.cd-close-form')) {
             $form_modal.removeClass('is-visible');
         }
     });
-    //close modal when clicking the esc keyboard button
+    //close model when clicking the esc keyboard button
     $(document).keyup(function (event) {
         if (event.which === '27') {
             $form_modal.removeClass('is-visible');

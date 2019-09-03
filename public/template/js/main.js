@@ -94,7 +94,7 @@
     ===========================================================*/
     var srcOld = $('.video-mo-01').children('iframe').attr('src');
 
-    $('[data-target="#modal-video-01"]').on('click',function(){
+    $('[data-target="#model-video-01"]').on('click',function(){
         $('.video-mo-01').children('iframe')[0].src += "&autoplay=1";
 
         setTimeout(function(){
@@ -102,7 +102,7 @@
         },300);
     });
 
-    $('[data-dismiss="modal"]').on('click',function(){
+    $('[data-dismiss="model"]').on('click',function(){
         $('.video-mo-01').children('iframe')[0].src = srcOld;
         $('.video-mo-01').css('opacity','0');
     });
