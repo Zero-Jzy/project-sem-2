@@ -1824,7 +1824,7 @@ var Dropdown = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-beta): modal.js
+ * Bootstrap (v4.0.0-beta): model.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -1839,7 +1839,7 @@ var Modal = function ($) {
 
   var NAME = 'modal';
   var VERSION = '4.0.0-beta';
-  var DATA_KEY = 'bs.modal';
+  var DATA_KEY = 'bs.model';
   var EVENT_KEY = '.' + DATA_KEY;
   var DATA_API_KEY = '.data-api';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
@@ -1876,17 +1876,17 @@ var Modal = function ($) {
   };
 
   var ClassName = {
-    SCROLLBAR_MEASURER: 'modal-scrollbar-measure',
-    BACKDROP: 'modal-backdrop',
-    OPEN: 'modal-open',
+    SCROLLBAR_MEASURER: 'model-scrollbar-measure',
+    BACKDROP: 'model-backdrop',
+    OPEN: 'model-open',
     FADE: 'fade',
     SHOW: 'show'
   };
 
   var Selector = {
-    DIALOG: '.modal-dialog',
-    DATA_TOGGLE: '[data-toggle="modal"]',
-    DATA_DISMISS: '[data-dismiss="modal"]',
+    DIALOG: '.model-dialog',
+    DATA_TOGGLE: '[data-toggle="model"]',
+    DATA_DISMISS: '[data-dismiss="model"]',
     FIXED_CONTENT: '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top',
     NAVBAR_TOGGLER: '.navbar-toggler'
 
@@ -2214,7 +2214,7 @@ var Modal = function ($) {
 
     // ----------------------------------------------------------------------
     // the following methods are used to handle overflowing modals
-    // todo (fat): these should probably be refactored out of modal.js
+    // todo (fat): these should probably be refactored out of model.js
     // ----------------------------------------------------------------------
 
     Modal.prototype._adjustDialog = function _adjustDialog() {
@@ -2363,7 +2363,7 @@ var Modal = function ($) {
 
     var $target = $(target).one(Event.SHOW, function (showEvent) {
       if (showEvent.isDefaultPrevented()) {
-        // only register focus restorer if modal will actually get shown
+        // only register focus restorer if model will actually get shown
         return;
       }
 
@@ -3138,7 +3138,7 @@ var Tooltip = function ($) {
       $.removeData(this.element, this.constructor.DATA_KEY);
 
       $(this.element).off(this.constructor.EVENT_KEY);
-      $(this.element).closest('.modal').off('hide.bs.modal');
+      $(this.element).closest('.model').off('hide.bs.model');
 
       if (this.tip) {
         $(this.tip).remove();
@@ -3386,7 +3386,7 @@ var Tooltip = function ($) {
           });
         }
 
-        $(_this26.element).closest('.modal').on('hide.bs.modal', function () {
+        $(_this26.element).closest('.model').on('hide.bs.model', function () {
           return _this26.hide();
         });
       });

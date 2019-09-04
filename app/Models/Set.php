@@ -11,7 +11,7 @@ class Set extends Model
     }
 
     public function dishes(){
-        return $this->belongsToMany(Set::class);
+        return $this->belongsToMany(Set::class, 'dish_set','set_id','dish_id');
     }
 
     public function set_category(){

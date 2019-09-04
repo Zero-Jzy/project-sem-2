@@ -303,7 +303,7 @@
 {{-- =============================== MODAL ===============================--}}
 
 {{-- Modal Login --}}
-<div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
+<div class="cd-user-modal"> <!-- this is the entire model form, including the background -->
     <div class="cd-user-modal-container"> <!-- this is the container wrapper -->
         <ul class="cd-switcher">
             <li><a href="#0">Sign in</a></li>
@@ -398,8 +398,8 @@
             <p class="cd-form-bottom-message"><a href="#0">Back to log-in</a></p>
         </div> <!-- cd-reset-password -->
         <a href="#0" class="cd-close-form">Close</a>
-    </div> <!-- cd-user-modal-container -->
-</div> <!-- cd-user-modal -->
+    </div> <!-- cd-user-model-container -->
+</div> <!-- cd-user-model -->
 {{-- =============================== END MODAL ===============================--}}
 
 <script>

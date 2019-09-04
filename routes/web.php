@@ -46,6 +46,12 @@ Route::get('/profile', function (){
 })->name('profile');
 
 
+//Route::get('/test', function (){
+//    $data = \App\Dish::find(2)->sets()->get();
+//    return response($data);
+//});
+
+
 //Route::group(['prefix' => 'admin'], function () {
 //  Route::get('/login', 'AdminAuth\LoginController@showLoginForm')->name('login');
 //  Route::post('/login', 'AdminAuth\LoginController@login');

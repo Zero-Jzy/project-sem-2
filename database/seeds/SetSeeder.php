@@ -14,12 +14,9 @@ class SetSeeder extends Seeder
     {
         DB::table('sets')->truncate();
         DB::table('sets')->insert([
-            [
-                'id'=>1,
-                'name'=>'',
-                'categogy_id'=>'',
-                'image'=>'',
-            ]
+
+            ['id' => 1, 'name' => 'demo', 'category_id' => 1, 'image' => 'image']
+
         ]);
     }
 }

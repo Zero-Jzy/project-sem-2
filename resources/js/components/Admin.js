@@ -7,6 +7,8 @@ import MasterLayout from './components/layout/MasterLayout'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import PrivateRoute from "./components/common/PrivateRoute";
 import UserTable from './components/table/UserTable'
+import DishTable from './components/table/DishTable';
+import TestTable from './components/table/TestTable';
 import UserDetail from './components/UserDetail';
 import FormTest from './components/FormTest'
 import LoginForm from "./components/auth/Login";
@@ -40,10 +42,12 @@ export default class Admin extends React.Component {
                         <Route exact path={['/ad/login']}>
                             <Route exact path="/ad/login" component={LoginForm}/>
                         </Route>
-                        <Route exact path={['/ad', '/ad/user', '/ad/form', '/ad/user/:id']}>
+                        <Route exact path={['/ad/*', '/ad']}>
                             <MasterLayout>
                                 <PrivateRoute exact path="/ad" component={Dashboard}/>
+                                <PrivateRoute exact path="/ad/dish" component={DishTable}/>
                                 <PrivateRoute exact path="/ad/user" component={UserTable}/>
+                                <PrivateRoute exact path="/ad/test" component={TestTable}/>
                                 <PrivateRoute exact path="/ad/form" component={FormTest}/>
                                 <PrivateRoute exact path="/ad/user/:id" component={UserDetail}/>
                             </MasterLayout>

@@ -14,10 +14,8 @@ class SetCategorySeeder extends Seeder
     {
         DB::table('set_categories')->truncate();
         DB::table('set_categories')->insert([
-            ['id' => '1','name'=>'','decription'=>''],
-            ['id' => '1','name'=>'','decription'=>''],
-            ['id' => '1','name'=>'','decription'=>''],
-            ['id' => '1','name'=>'','decription'=>''],
+
+            ['id' => 1, 'name' => 'demo', 'description' => 'demo']
 
         ]);
     }

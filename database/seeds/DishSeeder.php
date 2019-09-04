@@ -28,7 +28,7 @@ class DishSeeder extends Seeder
                 'carbohydrate' => 23.3,
                 'fat' => 43.23,
                 'vitamins' => 'A,C',
-                'mineral' => 'Iron,lead'
+                'minerals' => 'Iron,lead'
             ],
             [
                 'id' => 2,
@@ -42,7 +42,7 @@ class DishSeeder extends Seeder
                 'carbohydrate' => 23.3,
                 'fat' => 43.23,
                 'vitamins' => 'A,C',
-                'mineral' => 'Iron,lead'
+                'minerals' => 'Iron,lead'
             ],
             [
                 'id' => 3,
@@ -56,7 +56,7 @@ class DishSeeder extends Seeder
                 'carbohydrate' => 23.3,
                 'fat' => 43.23,
                 'vitamins' => 'A,C',
-                'mineral' => 'Iron,lead'
+                'minerals' => 'Iron,lead'
             ],
             [
                 'id' => 4,
@@ -70,7 +70,7 @@ class DishSeeder extends Seeder
                 'carbohydrate' => 23.3,
                 'fat' => 43.23,
                 'vitamins' => 'A,C',
-                'mineral' => 'Iron,lead'
+                'minerals' => 'Iron,lead'
             ],
             [
                 'id' => 5,
@@ -84,7 +84,7 @@ class DishSeeder extends Seeder
                 'carbohydrate' => 23.3,
                 'fat' => 43.23,
                 'vitamins' => 'A,C',
-                'mineral' => 'Iron,lead'
+                'minerals' => 'Iron,lead'
             ],
             [
                 'id' => 6,
@@ -98,7 +98,7 @@ class DishSeeder extends Seeder
                 'carbohydrate' => 23.3,
                 'fat' => 43.23,
                 'vitamins' => 'A,C',
-                'mineral' => 'Iron,lead'
+                'minerals' => 'Iron,lead'
             ],
             [
                 'id' => 7,
@@ -112,7 +112,7 @@ class DishSeeder extends Seeder
                 'carbohydrate' => 23.3,
                 'fat' => 43.23,
                 'vitamins' => 'A,C',
-                'mineral' => 'Iron,lead'
+                'minerals' => 'Iron,lead'
             ],
             [
                 'id' => 8,
@@ -126,7 +126,7 @@ class DishSeeder extends Seeder
                 'carbohydrate' => 23.3,
                 'fat' => 43.23,
                 'vitamins' => 'A,C',
-                'mineral' => 'Iron,lead'
+                'minerals' => 'Iron,lead'
             ],
             [
                 'id' => 9,
@@ -140,7 +140,7 @@ class DishSeeder extends Seeder
                 'carbohydrate' => 23.3,
                 'fat' => 43.23,
                 'vitamins' => 'A,C',
-                'mineral' => 'Iron,lead'
+                'minerals' => 'Iron,lead'
             ],
 
         ]);
