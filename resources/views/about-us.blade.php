@@ -13,7 +13,7 @@
 <!-- Our Story -->
 <section class="bg2-pattern p-t-116 p-b-110 t-center p-l-15 p-r-15">
 		<span class="tit2 t-center">
-			Italian Restaurant
+			Pato Restaurant
 		</span>
 
     <h3 class="tit3 t-center m-b-35 m-t-5">
@@ -21,7 +21,7 @@
     </h3>
 
     <p class="t-center size32 m-l-r-auto">
-        Fusce at risus eget mi auctor pulvinar. Suspendisse maximus venenatis pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam purus purus, lacinia a scelerisque in, luctus vel felis. Donec odio diam, dignissim a efficitur at, efficitur et est. Pellentesque semper est ut pulvinar ullamcorper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et leo accumsan, egestas velit ac, fringilla tortor. Sed varius justo sed luctus mattis.
+        Pato Restaurant was established on September 6th 2016 at 379 Hudson St, New York, NY 10018. Over 3 years of establishment and development, Pato Restaurant has become one of the ideal dining destinations for many people. Our restaurant is honored with 2 restaurant awards of the year voted by the consumer association, that is a great motivation for Pato Restaurant to continue growing.
     </p>
 </section>
 
@@ -60,7 +60,7 @@
                     </h3>
 
                     <p class="t-center m-b-22 size3 m-l-r-auto">
-                        Donec quis lorem nulla. Nunc eu odio mi. Morbi nec lobortis est. Sed fringilla, nunc sed imperdiet lacinia, nisl ante egestas mi, ac facilisis ligula sem id neque.
+                        Our responsibility is to help customers when coming to Pato Restaurant to enjoy the nutritious meals, suitable for each person so that they can see the quality of the dishes that Pato Restaurant makes.
                     </p>
                 </div>
             </div>
@@ -92,7 +92,7 @@
                     </h3>
 
                     <p class="t-center m-b-22 size3 m-l-r-auto">
-                        Fusce iaculis, quam quis volutpat cursus, tellus quam varius eros, in euismod lorem nisl in ante. Maecenas imperdiet vulputate dui sit amet vestibulum. Nulla quis suscipit nisl.
+                        Space with colorful, help customers come here feel comfortable at home. We not only care about the quality of the food, but also the restaurant space - those things combine to create a strong Pato.
                     </p>
                 </div>
             </div>
@@ -136,7 +136,7 @@
 							</span>
 
                         <p class="t-center">
-                            Donec porta eleifend mauris ut effici-tur. Quisque non velit vestibulum, lob-ortis mi eget, rhoncus nunc
+                            Serving you with nutritious dishes is our responsibility.
                         </p>
                     </div>
                 </div>
@@ -159,7 +159,7 @@
 							</span>
 
                         <p class="t-center">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies felis a sem tempus tempus.
+                            We are proud to be part of Pato to bring joy to you.
                         </p>
                     </div>
                 </div>
@@ -174,7 +174,7 @@
 
                     <div class="text-blo5 size34 t-center bo-rad-10 bo7 p-t-90 p-l-35 p-r-35 p-b-30">
                         <a href="#" class="txt34 dis-block p-b-6">
-                            Peter Hart
+                            James Bon
                         </a>
 
                         <span class="dis-block t-center txt35 p-b-25">
@@ -182,7 +182,7 @@
 							</span>
 
                         <p class="t-center">
-                            Phasellus aliquam libero a nisi varius, vitae placerat sem aliquet. Ut at velit nec ipsum iaculis posuere quis in sapien
+                            You guys are the motivation for us to cook nutritious dishes every day
                         </p>
                     </div>
                 </div>
