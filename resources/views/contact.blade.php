@@ -95,7 +95,7 @@
 							</span>
 
                         <span class="txt23 size38">
-								8th floor, 379 Hudson St, New York, NY 10018
+                            379 Hudson St, New York, NY 10018
 							</span>
                     </div>
                 </div>
