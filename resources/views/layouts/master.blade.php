@@ -186,18 +186,18 @@
 							<i class="fa fa-twitter" aria-hidden="true"></i>
 						</span>
                     <a href="#" class="txt15">
-                        @tuandao1
+                        @gumballwatterson
                     </a>
 
                     <p class="txt14 m-b-18">
                         What a great place! I will come back to Pato Restaurant!
                         <a href="#" class="txt15">
-                            https://buff.ly/2zaSfAQ
+                            https://www.twitter.com/theamazingworldofgumball
                         </a>
                     </p>
 
                     <span class="txt16">
-							21 Dec 2017
+							21st Dec 2017
 						</span>
                 </div>
 
@@ -206,18 +206,18 @@
 							<i class="fa fa-twitter" aria-hidden="true"></i>
 						</span>
                     <a href="#" class="txt15">
-                        @tuandao
+                        @naruto
                     </a>
 
                     <p class="txt14 m-b-18">
                        I feel so good when I come to Pato.
                         <a href="#" class="txt15">
-                            https://buff.ly/2zaSfAQ
+                            https://www.twitter.com/narutouzumaki
                         </a>
                     </p>
 
                     <span class="txt16">
-							21 Dec 2017
+							21st Dec 2017
 						</span>
                 </div>
             </div>
