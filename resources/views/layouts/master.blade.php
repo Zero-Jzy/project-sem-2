@@ -155,7 +155,7 @@
 
                     <li class="txt14 m-b-14">
                         <i class="fa fa-envelope fs-13 dis-inline-block size19" aria-hidden="true"></i>
-                        contact@site.com
+                        patorestaurant@gmail.com
                     </li>
                 </ul>
 
