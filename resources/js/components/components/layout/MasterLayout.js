@@ -71,8 +71,8 @@ class MasterLayout extends Component {
                                     <span>User</span>
                                 </Link>
                             </Menu.Item>
-                            <Menu.Item key="/ad/dish">
-                                <Link to="/ad/dish">
+                            <Menu.Item key="/ad/food">
+                                <Link to="/ad/food">
                                     <Icon type="none"/>
                                     <span>Dishes</span>
                                 </Link>
@@ -145,6 +145,7 @@ class MasterLayout extends Component {
                                     overflow: 'initial'
                                 }}
                             >
+
                                 {this.props.children}
                             </Content>
                             <Footer style={{textAlign: 'center'}}>

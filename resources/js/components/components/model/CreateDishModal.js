@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Modal, Button } from 'antd';
+import CreateDishForm from '../forms/CreateDishForm'
 
 class CreateDishModal extends Component {
     state = { visible: false };
@@ -10,19 +11,15 @@ class CreateDishModal extends Component {
         });
     };
 
-    handleOk = e => {
-        console.log(e);
+    handleCancel = e => {
         this.setState({
             visible: false,
         });
     };
 
-    handleCancel = e => {
-        console.log(e);
-        this.setState({
-            visible: false,
-        });
-    };
+    onSubmit = a => {
+        console.log('value ne :',a)
+    }
 
     render() {
         return (
@@ -31,14 +28,15 @@ class CreateDishModal extends Component {
                     Create new
                 </Button>
                 <Modal
-                    title="Basic Modal"
+                    title="Create dish"
                     visible={this.state.visible}
-                    onOk={this.handleOk}
                     onCancel={this.handleCancel}
+                    maskClosable={false}
+                    footer={null}
+                    closable={false}
+
                 >
-                    <p>Some contents...</p>
-                    <p>Some contents...</p>
-                    <p>Some contents...</p>
+                    <CreateDishForm handleCancel={this.handleCancel} onSubmit={this.handleOk} />
                 </Modal>
             </div>
         );

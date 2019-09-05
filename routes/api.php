@@ -1,5 +1,6 @@
 <?php
 
+use App\Set;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -24,18 +25,23 @@ Route::post('/login', 'Api\AuthAdController@login');
 //    return \App\User::with('profile')->where('username','sbumphreyci')->get();
 //});
 
-Route::get('/hanh-chinh-viet-nam', function (){
+Route::get('/hanh-chinh-viet-nam', function () {
     $path = storage_path() . "/json/hanhchinhvietnam.json";
     return response(file_get_contents($path));
 });
+Route::post('/upload', 'Api\UploadImageController@upload');
+
+
+//Route::get('/sets', function () {
+//    $set = Set::with('dishes')->get();
+//    echo $set;
+//});
 
 Route::group(['middleware' => 'jwt.auth'], function () {
     Route::resource('/user', 'Api\UserController');
-    Route::resource('/dish', 'Api\DishController');
-//    Route::get('/data', function (){
-//        $data = ->get();
-//        return response($data);
-//    });
+    Route::resource('/food', 'Api\FoodController');
+
+
     Route::post('/logout', 'Api\AuthAdController@logout');
 //    Route::get('/dataStock', 'Api\UserController@getDataStock');
 });

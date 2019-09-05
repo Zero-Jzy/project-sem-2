@@ -15,8 +15,6 @@ class DishSeeder extends Seeder
         DB::table('dishes')->truncate();
         DB::table('dishes')->insert([
             [
-
-
                 'id' => 1,
                 'name' => 'canh cua nấu đậu',
                 'category_id' => 4, //là cái id của bảng category ý để xem nó loại gì !! ví dụ 1 là water!!

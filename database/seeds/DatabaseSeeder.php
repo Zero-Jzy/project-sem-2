@@ -17,16 +17,17 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             ProfileSeeder::class,
             AdminSeeder::class,
-            AddressSeeder::class,
-            DishCategorySeeder::class,
-            SetCategorySeeder::class,
-            DishSeeder::class,
-            SetSeeder::class,
-            DishSetSeeder::class
+//            AddressSeeder::class,
+//            DishCategorySeeder::class,
+//            SetCategorySeeder::class,
+//            DishSeeder::class,
+//            SetSeeder::class,
+//            DishSetSeeder::class
         ]);
 
         DB::statement("ALTER SEQUENCE users_id_seq RESTART WITH 1001");
         DB::statement("ALTER SEQUENCE profiles_id_seq RESTART WITH 1001");
+//        DB::statement("ALTER SEQUENCE dishes_id_seq RESTART WITH 1001");
 
     }
 }

@@ -7,7 +7,7 @@
 // Đã free cho ng ta rồi còn cho coppy thiếu dkm nó :)) ai mà ko biết fix thì ăn lol hết :)) vcc
 $(document).ready(function () {
 
-    let $form_modal = $('.cd-user-model'),
+    let $form_modal = $('.cd-user-modal'),
         $form_login = $form_modal.find('#cd-login'),
         $form_signup = $form_modal.find('#cd-signup'),
         $form_forgot_password = $form_modal.find('#cd-reset-password'),
@@ -17,6 +17,7 @@ $(document).ready(function () {
         $forgot_password_link = $form_login.find('.cd-form-bottom-message a'),
         $back_to_login_link = $form_forgot_password.find('.cd-form-bottom-message a'),
         $main_nav = $('.main-nav');
+
     $('.cd-signin').click(function () {
         $form_modal.toggleClass('is-visible');
         if ($('#cd-signup').hasClass('is-selected')) {
@@ -26,10 +27,12 @@ $(document).ready(function () {
         if (!$('#cd-login').hasClass('is-selected')) {
             $('#cd-login').addClass('is-selected');
         }
+
         let aLast = $('.cd-switcher').children(':last').children(':first');
         if (aLast.hasClass('selected')) {
             aLast.removeClass('selected')
         }
+
         let aFirst = $('.cd-switcher').children(':first').children(':first');
         if (!aFirst.hasClass('selected')){
             aFirst.addClass('selected');
