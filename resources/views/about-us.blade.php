@@ -5,7 +5,7 @@
 <!-- Title Page -->
 <section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url('https://media-cdn.tripadvisor.com/media/photo-w/17/cb/0d/9d/photo1jpg.jpg'); background-position: center">
     <h2 class="tit6 t-center">
-        About Us
+
     </h2>
 </section>
 
@@ -29,9 +29,9 @@
 <!-- Video -->
 <section class="" style="background-image: url(https://znews-photo.zadn.vn/w660/Uploaded/rotntt/2015_10_19/hemquan20.jpg);">
     <div class="content-video t-center p-t-225 p-b-250">
-			<span class="tit2 p-l-15 p-r-15">
-				Discover
-			</span>
+			<!--<span class="tit2 p-l-15 p-r-15">
+
+			</span> -->
 
 
 
