@@ -186,11 +186,11 @@
 							<i class="fa fa-twitter" aria-hidden="true"></i>
 						</span>
                     <a href="#" class="txt15">
-                        @colorlib
+                        @tuandao1
                     </a>
 
                     <p class="txt14 m-b-18">
-                        Activello is a good option. It has a slider built into that displays the featured image in the slider.
+                        What a great place! I will come back to Pato Restaurant!
                         <a href="#" class="txt15">
                             https://buff.ly/2zaSfAQ
                         </a>
@@ -206,11 +206,11 @@
 							<i class="fa fa-twitter" aria-hidden="true"></i>
 						</span>
                     <a href="#" class="txt15">
-                        @colorlib
+                        @tuandao
                     </a>
 
                     <p class="txt14 m-b-18">
-                        Activello is a good option. It has a slider built into that displays
+                       I feel so good when I come to Pato.
                         <a href="#" class="txt15">
                             https://buff.ly/2zaSfAQ
                         </a>
