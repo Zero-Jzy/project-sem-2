@@ -1,7 +1,21 @@
-/*body{*/
-/*    color: #666;*/
-/*    font-size: 13px;*/
-/*}*/
+.ant-upload-select-picture-card i {
+    font-size: 32px;
+    color: #999;
+}
+
+.ant-upload-select-picture-card .ant-upload-text {
+    margin-top: 8px;
+    color: #666;
+}
+
+.ant-form-item-label > label{
+    margin: 0;
+}
+
+.ant-upload-picture-card-wrapper{
+    display: block;
+}
+
 .anticon{
      vertical-align: 0;
 }
