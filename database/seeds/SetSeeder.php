@@ -14,7 +14,6 @@ class SetSeeder extends Seeder
     {
         DB::table('sets')->truncate();
         DB::table('sets')->insert([
-
             ['id' => 1, 'name' => 'Five-flavored fried chicken', 'category_id' => 1, 'image' => 'http://resources.cook.beepot.vn/wp-content/uploads/2019/05/14153742/ga-ran-ngu-vi-e1557848311360.jpg'],
             ['id' => 2, 'name' => 'Meat rice with vegetables', 'category_id' => 2, 'image' => 'http://resources.cook.beepot.vn/wp-content/uploads/2019/05/14153450/com_chay_ram_trung_thu.jpg'],
             ['id' => 3, 'name' => 'Galangal fried saba fish', 'category_id' => 3, 'image' => 'http://resources.cook.beepot.vn/wp-content/uploads/2019/05/14152756/ca-basa-chien-rieng-me.jpg'],
@@ -36,7 +35,6 @@ class SetSeeder extends Seeder
             ['id' => 19, 'name' => 'Rice, fried fish, vegetables, beans', 'category_id' => 3, 'image' => 'http://channel.mediacdn.vn//thumb_w/640/prupload/164/2015/09/img20150915220739926.jpg'],
             ['id' => 20, 'name' => 'Rice, braised fish, beans, salad', 'category_id' => 2, 'image' => 'http://channel.mediacdn.vn//thumb_w/640/prupload/164/2015/09/img20150915220740737.jpg'],
             ['id' => 21, 'name' => 'Rice, beans, vegetables, fried meat', 'category_id' => 1, 'image' => 'http://channel.mediacdn.vn//thumb_w/640/prupload/164/2015/09/img20150915220740893.jpg'],
-
         ]);
     }
 }

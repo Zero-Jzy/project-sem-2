@@ -14,7 +14,6 @@ class SetCategorySeeder extends Seeder
     {
         DB::table('set_categories')->truncate();
         DB::table('set_categories')->insert([
-
             ['id' => 1, 'name' => 'ration for fat people', 'description' => 'Meals will help you provide the necessary nutrients and lose a lot of weight when you apply. 
             Providing enough calories does not make you feel anxious or too hungry in each meal, 
             to avoid the situation. indigestion or appetite, and does not improve the desired weight'],

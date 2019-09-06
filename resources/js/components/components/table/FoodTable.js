@@ -14,23 +14,30 @@ export default class FoodTable extends Component {
         loading: false,
         results: 10,
         selectedRowKeys: [],
-        keys: [1, 9]
+        keys: []
     };
      columns = [
         {
             title: 'Name',
             dataIndex: 'name',
-            sorter: true,
-            render: name => `${name.first} ${name.last}`,
+            sorter: true
         },
         {
             title: 'Images',
             dataIndex: 'image',
             render: image => (<img width={45} src={image} alt=""/>)
+
         },
         {
             title: 'Category',
-            dataIndex: 'category',
+            dataIndex: 'category_id',
+            render: (category_id, record) => `${record.category.name}`,
+            filters: [
+                {text: 'Active', value: 'active'},
+                {text: 'Deleted', value: 'delete'},
+                {text: 'Vip', value: 'vip'},
+                {text: 'Banned', value: 'banned'},
+            ],
         },
         {
             title: 'Price',
@@ -135,27 +142,16 @@ export default class FoodTable extends Component {
                 ...params,
             }
         }).then(res => {
+            const data = res.data;
             const pagination = {...this.state.pagination};
             // Read total count from server
-            // pagination.total = data.totalCount;
-            pagination.total = 200;
+            pagination.total = data.totalCount;
+            // pagination.total = 200;
             this.setState({
                 loading: false,
-                data: [{
-                    id: 9,
-                    name: 'bắp cải luộc',
-                    category_id: 1,
-                    price: 30000,
-                    image: 'https://media.ex-cdn.com/EXP/media.phunutoday.vn/files/upload_images/2015/11/22/cach-lam-bap-cai-luoc-1-phunutoday_vn.jpg',
-                    calo: 923.3,
-                    protein: 23.1,
-                    dietary_fiber: 12.2,
-                    carbohydrate: 23.3,
-                    fat: 43.23,
-                    vitamins: 'A,C',
-                    minerals: 'Iron,lead'
-                }],
+                data: data.foods,
                 pagination,
+                keys: data.keys
             });
         });
     };

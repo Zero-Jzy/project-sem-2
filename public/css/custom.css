@@ -716,12 +716,12 @@ input[type=number]
     position: absolute;
     background: #ff6600;
     height: 1rem;
-    top: 0;
-    right: 0;
+    top: 10%;
+    left: 7%;
     width: 1rem;
     text-align: center;
-    line-height: 2rem;
-    font-size: 1rem;
+    line-height: 1rem;
+    font-size: 12px;
     border-radius: 50%;
     color: white;
     border: 1px solid #ff6600;
@@ -732,17 +732,17 @@ input[type=number]
 .btn-toggle-sidebar .bag-icon::after{
     content: attr(data-set);
     position: absolute;
-    background: #ff6600;
+    background: #0061ff;
     height: 1rem;
-    top: 0;
-    left: 0;
+    top: 10%;
+    right: 7%;
     width: 1rem;
     text-align: center;
-    line-height: 2rem;
-    font-size: 1rem;
+    line-height: 1rem;
+    font-size: 12px;
     border-radius: 50%;
     color: white;
-    border: 1px solid #ff6600;
+    border: 1px solid #0061ff;
     font-family: sans-serif;
     font-weight: bold;
 }
