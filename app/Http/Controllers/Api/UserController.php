@@ -27,13 +27,10 @@ class UserController extends Controller
         $filterDate = json_decode($data['filterDate'] ?? '{}', true);
         $filterAddress = $data['filterAddress'] ?? false;
 
-
         $filters = [json_decode($data['filters'] ?? '{}', true)][0];
 //        Log::info('filter' ,$filters);
 
-
-        $users = User::join('profiles', 'users.id', '=', 'profiles.user_id')
-        ->join('addresses', 'addresses.profile_id', '=', 'profiles.id');
+        $users = User::join('profiles', 'users.id', '=', 'profiles.user_id');
 
         if($filterAddress){
             $users->where('addressTxt','like', $filterAddress.'%' );
@@ -76,14 +73,14 @@ class UserController extends Controller
 
         $res['users'] = $users->get();
 
-        return response(json_encode($res));
+        return response($res);
     }
 
     public function getDataStock(){
 //        $data = User::select('create_at')->take(10)->get();
         $data = User::all();
 
-        return response(json_encode($data));
+        return response();
 
     }
 

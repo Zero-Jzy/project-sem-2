@@ -29,7 +29,7 @@ for (let mineral of mineralsData) {
     minerals.push(<Option key={mineral}>{mineral}</Option>);
 }
 
-class MyCreateDishForm extends Component {
+class MyCreateFoodForm extends Component {
     state = {
         visible: true,
         submitting: false,
@@ -49,7 +49,7 @@ class MyCreateDishForm extends Component {
         this.props.form.validateFieldsAndScroll((err, values) => {
 
             if (!err) {
-                axios.post('/api/dish', values)
+                axios.post('/api/food', values)
                     .then(res => {
                         this.props.form.resetFields();
                         this.removeImage()
@@ -211,6 +211,6 @@ class MyCreateDishForm extends Component {
     }
 }
 
-const CreateDishForm = Form.create({name: 'register'})(MyCreateDishForm);
+const CreateFoodForm = Form.create({name: 'register'})(MyCreateFoodForm);
 
-export default CreateDishForm
+export default CreateFoodForm

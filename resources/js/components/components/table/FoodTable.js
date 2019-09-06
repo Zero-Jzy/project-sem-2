@@ -14,7 +14,8 @@ export default class FoodTable extends Component {
         loading: false,
         results: 10,
         selectedRowKeys: [],
-        keys: []
+        keys: [],
+
     };
      columns = [
         {

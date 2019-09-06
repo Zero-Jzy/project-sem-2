@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Modal, Button } from 'antd';
-import CreateDishForm from '../forms/CreateDishForm'
+import CreateFoodForm from '../forms/CreateFoodForm'
 
 class CreateDishModal extends Component {
     state = { visible: false };
@@ -36,7 +36,7 @@ class CreateDishModal extends Component {
                     closable={false}
 
                 >
-                    <CreateDishForm handleCancel={this.handleCancel} onSubmit={this.handleOk} />
+                    <CreateFoodForm handleCancel={this.handleCancel} onSubmit={this.handleOk} />
                 </Modal>
             </div>
         );
