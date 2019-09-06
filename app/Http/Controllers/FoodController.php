@@ -41,21 +41,21 @@ class FoodController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Food  $food
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Food $food)
+    public function show($id)
     {
-        //
+        return response(Food::find($id)->name);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Food  $food
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Food $food)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +64,10 @@ class FoodController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Food  $food
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Food $food)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +75,10 @@ class FoodController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Food  $food
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Food $food)
+    public function destroy($id)
     {
         //
     }

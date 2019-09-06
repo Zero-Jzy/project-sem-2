@@ -29,9 +29,11 @@ Route::view('/ad/{any}', 'admin')
 
 Route::resource('/user','UserController');
 
-Route::get('/menu', function (){
-    return view('menu');
-})->name('menu');
+Route::resource('menu', 'MenuController');
+
+Route::resource('food', 'MenuController');
+
+Route::resource('set', 'MenuController');
 
 Route::get('/about-us', function (){
     return view('about-us');

@@ -24,7 +24,7 @@ class CreateFoodsTable extends Migration
             $table->float('protein');
             $table->float('dietary_fiber');
             $table->float('carbohydrate');
-            $table->float('fat');
+            $table->float('total_fat');
             $table->string('vitamins');
             $table->string('minerals');
             $table->longText('created_at')->default(\Carbon\Carbon::now()->valueOf());

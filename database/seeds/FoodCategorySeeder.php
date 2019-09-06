@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class DishCategorySeeder extends Seeder
+class FoodCategorySeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,8 +12,8 @@ class DishCategorySeeder extends Seeder
      */
     public function run()
     {
-        DB::table('dish_categories')->truncate();
-        DB::table('dish_categories')->insert([
+        DB::table('food_categories')->truncate();
+        DB::table('food_categories')->insert([
             ['id' => 1, 'name' => 'rau củ ',
                 'description' => ' rau củ chứa rất nhiều : vitamin, protein, khoáng chất quan trọng…,
                 rau củ còn là thực phẩm chính cung cấp chất xơ giúp con người có thể dễ dàng tiêu hóa'],

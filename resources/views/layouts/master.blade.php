@@ -59,7 +59,7 @@
                                 <a class="{{Request::is('/') ? 'active' : ''}}" href="{{route('home')}}">Home</a>
                             </li>
                             <li>
-                                <a class="{{Request::is('menu') ? 'active' : ''}}" href="{{route('menu')}}">Menu</a>
+                                <a class="{{Request::is('menu') ? 'active' : ''}}" href="{{route('menu.index')}}">Menu</a>
                             </li>
                             <li>
                                 <a class="{{Request::is('about-us') ? 'active' : ''}}" href="{{route('about-us')}}">About</a>

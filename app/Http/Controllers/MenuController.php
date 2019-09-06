@@ -1,28 +1,25 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers;
 
 use App\Food;
-use Foo\DataProviderIssue2833\FirstTest;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Log;
 
-class FoodController extends Controller
+class MenuController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('jwt.auth')->except(['index','show']);
-    }
-
     /**
      * Display a listing of the resource.
      *
-     * @return string
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return Food::find(1)->get();
+        $foods = Food::all();
+
+        $data = [
+            'foods' => $foods
+        ];
+        return view('menu', $data);
     }
 
     /**
@@ -43,8 +40,7 @@ class FoodController extends Controller
      */
     public function store(Request $request)
     {
-        $images = $request->get('images');
-
+        //
     }
 
     /**
@@ -55,7 +51,7 @@ class FoodController extends Controller
      */
     public function show($id)
     {
-        return Food::find($id);
+        //
     }
 
     /**
