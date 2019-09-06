@@ -6,7 +6,7 @@
 <!-- Title Page -->
 <section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url(https://thegioiamthuc.com/wp-content/uploads/2017/08/com-thit-bo-xao-hanh-tay-kieu-Nhat.jpg);">
     <h2 class="tit6 t-center">
-        Contact
+
     </h2>
 </section>
 
@@ -95,7 +95,7 @@
 							</span>
 
                         <span class="txt23 size38">
-								8th floor, 379 Hudson St, New York, NY 10018
+                            379 Hudson St, New York, NY 10018
 							</span>
                     </div>
                 </div>

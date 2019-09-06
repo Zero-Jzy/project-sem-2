@@ -5,7 +5,7 @@
     <section class="section-slide">
         <div class="wrap-slick1">
             <div class="slick1">
-                <div class="item-slick1 item1-slick1" style="background-image: url(http://file.brillianthotel.vn/brilliant_NHAHANG10444917032018.jpg);">
+                <div class="item-slick1 item1-slick1" style="background-image: url(http://maichauhideaway.com/wp-content/uploads/2017/08/Restaurant-1-1.jpg);">
                     <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
 							Welcome to
@@ -24,7 +24,7 @@
                     </div>
                 </div>
 
-                <div class="item-slick1 item2-slick1" style="background-image: url(http://file.brillianthotel.vn/brilliant_NHAHANG10444917032018.jpg);">
+                <div class="item-slick1 item2-slick1" style="background-image: url(http://3.bp.blogspot.com/-J1oJWyGafjA/Uwq-E_2W0dI/AAAAAAAAC3Q/A_jwJlK1SAc/s1600/Banyu+Mili+Resto.jpg);">
                     <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="rollIn">
 							Welcome to
@@ -43,7 +43,7 @@
                     </div>
                 </div>
 
-                <div class="item-slick1 item3-slick1" style="background-image: url(http://file.brillianthotel.vn/brilliant_NHAHANG10444917032018.jpg);">
+                <div class="item-slick1 item3-slick1" style="background-image: url(http://www.centrale-beirut.com/wp-content/uploads/2017/02/2-1600x780.jpg);">
                     <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="rotateInDownLeft">
 							Welcome to
@@ -167,7 +167,7 @@
                         <!-- Block1 -->
                         <div class="blo1">
                             <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom">
-                                <a href="#"><img src="https://s.yimg.com/ny/api/res/1.2/W9ZQGpZytArfe6OwixDa0w--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-images/2019-07/435589a0-a3b8-11e9-9e59-aead0ca2c95e" alt="IMG-INTRO"></a>
+                                <a href="#"><img src="https://i1.wp.com/www.trifocusfitnessacademy.co.za/wp-content/uploads/2019/07/shutterstock_1403159381.jpg?fit=800%2C533&ssl=1" alt="IMG-INTRO"></a>
                             </div>
 
                             <div class="wrap-text-blo1 p-t-35">

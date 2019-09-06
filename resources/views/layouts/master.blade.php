@@ -145,7 +145,7 @@
                 <ul class="m-b-70">
                     <li class="txt14 m-b-14">
                         <i class="fa fa-map-marker fs-16 dis-inline-block size19" aria-hidden="true"></i>
-                        8th floor, 379 Hudson St, New York, NY 10018
+                         379 Hudson St, New York, NY 10018
                     </li>
 
                     <li class="txt14 m-b-14">
@@ -155,7 +155,7 @@
 
                     <li class="txt14 m-b-14">
                         <i class="fa fa-envelope fs-13 dis-inline-block size19" aria-hidden="true"></i>
-                        contact@site.com
+                        patorestaurant@gmail.com
                     </li>
                 </ul>
 
@@ -186,18 +186,18 @@
 							<i class="fa fa-twitter" aria-hidden="true"></i>
 						</span>
                     <a href="#" class="txt15">
-                        @colorlib
+                        @gumballwatterson
                     </a>
 
                     <p class="txt14 m-b-18">
-                        Activello is a good option. It has a slider built into that displays the featured image in the slider.
+                        What a great place! I will come back to Pato Restaurant!
                         <a href="#" class="txt15">
-                            https://buff.ly/2zaSfAQ
+                            https://www.twitter.com/theamazingworldofgumball
                         </a>
                     </p>
 
                     <span class="txt16">
-							21 Dec 2017
+							21st Dec 2017
 						</span>
                 </div>
 
@@ -206,18 +206,18 @@
 							<i class="fa fa-twitter" aria-hidden="true"></i>
 						</span>
                     <a href="#" class="txt15">
-                        @colorlib
+                        @naruto
                     </a>
 
                     <p class="txt14 m-b-18">
-                        Activello is a good option. It has a slider built into that displays
+                       I feel so good when I come to Pato.
                         <a href="#" class="txt15">
-                            https://buff.ly/2zaSfAQ
+                            https://www.twitter.com/narutouzumaki
                         </a>
                     </p>
 
                     <span class="txt16">
-							21 Dec 2017
+							21st Dec 2017
 						</span>
                 </div>
             </div>
@@ -293,7 +293,7 @@
                 </div>
 
                 <div class="txt17 p-r-20 p-t-5 p-b-5">
-                    Copyright &copy; 2018 All rights reserved  |  This template is made with <i class="fa fa-heart"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                    <i class="fa fa-heart"></i><a href="https://colorlib.com" target="_blank"></a>
                 </div>
             </div>
         </div>
