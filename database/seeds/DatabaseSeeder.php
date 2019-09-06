@@ -18,11 +18,11 @@ class DatabaseSeeder extends Seeder
             ProfileSeeder::class,
             AdminSeeder::class,
 //            AddressSeeder::class,
-//            DishCategorySeeder::class,
+//            FoodCategorySeeder::class,
 //            SetCategorySeeder::class,
-//            DishSeeder::class,
+//            FoodSeeder::class,
 //            SetSeeder::class,
-//            DishSetSeeder::class
+//            FoodSetSeeder::class
         ]);
 
         DB::statement("ALTER SEQUENCE users_id_seq RESTART WITH 1001");
