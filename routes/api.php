@@ -3,6 +3,7 @@
 use App\Set;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,12 @@ use Illuminate\Support\Facades\Route;
 Route::post('/register', 'Api\AuthAdController@register');
 
 Route::post('/login', 'Api\AuthAdController@login');
+
+Route::post('/upload-image', 'Api\UploadImageController@upload');
+
+//Route::get('/upload-image', function (Request $request){
+//    Log::info($request);
+//});
 
 //Route::get('/test', function (){
 //    return \App\User::with('profile')->where('username','sbumphreyci')->get();
