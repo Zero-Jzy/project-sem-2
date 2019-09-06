@@ -270,7 +270,7 @@ class UserTable extends React.Component {
                     {text: 'Deleted', value: 'delete'},
                     {text: 'Vip', value: 'vip'},
                     {text: 'Banned', value: 'banned'},
-                ],
+                ]
                 // ,
                 // sorter: true,
                 // render: create_at => `${moment(parseFloat(create_at)).fromNow()}`
