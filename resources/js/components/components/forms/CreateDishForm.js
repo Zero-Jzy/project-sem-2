@@ -49,7 +49,7 @@ class MyCreateDishForm extends Component {
         this.props.form.validateFieldsAndScroll((err, values) => {
 
             if (!err) {
-                axios.post('/api/dish', values)
+                axios.post('/api/food', values)
                     .then(res => {
                         this.props.form.resetFields();
                         this.removeImage()

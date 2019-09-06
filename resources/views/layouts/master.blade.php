@@ -183,7 +183,7 @@
 
                 <div class="m-b-25">
 						<span class="fs-13 color2 m-r-5">
-							<i class="fa fa-twitter" aria-hidden="true"></i>
+							<i class="fab fa-twitter" aria-hidden="true"></i>
 						</span>
                     <a href="#" class="txt15">
                         @gumballwatterson
@@ -203,7 +203,7 @@
 
                 <div>
 						<span class="fs-13 color2 m-r-5">
-							<i class="fa fa-twitter" aria-hidden="true"></i>
+							<i class="fab fa-twitter"  aria-hidden="true"></i>
 						</span>
                     <a href="#" class="txt15">
                         @naruto
