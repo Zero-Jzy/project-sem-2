@@ -132,33 +132,39 @@
     ===========================================================*/
     $('body').append('<div class="overlay-sidebar trans-0-4"></div>');
     var ovlSideBar = $('.overlay-sidebar');
-    var btnControlSidebar = $('#btn-control-sidebar');
+    var btnToggleSideBar = $('#btn-toggle-sidebar');
     var sidebar = $('.sidebar');
+    var bagIcon = $('#btn-toggle-sidebar .bag-icon');
+    var closeIcon = $('#btn-toggle-sidebar .close-icon');
     var show = false;
 
-    $(btnControlSidebar).on('click', function () {
+    closeIcon.hide();
+
+    $(btnToggleSideBar).on('click', function () {
 
         if (show) {
             $(sidebar).removeClass('show-sidebar');
             $(ovlSideBar).removeClass('show-overlay-sidebar');
             show = false;
             $(this).css('top','15%');
-            $(this).html('<i class="fal fa-shopping-bag"></i>')
+            bagIcon.show();
+            closeIcon.hide();
         } else {
             $(sidebar).addClass('show-sidebar');
             $(ovlSideBar).addClass('show-overlay-sidebar');
             show = true;
             $(this).css('top','0%');
-            $(this).html('<i class="fas fa-times"></i>')
+            bagIcon.hide();
+            closeIcon.show();
         }
     });
 
     ovlSideBar.click(function () {
         $(sidebar).removeClass('show-sidebar');
         $(ovlSideBar).removeClass('show-overlay-sidebar');
-        $(btnControlSidebar).css('top','15%');
-        $(btnControlSidebar).html('<i class="fal fa-shopping-bag"></i>')
-        show = false;
+        $(btnToggleSideBar).css('top','15%');
+        bagIcon.show();
+        closeIcon.hide();
     });
 
     // var ovlSideBar = $('.overlay-sidebar');

@@ -4,18 +4,9 @@
     <aside style="overflow: inherit" class="sidebar trans-0-4">
         <!-- Button Hide sidebar -->
         {{--        <button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>--}}
-        <button id="btn-control-sidebar" class="btn-show-sidebar m-l-33 trans-0-4" style="
-        position: absolute;
-        left: -83px;
-        top: 15%;
-        width: 50px;
-        height: 50px;
-box-shadow: -2px 0px 5px 0px rgba(0,0,0,0.25);
-border-radius: 10px 0px 0px 10px;
-background: white;
-        border: none;
-">
-            <span><i class="fal fa-shopping-bag"></i></span>
+        <button id="btn-toggle-sidebar" class="btn-toggle-sidebar m-l-33 trans-0-4">
+            <span class="bag-icon" data-food="3" data-set="3"><i class="fal fa-shopping-bag"></i></span>
+            <span class="close-icon"><i class="fal fa-times"></i></span>
         </button>
 
         <!-- - -->
@@ -605,6 +596,7 @@ background: white;
 
         const increment = 'increment';
         const decrement = 'decrement';
+        const withValue = 'withValue';
         const deleteFood = 'deleteFood';
 
         btnAddFood.click(function () {
@@ -612,8 +604,12 @@ background: white;
             updateQuantity(foodId, increment)
         });
 
+        const handleChangeQuantity = function (id, quantity) {
+            console.log(quantity)
+            updateQuantity(id, withValue, quantity)
+        };
 
-        function updateQuantity(id, type) {
+        function updateQuantity(id, type, payload) {
             id = parseInt(id);
             const food = foodInBag.get(id);
             var currentQuantity = food ? food.quantity : 0;
@@ -639,6 +635,9 @@ background: white;
                         foodInBag.set(id, {...food, quantity: currentQuantity - 1})
                     }
                     break;
+                case withValue:
+                    foodInBag.set(id, {...food, quantity: parseInt(payload)});
+                    break;
                 case deleteFood:
                     foodInBag.delete(id);
                     break;
@@ -662,7 +661,7 @@ background: white;
                         </a>
                         <div>
                             <div class="quantity">
-                                 <input type="number" min="1" step="1" data-id="${food.id}" value="${food.quantity}">
+                                 <input onchange="handleChangeQuantity(${food.id}, this.value)" type="number" min="1" step="1" data-id="${food.id}" value="${food.quantity}">
                                  <div class="quantity-nav">
                                      <div onclick="updateQuantity(${food.id}, increment)" class="quantity-button quantity-up">+</div>
                                      <div onclick="updateQuantity(${food.id}, decrement)" class="quantity-button quantity-down">-</div>
