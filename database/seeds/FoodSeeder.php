@@ -12,9 +12,8 @@ class FoodSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('food')->truncate();
-        DB::table('food')->insert([
-
+        DB::table('foods')->truncate();
+        DB::table('foods')->insert([
             [
                 'id' => 1,
                 'name' => 'rice',
@@ -155,7 +154,6 @@ class FoodSeeder extends Seeder
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],
-
             [
                 'id' => 11,
                 'name'=>'Stewed pork leg with bell peppers',

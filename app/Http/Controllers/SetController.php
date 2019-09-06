@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Set;
 use Illuminate\Http\Request;
 
 class SetController extends Controller
@@ -41,10 +40,10 @@ class SetController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Set  $set
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Set $set)
+    public function show($id)
     {
         //
     }
@@ -52,10 +51,10 @@ class SetController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Set  $set
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Set $set)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +63,10 @@ class SetController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Set  $set
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Set $set)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +74,10 @@ class SetController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Set  $set
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Set $set)
+    public function destroy($id)
     {
         //
     }

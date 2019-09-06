@@ -10,7 +10,7 @@ import UserTable from './components/table/UserTable'
 import FoodTable from './components/table/FoodTable';
 import TestTable from './components/table/TestTable';
 import UserDetail from './components/UserDetail';
-import {FormTest, UploadImage2} from './components/FormTest'
+import FormTest from './components/FormTest'
 import LoginForm from "./components/auth/Login";
 
 import Dashboard from "./components/dashboard";
@@ -48,7 +48,7 @@ export default class Admin extends React.Component {
                                 <PrivateRoute exact path="/ad/food" component={FoodTable}/>
                                 <PrivateRoute exact path="/ad/user" component={UserTable}/>
                                 <PrivateRoute exact path="/ad/test" component={TestTable}/>
-                                <PrivateRoute exact path="/ad/form" component={UploadImage2}/>
+                                <PrivateRoute exact path="/ad/form" component={FormTest}/>
                                 <PrivateRoute exact path="/ad/user/:id" component={UserDetail}/>
                             </MasterLayout>
                         </Route>

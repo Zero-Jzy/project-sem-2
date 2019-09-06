@@ -4,18 +4,9 @@
     <aside style="overflow: inherit" class="sidebar trans-0-4">
         <!-- Button Hide sidebar -->
         {{--        <button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>--}}
-        <button id="btn-control-sidebar" class="btn-show-sidebar m-l-33 trans-0-4" style="
-        position: absolute;
-        left: -83px;
-        top: 15%;
-        width: 50px;
-        height: 50px;
-box-shadow: -2px 0px 5px 0px rgba(0,0,0,0.25);
-border-radius: 10px 0px 0px 10px;
-background: white;
-        border: none;
-">
-            <span><i class="fal fa-shopping-bag"></i></span>
+        <button id="btn-toggle-sidebar" class="btn-toggle-sidebar m-l-33 trans-0-4">
+            <span class="bag-icon" data-food="3" data-set="3"><i class="fal fa-shopping-bag"></i></span>
+            <span class="close-icon"><i class="fal fa-times"></i></span>
         </button>
 
         <!-- - -->
@@ -23,13 +14,13 @@ background: white;
             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                 <li class="nav-item">
                     <a class="active"
-                       id="pills-dish-tab"
+                       id="pills-food-tab"
                        data-toggle="pill"
-                       href="#pills-dish"
+                       href="#pills-food"
                        role="tab"
-                       aria-controls="pills-dish"
+                       aria-controls="pills-food"
                        aria-selected="true">
-                        Dishs
+                        foods
                     </a>
                 </li>
                 <li class="nav-item">
@@ -47,115 +38,28 @@ background: white;
         </div>
 
         <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-dish" role="tabpanel" aria-labelledby="pills-dish-tab">
-                <div class="list-dish scrollbar">
-                    <div class="dish-item">
-                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                            </div>
-
-                            <div class="text-blo3 flex-col-l-m">
-                                <a href="#" class="txt19 m-b-3">
-                                    Duis massa
-                                </a>
-
-                                <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                            </div>
+            <div class="tab-pane fade show active" id="pills-food" role="tabpanel" aria-labelledby="pills-food-tab">
+                <div id="list-food" class="list-food scrollbar">
+                    <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                        <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                            <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
                         </div>
-                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                            </div>
+                        <div class="text-blo3 flex-col-l-m">
+                            <a href="#" class="txt19 m-b-3">
+                                Duis massa
+                            </a>
 
-                            <div class="text-blo3 flex-col-l-m">
-                                <a href="#" class="txt19 m-b-3">
-                                    Duis massa
-                                </a>
-
-                                <span class="txt10 m-t-20">
+                            <span class="txt10 m-t-20">
 								$12.75
 							</span>
-                            </div>
                         </div>
-                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                            </div>
-
-                            <div class="text-blo3 flex-col-l-m">
-                                <a href="#" class="txt19 m-b-3">
-                                    Duis massa
-                                </a>
-
-                                <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                            </div>
-                        </div>
-                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                            </div>
-
-                            <div class="text-blo3 flex-col-l-m">
-                                <a href="#" class="txt19 m-b-3">
-                                    Duis massa
-                                </a>
-
-                                <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                            </div>
-                        </div>
-                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                            </div>
-
-                            <div class="text-blo3 flex-col-l-m">
-                                <a href="#" class="txt19 m-b-3">
-                                    Duis massa
-                                </a>
-
-                                <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                            </div>
-                        </div>
-                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                            </div>
-
-                            <div class="text-blo3 flex-col-l-m">
-                                <a href="#" class="txt19 m-b-3">
-                                    Duis massa
-                                </a>
-
-                                <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                            </div>
-                        </div>
-                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                            </div>
-
-                            <div class="text-blo3 flex-col-l-m">
-                                <a href="#" class="txt19 m-b-3">
-                                    Duis massa
-                                </a>
-
-                                <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                            </div>
+                        <div class="ml-auto mr-4 my-2">
+                            <button id="btn-delete-food ">
+                                <i class="fal fa-times"></i>
+                            </button>
                         </div>
                     </div>
+
                 </div>
                 <div class="total-box">
                     <div style="height: 30px">
@@ -187,8 +91,8 @@ background: white;
                 </div>
             </div>
             <div class="tab-pane fade" id="pills-set" role="tabpanel" aria-labelledby="pills-set-tab">
-                <div class="list-dish scrollbar">
-                    <div class="dish-item">
+                <div class="list-food scrollbar">
+                    <div class="food-item">
                         <div class="blo3 flex-w flex-col-l-sm m-b-30">
                             <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
                                 <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
@@ -373,1616 +277,124 @@ background: white;
                     <div class="kc_tab_content">
                         <div class="kc-elm kc-css-690017 kc-raw-code">
                             <div class="woocommerce columns-4 container">
-                                <ul class="products dc_columns dc_columns-4 row">
-                                    <li class="col-md-3">
-                                        <div class="product_item">
-                                            <div class="product_img">
-                                                <img width="260" height="204"
-                                                     src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                     class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image lazyloaded"
-                                                     alt="P1. Beefy Pizza" data-lazy-srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w,
-                                              https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                              https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                     data-lazy-sizes="(max-width: 260px) 100vw, 260px"
-                                                     data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                     sizes="(max-width: 260px) 100vw, 260px"
-                                                     srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w, https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                             https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                     data-was-processed="true">
-                                                <noscript><img width="260" height="204"
-                                                               src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                               class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
-                                                               alt="P1. Beefy Pizza" srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w,
-                                                       https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                                       https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                               sizes="(max-width: 260px) 100vw, 260px"/></noscript>
-                                            </div>
-                                            <div class="product_hover">
-                                                <div class="product_hover_cont"><h3
-                                                        class="woocommerce-loop-product__title"
-                                                        style="">
-                                                        P1. Beefy Pizza</h3>
-                                                    <p><strong>Thành phần</strong></p>
-                                                    <p>Thịt bò xay, ngô, sốt BBQ, pho mai.</p>
-                                                    <p><strong>Kích cỡ / Giá</strong></p>
-                                                    <p><img class="alignnone wp-image-345 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                            alt="Pizza Size S" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                            data-was-processed="true">
-                                                    <noscript>
-                                                        <img class="alignnone wp-image-345 size-full"
-                                                             src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                             alt="Pizza Size S" width="25" height="25"/></noscript>&nbsp;
-                                                    Size S / 20cm / 80.000đ</p>
-                                                    <p><img class="alignnone wp-image-344 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                            alt="Pizza Size M" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                            data-was-processed="true">
-                                                    <noscript>
-                                                        <img class="alignnone wp-image-344 size-full"
-                                                             src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                             alt="Pizza Size M" width="25" height="25"/></noscript>&nbsp;
-                                                    Size M / 24cm / 100.000đ</p>
-                                                    <p><img class="alignnone wp-image-346 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                            alt="Pizza Size L" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                            data-was-processed="true">
-                                                    <noscript><img class="alignnone wp-image-346 size-full"
-                                                                   src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                                   alt="Pizza Size L" width="25" height="25"/>
-                                                    </noscript>&nbsp;
-                                                    Size L / 30cm / 140.000đ</p></div>
-                                            </div>
-                                            <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
-                                                class="price">
-                                        <span class="woocommerce-Price-amount amount">80.000<span
-                                                class="woocommerce-Price-currencySymbol">₫</span>
-                                        </span> – <span class="woocommerce-Price-amount amount">140.000<span
-                                                        class="woocommerce-Price-currencySymbol">₫</span></span></span>
-                                            <form action="" class="variations_form cart">
-                                                <table class="variations">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="label"><label for="pa_size">Size</label></td>
-                                                        <td class="value woo-variation-items-wrapper">
-                                                            <select name="" id=""
-                                                                    class="value woo-variation-items-wrapper"
-                                                                    style="display: none">
-                                                                <option value="">Chọn một tùy chọn</option>
-                                                                <option value="s" class="attached enabled">S</option>
-                                                                <option value="m" class="attached enabled">M</option>
-                                                                <option value="l" class="attached enabled">L</option>
-                                                            </select>
-                                                            <ul class="variable-items-wrapperbutton-variable-wrapperreselect-clear">
-                                                                <li data-wvstooltip="S"
-                                                                    class="variable-item button-variable-item button-variable-item-s"
-                                                                    title="S" data-value="s"><span
-                                                                        class="variable-item-span variable-item-span-button">S</span>
-                                                                </li>
-                                                                <li data-wvstooltip="M"
-                                                                    class="variable-item button-variable-item button-variable-item-m"
-                                                                    title="M" data-value="m"><span
-                                                                        class="variable-item-span variable-item-span-button">M</span>
-                                                                </li>
-                                                                <li data-wvstooltip="L"
-                                                                    class="variable-item button-variable-item button-variable-item-l"
-                                                                    title="L" data-value="l"><span
-                                                                        class="variable-item-span variable-item-span-button">L</span>
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                                <div class="single_variation_wrap">
-                                                    <div class="woocommerce-variation single_variation"
-                                                         style="display: none"></div>
-                                                    <div
-                                                        class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
-                                                        <div class="quantity">
-                                                            <label class="screen-reader-text"
-                                                                   for="quantity_5d659bfc5c52e">
-                                                                Số lượng </label>
-                                                            <div class="dc_quantity_input">
-                                                                <input class="minus" type="button" value="-">
-                                                                <input type="number" id="quantity_5d659bfc5c52e"
-                                                                       class="input-text qty text" step="1" min="1"
-                                                                       max=""
-                                                                       name="quantity" value="1" title="SL" size="4"
-                                                                       pattern="[0-9]*" inputmode="numeric"
-                                                                       aria-labelledby="P1. Beefy Pizza số lượng">
-                                                                <input class="plus" type="button" value="+">
+                                <div class="row">
+                                    <div class="col-sm-4 col-md-3">
+                                        <div class="food-card">
+                                            <div class="food-card-content">
+                                                <img src="https://via.placeholder.com/360"/>
+                                                <div class="info">
+                                                    <div class="row amount-of-nutrition">
+                                                        <div class="col-sm-6 offset-3" style="margin-left: 25%">
+                                                            <span>Calo</span>
+                                                            <div class="low"><span>32487</span><small>&nbsp;(g)</small>
                                                             </div>
                                                         </div>
-                                                        <button type="submit"
-                                                                class="single_add_to_cart_button button alt disabled wc-variation-selection-needed">
-                                                            Mua hàng
-                                                        </button>
-
-
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </li>
-                                    <li class="col-md-3">
-                                        <div class="product_item">
-                                            <div class="product_img">
-                                                <img width="260" height="204"
-                                                     src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                     class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image lazyloaded"
-                                                     alt="P1. Beefy Pizza" data-lazy-srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w,
-                                              https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                              https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                     data-lazy-sizes="(max-width: 260px) 100vw, 260px"
-                                                     data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                     sizes="(max-width: 260px) 100vw, 260px"
-                                                     srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w, https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                             https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                     data-was-processed="true">
-                                                <noscript><img width="260" height="204"
-                                                               src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                               class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
-                                                               alt="P1. Beefy Pizza" srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w,
-                                                       https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                                       https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                               sizes="(max-width: 260px) 100vw, 260px"/></noscript>
-                                            </div>
-                                            <div class="product_hover">
-                                                <div class="product_hover_cont"><h3
-                                                        class="woocommerce-loop-product__title"
-                                                        style="">
-                                                        P1. Beefy Pizza</h3>
-                                                    <p><strong>Thành phần</strong></p>
-                                                    <p>Thịt bò xay, ngô, sốt BBQ, pho mai.</p>
-                                                    <p><strong>Kích cỡ / Giá</strong></p>
-                                                    <p><img class="alignnone wp-image-345 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                            alt="Pizza Size S" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                            data-was-processed="true">
-                                                    <noscript>
-                                                        <img class="alignnone wp-image-345 size-full"
-                                                             src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                             alt="Pizza Size S" width="25" height="25"/></noscript>&nbsp;
-                                                    Size S / 20cm / 80.000đ</p>
-                                                    <p><img class="alignnone wp-image-344 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                            alt="Pizza Size M" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                            data-was-processed="true">
-                                                    <noscript>
-                                                        <img class="alignnone wp-image-344 size-full"
-                                                             src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                             alt="Pizza Size M" width="25" height="25"/></noscript>&nbsp;
-                                                    Size M / 24cm / 100.000đ</p>
-                                                    <p><img class="alignnone wp-image-346 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                            alt="Pizza Size L" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                            data-was-processed="true">
-                                                    <noscript><img class="alignnone wp-image-346 size-full"
-                                                                   src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                                   alt="Pizza Size L" width="25" height="25"/>
-                                                    </noscript>&nbsp;
-                                                    Size L / 30cm / 140.000đ</p></div>
-                                            </div>
-                                            <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
-                                                class="price">
-                                        <span class="woocommerce-Price-amount amount">80.000<span
-                                                class="woocommerce-Price-currencySymbol">₫</span>
-                                        </span> – <span class="woocommerce-Price-amount amount">140.000<span
-                                                        class="woocommerce-Price-currencySymbol">₫</span></span></span>
-                                            <form action="" class="variations_form cart">
-                                                <table class="variations">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="label"><label for="pa_size">Size</label></td>
-                                                        <td class="value woo-variation-items-wrapper">
-                                                            <select name="" id=""
-                                                                    class="value woo-variation-items-wrapper"
-                                                                    style="display: none">
-                                                                <option value="">Chọn một tùy chọn</option>
-                                                                <option value="s" class="attached enabled">S</option>
-                                                                <option value="m" class="attached enabled">M</option>
-                                                                <option value="l" class="attached enabled">L</option>
-                                                            </select>
-                                                            <ul class="variable-items-wrapperbutton-variable-wrapperreselect-clear">
-                                                                <li data-wvstooltip="S"
-                                                                    class="variable-item button-variable-item button-variable-item-s"
-                                                                    title="S" data-value="s"><span
-                                                                        class="variable-item-span variable-item-span-button">S</span>
-                                                                </li>
-                                                                <li data-wvstooltip="M"
-                                                                    class="variable-item button-variable-item button-variable-item-m"
-                                                                    title="M" data-value="m"><span
-                                                                        class="variable-item-span variable-item-span-button">M</span>
-                                                                </li>
-                                                                <li data-wvstooltip="L"
-                                                                    class="variable-item button-variable-item button-variable-item-l"
-                                                                    title="L" data-value="l"><span
-                                                                        class="variable-item-span variable-item-span-button">L</span>
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                                <div class="single_variation_wrap">
-                                                    <div class="woocommerce-variation single_variation"
-                                                         style="display: none"></div>
-                                                    <div
-                                                        class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
-                                                        <div class="quantity">
-                                                            <label class="screen-reader-text"
-                                                                   for="quantity_5d659bfc5c52e">
-                                                                Số lượng </label>
-                                                            <div class="dc_quantity_input">
-                                                                <input class="minus" type="button" value="-">
-                                                                <input type="number" id="quantity_5d659bfc5c52e"
-                                                                       class="input-text qty text" step="1" min="1"
-                                                                       max=""
-                                                                       name="quantity" value="1" title="SL" size="4"
-                                                                       pattern="[0-9]*" inputmode="numeric"
-                                                                       aria-labelledby="P1. Beefy Pizza số lượng">
-                                                                <input class="plus" type="button" value="+">
+                                                        <div class="col-sm-6">
+                                                            <span>Proteint</span>
+                                                            <div class="normal"><span>233</span><small>&nbsp;(g)</small>
                                                             </div>
                                                         </div>
-                                                        <button type="submit"
-                                                                class="single_add_to_cart_button button alt disabled wc-variation-selection-needed">
-                                                            Mua hàng
-                                                        </button>
-
-
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </li>
-                                    <li class="col-md-3">
-                                        <div class="product_item">
-                                            <div class="product_img">
-                                                <img width="260" height="204"
-                                                     src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                     class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image lazyloaded"
-                                                     alt="P1. Beefy Pizza" data-lazy-srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w,
-                                              https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                              https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                     data-lazy-sizes="(max-width: 260px) 100vw, 260px"
-                                                     data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                     sizes="(max-width: 260px) 100vw, 260px"
-                                                     srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w, https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                             https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                     data-was-processed="true">
-                                                <noscript><img width="260" height="204"
-                                                               src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                               class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
-                                                               alt="P1. Beefy Pizza" srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w,
-                                                       https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                                       https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                               sizes="(max-width: 260px) 100vw, 260px"/></noscript>
-                                            </div>
-                                            <div class="product_hover">
-                                                <div class="product_hover_cont"><h3
-                                                        class="woocommerce-loop-product__title"
-                                                        style="">
-                                                        P1. Beefy Pizza</h3>
-                                                    <p><strong>Thành phần</strong></p>
-                                                    <p>Thịt bò xay, ngô, sốt BBQ, pho mai.</p>
-                                                    <p><strong>Kích cỡ / Giá</strong></p>
-                                                    <p><img class="alignnone wp-image-345 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                            alt="Pizza Size S" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                            data-was-processed="true">
-                                                    <noscript>
-                                                        <img class="alignnone wp-image-345 size-full"
-                                                             src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                             alt="Pizza Size S" width="25" height="25"/></noscript>&nbsp;
-                                                    Size S / 20cm / 80.000đ</p>
-                                                    <p><img class="alignnone wp-image-344 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                            alt="Pizza Size M" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                            data-was-processed="true">
-                                                    <noscript>
-                                                        <img class="alignnone wp-image-344 size-full"
-                                                             src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                             alt="Pizza Size M" width="25" height="25"/></noscript>&nbsp;
-                                                    Size M / 24cm / 100.000đ</p>
-                                                    <p><img class="alignnone wp-image-346 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                            alt="Pizza Size L" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                            data-was-processed="true">
-                                                    <noscript><img class="alignnone wp-image-346 size-full"
-                                                                   src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                                   alt="Pizza Size L" width="25" height="25"/>
-                                                    </noscript>&nbsp;
-                                                    Size L / 30cm / 140.000đ</p></div>
-                                            </div>
-                                            <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
-                                                class="price">
-                                        <span class="woocommerce-Price-amount amount">80.000<span
-                                                class="woocommerce-Price-currencySymbol">₫</span>
-                                        </span> – <span class="woocommerce-Price-amount amount">140.000<span
-                                                        class="woocommerce-Price-currencySymbol">₫</span></span></span>
-                                            <form action="" class="variations_form cart">
-                                                <table class="variations">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="label"><label for="pa_size">Size</label></td>
-                                                        <td class="value woo-variation-items-wrapper">
-                                                            <select name="" id=""
-                                                                    class="value woo-variation-items-wrapper"
-                                                                    style="display: none">
-                                                                <option value="">Chọn một tùy chọn</option>
-                                                                <option value="s" class="attached enabled">S</option>
-                                                                <option value="m" class="attached enabled">M</option>
-                                                                <option value="l" class="attached enabled">L</option>
-                                                            </select>
-                                                            <ul class="variable-items-wrapperbutton-variable-wrapperreselect-clear">
-                                                                <li data-wvstooltip="S"
-                                                                    class="variable-item button-variable-item button-variable-item-s"
-                                                                    title="S" data-value="s"><span
-                                                                        class="variable-item-span variable-item-span-button">S</span>
-                                                                </li>
-                                                                <li data-wvstooltip="M"
-                                                                    class="variable-item button-variable-item button-variable-item-m"
-                                                                    title="M" data-value="m"><span
-                                                                        class="variable-item-span variable-item-span-button">M</span>
-                                                                </li>
-                                                                <li data-wvstooltip="L"
-                                                                    class="variable-item button-variable-item button-variable-item-l"
-                                                                    title="L" data-value="l"><span
-                                                                        class="variable-item-span variable-item-span-button">L</span>
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                                <div class="single_variation_wrap">
-                                                    <div class="woocommerce-variation single_variation"
-                                                         style="display: none"></div>
-                                                    <div
-                                                        class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
-                                                        <div class="quantity">
-                                                            <label class="screen-reader-text"
-                                                                   for="quantity_5d659bfc5c52e">
-                                                                Số lượng </label>
-                                                            <div class="dc_quantity_input">
-                                                                <input class="minus" type="button" value="-">
-                                                                <input type="number" id="quantity_5d659bfc5c52e"
-                                                                       class="input-text qty text" step="1" min="1"
-                                                                       max=""
-                                                                       name="quantity" value="1" title="SL" size="4"
-                                                                       pattern="[0-9]*" inputmode="numeric"
-                                                                       aria-labelledby="P1. Beefy Pizza số lượng">
-                                                                <input class="plus" type="button" value="+">
+                                                        <div class="col-sm-6">
+                                                            <span>Dietary fiber</span>
+                                                            <div class="very-high">
+                                                                <span>12</span><small>&nbsp;(g)</small></div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <span>Carbohydrate</span>
+                                                            <div class="high"><span>324</span><small>&nbsp;(g)</small>
                                                             </div>
                                                         </div>
-                                                        <button type="submit"
-                                                                class="single_add_to_cart_button button alt disabled wc-variation-selection-needed">
-                                                            Mua hàng
-                                                        </button>
-
-
+                                                        <div class="col-sm-6">
+                                                            <span>Fat intaket</span>
+                                                            <div class="very-low">
+                                                                <span>12</span><small>&nbsp;(g)</small></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-sm-12">
+                                                            <span>Viatmins:</span>
+                                                        </div>
+                                                        <div class="col-sm-12">
+                                                            <span>Minerals:</span>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </form>
+                                            </div>
+                                            <div class="food-card-footer">
+                                                <h5>Name food</h5>
+                                                <div class="d-flex justify-content-between">
+                                                    <p class="price">12$</p>
+                                                    <a class="btn-add-food">
+                                                        <i class="fal fa-plus"></i>
+                                                    </a>
+                                                </div>
+
+                                            </div>
                                         </div>
-                                    </li>
-                                    <li class="col-md-3">
-                                        <div class="product_item">
-                                            <div class="product_img">
-                                                <img width="260" height="204"
-                                                     src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                     class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image lazyloaded"
-                                                     alt="P1. Beefy Pizza" data-lazy-srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w,
-                                              https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                              https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                     data-lazy-sizes="(max-width: 260px) 100vw, 260px"
-                                                     data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                     sizes="(max-width: 260px) 100vw, 260px"
-                                                     srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w, https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                             https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                     data-was-processed="true">
-                                                <noscript><img width="260" height="204"
-                                                               src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                               class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
-                                                               alt="P1. Beefy Pizza" srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w,
-                                                       https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                                       https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                               sizes="(max-width: 260px) 100vw, 260px"/></noscript>
-                                            </div>
-                                            <div class="product_hover">
-                                                <div class="product_hover_cont"><h3
-                                                        class="woocommerce-loop-product__title"
-                                                        style="">
-                                                        P1. Beefy Pizza</h3>
-                                                    <p><strong>Thành phần</strong></p>
-                                                    <p>Thịt bò xay, ngô, sốt BBQ, pho mai.</p>
-                                                    <p><strong>Kích cỡ / Giá</strong></p>
-                                                    <p><img class="alignnone wp-image-345 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                            alt="Pizza Size S" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                            data-was-processed="true">
-                                                    <noscript>
-                                                        <img class="alignnone wp-image-345 size-full"
-                                                             src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                             alt="Pizza Size S" width="25" height="25"/></noscript>&nbsp;
-                                                    Size S / 20cm / 80.000đ</p>
-                                                    <p><img class="alignnone wp-image-344 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                            alt="Pizza Size M" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                            data-was-processed="true">
-                                                    <noscript>
-                                                        <img class="alignnone wp-image-344 size-full"
-                                                             src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                             alt="Pizza Size M" width="25" height="25"/></noscript>&nbsp;
-                                                    Size M / 24cm / 100.000đ</p>
-                                                    <p><img class="alignnone wp-image-346 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                            alt="Pizza Size L" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                            data-was-processed="true">
-                                                    <noscript><img class="alignnone wp-image-346 size-full"
-                                                                   src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                                   alt="Pizza Size L" width="25" height="25"/>
-                                                    </noscript>&nbsp;
-                                                    Size L / 30cm / 140.000đ</p></div>
-                                            </div>
-                                            <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
-                                                class="price">
-                                        <span class="woocommerce-Price-amount amount">80.000<span
-                                                class="woocommerce-Price-currencySymbol">₫</span>
-                                        </span> – <span class="woocommerce-Price-amount amount">140.000<span
-                                                        class="woocommerce-Price-currencySymbol">₫</span></span></span>
-                                            <form action="" class="variations_form cart">
-                                                <table class="variations">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="label"><label for="pa_size">Size</label></td>
-                                                        <td class="value woo-variation-items-wrapper">
-                                                            <select name="" id=""
-                                                                    class="value woo-variation-items-wrapper"
-                                                                    style="display: none">
-                                                                <option value="">Chọn một tùy chọn</option>
-                                                                <option value="s" class="attached enabled">S</option>
-                                                                <option value="m" class="attached enabled">M</option>
-                                                                <option value="l" class="attached enabled">L</option>
-                                                            </select>
-                                                            <ul class="variable-items-wrapperbutton-variable-wrapperreselect-clear">
-                                                                <li data-wvstooltip="S"
-                                                                    class="variable-item button-variable-item button-variable-item-s"
-                                                                    title="S" data-value="s"><span
-                                                                        class="variable-item-span variable-item-span-button">S</span>
-                                                                </li>
-                                                                <li data-wvstooltip="M"
-                                                                    class="variable-item button-variable-item button-variable-item-m"
-                                                                    title="M" data-value="m"><span
-                                                                        class="variable-item-span variable-item-span-button">M</span>
-                                                                </li>
-                                                                <li data-wvstooltip="L"
-                                                                    class="variable-item button-variable-item button-variable-item-l"
-                                                                    title="L" data-value="l"><span
-                                                                        class="variable-item-span variable-item-span-button">L</span>
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                                <div class="single_variation_wrap">
-                                                    <div class="woocommerce-variation single_variation"
-                                                         style="display: none"></div>
-                                                    <div
-                                                        class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
-                                                        <div class="quantity">
-                                                            <label class="screen-reader-text"
-                                                                   for="quantity_5d659bfc5c52e">
-                                                                Số lượng </label>
-                                                            <div class="dc_quantity_input">
-                                                                <input class="minus" type="button" value="-">
-                                                                <input type="number" id="quantity_5d659bfc5c52e"
-                                                                       class="input-text qty text" step="1" min="1"
-                                                                       max=""
-                                                                       name="quantity" value="1" title="SL" size="4"
-                                                                       pattern="[0-9]*" inputmode="numeric"
-                                                                       aria-labelledby="P1. Beefy Pizza số lượng">
-                                                                <input class="plus" type="button" value="+">
+                                    </div>
+
+                                    @foreach($foods as $food)
+                                        <div class="col-sm-4 col-md-3">
+                                            <div class="food-card">
+                                                <div class="food-card-content">
+                                                    <img src="{{$food->image}}"/>
+                                                    <div class="info">
+                                                        <div class="row amount-of-nutrition">
+                                                            <div class="col-sm-6 offset-3" style="margin-left: 25%">
+                                                                <span>Calo</span>
+                                                                <div class="low">
+                                                                    <span>{{$food->calo}}</span><small>&nbsp;(g)</small>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <span>Protein</span>
+                                                                <div class="normal">
+                                                                    <span>{{$food->protein}}</span><small>&nbsp;(g)</small>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <span>Dietary fiber</span>
+                                                                <div class="very-high">
+                                                                    <span>{{$food->dietary_fiber}}</span><small>&nbsp;(g)</small>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <span>Carbohydrate</span>
+                                                                <div class="high">
+                                                                    <span>{{$food->carbohydrate}}</span><small>&nbsp;(g)</small>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <span>Total fat</span>
+                                                                <div class="very-low">
+                                                                    <span>{{$food->total_fat}}</span><small>&nbsp;(g)</small>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <button type="submit"
-                                                                class="single_add_to_cart_button button alt disabled wc-variation-selection-needed">
-                                                            Mua hàng
-                                                        </button>
-
-
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </li>
-                                    <li class="col-md-3">
-                                        <div class="product_item">
-                                            <div class="product_img">
-                                                <img width="260" height="204"
-                                                     src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                     class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image lazyloaded"
-                                                     alt="P1. Beefy Pizza" data-lazy-srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w,
-                                              https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                              https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                     data-lazy-sizes="(max-width: 260px) 100vw, 260px"
-                                                     data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                     sizes="(max-width: 260px) 100vw, 260px"
-                                                     srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w, https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                             https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                     data-was-processed="true">
-                                                <noscript><img width="260" height="204"
-                                                               src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                               class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
-                                                               alt="P1. Beefy Pizza" srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w,
-                                                       https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                                       https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                               sizes="(max-width: 260px) 100vw, 260px"/></noscript>
-                                            </div>
-                                            <div class="product_hover">
-                                                <div class="product_hover_cont"><h3
-                                                        class="woocommerce-loop-product__title"
-                                                        style="">
-                                                        P1. Beefy Pizza</h3>
-                                                    <p><strong>Thành phần</strong></p>
-                                                    <p>Thịt bò xay, ngô, sốt BBQ, pho mai.</p>
-                                                    <p><strong>Kích cỡ / Giá</strong></p>
-                                                    <p><img class="alignnone wp-image-345 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                            alt="Pizza Size S" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                            data-was-processed="true">
-                                                    <noscript>
-                                                        <img class="alignnone wp-image-345 size-full"
-                                                             src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                             alt="Pizza Size S" width="25" height="25"/></noscript>&nbsp;
-                                                    Size S / 20cm / 80.000đ</p>
-                                                    <p><img class="alignnone wp-image-344 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                            alt="Pizza Size M" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                            data-was-processed="true">
-                                                    <noscript>
-                                                        <img class="alignnone wp-image-344 size-full"
-                                                             src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                             alt="Pizza Size M" width="25" height="25"/></noscript>&nbsp;
-                                                    Size M / 24cm / 100.000đ</p>
-                                                    <p><img class="alignnone wp-image-346 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                            alt="Pizza Size L" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                            data-was-processed="true">
-                                                    <noscript><img class="alignnone wp-image-346 size-full"
-                                                                   src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                                   alt="Pizza Size L" width="25" height="25"/>
-                                                    </noscript>&nbsp;
-                                                    Size L / 30cm / 140.000đ</p></div>
-                                            </div>
-                                            <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
-                                                class="price">
-                                        <span class="woocommerce-Price-amount amount">80.000<span
-                                                class="woocommerce-Price-currencySymbol">₫</span>
-                                        </span> – <span class="woocommerce-Price-amount amount">140.000<span
-                                                        class="woocommerce-Price-currencySymbol">₫</span></span></span>
-                                            <form action="" class="variations_form cart">
-                                                <table class="variations">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="label"><label for="pa_size">Size</label></td>
-                                                        <td class="value woo-variation-items-wrapper">
-                                                            <select name="" id=""
-                                                                    class="value woo-variation-items-wrapper"
-                                                                    style="display: none">
-                                                                <option value="">Chọn một tùy chọn</option>
-                                                                <option value="s" class="attached enabled">S</option>
-                                                                <option value="m" class="attached enabled">M</option>
-                                                                <option value="l" class="attached enabled">L</option>
-                                                            </select>
-                                                            <ul class="variable-items-wrapperbutton-variable-wrapperreselect-clear">
-                                                                <li data-wvstooltip="S"
-                                                                    class="variable-item button-variable-item button-variable-item-s"
-                                                                    title="S" data-value="s"><span
-                                                                        class="variable-item-span variable-item-span-button">S</span>
-                                                                </li>
-                                                                <li data-wvstooltip="M"
-                                                                    class="variable-item button-variable-item button-variable-item-m"
-                                                                    title="M" data-value="m"><span
-                                                                        class="variable-item-span variable-item-span-button">M</span>
-                                                                </li>
-                                                                <li data-wvstooltip="L"
-                                                                    class="variable-item button-variable-item button-variable-item-l"
-                                                                    title="L" data-value="l"><span
-                                                                        class="variable-item-span variable-item-span-button">L</span>
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                                <div class="single_variation_wrap">
-                                                    <div class="woocommerce-variation single_variation"
-                                                         style="display: none"></div>
-                                                    <div
-                                                        class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
-                                                        <div class="quantity">
-                                                            <label class="screen-reader-text"
-                                                                   for="quantity_5d659bfc5c52e">
-                                                                Số lượng </label>
-                                                            <div class="dc_quantity_input">
-                                                                <input class="minus" type="button" value="-">
-                                                                <input type="number" id="quantity_5d659bfc5c52e"
-                                                                       class="input-text qty text" step="1" min="1"
-                                                                       max=""
-                                                                       name="quantity" value="1" title="SL" size="4"
-                                                                       pattern="[0-9]*" inputmode="numeric"
-                                                                       aria-labelledby="P1. Beefy Pizza số lượng">
-                                                                <input class="plus" type="button" value="+">
+                                                        <div class="row mt-3">
+                                                            <div class="col-sm-12">
+                                                                <span>Vitamins: {{$food->vitamins}}</span>
+                                                            </div>
+                                                            <div class="col-sm-12">
+                                                                <span>Minerals: {{$food->minerals}} </span>
                                                             </div>
                                                         </div>
-                                                        <button type="submit"
-                                                                class="single_add_to_cart_button button alt disabled wc-variation-selection-needed">
-                                                            Mua hàng
-                                                        </button>
-
-
                                                     </div>
                                                 </div>
-                                            </form>
-                                        </div>
-                                    </li>
-                                    <li class="col-md-3">
-                                        <div class="product_item">
-                                            <div class="product_img">
-                                                <img width="260" height="204"
-                                                     src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                     class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image lazyloaded"
-                                                     alt="P1. Beefy Pizza" data-lazy-srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w,
-                                              https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                              https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                     data-lazy-sizes="(max-width: 260px) 100vw, 260px"
-                                                     data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                     sizes="(max-width: 260px) 100vw, 260px"
-                                                     srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w, https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                             https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                     data-was-processed="true">
-                                                <noscript><img width="260" height="204"
-                                                               src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                               class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
-                                                               alt="P1. Beefy Pizza" srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w,
-                                                       https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                                       https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                               sizes="(max-width: 260px) 100vw, 260px"/></noscript>
-                                            </div>
-                                            <div class="product_hover">
-                                                <div class="product_hover_cont"><h3
-                                                        class="woocommerce-loop-product__title"
-                                                        style="">
-                                                        P1. Beefy Pizza</h3>
-                                                    <p><strong>Thành phần</strong></p>
-                                                    <p>Thịt bò xay, ngô, sốt BBQ, pho mai.</p>
-                                                    <p><strong>Kích cỡ / Giá</strong></p>
-                                                    <p><img class="alignnone wp-image-345 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                            alt="Pizza Size S" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                            data-was-processed="true">
-                                                    <noscript>
-                                                        <img class="alignnone wp-image-345 size-full"
-                                                             src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                             alt="Pizza Size S" width="25" height="25"/></noscript>&nbsp;
-                                                    Size S / 20cm / 80.000đ</p>
-                                                    <p><img class="alignnone wp-image-344 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                            alt="Pizza Size M" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                            data-was-processed="true">
-                                                    <noscript>
-                                                        <img class="alignnone wp-image-344 size-full"
-                                                             src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                             alt="Pizza Size M" width="25" height="25"/></noscript>&nbsp;
-                                                    Size M / 24cm / 100.000đ</p>
-                                                    <p><img class="alignnone wp-image-346 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                            alt="Pizza Size L" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                            data-was-processed="true">
-                                                    <noscript><img class="alignnone wp-image-346 size-full"
-                                                                   src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                                   alt="Pizza Size L" width="25" height="25"/>
-                                                    </noscript>&nbsp;
-                                                    Size L / 30cm / 140.000đ</p></div>
-                                            </div>
-                                            <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
-                                                class="price">
-                                        <span class="woocommerce-Price-amount amount">80.000<span
-                                                class="woocommerce-Price-currencySymbol">₫</span>
-                                        </span> – <span class="woocommerce-Price-amount amount">140.000<span
-                                                        class="woocommerce-Price-currencySymbol">₫</span></span></span>
-                                            <form action="" class="variations_form cart">
-                                                <table class="variations">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="label"><label for="pa_size">Size</label></td>
-                                                        <td class="value woo-variation-items-wrapper">
-                                                            <select name="" id=""
-                                                                    class="value woo-variation-items-wrapper"
-                                                                    style="display: none">
-                                                                <option value="">Chọn một tùy chọn</option>
-                                                                <option value="s" class="attached enabled">S</option>
-                                                                <option value="m" class="attached enabled">M</option>
-                                                                <option value="l" class="attached enabled">L</option>
-                                                            </select>
-                                                            <ul class="variable-items-wrapperbutton-variable-wrapperreselect-clear">
-                                                                <li data-wvstooltip="S"
-                                                                    class="variable-item button-variable-item button-variable-item-s"
-                                                                    title="S" data-value="s"><span
-                                                                        class="variable-item-span variable-item-span-button">S</span>
-                                                                </li>
-                                                                <li data-wvstooltip="M"
-                                                                    class="variable-item button-variable-item button-variable-item-m"
-                                                                    title="M" data-value="m"><span
-                                                                        class="variable-item-span variable-item-span-button">M</span>
-                                                                </li>
-                                                                <li data-wvstooltip="L"
-                                                                    class="variable-item button-variable-item button-variable-item-l"
-                                                                    title="L" data-value="l"><span
-                                                                        class="variable-item-span variable-item-span-button">L</span>
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                                <div class="single_variation_wrap">
-                                                    <div class="woocommerce-variation single_variation"
-                                                         style="display: none"></div>
-                                                    <div
-                                                        class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
-                                                        <div class="quantity">
-                                                            <label class="screen-reader-text"
-                                                                   for="quantity_5d659bfc5c52e">
-                                                                Số lượng </label>
-                                                            <div class="dc_quantity_input">
-                                                                <input class="minus" type="button" value="-">
-                                                                <input type="number" id="quantity_5d659bfc5c52e"
-                                                                       class="input-text qty text" step="1" min="1"
-                                                                       max=""
-                                                                       name="quantity" value="1" title="SL" size="4"
-                                                                       pattern="[0-9]*" inputmode="numeric"
-                                                                       aria-labelledby="P1. Beefy Pizza số lượng">
-                                                                <input class="plus" type="button" value="+">
-                                                            </div>
-                                                        </div>
-                                                        <button type="submit"
-                                                                class="single_add_to_cart_button button alt disabled wc-variation-selection-needed">
-                                                            Mua hàng
-                                                        </button>
-
-
+                                                <div class="food-card-footer">
+                                                    <h5>{{$food->name}}</h5>
+                                                    <div class="d-flex justify-content-between">
+                                                        <p class="price">{{$food->price}}$</p>
+                                                        <a class="btn-add-food" data-id="{{$food->id}}">
+                                                            <i class="fal fa-plus"></i>
+                                                        </a>
                                                     </div>
+
                                                 </div>
-                                            </form>
+                                            </div>
                                         </div>
-                                    </li>
-                                    <li class="col-md-3">
-                                        <div class="product_item">
-                                            <div class="product_img">
-                                                <img width="260" height="204"
-                                                     src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                     class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image lazyloaded"
-                                                     alt="P1. Beefy Pizza" data-lazy-srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w,
-                                              https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                              https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                     data-lazy-sizes="(max-width: 260px) 100vw, 260px"
-                                                     data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                     sizes="(max-width: 260px) 100vw, 260px"
-                                                     srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w, https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                             https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                     data-was-processed="true">
-                                                <noscript><img width="260" height="204"
-                                                               src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                               class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
-                                                               alt="P1. Beefy Pizza" srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w,
-                                                       https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                                       https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                               sizes="(max-width: 260px) 100vw, 260px"/></noscript>
-                                            </div>
-                                            <div class="product_hover">
-                                                <div class="product_hover_cont"><h3
-                                                        class="woocommerce-loop-product__title"
-                                                        style="">
-                                                        P1. Beefy Pizza</h3>
-                                                    <p><strong>Thành phần</strong></p>
-                                                    <p>Thịt bò xay, ngô, sốt BBQ, pho mai.</p>
-                                                    <p><strong>Kích cỡ / Giá</strong></p>
-                                                    <p><img class="alignnone wp-image-345 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                            alt="Pizza Size S" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                            data-was-processed="true">
-                                                    <noscript>
-                                                        <img class="alignnone wp-image-345 size-full"
-                                                             src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                             alt="Pizza Size S" width="25" height="25"/></noscript>&nbsp;
-                                                    Size S / 20cm / 80.000đ</p>
-                                                    <p><img class="alignnone wp-image-344 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                            alt="Pizza Size M" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                            data-was-processed="true">
-                                                    <noscript>
-                                                        <img class="alignnone wp-image-344 size-full"
-                                                             src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                             alt="Pizza Size M" width="25" height="25"/></noscript>&nbsp;
-                                                    Size M / 24cm / 100.000đ</p>
-                                                    <p><img class="alignnone wp-image-346 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                            alt="Pizza Size L" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                            data-was-processed="true">
-                                                    <noscript><img class="alignnone wp-image-346 size-full"
-                                                                   src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                                   alt="Pizza Size L" width="25" height="25"/>
-                                                    </noscript>&nbsp;
-                                                    Size L / 30cm / 140.000đ</p></div>
-                                            </div>
-                                            <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
-                                                class="price">
-                                        <span class="woocommerce-Price-amount amount">80.000<span
-                                                class="woocommerce-Price-currencySymbol">₫</span>
-                                        </span> – <span class="woocommerce-Price-amount amount">140.000<span
-                                                        class="woocommerce-Price-currencySymbol">₫</span></span></span>
-                                            <form action="" class="variations_form cart">
-                                                <table class="variations">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="label"><label for="pa_size">Size</label></td>
-                                                        <td class="value woo-variation-items-wrapper">
-                                                            <select name="" id=""
-                                                                    class="value woo-variation-items-wrapper"
-                                                                    style="display: none">
-                                                                <option value="">Chọn một tùy chọn</option>
-                                                                <option value="s" class="attached enabled">S</option>
-                                                                <option value="m" class="attached enabled">M</option>
-                                                                <option value="l" class="attached enabled">L</option>
-                                                            </select>
-                                                            <ul class="variable-items-wrapperbutton-variable-wrapperreselect-clear">
-                                                                <li data-wvstooltip="S"
-                                                                    class="variable-item button-variable-item button-variable-item-s"
-                                                                    title="S" data-value="s"><span
-                                                                        class="variable-item-span variable-item-span-button">S</span>
-                                                                </li>
-                                                                <li data-wvstooltip="M"
-                                                                    class="variable-item button-variable-item button-variable-item-m"
-                                                                    title="M" data-value="m"><span
-                                                                        class="variable-item-span variable-item-span-button">M</span>
-                                                                </li>
-                                                                <li data-wvstooltip="L"
-                                                                    class="variable-item button-variable-item button-variable-item-l"
-                                                                    title="L" data-value="l"><span
-                                                                        class="variable-item-span variable-item-span-button">L</span>
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                                <div class="single_variation_wrap">
-                                                    <div class="woocommerce-variation single_variation"
-                                                         style="display: none"></div>
-                                                    <div
-                                                        class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
-                                                        <div class="quantity">
-                                                            <label class="screen-reader-text"
-                                                                   for="quantity_5d659bfc5c52e">
-                                                                Số lượng </label>
-                                                            <div class="dc_quantity_input">
-                                                                <input class="minus" type="button" value="-">
-                                                                <input type="number" id="quantity_5d659bfc5c52e"
-                                                                       class="input-text qty text" step="1" min="1"
-                                                                       max=""
-                                                                       name="quantity" value="1" title="SL" size="4"
-                                                                       pattern="[0-9]*" inputmode="numeric"
-                                                                       aria-labelledby="P1. Beefy Pizza số lượng">
-                                                                <input class="plus" type="button" value="+">
-                                                            </div>
-                                                        </div>
-                                                        <button type="submit"
-                                                                class="single_add_to_cart_button button alt disabled wc-variation-selection-needed">
-                                                            Mua hàng
-                                                        </button>
-
-
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </li>
-                                    <li class="col-md-3">
-                                        <div class="product_item">
-                                            <div class="product_img">
-                                                <img width="260" height="204"
-                                                     src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                     class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image lazyloaded"
-                                                     alt="P1. Beefy Pizza" data-lazy-srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w,
-                                              https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                              https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                     data-lazy-sizes="(max-width: 260px) 100vw, 260px"
-                                                     data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                     sizes="(max-width: 260px) 100vw, 260px"
-                                                     srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w, https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                             https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                     data-was-processed="true">
-                                                <noscript><img width="260" height="204"
-                                                               src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                               class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
-                                                               alt="P1. Beefy Pizza" srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w,
-                                                       https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                                       https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                               sizes="(max-width: 260px) 100vw, 260px"/></noscript>
-                                            </div>
-                                            <div class="product_hover">
-                                                <div class="product_hover_cont"><h3
-                                                        class="woocommerce-loop-product__title"
-                                                        style="">
-                                                        P1. Beefy Pizza</h3>
-                                                    <p><strong>Thành phần</strong></p>
-                                                    <p>Thịt bò xay, ngô, sốt BBQ, pho mai.</p>
-                                                    <p><strong>Kích cỡ / Giá</strong></p>
-                                                    <p><img class="alignnone wp-image-345 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                            alt="Pizza Size S" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                            data-was-processed="true">
-                                                    <noscript>
-                                                        <img class="alignnone wp-image-345 size-full"
-                                                             src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                             alt="Pizza Size S" width="25" height="25"/></noscript>&nbsp;
-                                                    Size S / 20cm / 80.000đ</p>
-                                                    <p><img class="alignnone wp-image-344 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                            alt="Pizza Size M" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                            data-was-processed="true">
-                                                    <noscript>
-                                                        <img class="alignnone wp-image-344 size-full"
-                                                             src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                             alt="Pizza Size M" width="25" height="25"/></noscript>&nbsp;
-                                                    Size M / 24cm / 100.000đ</p>
-                                                    <p><img class="alignnone wp-image-346 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                            alt="Pizza Size L" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                            data-was-processed="true">
-                                                    <noscript><img class="alignnone wp-image-346 size-full"
-                                                                   src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                                   alt="Pizza Size L" width="25" height="25"/>
-                                                    </noscript>&nbsp;
-                                                    Size L / 30cm / 140.000đ</p></div>
-                                            </div>
-                                            <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
-                                                class="price">
-                                        <span class="woocommerce-Price-amount amount">80.000<span
-                                                class="woocommerce-Price-currencySymbol">₫</span>
-                                        </span> – <span class="woocommerce-Price-amount amount">140.000<span
-                                                        class="woocommerce-Price-currencySymbol">₫</span></span></span>
-                                            <form action="" class="variations_form cart">
-                                                <table class="variations">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="label"><label for="pa_size">Size</label></td>
-                                                        <td class="value woo-variation-items-wrapper">
-                                                            <select name="" id=""
-                                                                    class="value woo-variation-items-wrapper"
-                                                                    style="display: none">
-                                                                <option value="">Chọn một tùy chọn</option>
-                                                                <option value="s" class="attached enabled">S</option>
-                                                                <option value="m" class="attached enabled">M</option>
-                                                                <option value="l" class="attached enabled">L</option>
-                                                            </select>
-                                                            <ul class="variable-items-wrapperbutton-variable-wrapperreselect-clear">
-                                                                <li data-wvstooltip="S"
-                                                                    class="variable-item button-variable-item button-variable-item-s"
-                                                                    title="S" data-value="s"><span
-                                                                        class="variable-item-span variable-item-span-button">S</span>
-                                                                </li>
-                                                                <li data-wvstooltip="M"
-                                                                    class="variable-item button-variable-item button-variable-item-m"
-                                                                    title="M" data-value="m"><span
-                                                                        class="variable-item-span variable-item-span-button">M</span>
-                                                                </li>
-                                                                <li data-wvstooltip="L"
-                                                                    class="variable-item button-variable-item button-variable-item-l"
-                                                                    title="L" data-value="l"><span
-                                                                        class="variable-item-span variable-item-span-button">L</span>
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                                <div class="single_variation_wrap">
-                                                    <div class="woocommerce-variation single_variation"
-                                                         style="display: none"></div>
-                                                    <div
-                                                        class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
-                                                        <div class="quantity">
-                                                            <label class="screen-reader-text"
-                                                                   for="quantity_5d659bfc5c52e">
-                                                                Số lượng </label>
-                                                            <div class="dc_quantity_input">
-                                                                <input class="minus" type="button" value="-">
-                                                                <input type="number" id="quantity_5d659bfc5c52e"
-                                                                       class="input-text qty text" step="1" min="1"
-                                                                       max=""
-                                                                       name="quantity" value="1" title="SL" size="4"
-                                                                       pattern="[0-9]*" inputmode="numeric"
-                                                                       aria-labelledby="P1. Beefy Pizza số lượng">
-                                                                <input class="plus" type="button" value="+">
-                                                            </div>
-                                                        </div>
-                                                        <button type="submit"
-                                                                class="single_add_to_cart_button button alt disabled wc-variation-selection-needed">
-                                                            Mua hàng
-                                                        </button>
-
-
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </li>
-                                    <li class="col-md-3">
-                                        <div class="product_item">
-                                            <div class="product_img">
-                                                <img width="260" height="204"
-                                                     src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                     class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image lazyloaded"
-                                                     alt="P1. Beefy Pizza" data-lazy-srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w,
-                                              https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                              https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                     data-lazy-sizes="(max-width: 260px) 100vw, 260px"
-                                                     data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                     sizes="(max-width: 260px) 100vw, 260px"
-                                                     srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w, https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                             https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                     data-was-processed="true">
-                                                <noscript><img width="260" height="204"
-                                                               src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                               class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
-                                                               alt="P1. Beefy Pizza" srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w,
-                                                       https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                                       https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                               sizes="(max-width: 260px) 100vw, 260px"/></noscript>
-                                            </div>
-                                            <div class="product_hover">
-                                                <div class="product_hover_cont"><h3
-                                                        class="woocommerce-loop-product__title"
-                                                        style="">
-                                                        P1. Beefy Pizza</h3>
-                                                    <p><strong>Thành phần</strong></p>
-                                                    <p>Thịt bò xay, ngô, sốt BBQ, pho mai.</p>
-                                                    <p><strong>Kích cỡ / Giá</strong></p>
-                                                    <p><img class="alignnone wp-image-345 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                            alt="Pizza Size S" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                            data-was-processed="true">
-                                                    <noscript>
-                                                        <img class="alignnone wp-image-345 size-full"
-                                                             src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                             alt="Pizza Size S" width="25" height="25"/></noscript>&nbsp;
-                                                    Size S / 20cm / 80.000đ</p>
-                                                    <p><img class="alignnone wp-image-344 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                            alt="Pizza Size M" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                            data-was-processed="true">
-                                                    <noscript>
-                                                        <img class="alignnone wp-image-344 size-full"
-                                                             src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                             alt="Pizza Size M" width="25" height="25"/></noscript>&nbsp;
-                                                    Size M / 24cm / 100.000đ</p>
-                                                    <p><img class="alignnone wp-image-346 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                            alt="Pizza Size L" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                            data-was-processed="true">
-                                                    <noscript><img class="alignnone wp-image-346 size-full"
-                                                                   src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                                   alt="Pizza Size L" width="25" height="25"/>
-                                                    </noscript>&nbsp;
-                                                    Size L / 30cm / 140.000đ</p></div>
-                                            </div>
-                                            <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
-                                                class="price">
-                                        <span class="woocommerce-Price-amount amount">80.000<span
-                                                class="woocommerce-Price-currencySymbol">₫</span>
-                                        </span> – <span class="woocommerce-Price-amount amount">140.000<span
-                                                        class="woocommerce-Price-currencySymbol">₫</span></span></span>
-                                            <form action="" class="variations_form cart">
-                                                <table class="variations">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="label"><label for="pa_size">Size</label></td>
-                                                        <td class="value woo-variation-items-wrapper">
-                                                            <select name="" id=""
-                                                                    class="value woo-variation-items-wrapper"
-                                                                    style="display: none">
-                                                                <option value="">Chọn một tùy chọn</option>
-                                                                <option value="s" class="attached enabled">S</option>
-                                                                <option value="m" class="attached enabled">M</option>
-                                                                <option value="l" class="attached enabled">L</option>
-                                                            </select>
-                                                            <ul class="variable-items-wrapperbutton-variable-wrapperreselect-clear">
-                                                                <li data-wvstooltip="S"
-                                                                    class="variable-item button-variable-item button-variable-item-s"
-                                                                    title="S" data-value="s"><span
-                                                                        class="variable-item-span variable-item-span-button">S</span>
-                                                                </li>
-                                                                <li data-wvstooltip="M"
-                                                                    class="variable-item button-variable-item button-variable-item-m"
-                                                                    title="M" data-value="m"><span
-                                                                        class="variable-item-span variable-item-span-button">M</span>
-                                                                </li>
-                                                                <li data-wvstooltip="L"
-                                                                    class="variable-item button-variable-item button-variable-item-l"
-                                                                    title="L" data-value="l"><span
-                                                                        class="variable-item-span variable-item-span-button">L</span>
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                                <div class="single_variation_wrap">
-                                                    <div class="woocommerce-variation single_variation"
-                                                         style="display: none"></div>
-                                                    <div
-                                                        class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
-                                                        <div class="quantity">
-                                                            <label class="screen-reader-text"
-                                                                   for="quantity_5d659bfc5c52e">
-                                                                Số lượng </label>
-                                                            <div class="dc_quantity_input">
-                                                                <input class="minus" type="button" value="-">
-                                                                <input type="number" id="quantity_5d659bfc5c52e"
-                                                                       class="input-text qty text" step="1" min="1"
-                                                                       max=""
-                                                                       name="quantity" value="1" title="SL" size="4"
-                                                                       pattern="[0-9]*" inputmode="numeric"
-                                                                       aria-labelledby="P1. Beefy Pizza số lượng">
-                                                                <input class="plus" type="button" value="+">
-                                                            </div>
-                                                        </div>
-                                                        <button type="submit"
-                                                                class="single_add_to_cart_button button alt disabled wc-variation-selection-needed">
-                                                            Mua hàng
-                                                        </button>
-
-
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </li>
-                                    <li class="col-md-3">
-                                        <div class="product_item">
-                                            <div class="product_img">
-                                                <img width="260" height="204"
-                                                     src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                     class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image lazyloaded"
-                                                     alt="P1. Beefy Pizza" data-lazy-srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w,
-                                              https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                              https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                     data-lazy-sizes="(max-width: 260px) 100vw, 260px"
-                                                     data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                     sizes="(max-width: 260px) 100vw, 260px"
-                                                     srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w, https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                             https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                     data-was-processed="true">
-                                                <noscript><img width="260" height="204"
-                                                               src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                               class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
-                                                               alt="P1. Beefy Pizza" srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w,
-                                                       https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                                       https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                               sizes="(max-width: 260px) 100vw, 260px"/></noscript>
-                                            </div>
-                                            <div class="product_hover">
-                                                <div class="product_hover_cont"><h3
-                                                        class="woocommerce-loop-product__title"
-                                                        style="">
-                                                        P1. Beefy Pizza</h3>
-                                                    <p><strong>Thành phần</strong></p>
-                                                    <p>Thịt bò xay, ngô, sốt BBQ, pho mai.</p>
-                                                    <p><strong>Kích cỡ / Giá</strong></p>
-                                                    <p><img class="alignnone wp-image-345 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                            alt="Pizza Size S" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                            data-was-processed="true">
-                                                    <noscript>
-                                                        <img class="alignnone wp-image-345 size-full"
-                                                             src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                             alt="Pizza Size S" width="25" height="25"/></noscript>&nbsp;
-                                                    Size S / 20cm / 80.000đ</p>
-                                                    <p><img class="alignnone wp-image-344 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                            alt="Pizza Size M" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                            data-was-processed="true">
-                                                    <noscript>
-                                                        <img class="alignnone wp-image-344 size-full"
-                                                             src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                             alt="Pizza Size M" width="25" height="25"/></noscript>&nbsp;
-                                                    Size M / 24cm / 100.000đ</p>
-                                                    <p><img class="alignnone wp-image-346 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                            alt="Pizza Size L" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                            data-was-processed="true">
-                                                    <noscript><img class="alignnone wp-image-346 size-full"
-                                                                   src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                                   alt="Pizza Size L" width="25" height="25"/>
-                                                    </noscript>&nbsp;
-                                                    Size L / 30cm / 140.000đ</p></div>
-                                            </div>
-                                            <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
-                                                class="price">
-                                        <span class="woocommerce-Price-amount amount">80.000<span
-                                                class="woocommerce-Price-currencySymbol">₫</span>
-                                        </span> – <span class="woocommerce-Price-amount amount">140.000<span
-                                                        class="woocommerce-Price-currencySymbol">₫</span></span></span>
-                                            <form action="" class="variations_form cart">
-                                                <table class="variations">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="label"><label for="pa_size">Size</label></td>
-                                                        <td class="value woo-variation-items-wrapper">
-                                                            <select name="" id=""
-                                                                    class="value woo-variation-items-wrapper"
-                                                                    style="display: none">
-                                                                <option value="">Chọn một tùy chọn</option>
-                                                                <option value="s" class="attached enabled">S</option>
-                                                                <option value="m" class="attached enabled">M</option>
-                                                                <option value="l" class="attached enabled">L</option>
-                                                            </select>
-                                                            <ul class="variable-items-wrapperbutton-variable-wrapperreselect-clear">
-                                                                <li data-wvstooltip="S"
-                                                                    class="variable-item button-variable-item button-variable-item-s"
-                                                                    title="S" data-value="s"><span
-                                                                        class="variable-item-span variable-item-span-button">S</span>
-                                                                </li>
-                                                                <li data-wvstooltip="M"
-                                                                    class="variable-item button-variable-item button-variable-item-m"
-                                                                    title="M" data-value="m"><span
-                                                                        class="variable-item-span variable-item-span-button">M</span>
-                                                                </li>
-                                                                <li data-wvstooltip="L"
-                                                                    class="variable-item button-variable-item button-variable-item-l"
-                                                                    title="L" data-value="l"><span
-                                                                        class="variable-item-span variable-item-span-button">L</span>
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                                <div class="single_variation_wrap">
-                                                    <div class="woocommerce-variation single_variation"
-                                                         style="display: none"></div>
-                                                    <div
-                                                        class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
-                                                        <div class="quantity">
-                                                            <label class="screen-reader-text"
-                                                                   for="quantity_5d659bfc5c52e">
-                                                                Số lượng </label>
-                                                            <div class="dc_quantity_input">
-                                                                <input class="minus" type="button" value="-">
-                                                                <input type="number" id="quantity_5d659bfc5c52e"
-                                                                       class="input-text qty text" step="1" min="1"
-                                                                       max=""
-                                                                       name="quantity" value="1" title="SL" size="4"
-                                                                       pattern="[0-9]*" inputmode="numeric"
-                                                                       aria-labelledby="P1. Beefy Pizza số lượng">
-                                                                <input class="plus" type="button" value="+">
-                                                            </div>
-                                                        </div>
-                                                        <button type="submit"
-                                                                class="single_add_to_cart_button button alt disabled wc-variation-selection-needed">
-                                                            Mua hàng
-                                                        </button>
-
-
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </li>
-                                    <li class="col-md-3">
-                                        <div class="product_item">
-                                            <div class="product_img">
-                                                <img width="260" height="204"
-                                                     src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                     class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image lazyloaded"
-                                                     alt="P1. Beefy Pizza" data-lazy-srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w,
-                                              https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                              https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                     data-lazy-sizes="(max-width: 260px) 100vw, 260px"
-                                                     data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                     sizes="(max-width: 260px) 100vw, 260px"
-                                                     srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w, https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                             https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                     data-was-processed="true">
-                                                <noscript><img width="260" height="204"
-                                                               src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                               class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
-                                                               alt="P1. Beefy Pizza" srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w,
-                                                       https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                                       https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                               sizes="(max-width: 260px) 100vw, 260px"/></noscript>
-                                            </div>
-                                            <div class="product_hover">
-                                                <div class="product_hover_cont"><h3
-                                                        class="woocommerce-loop-product__title"
-                                                        style="">
-                                                        P1. Beefy Pizza</h3>
-                                                    <p><strong>Thành phần</strong></p>
-                                                    <p>Thịt bò xay, ngô, sốt BBQ, pho mai.</p>
-                                                    <p><strong>Kích cỡ / Giá</strong></p>
-                                                    <p><img class="alignnone wp-image-345 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                            alt="Pizza Size S" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                            data-was-processed="true">
-                                                    <noscript>
-                                                        <img class="alignnone wp-image-345 size-full"
-                                                             src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                             alt="Pizza Size S" width="25" height="25"/></noscript>&nbsp;
-                                                    Size S / 20cm / 80.000đ</p>
-                                                    <p><img class="alignnone wp-image-344 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                            alt="Pizza Size M" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                            data-was-processed="true">
-                                                    <noscript>
-                                                        <img class="alignnone wp-image-344 size-full"
-                                                             src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                             alt="Pizza Size M" width="25" height="25"/></noscript>&nbsp;
-                                                    Size M / 24cm / 100.000đ</p>
-                                                    <p><img class="alignnone wp-image-346 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                            alt="Pizza Size L" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                            data-was-processed="true">
-                                                    <noscript><img class="alignnone wp-image-346 size-full"
-                                                                   src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                                   alt="Pizza Size L" width="25" height="25"/>
-                                                    </noscript>&nbsp;
-                                                    Size L / 30cm / 140.000đ</p></div>
-                                            </div>
-                                            <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
-                                                class="price">
-                                        <span class="woocommerce-Price-amount amount">80.000<span
-                                                class="woocommerce-Price-currencySymbol">₫</span>
-                                        </span> – <span class="woocommerce-Price-amount amount">140.000<span
-                                                        class="woocommerce-Price-currencySymbol">₫</span></span></span>
-                                            <form action="" class="variations_form cart">
-                                                <table class="variations">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="label"><label for="pa_size">Size</label></td>
-                                                        <td class="value woo-variation-items-wrapper">
-                                                            <select name="" id=""
-                                                                    class="value woo-variation-items-wrapper"
-                                                                    style="display: none">
-                                                                <option value="">Chọn một tùy chọn</option>
-                                                                <option value="s" class="attached enabled">S</option>
-                                                                <option value="m" class="attached enabled">M</option>
-                                                                <option value="l" class="attached enabled">L</option>
-                                                            </select>
-                                                            <ul class="variable-items-wrapperbutton-variable-wrapperreselect-clear">
-                                                                <li data-wvstooltip="S"
-                                                                    class="variable-item button-variable-item button-variable-item-s"
-                                                                    title="S" data-value="s"><span
-                                                                        class="variable-item-span variable-item-span-button">S</span>
-                                                                </li>
-                                                                <li data-wvstooltip="M"
-                                                                    class="variable-item button-variable-item button-variable-item-m"
-                                                                    title="M" data-value="m"><span
-                                                                        class="variable-item-span variable-item-span-button">M</span>
-                                                                </li>
-                                                                <li data-wvstooltip="L"
-                                                                    class="variable-item button-variable-item button-variable-item-l"
-                                                                    title="L" data-value="l"><span
-                                                                        class="variable-item-span variable-item-span-button">L</span>
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                                <div class="single_variation_wrap">
-                                                    <div class="woocommerce-variation single_variation"
-                                                         style="display: none"></div>
-                                                    <div
-                                                        class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
-                                                        <div class="quantity">
-                                                            <label class="screen-reader-text"
-                                                                   for="quantity_5d659bfc5c52e">
-                                                                Số lượng </label>
-                                                            <div class="dc_quantity_input">
-                                                                <input class="minus" type="button" value="-">
-                                                                <input type="number" id="quantity_5d659bfc5c52e"
-                                                                       class="input-text qty text" step="1" min="1"
-                                                                       max=""
-                                                                       name="quantity" value="1" title="SL" size="4"
-                                                                       pattern="[0-9]*" inputmode="numeric"
-                                                                       aria-labelledby="P1. Beefy Pizza số lượng">
-                                                                <input class="plus" type="button" value="+">
-                                                            </div>
-                                                        </div>
-                                                        <button type="submit"
-                                                                class="single_add_to_cart_button button alt disabled wc-variation-selection-needed">
-                                                            Mua hàng
-                                                        </button>
-
-
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </li>
-                                    <li class="col-md-3">
-                                        <div class="product_item">
-                                            <div class="product_img">
-                                                <img width="260" height="204"
-                                                     src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                     class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image lazyloaded"
-                                                     alt="P1. Beefy Pizza" data-lazy-srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w,
-                                              https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                              https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                     data-lazy-sizes="(max-width: 260px) 100vw, 260px"
-                                                     data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                     sizes="(max-width: 260px) 100vw, 260px"
-                                                     srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w, https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                             https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                     data-was-processed="true">
-                                                <noscript><img width="260" height="204"
-                                                               src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg"
-                                                               class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
-                                                               alt="P1. Beefy Pizza" srcset="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-260x204.jpg 260w,
-                                                       https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1-390x305.jpg 390w,
-                                                       https://www.pizzaexpress.vn/wp-content/uploads/2018/06/P1.jpg 562w"
-                                                               sizes="(max-width: 260px) 100vw, 260px"/></noscript>
-                                            </div>
-                                            <div class="product_hover">
-                                                <div class="product_hover_cont"><h3
-                                                        class="woocommerce-loop-product__title"
-                                                        style="">
-                                                        P1. Beefy Pizza</h3>
-                                                    <p><strong>Thành phần</strong></p>
-                                                    <p>Thịt bò xay, ngô, sốt BBQ, pho mai.</p>
-                                                    <p><strong>Kích cỡ / Giá</strong></p>
-                                                    <p><img class="alignnone wp-image-345 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                            alt="Pizza Size S" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                            data-was-processed="true">
-                                                    <noscript>
-                                                        <img class="alignnone wp-image-345 size-full"
-                                                             src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-S.png"
-                                                             alt="Pizza Size S" width="25" height="25"/></noscript>&nbsp;
-                                                    Size S / 20cm / 80.000đ</p>
-                                                    <p><img class="alignnone wp-image-344 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                            alt="Pizza Size M" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                            data-was-processed="true">
-                                                    <noscript>
-                                                        <img class="alignnone wp-image-344 size-full"
-                                                             src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-M.png"
-                                                             alt="Pizza Size M" width="25" height="25"/></noscript>&nbsp;
-                                                    Size M / 24cm / 100.000đ</p>
-                                                    <p><img class="alignnone wp-image-346 size-full lazyloaded"
-                                                            src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                            alt="Pizza Size L" width="25" height="25"
-                                                            data-lazy-src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                            data-was-processed="true">
-                                                    <noscript><img class="alignnone wp-image-346 size-full"
-                                                                   src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/icon-P-L.png"
-                                                                   alt="Pizza Size L" width="25" height="25"/>
-                                                    </noscript>&nbsp;
-                                                    Size L / 30cm / 140.000đ</p></div>
-                                            </div>
-                                            <h3 class="woocommerce-loop-product__title">P1. Beefy Pizza</h3> <span
-                                                class="price">
-                                        <span class="woocommerce-Price-amount amount">80.000<span
-                                                class="woocommerce-Price-currencySymbol">₫</span>
-                                        </span> – <span class="woocommerce-Price-amount amount">140.000<span
-                                                        class="woocommerce-Price-currencySymbol">₫</span></span></span>
-                                            <form action="" class="variations_form cart">
-                                                <table class="variations">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="label"><label for="pa_size">Size</label></td>
-                                                        <td class="value woo-variation-items-wrapper">
-                                                            <select name="" id=""
-                                                                    class="value woo-variation-items-wrapper"
-                                                                    style="display: none">
-                                                                <option value="">Chọn một tùy chọn</option>
-                                                                <option value="s" class="attached enabled">S</option>
-                                                                <option value="m" class="attached enabled">M</option>
-                                                                <option value="l" class="attached enabled">L</option>
-                                                            </select>
-                                                            <ul class="variable-items-wrapperbutton-variable-wrapperreselect-clear">
-                                                                <li data-wvstooltip="S"
-                                                                    class="variable-item button-variable-item button-variable-item-s"
-                                                                    title="S" data-value="s"><span
-                                                                        class="variable-item-span variable-item-span-button">S</span>
-                                                                </li>
-                                                                <li data-wvstooltip="M"
-                                                                    class="variable-item button-variable-item button-variable-item-m"
-                                                                    title="M" data-value="m"><span
-                                                                        class="variable-item-span variable-item-span-button">M</span>
-                                                                </li>
-                                                                <li data-wvstooltip="L"
-                                                                    class="variable-item button-variable-item button-variable-item-l"
-                                                                    title="L" data-value="l"><span
-                                                                        class="variable-item-span variable-item-span-button">L</span>
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                                <div class="single_variation_wrap">
-                                                    <div class="woocommerce-variation single_variation"
-                                                         style="display: none"></div>
-                                                    <div
-                                                        class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
-                                                        <div class="quantity">
-                                                            <label class="screen-reader-text"
-                                                                   for="quantity_5d659bfc5c52e">
-                                                                Số lượng </label>
-                                                            <div class="dc_quantity_input">
-                                                                <input class="minus" type="button" value="-">
-                                                                <input type="number" id="quantity_5d659bfc5c52e"
-                                                                       class="input-text qty text" step="1" min="1"
-                                                                       max=""
-                                                                       name="quantity" value="1" title="SL" size="4"
-                                                                       pattern="[0-9]*" inputmode="numeric"
-                                                                       aria-labelledby="P1. Beefy Pizza số lượng">
-                                                                <input class="plus" type="button" value="+">
-                                                            </div>
-                                                        </div>
-                                                        <button type="submit"
-                                                                class="single_add_to_cart_button button alt disabled wc-variation-selection-needed">
-                                                            Mua hàng
-                                                        </button>
-
-
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </li>
-                                </ul>
+                                    @endforeach
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -2168,6 +580,108 @@ background: white;
         </section>
 
     </div>
+
+    <script>
+
+        const btnAddFood = $('.btn-add-food');
+        var foodInBag = new Map(JSON.parse(localStorage.getItem('foods_in_bag'))) || new Map();
+        const listFoodInBag = $('#list-food');
+        renderFoodInBag();
+
+        var spinner = $('.quantity'),
+            inputQuantity = spinner.find('input[type="number"]');
+
+        const btnUp = $('.quantity-up');
+        const btnDown = $('.quantity-down');
+
+        const increment = 'increment';
+        const decrement = 'decrement';
+        const withValue = 'withValue';
+        const deleteFood = 'deleteFood';
+
+        btnAddFood.click(function () {
+            const foodId = $(this).attr('data-id');
+            updateQuantity(foodId, increment)
+        });
+
+        const handleChangeQuantity = function (id, quantity) {
+            console.log(quantity)
+            updateQuantity(id, withValue, quantity)
+        };
+
+        function updateQuantity(id, type, payload) {
+            id = parseInt(id);
+            const food = foodInBag.get(id);
+            var currentQuantity = food ? food.quantity : 0;
+            switch (type) {
+                case increment:
+                    if (foodInBag.has(id)) {
+                        foodInBag.set(id, {...food, quantity: currentQuantity + 1});
+                    } else {
+                        $.get(`/api/food/${id}`)
+                            .done(function (res) {
+                                foodInBag.set(res.id, {...res, quantity: 1})
+                                localStorage.foods_in_bag = JSON.stringify(Array.from(foodInBag.entries()));
+                                renderFoodInBag();
+                            });
+                    }
+                    break;
+                case decrement:
+                    if (!foodInBag.has(id) || currentQuantity < 0) break;
+
+                    if (currentQuantity === 1) {
+                        foodInBag.delete(id)
+                    } else {
+                        foodInBag.set(id, {...food, quantity: currentQuantity - 1})
+                    }
+                    break;
+                case withValue:
+                    foodInBag.set(id, {...food, quantity: parseInt(payload)});
+                    break;
+                case deleteFood:
+                    foodInBag.delete(id);
+                    break;
+                default:
+                    break;
+            }
+            localStorage.foods_in_bag = JSON.stringify(Array.from(foodInBag.entries()));
+            renderFoodInBag();
+        }
+
+
+        function renderFoodInBag(foods = Array.from(foodInBag.values())) {
+            let listFoodsHtml = foods.map(food => (
+                `<div class="blo3 flex-w flex-col-l-sm m-b-30">
+                    <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
+                        <a href="#"><img src="${food.image}" alt="${food.name}"></a>
+                    </div>
+                    <div class="text-blo3 flex-col-l-m">
+                        <a href="#" class="txt19 m-b-3">
+                            ${food.name}
+                        </a>
+                        <div>
+                            <div class="quantity">
+                                 <input onchange="handleChangeQuantity(${food.id}, this.value)" type="number" min="1" step="1" data-id="${food.id}" value="${food.quantity}">
+                                 <div class="quantity-nav">
+                                     <div onclick="updateQuantity(${food.id}, increment)" class="quantity-button quantity-up">+</div>
+                                     <div onclick="updateQuantity(${food.id}, decrement)" class="quantity-button quantity-down">-</div>
+                                 </div>
+                            </div>
+                            <span class="txt10 m-t-20">${food.price}</span>
+                        </div>
+                    </div>
+                    <div class="ml-auto mr-4 my-2">
+                        <button onclick="updateQuantity(${food.id}, deleteFood)">
+                            <i class="fal fa-times"></i>
+                        </button>
+                    </div>
+                </div>`)
+            );
+
+            listFoodInBag.html(listFoodsHtml.join(''))
+        }
+
+    </script>
     {{--    <aside style="overflow: inherit" class="sidebar trans-0-4">--}}
     {{--        <!-- Button Hide sidebar -->--}}
     {{--        --}}{{--        <button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>--}}
@@ -2188,7 +702,7 @@ background: white;
     {{--            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">--}}
     {{--                <li>--}}
     {{--                    <a class="active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"--}}
-    {{--                       aria-controls="pills-home" aria-selected="true">Dishs</a>--}}
+    {{--                       aria-controls="pills-home" aria-selected="true">foods</a>--}}
     {{--                </li>--}}
     {{--                <li>--}}
     {{--                    <a id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"--}}
@@ -2199,8 +713,8 @@ background: white;
 
     {{--        <div class="tab-content" id="pills-tabContent">--}}
     {{--            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">--}}
-    {{--                <div class="list-dish">--}}
-    {{--                    <div class="dish-item">--}}
+    {{--                <div class="list-food">--}}
+    {{--                    <div class="food-item">--}}
     {{--                        <div class="img-box">--}}
     {{--                            <img width="70px"--}}
     {{--                                 src="https://i.pinimg.com/564x/c2/ff/3d/c2ff3d07a7abb23bc24c9f723d0cab75.jpg" alt="">--}}
@@ -2214,7 +728,7 @@ background: white;
     {{--                            <p>dam</p>--}}
     {{--                        </div>--}}
     {{--                    </div>--}}
-    {{--                    <div class="dish-item">--}}
+    {{--                    <div class="food-item">--}}
     {{--                        <div class="img-box">--}}
     {{--                            <img width="70px"--}}
     {{--                                 src="https://i.pinimg.com/564x/c2/ff/3d/c2ff3d07a7abb23bc24c9f723d0cab75.jpg" alt="">--}}

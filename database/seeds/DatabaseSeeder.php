@@ -18,9 +18,10 @@ class DatabaseSeeder extends Seeder
             ProfileSeeder::class,
             AdminSeeder::class,
 //            AddressSeeder::class,
-//            FoodCategorySeeder::class,
+            FoodCategorySeeder::class,
 //            SetCategorySeeder::class,
-//            FoodSeeder::class,
+            FoodSeeder::class,
+
 //            SetSeeder::class,
 //            FoodSetSeeder::class
         ]);

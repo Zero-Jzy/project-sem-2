@@ -14,6 +14,7 @@ class FoodSetSeeder extends Seeder
     {
         DB::table('food_set')->truncate();
         DB::table('food_set')->insert([
+
 //            ['set_id' => 1, 'food_id' => 2],
 //            ['set_id' => 1, 'food_id' => 1],
 //            ['set_id' => 1, 'food_id' => 3]

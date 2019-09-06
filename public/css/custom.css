@@ -137,12 +137,12 @@
 }
 
 
-.list-dish {
+.list-food {
     height: 70vh;
     overflow-y: auto;
 }
 
-.list-dish{
+.list-food{
     overflow-y: auto;
     margin: 10px;
     bottom: 200px;
@@ -514,3 +514,239 @@ xsigin/signup popup
 }
 
 /* End model login css*/
+
+
+/*Start food-card css*/
+.food-card{
+    position: relative;
+    background: white;
+    border-radius: .5rem;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+}
+
+.food-card .food-card-content{
+    position: relative;
+}
+
+.food-card .food-card-content img{
+    border-radius: .5rem;
+    width: 100%;
+}
+
+.food-card .food-card-content .info{
+    border-radius: .5rem;
+    position: absolute;
+    transition: 400ms;
+    padding: 0 1rem;
+    height: 100%;
+    width: 100%;
+    background: rgba(255,255,255,0.8);
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.food-card .food-card-content:hover .info{
+    opacity: 1;
+}
+
+.food-card-footer{
+    padding: .5rem 1rem;
+    /* justify-content: space-between; */
+    /* display: flex; */
+    z-index: 2;
+}
+
+.food-card-footer h5{
+    /* text-align: center; */
+}
+
+.btn-add-food{
+    /* position: absolute; */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-radius: 1em;
+    height: 30px;
+    width: 30px;
+    font-size: 24px;
+    background: #ccc;
+    border: none;
+    cursor: pointer;
+    transition: 500;
+}
+
+.btn-add-food:hover{
+    transform: scale(1.1)
+}
+
+.btn-add-food i {
+    margin: 4px 3px 3px 3px;
+}
+
+.food-card-footer .price{
+    color: red;
+}
+
+
+.food-card-footer button:hover{
+    /* box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15); */
+}
+
+.food-card .amount-of-nutrition > div{
+    padding: .3rem .6em;
+}
+
+.food-card .amount-of-nutrition > div > span{
+    font-size: 14px;
+}
+
+.food-card .amount-of-nutrition > div > div{
+    border-radius: .3em;
+    text-align: center
+}
+
+.very-high{
+    background: #FF0000;
+}
+
+.high{
+    background: #FFA500;
+}
+
+.normal{
+    background: #F6FF00;
+}
+
+.low{
+    background: #00EA1B;
+}
+.very-low{
+    background: #00B5F2;
+}
+
+/*Custom input number */
+.quantity {
+    position: relative;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]
+{
+    -moz-appearance: textfield;
+}
+
+.quantity input {
+    width: 62px;
+    height: 30px;
+    line-height: 1.65;
+    float: left;
+    display: block;
+    padding: 0;
+    margin: 0;
+    padding-left: 18px;
+    border: 1px solid #eee;
+}
+
+.quantity input:focus {
+    outline: 0;
+}
+
+.quantity-nav {
+    float: left;
+    position: relative;
+    height: 30px;
+}
+
+.quantity-button {
+    position: relative;
+    cursor: pointer;
+    border-left: 1px solid #eee;
+    width: 20px;
+    text-align: center;
+    color: #333;
+    font-size: 13px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif !important;
+    line-height: 1.7;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    height: 50%;
+    line-height: 15px;
+}
+
+.quantity-button.quantity-up {
+    position: absolute;
+    top: 0;
+    border-bottom: 1px solid #eee;
+}
+
+.quantity-button.quantity-down {
+    position: absolute;
+    bottom: -1px;
+}
+
+/*End food-card css*/
+
+.btn-toggle-sidebar{
+    position: absolute;
+    left: -83px;
+    top: 15%;
+    width: 50px;
+    height: 50px;
+    box-shadow: -2px 0px 5px 0px rgba(0,0,0,0.25);
+    border-radius: 10px 0px 0px 10px;
+    background: white;
+    border: none;
+}
+
+
+.btn-toggle-sidebar .bag-icon::before{
+    content: attr(data-food);
+    position: absolute;
+    background: #ff6600;
+    height: 1rem;
+    top: 0;
+    right: 0;
+    width: 1rem;
+    text-align: center;
+    line-height: 2rem;
+    font-size: 1rem;
+    border-radius: 50%;
+    color: white;
+    border: 1px solid #ff6600;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.btn-toggle-sidebar .bag-icon::after{
+    content: attr(data-set);
+    position: absolute;
+    background: #ff6600;
+    height: 1rem;
+    top: 0;
+    left: 0;
+    width: 1rem;
+    text-align: center;
+    line-height: 2rem;
+    font-size: 1rem;
+    border-radius: 50%;
+    color: white;
+    border: 1px solid #ff6600;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.btn-toggle-sidebar i{
+    font-size: 24px;
+}
