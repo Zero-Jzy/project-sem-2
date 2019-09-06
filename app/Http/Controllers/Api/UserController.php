@@ -21,6 +21,7 @@ class UserController extends Controller
         $data = Input::all();
         Log::info($data);
         $results = $data['results'] ?? false;
+        $page = ($data['page'] ?? 1) - 1;
         $sortField = $data['sortField'] ?? false;
         $sortOrder = $data['sortOrder'] ?? false;
         $filterDate = json_decode($data['filterDate'] ?? '{}', true);
@@ -29,7 +30,6 @@ class UserController extends Controller
 
         $filters = [json_decode($data['filters'] ?? '{}', true)][0];
 //        Log::info('filter' ,$filters);
-        $page = ($data['page'] ?? 1) - 1;
 
 
         $users = User::join('profiles', 'users.id', '=', 'profiles.user_id')

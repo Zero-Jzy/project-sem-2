@@ -5,7 +5,7 @@
         <!-- Button Hide sidebar -->
         {{--        <button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>--}}
         <button id="btn-toggle-sidebar" class="btn-toggle-sidebar m-l-33 trans-0-4">
-            <span class="bag-icon" data-food="3" data-set="3"><i class="fal fa-shopping-bag"></i></span>
+            <span class="bag-icon" data-food="0" data-set="0"><i class="fal fa-shopping-bag"></i></span>
             <span class="close-icon"><i class="fal fa-times"></i></span>
         </button>
 
@@ -605,7 +605,7 @@
         });
 
         const handleChangeQuantity = function (id, quantity) {
-            console.log(quantity)
+            console.log(quantity);
             updateQuantity(id, withValue, quantity)
         };
 
@@ -650,6 +650,12 @@
 
 
         function renderFoodInBag(foods = Array.from(foodInBag.values())) {
+            var countFood = foods.reduce((a, b) => {
+                return a + b.quantity
+            }, 0);
+
+            $('.bag-icon').attr('data-food',countFood);
+
             let listFoodsHtml = foods.map(food => (
                 `<div class="blo3 flex-w flex-col-l-sm m-b-30">
                     <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">

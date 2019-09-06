@@ -24,7 +24,7 @@ class FoodSeeder extends Seeder
                 'protein' => 23.1,
                 'dietary_fiber' => 12.2,
                 'carbohydrate' => 23.3,
-                'fat' => 43.23,
+                'total_fat' => 43.23,
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],
@@ -38,7 +38,7 @@ class FoodSeeder extends Seeder
                 'protein' => 23.1,
                 'dietary_fiber' => 12.2,
                 'carbohydrate' => 23.3,
-                'fat' => 43.23,
+                'total_fat' => 43.23,
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],
@@ -52,7 +52,7 @@ class FoodSeeder extends Seeder
                 'protein' => 23.1,
                 'dietary_fiber' => 12.2,
                 'carbohydrate' => 23.3,
-                'fat' => 43.23,
+                'total_fat' => 43.23,
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],
@@ -66,7 +66,7 @@ class FoodSeeder extends Seeder
                 'protein' => 23.1,
                 'dietary_fiber' => 12.2,
                 'carbohydrate' => 23.3,
-                'fat' => 43.23,
+                'total_fat' => 43.23,
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],
@@ -80,7 +80,7 @@ class FoodSeeder extends Seeder
                 'protein' => 23.1,
                 'dietary_fiber' => 12.2,
                 'carbohydrate' => 23.3,
-                'fat' => 43.23,
+                'total_fat' => 43.23,
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],
@@ -94,7 +94,7 @@ class FoodSeeder extends Seeder
                 'protein' => 23.1,
                 'dietary_fiber' => 12.2,
                 'carbohydrate' => 23.3,
-                'fat' => 43.23,
+                'total_fat' => 43.23,
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],
@@ -108,7 +108,7 @@ class FoodSeeder extends Seeder
                 'protein' => 23.1,
                 'dietary_fiber' => 12.2,
                 'carbohydrate' => 23.3,
-                'fat' => 43.23,
+                'total_fat' => 43.23,
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],
@@ -122,7 +122,7 @@ class FoodSeeder extends Seeder
                 'protein' => 23.1,
                 'dietary_fiber' => 12.2,
                 'carbohydrate' => 23.3,
-                'fat' => 43.23,
+                'total_fat' => 43.23,
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],
@@ -136,7 +136,7 @@ class FoodSeeder extends Seeder
                 'protein' => 23.1,
                 'dietary_fiber' => 12.2,
                 'carbohydrate' => 23.3,
-                'fat' => 43.23,
+                'total_fat' => 43.23,
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],
@@ -150,7 +150,7 @@ class FoodSeeder extends Seeder
                 'protein' => 23.1,
                 'dietary_fiber' => 12.2,
                 'carbohydrate' => 23.3,
-                'fat' => 43.23,
+                'total_fat' => 43.23,
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],
@@ -164,7 +164,7 @@ class FoodSeeder extends Seeder
                 'protein' => 23.1,
                 'dietary_fiber' => 12.2,
                 'carbohydrate' => 23.3,
-                'fat' => 43.23,
+                'total_fat' => 43.23,
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],
@@ -178,7 +178,7 @@ class FoodSeeder extends Seeder
                 'protein' => 23.1,
                 'dietary_fiber' => 12.2,
                 'carbohydrate' => 23.3,
-                'fat' => 43.23,
+                'total_fat' => 43.23,
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],
@@ -192,7 +192,7 @@ class FoodSeeder extends Seeder
                 'protein' => 23.1,
                 'dietary_fiber' => 12.2,
                 'carbohydrate' => 23.3,
-                'fat' => 43.23,
+                'total_fat' => 43.23,
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],
@@ -206,7 +206,7 @@ class FoodSeeder extends Seeder
                 'protein' => 23.1,
                 'dietary_fiber' => 12.2,
                 'carbohydrate' => 23.3,
-                'fat' => 43.23,
+                'total_fat' => 43.23,
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],
@@ -220,7 +220,7 @@ class FoodSeeder extends Seeder
                 'protein' => 23.1,
                 'dietary_fiber' => 12.2,
                 'carbohydrate' => 23.3,
-                'fat' => 43.23,
+                'total_fat' => 43.23,
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],
@@ -234,7 +234,7 @@ class FoodSeeder extends Seeder
                 'protein' => 23.1,
                 'dietary_fiber' => 12.2,
                 'carbohydrate' => 23.3,
-                'fat' => 43.23,
+                'total_fat' => 43.23,
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],
@@ -248,7 +248,7 @@ class FoodSeeder extends Seeder
                 'protein' => 23.1,
                 'dietary_fiber' => 12.2,
                 'carbohydrate' => 23.3,
-                'fat' => 43.23,
+                'total_fat' => 43.23,
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],
@@ -262,7 +262,7 @@ class FoodSeeder extends Seeder
                 'protein' => 23.1,
                 'dietary_fiber' => 12.2,
                 'carbohydrate' => 23.3,
-                'fat' => 43.23,
+                'total_fat' => 43.23,
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],
@@ -276,7 +276,7 @@ class FoodSeeder extends Seeder
                 'protein' => 23.1,
                 'dietary_fiber' => 12.2,
                 'carbohydrate' => 23.3,
-                'fat' => 43.23,
+                'total_fat' => 43.23,
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],
@@ -290,7 +290,7 @@ class FoodSeeder extends Seeder
                 'protein' => 23.1,
                 'dietary_fiber' => 12.2,
                 'carbohydrate' => 23.3,
-                'fat' => 43.23,
+                'total_fat' => 43.23,
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],
@@ -304,7 +304,7 @@ class FoodSeeder extends Seeder
                 'protein' => 23.1,
                 'dietary_fiber' => 12.2,
                 'carbohydrate' => 23.3,
-                'fat' => 43.23,
+                'total_fat' => 43.23,
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],
@@ -318,7 +318,7 @@ class FoodSeeder extends Seeder
                 'protein' => 23.1,
                 'dietary_fiber' => 12.2,
                 'carbohydrate' => 23.3,
-                'fat' => 43.23,
+                'total_fat' => 43.23,
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],
@@ -332,7 +332,7 @@ class FoodSeeder extends Seeder
                 'protein' => 23.1,
                 'dietary_fiber' => 12.2,
                 'carbohydrate' => 23.3,
-                'fat' => 43.23,
+                'total_fat' => 43.23,
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],
@@ -346,7 +346,7 @@ class FoodSeeder extends Seeder
                 'protein' => 23.1,
                 'dietary_fiber' => 12.2,
                 'carbohydrate' => 23.3,
-                'fat' => 43.23,
+                'total_fat' => 43.23,
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],
@@ -360,7 +360,7 @@ class FoodSeeder extends Seeder
                 'protein' => 23.1,
                 'dietary_fiber' => 12.2,
                 'carbohydrate' => 23.3,
-                'fat' => 43.23,
+                'total_fat' => 43.23,
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],
@@ -374,7 +374,7 @@ class FoodSeeder extends Seeder
                 'protein' => 23.1,
                 'dietary_fiber' => 12.2,
                 'carbohydrate' => 23.3,
-                'fat' => 43.23,
+                'total_fat' => 43.23,
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],
@@ -388,7 +388,7 @@ class FoodSeeder extends Seeder
                 'protein' => 23.1,
                 'dietary_fiber' => 12.2,
                 'carbohydrate' => 23.3,
-                'fat' => 43.23,
+                'total_fat' => 43.23,
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],
@@ -402,7 +402,7 @@ class FoodSeeder extends Seeder
                 'protein' => 23.1,
                 'dietary_fiber' => 12.2,
                 'carbohydrate' => 23.3,
-                'fat' => 43.23,
+                'total_fat' => 43.23,
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],
@@ -416,7 +416,7 @@ class FoodSeeder extends Seeder
                 'protein' => 23.1,
                 'dietary_fiber' => 12.2,
                 'carbohydrate' => 23.3,
-                'fat' => 43.23,
+                'total_fat' => 43.23,
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],
@@ -430,7 +430,7 @@ class FoodSeeder extends Seeder
                 'protein' => 23.1,
                 'dietary_fiber' => 12.2,
                 'carbohydrate' => 23.3,
-                'fat' => 43.23,
+                'total_fat' => 43.23,
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],
@@ -444,7 +444,7 @@ class FoodSeeder extends Seeder
                 'protein' => 23.1,
                 'dietary_fiber' => 12.2,
                 'carbohydrate' => 23.3,
-                'fat' => 43.23,
+                'total_fat' => 43.23,
                 'vitamins' => 'A,C',
                 'minerals' => 'Iron,lead'
             ],

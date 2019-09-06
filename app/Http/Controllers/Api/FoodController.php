@@ -6,6 +6,7 @@ use App\Food;
 use Foo\DataProviderIssue2833\FirstTest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Log;
 
 class FoodController extends Controller
@@ -22,7 +23,23 @@ class FoodController extends Controller
      */
     public function index()
     {
-        return Food::find(1)->get();
+//        $foods = Food::join('food_categories', 'foods.category_id', '=', 'foods.id')->get();
+        $data = Input::all();
+        $foods = Food::with('category');
+        $results = $data['results'] ?? false;
+        $page = ($data['page'] ?? 1) - 1;
+
+        $res['totalCount'] = $foods->count();
+
+        $res['keys'] = $foods->get()->map(function ($values){
+            return $values->id;
+        });
+
+        $foods->skip($page * $results)->take($results);
+
+        $res['foods'] = $foods->get();
+
+        return response($res);
     }
 
     /**
