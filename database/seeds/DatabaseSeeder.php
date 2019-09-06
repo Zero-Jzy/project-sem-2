@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
             FoodCategorySeeder::class,
 //            SetCategorySeeder::class,
             FoodSeeder::class,
+
 //            SetSeeder::class,
 //            FoodSetSeeder::class
         ]);
