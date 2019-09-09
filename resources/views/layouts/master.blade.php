@@ -40,14 +40,17 @@
 <body class="animsition">
 <header>
     <!-- Header desktop -->
-    <div class="wrap-menu-header {{Request::is(['/','contact','about-us']) ? 'gradient1' : 'box-shadow-header-custom'}}  trans-0-4">
+    <div
+        class="wrap-menu-header {{Request::is(['/','contact','about-us']) ? 'gradient1' : 'box-shadow-header-custom'}}  trans-0-4">
         <div class="container h-full">
             <div class="wrap_header trans-0-3">
                 <!-- Logo -->
                 <div class="logo">
                     <a href="{{route('home')}}">
-                        <img src="{{asset(Request::is(['/','contact','about-us']) ? '/template/images/icons/logo.png' : '/template/images/icons/logo2.png')}}" alt="IMG-LOGO"
-                             data-logofixed="{{asset('/template/images/icons/logo2.png')}}">
+                        <img
+                            src="{{asset(Request::is(['/','contact','about-us']) ? '/template/images/icons/logo.png' : '/template/images/icons/logo2.png')}}"
+                            alt="IMG-LOGO"
+                            data-logofixed="{{asset('/template/images/icons/logo2.png')}}">
                     </a>
                 </div>
 
@@ -59,7 +62,8 @@
                                 <a class="{{Request::is('/') ? 'active' : ''}}" href="{{route('home')}}">Home</a>
                             </li>
                             <li>
-                                <a class="{{Request::is('menu') ? 'active' : ''}}" href="{{route('menu.index')}}">Menu</a>
+                                <a class="{{Request::is('menu') ? 'active' : ''}}"
+                                   href="{{route('menu.index')}}">Menu</a>
                             </li>
                             <li>
                                 <a class="{{Request::is('about-us') ? 'active' : ''}}" href="{{route('about-us')}}">About</a>
@@ -91,13 +95,13 @@
                             @auth
                                 <li>
                                     <a class="dropdown-toggle" data-toggle="dropdown">
-                                        <span>Pato Test</span>
+                                        <span>{{ Auth::user()->profile->first_name . ' ' . Auth::user()->profile->last_name }}</span>
                                         <img class="avatar"
-                                             src="https://i.pinimg.com/564x/5d/b8/a1/5db8a1d8d5da7010902c7d636766c5b9.jpg"
+                                             src="{{ Auth::user()->avatar ? Auth::user()->avatar : 'https://iupac.org/wp-content/uploads/2018/05/default-avatar.png'}}"
                                              alt="">
                                     </a>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#"><i class="fal fa-id-card-alt"></i> <span>My profile</span></a>
+                                        <a class="dropdown-item" href="{{route('profile.index')}}"><i class="fal fa-id-card-alt"></i> <span>My profile</span></a>
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                            onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -111,13 +115,13 @@
                                 </li>
                             @else
                                 <li>
-{{--                                    <a href="{{ route('login') }}">Login</a>--}}
+                                    {{--                                    <a href="{{ route('login') }}">Login</a>--}}
                                     <a href="#0" class="cd-signin">Login</a>
                                 </li>
 
                                 @if (Route::has('register'))
                                     <li>
-{{--                                        <a href="{{ route('register') }}" class="cd-signup">Register</a>--}}
+                                        {{--                                        <a href="{{ route('register') }}" class="cd-signup">Register</a>--}}
                                         <a href="#0" class="cd-signup">Register</a>
                                     </li>
                                 @endif
@@ -145,7 +149,7 @@
                 <ul class="m-b-70">
                     <li class="txt14 m-b-14">
                         <i class="fa fa-map-marker fs-16 dis-inline-block size19" aria-hidden="true"></i>
-                         379 Hudson St, New York, NY 10018
+                        379 Hudson St, New York, NY 10018
                     </li>
 
                     <li class="txt14 m-b-14">
@@ -210,7 +214,7 @@
                     </a>
 
                     <p class="txt14 m-b-18">
-                       I feel so good when I come to Pato.
+                        I feel so good when I come to Pato.
                         <a href="#" class="txt15">
                             https://www.twitter.com/narutouzumaki
                         </a>
@@ -230,52 +234,89 @@
 
                 <!-- Gallery footer -->
                 <div class="wrap-gallery-footer flex-w">
-                    <a class="item-gallery-footer wrap-pic-w" href="https://media-cdn.tripadvisor.com/media/photo-w/17/6a/bd/3a/photo0jpg.jpg" data-lightbox="gallery-footer">
-                        <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/6a/bd/3a/photo0jpg.jpg" alt="GALLERY">
+                    <a class="item-gallery-footer wrap-pic-w"
+                       href="https://media-cdn.tripadvisor.com/media/photo-w/17/6a/bd/3a/photo0jpg.jpg"
+                       data-lightbox="gallery-footer">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/6a/bd/3a/photo0jpg.jpg"
+                             alt="GALLERY">
                     </a>
 
-                    <a class="item-gallery-footer wrap-pic-w" href="https://product.hstatic.net/1000347095/product/rau-c_-lu_t-ch_m-kho-qu_t_large.jpg" data-lightbox="gallery-footer">
-                        <img src="https://product.hstatic.net/1000347095/product/rau-c_-lu_t-ch_m-kho-qu_t_large.jpg" alt="GALLERY">
+                    <a class="item-gallery-footer wrap-pic-w"
+                       href="https://product.hstatic.net/1000347095/product/rau-c_-lu_t-ch_m-kho-qu_t_large.jpg"
+                       data-lightbox="gallery-footer">
+                        <img src="https://product.hstatic.net/1000347095/product/rau-c_-lu_t-ch_m-kho-qu_t_large.jpg"
+                             alt="GALLERY">
                     </a>
 
-                    <a class="item-gallery-footer wrap-pic-w" href="https://media-cdn.tripadvisor.com/media/photo-p/16/24/d9/11/photo0jpg.jpg" data-lightbox="gallery-footer">
-                        <img src="https://media-cdn.tripadvisor.com/media/photo-p/16/24/d9/11/photo0jpg.jpg" alt="GALLERY">
+                    <a class="item-gallery-footer wrap-pic-w"
+                       href="https://media-cdn.tripadvisor.com/media/photo-p/16/24/d9/11/photo0jpg.jpg"
+                       data-lightbox="gallery-footer">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-p/16/24/d9/11/photo0jpg.jpg"
+                             alt="GALLERY">
                     </a>
 
-                    <a class="item-gallery-footer wrap-pic-w" href="https://media-cdn.tripadvisor.com/media/photo-w/16/aa/78/2f/poke-hanoi.jpg" data-lightbox="gallery-footer">
-                        <img src="https://media-cdn.tripadvisor.com/media/photo-w/16/aa/78/2f/poke-hanoi.jpg" alt="GALLERY">
+                    <a class="item-gallery-footer wrap-pic-w"
+                       href="https://media-cdn.tripadvisor.com/media/photo-w/16/aa/78/2f/poke-hanoi.jpg"
+                       data-lightbox="gallery-footer">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-w/16/aa/78/2f/poke-hanoi.jpg"
+                             alt="GALLERY">
                     </a>
 
-                    <a class="item-gallery-footer wrap-pic-w" href="https://media-cdn.tripadvisor.com/media/photo-p/18/a0/9b/d1/photo1jpg.jpg" data-lightbox="gallery-footer">
-                        <img src="https://media-cdn.tripadvisor.com/media/photo-p/18/a0/9b/d1/photo1jpg.jpg" alt="GALLERY">
+                    <a class="item-gallery-footer wrap-pic-w"
+                       href="https://media-cdn.tripadvisor.com/media/photo-p/18/a0/9b/d1/photo1jpg.jpg"
+                       data-lightbox="gallery-footer">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-p/18/a0/9b/d1/photo1jpg.jpg"
+                             alt="GALLERY">
                     </a>
 
-                    <a class="item-gallery-footer wrap-pic-w" href="https://media-cdn.tripadvisor.com/media/photo-w/15/d3/03/3a/poke-hanoi-11b-hang-khay.jpg" data-lightbox="gallery-footer">
-                        <img src="https://media-cdn.tripadvisor.com/media/photo-w/15/d3/03/3a/poke-hanoi-11b-hang-khay.jpg" alt="GALLERY">
+                    <a class="item-gallery-footer wrap-pic-w"
+                       href="https://media-cdn.tripadvisor.com/media/photo-w/15/d3/03/3a/poke-hanoi-11b-hang-khay.jpg"
+                       data-lightbox="gallery-footer">
+                        <img
+                            src="https://media-cdn.tripadvisor.com/media/photo-w/15/d3/03/3a/poke-hanoi-11b-hang-khay.jpg"
+                            alt="GALLERY">
                     </a>
 
-                    <a class="item-gallery-footer wrap-pic-w" href="https://media-cdn.tripadvisor.com/media/photo-p/16/f5/03/30/poke-hanoi.jpg" data-lightbox="gallery-footer">
-                        <img src="https://media-cdn.tripadvisor.com/media/photo-p/16/f5/03/30/poke-hanoi.jpg" alt="GALLERY">
+                    <a class="item-gallery-footer wrap-pic-w"
+                       href="https://media-cdn.tripadvisor.com/media/photo-p/16/f5/03/30/poke-hanoi.jpg"
+                       data-lightbox="gallery-footer">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-p/16/f5/03/30/poke-hanoi.jpg"
+                             alt="GALLERY">
                     </a>
 
-                    <a class="item-gallery-footer wrap-pic-w" href="https://media-cdn.tripadvisor.com/media/photo-p/16/39/d6/67/poke-hanoi.jpg" data-lightbox="gallery-footer">
-                        <img src="https://media-cdn.tripadvisor.com/media/photo-p/16/39/d6/67/poke-hanoi.jpg" alt="GALLERY">
+                    <a class="item-gallery-footer wrap-pic-w"
+                       href="https://media-cdn.tripadvisor.com/media/photo-p/16/39/d6/67/poke-hanoi.jpg"
+                       data-lightbox="gallery-footer">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-p/16/39/d6/67/poke-hanoi.jpg"
+                             alt="GALLERY">
                     </a>
 
-                    <a class="item-gallery-footer wrap-pic-w" href="https://media-cdn.tripadvisor.com/media/photo-w/15/fa/7e/2f/photo0jpg.jpg" data-lightbox="gallery-footer">
-                        <img src="https://media-cdn.tripadvisor.com/media/photo-w/15/fa/7e/2f/photo0jpg.jpg" alt="GALLERY">
+                    <a class="item-gallery-footer wrap-pic-w"
+                       href="https://media-cdn.tripadvisor.com/media/photo-w/15/fa/7e/2f/photo0jpg.jpg"
+                       data-lightbox="gallery-footer">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-w/15/fa/7e/2f/photo0jpg.jpg"
+                             alt="GALLERY">
                     </a>
 
-                    <a class="item-gallery-footer wrap-pic-w" href="https://media-cdn.tripadvisor.com/media/photo-p/16/9a/86/a8/photo2jpg.jpg" data-lightbox="gallery-footer">
-                        <img src="https://media-cdn.tripadvisor.com/media/photo-p/16/9a/86/a8/photo2jpg.jpg" alt="GALLERY">
+                    <a class="item-gallery-footer wrap-pic-w"
+                       href="https://media-cdn.tripadvisor.com/media/photo-p/16/9a/86/a8/photo2jpg.jpg"
+                       data-lightbox="gallery-footer">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-p/16/9a/86/a8/photo2jpg.jpg"
+                             alt="GALLERY">
                     </a>
 
-                    <a class="item-gallery-footer wrap-pic-w" href="https://media-cdn.tripadvisor.com/media/photo-w/18/bd/16/9b/photo0jpg.jpg" data-lightbox="gallery-footer">
-                        <img src="https://media-cdn.tripadvisor.com/media/photo-w/18/bd/16/9b/photo0jpg.jpg" alt="GALLERY">
+                    <a class="item-gallery-footer wrap-pic-w"
+                       href="https://media-cdn.tripadvisor.com/media/photo-w/18/bd/16/9b/photo0jpg.jpg"
+                       data-lightbox="gallery-footer">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-w/18/bd/16/9b/photo0jpg.jpg"
+                             alt="GALLERY">
                     </a>
 
-                    <a class="item-gallery-footer wrap-pic-w" href="https://media-cdn.tripadvisor.com/media/photo-w/17/0f/03/c6/dinner-poke-hanoi.jpg" data-lightbox="gallery-footer">
-                        <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/0f/03/c6/dinner-poke-hanoi.jpg" alt="GALLERY">
+                    <a class="item-gallery-footer wrap-pic-w"
+                       href="https://media-cdn.tripadvisor.com/media/photo-w/17/0f/03/c6/dinner-poke-hanoi.jpg"
+                       data-lightbox="gallery-footer">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/0f/03/c6/dinner-poke-hanoi.jpg"
+                             alt="GALLERY">
                     </a>
                 </div>
 
@@ -287,8 +328,8 @@
         <div class="container">
             <div class="flex-sb-m flex-w p-t-22 p-b-22">
                 <div class="p-t-5 p-b-5">
-                    <a href="#" class="fs-15 c-white"> <i class="fab fa-tripadvisor"aria-hidden ="true"></i> </a>
-                    <a href="#" class="fs-15 c-white"><i class="fab fa-facebook-f m-l-18"aria-hidden ="true"></i></a>
+                    <a href="#" class="fs-15 c-white"> <i class="fab fa-tripadvisor" aria-hidden="true"></i> </a>
+                    <a href="#" class="fs-15 c-white"><i class="fab fa-facebook-f m-l-18" aria-hidden="true"></i></a>
                     <a href="#" class="fs-15 c-white"><i class="fab fa-twitter m-l-18"></i></a>
                 </div>
 
@@ -311,18 +352,21 @@
         </ul>
 
         <div id="cd-login"> <!-- log in form -->
-            <form class="cd-form">
+            <form class="cd-form" id="login-form" action="{{route('login')}}" method="POST">
+                @csrf
                 <p class="fieldset">
                     <label class="image-replace cd-email" for="signin-email">E-mail</label>
-                    <input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
+                    <input name="email" class="full-width has-padding has-border" id="signin-email" type="email"
+                           placeholder="E-mail">
                     <span class="cd-error-message">Error message here!</span>
                 </p>
 
                 <p class="fieldset">
                     <label class="image-replace cd-password" for="signin-password">Password</label>
-                    <input class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="Password">
-                    <a href="#0" class="hide-password">Hide</a>
+                    <input name="password" class="full-width has-padding has-border" id="signin-password" type="password"
+                           placeholder="Password">
                     <span class="cd-error-message">Error message here!</span>
+                    <a href="#0" class="hide-password">Hide</a>
                 </p>
 
                 <p class="fieldset">
@@ -331,8 +375,11 @@
                 </p>
 
                 <p class="fieldset">
-                    <input class="full-width" type="submit" value="Login">
+                    <input type="button" id="btn-login" class="full-width has-padding btn my-2 btn-login" value="Login">
+                    <input type="button" class="full-width has-padding btn my-2 btn-login" value="Login with facebook">
+                    <input type="button" class="full-width has-padding btn my-2 btn-login" value="Login with google">
                 </p>
+
             </form>
 
             <p class="cd-form-bottom-message"><a href="#0">Forgot your password?</a></p>
@@ -340,40 +387,42 @@
         </div> <!-- cd-login -->
 
         <div id="cd-signup"> <!-- sign up form -->
-            <form class="cd-form">
+            <form class="cd-form" id="register-form" action="{{route('register')}}" method="POST">
+                @csrf
                 <p class="fieldset">
                     <label class="image-replace " for="signup-first-name">First name</label>
-                    <input class="full-width has-padding has-border" id="signup-first-name" type="text" placeholder="First Name">
+                    <input name="first_name" class="full-width has-padding has-border" id="signup-first-name"
+                           type="text" placeholder="First Name">
                     <span class="cd-error-message">Error message here!</span>
                 </p>
 
                 <p class="fieldset">
                     <label class="image-replace " for="ignup-last-name">Last Name</label>
-                    <input class="full-width has-padding has-border" id="signup-last-name" type="text" placeholder="Last Name">
+                    <input name="last_name" class="full-width has-padding has-border" id="signup-last-name" type="text"
+                           placeholder="Last Name">
                     <span class="cd-error-message">Error message here!</span>
                 </p>
-
                 <p class="fieldset">
                     <label class="image-replace " for="signup-email">Email</label>
-                    <input class="full-width has-padding has-border" id="signup-email" type="email"  placeholder="Email">
-                    <span class="cd-error-message">Error message here!</span>
+                    <input name="email" class="full-width has-padding has-border" id="signup-email" type="email"
+                           placeholder="Email">
+                    <span class="cd-error-message ">Error message here!</span>
                 </p>
-
                 <p class="fieldset">
                     <label class="image-replace " for="signup-password">Password</label>
-                    <input class="full-width has-padding has-border" id="signup-password" type="password"  placeholder="Password">
-                    <a href="#0" class="hide-password">Hide</a>
+                    <input name="password" class="full-width has-padding has-border" id="signup-password"
+                           type="password" placeholder="Password">
                     <span class="cd-error-message">Error message here!</span>
+                    <a href="#0" class="hide-password">Hide</a>
                 </p>
-
                 <p class="fieldset">
                     <label class="image-replace " for="signup-re-pass">Confirm Password</label>
-                    <input class="full-width has-padding has-border" id="signup-re-pass" type="password"  placeholder="Confirm Password">
+                    <input name="password_confirmation" class="full-width has-padding has-border" id="signup-re-pass"
+                           type="password" placeholder="Confirm Password">
                     <a href="#0" class="hide-password">Hide</a>
-                    <span class="cd-error-message">Error message here!</span>
                 </p>
                 <p class="fieldset">
-                    <input class="full-width has-padding" type="submit" value="Register">
+                    <input type="button" id="btn-register" class="full-width has-padding btn btn-register" value="Register">
                 </p>
             </form>
 
@@ -381,7 +430,8 @@
         </div> <!-- cd-signup -->
 
         <div id="cd-reset-password"> <!-- reset password form -->
-            <p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
+            <p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to
+                create a new password.</p>
 
             <form class="cd-form">
                 <p class="fieldset">
@@ -402,20 +452,12 @@
 </div> <!-- cd-user-model -->
 {{-- =============================== END MODAL ===============================--}}
 
-<script>
-
-    var itemHeader =  $('.wrap_menu a, .wrap_menu li a');
-    var rightNavbar =  $('.right-navbar a');
-    var path = window.location.pathname;
-
-    if(['/menu','/login','/register','/profile'].indexOf(path) !== -1){
-        itemHeader.css('color','black');
-        rightNavbar.css('color','#000')
-    }
-</script>
+<input id="current-user-logged" type="hidden" value="{{Auth::check() ? Auth::user()->id : null }}">
 
 
 <!--===============================================================================================-->
+<script type="text/javascript" src="{{asset('/lib/sweetalert2.all.min.js')}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
 <!--===============================================================================================-->
 <script type="text/javascript" src="{{asset('/template/vendor/animsition/js/animsition.min.js')}}"></script>
 <!--===============================================================================================-->

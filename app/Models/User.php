@@ -18,6 +18,10 @@ class User extends Authenticatable
         return $this->hasMany(Order::class);
     }
 
+    public function addresses(){
+        return $this->hasManyThrough(Address::class, Profile::class);
+    }
+
     /**
      * The attributes that are mass assignable.
      *

@@ -19,16 +19,17 @@ class DatabaseSeeder extends Seeder
             AdminSeeder::class,
 //            AddressSeeder::class,
             FoodCategorySeeder::class,
-//            SetCategorySeeder::class,
+            SetCategorySeeder::class,
             FoodSeeder::class,
 
-//            SetSeeder::class,
-//            FoodSetSeeder::class
+            SetSeeder::class,
+            FoodSetSeeder::class
         ]);
 
         DB::statement("ALTER SEQUENCE users_id_seq RESTART WITH 1001");
         DB::statement("ALTER SEQUENCE profiles_id_seq RESTART WITH 1001");
-//        DB::statement("ALTER SEQUENCE dishes_id_seq RESTART WITH 1001");
+        DB::statement("ALTER SEQUENCE foods_id_seq RESTART WITH 1001");
+        DB::statement("ALTER SEQUENCE sets_id_seq RESTART WITH 1001");
 
     }
 }

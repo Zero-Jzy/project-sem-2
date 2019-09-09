@@ -20,7 +20,7 @@ class ResetPasswordController extends Controller
 
     use ResetsPasswords;
 
-    /**
+    /**App\Http\Controllers\Auth\RegisterController@showRegistrationForm
      * Where to redirect users after resetting their password.
      *
      * @var string

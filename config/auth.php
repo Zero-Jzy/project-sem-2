@@ -44,13 +44,13 @@ return [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
-        ],
+        ]
+//        ,
 
-        'api' => [
-            'driver' => 'token',
-            'provider' => 'admins',
-            'hash' => false,
-        ],
+//        'api' => [
+//            'driver' => 'session',
+//            'provider' => 'users'
+//        ],
     ],
 
     /*

@@ -74,7 +74,7 @@
             margin-top: 5px;
             position: relative;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
             border-radius: 10px;
         }
 
@@ -127,6 +127,46 @@
             border: none;
             color: #ec1d25;
         }
+
+        .address-box {
+            display: flex;
+            /* border: 1px solid black; */
+            /*justify-content: space-between;*/
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.35);
+        }
+
+        .address-box input[type="radio"] {
+            margin: 0 15px;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%)
+            /* font-size: 24px; */
+        }
+
+        .address-box h5 {
+            font-weight: 550;
+        }
+
+        .address-box p {
+            margin-bottom: 5px;
+        }
+
+        .box-form-address {
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.35);
+            display: none;
+            padding: 30px 20px;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .box-form-address .btn-close {
+            position: absolute;
+            right: 1%;
+            top: 1%;
+            font-size: 24px;
+        }
     </style>
     <section class="container" style="padding-top: 120px;">
         <div class="wrap">
@@ -135,11 +175,11 @@
                     <div class="menu-left col-md-3 container mt-3">
                         <div class="profiles">
                             <p class="image">
-                                <img src="https://salt.tikicdn.com/desktop/img/avatar.png?v=3" height="45" width="45"
+                                <img src="{{$user->profile->avatar}}" height="45" width="45"
                                      alt="">
                             </p>
                             <p class="name">Tài khoản của</p>
-                            <h6>Hoài Anh</h6>
+                            <h6>{{$user->profile->first_name .' '. $user->profile->last_name}}</h6>
                         </div>
                         <div class="">
                             {{--                            <button class="btn btn-default dropdown-toggle btn-block" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">Danh mục--}}
@@ -155,8 +195,8 @@
                                 <li style="padding-top: 30px" class="">
                                     <a class="nav-link" data-toggle="tab" href="#content1"
                                        style="display: flex;align-items: center;"><i class="fas fa-map-marker-alt"
-                                                                                     style="flex: 0 0 20%;text-align: center;padding-right: 26px;"></i>Sổ
-                                        địa chỉ</a>
+                                                                                     style="flex: 0 0 20%;text-align: center;padding-right: 26px;"></i>Sổđịa
+                                        chỉ</a>
                                 </li>
                             </ul>
                         </div>
@@ -170,31 +210,27 @@
                             </div>
                             <form>
                                 <div class="form-group row">
-                                    <label for="staticEmail" class="col-sm-2 col-form-label">Họ tên</label>
+                                    <label class="col-sm-2 col-form-label">Họ tên</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="staticEmail"
-                                               value="Hoài Anh">
+                                        <input type="text" class="form-control" value="{{$user->profile->first_name .' '. $user->profile->last_name}}" placeholder="Enter your name">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="inputPassword" class="col-sm-2 col-form-label">Điện thoại</label>
+                                    <label class="col-sm-2 col-form-label">Điện thoại</label>
                                     <div class="col-sm-10">
-                                        <input type="number" readonly class="form-control" id="inputPassword"
-                                               value="0869699109">
+                                        <input type="number" class="form-control"  name="phone" placeholder="Enter your phone">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                                    <label class="col-sm-2 col-form-label">Email</label>
                                     <div class="col-sm-10">
-                                        <input type="text" readonly class="form-control" id="staticEmail"
-                                               value="vuhonghoaianh1609@gmail.com">
+                                        <input type="text" readonly class="form-control" value="vuhonghoaianh1609@gmail.com">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="inputPassword" class="col-sm-2 col-form-label">Tuổi</label>
+                                    <label class="col-sm-2 col-form-label">Tuổi</label>
                                     <div class="col-sm-10">
-                                        <input type="number" readonly class="form-control" id="inputPassword"
-                                               value="19">
+                                        <input type="date" class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-group row" id="register_name">
@@ -204,21 +240,18 @@
                                             <div class="row" style="margin: 0">
                                                 <div class="col-xs-4">
                                                     <label>
-                                                        <input type="radio" name="gender" value="on" id="gender_male"
+                                                        <input type="radio" name="gender" id="gender_male"
                                                                class="gender">
                                                         <span>
                                                  <i class="ico"></i>
-                                            </span>
-                                                        Nam
-
-                                                    </label>
+                                            </span> Nam</label>
 
                                                 </div>
                                                 <div class="col-xs-4" style="margin-left: 60px">
                                                     <label>
 
-                                                        <input type="radio" name="gender" value="off" id="gender_female"
-                                                               class="gender" checked="">
+                                                        <input type="radio" name="gender"  id="gender_female"
+                                                               class="gender">
                                                         <span>
                                                  <i class="ico"></i>
                                             </span>
@@ -240,73 +273,98 @@
                             <div class="have-margin">
                                 <h1 class="have-margin" style="font-size: 30px">Sổ địa chỉ</h1>
                             </div>
-                            <form>
-                                <div class="form-group row">
-                                    <label for="staticEmail" class="col-sm-2 col-form-label">Họ tên</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="staticEmail" value="Hoài Anh">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="inputPassword" class="col-sm-2 col-form-label">Điện thoại</label>
-                                    <div class="col-sm-10">
-                                        <input type="number" readonly class="form-control" id="inputPassword"
-                                               value="0869699109">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" readonly class="form-control" id="staticEmail"
-                                               value="vuhonghoaianh1609@gmail.com">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="staticEmail" class="col-sm-2 col-form-label">Tỉnh</label>
-                                    {{--                                    <label for="sel1">Thành phố:</label>--}}
-                                    <div class="col-md-10">
-                                        <select class="form-control" id="tinh">
+                            <div class="list-address">
+                                @foreach($user->addresses as $address)
+                                    <div class="address-box my-2">
+                                        <div>
+                                            <input name="addressActive" type="radio" >
+                                        </div>
+                                        <div>
+                                            <h5>{{$address->name}}</h5>
+                                            <address>Address: {{$address->addressTxt}}
+                                            </address>
+                                            <p>Phone: {{$address->phone}}</p>
+                                        </div>
 
-                                        </select>
+                                        <button class="btn btn-link">
+                                            delete
+                                        </button>
                                     </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="staticEmail" class="col-sm-2 col-form-label">Quận huyện</label>
-                                    {{--                                    <label for="sel1">Thành phố:</label>--}}
-                                    <div class="col-md-10">
-                                        <select class="form-control" id="huyen">
+                                @endforeach
 
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="staticEmail" class="col-sm-2 col-form-label">Phường xã</label>
-                                    {{--                                    <label for="sel1">Thành phố:</label>--}}
-                                    <div class="col-md-10">
-                                        <select class="form-control" id="xa">
+                            </div>
+                            <div class="add-new-address" style="text-align: center">
 
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group row  has-feedback">
-                                    <label for="street"
-                                           class="col-lg-2 col-md-2 control-label visible-md-block visible-lg-block">Địa
-                                        chỉ:</label>
-                                    <div class="col-lg-10 col-md-10">
-                                        <textarea class="form-control" id="street" name="street" cols="30" rows="10"
-                                                  placeholder="Nhập địa chỉ" data-bv-field="street"></textarea><i
-                                            class="form-control-feedback" data-bv-icon-for="street"
-                                            style="display: none;"></i>
-                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="street"
-                                               data-bv-result="NOT_VALIDATED" style="display: none;">Vui lòng nhập Địa
-                                            chỉ</small><small class="help-block" data-bv-validator="regexp"
-                                                              data-bv-for="street" data-bv-result="NOT_VALIDATED"
-                                                              style="display: none;">Địa chỉ của bạn không hợp
-                                            lệ </small></div>
-                                </div>
-                                <button type="submit" class="btn btn-warning mb-2" style="margin-left: 165px">Cập nhật
+                                <button id="btn-add-address">
+                                    <i class="far fa-plus fa-2x"></i>
                                 </button>
-                            </form>
+                            </div>
+                            <div class="box-form-address">
+                                <h3 class="text-center mb-4">Add address</h3>
+                                <button class="btn btn-close">
+                                    <i class="fal fa-minus"></i>
+                                </button>
+                                <form id="form-add-address" action="{{route('profile.store')}}" method="POST">
+                                    @csrf
+                                    <div class="form-group row">
+                                        <label for="name" class="col-sm-2 col-form-label">Họ tên</label>
+                                        <div class="col-sm-10">
+                                            <input name="name" type="text" class="form-control" id="name" >
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Điện thoại</label>
+                                        <div class="col-sm-10">
+                                            <input name="phone" type="number" class="form-control" value="0869699109">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="email" class="col-sm-2 col-form-label">Email</label>
+                                        <div class="col-sm-10">
+                                            <input name="email" type="email" class="form-control" id="email">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Tỉnh</label>
+                                        {{--                                    <label for="sel1">Thành phố:</label>--}}
+                                        <div class="col-md-10">
+                                            <select name="tinh" class="form-control" id="tinh">
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Quận huyện</label>
+                                        {{--                                    <label for="sel1">Thành phố:</label>--}}
+                                        <div class="col-md-10">
+                                            <select name="huyen" class="form-control" id="huyen">
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Phường xã</label>
+                                        {{--                                    <label for="sel1">Thành phố:</label>--}}
+                                        <div class="col-md-10">
+                                            <select name="xa" class="form-control" id="xa">
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row  has-feedback">
+                                        <label for="address"
+                                               class="col-lg-2 col-md-2 control-label visible-md-block visible-lg-block">Địa
+                                            chỉ:</label>
+                                        <div class="col-lg-10 col-md-10">
+                                        <textarea class="form-control" name="address" cols="30" rows="10"
+                                                  placeholder="Nhập địa chỉ"></textarea>
+                                            <i class="form-control-feedback" style="display: none;"></i>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="profile_id" value="{{$user->profile->id}}">
+                                    <button type="submit" class="btn btn-warning mb-2" style="margin-left: 165px">Add</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -328,14 +386,17 @@
                 data = JSON.parse(res);
             },
             error: err => {
-              alert('Có lỗi xảy ra!')
+                alert('Có lỗi xảy ra!')
             },
             async: false
         });
+
         renderOption(tinh, data, 'Tỉnh/Thành Phố');
+
         var huyenData;
         tinh.onchange = function (e) {
-            huyenData = data.filter(item => item.value == e.target.value)[0].children;
+            let currentValue = e.target.value.split('-')[0];
+            huyenData = data.filter(item => item.value === currentValue)[0].children;
             renderOption(huyen, huyenData, 'Quận/Huyện');
             huyen.disabled = false;
             xa.innerHTML = '<option value="">Chọn Xã/Phường</option>';
@@ -344,15 +405,25 @@
         };
 
         huyen.onchange = function (e) {
-            var xaData = huyenData.filter(item => item.value === e.target.value)[0].children;
+            let currentValue = e.target.value.split('--')[0];
+            var xaData = huyenData.filter(item => item.value === currentValue)[0].children;
             renderOption(xa, xaData, 'Xã/Phường');
             xa.disabled = false;
         };
 
         function renderOption(select, data, type) {
-            var htmlTxt = data.map(e => `<option value="${e.value}">${e.label}</option>`).join('');
+            var htmlTxt = data.map(e => `<option value="${e.value}--${e.label}">${e.label}</option>`).join('');
             select.innerHTML = `<option value="">Chọn ${type}</option>` + htmlTxt
         }
 
+        $('#btn-add-address').click(function () {
+            $('.box-form-address').show();
+            $(this).hide();
+        });
+
+        $('.btn-close').click(function () {
+            $('#btn-add-address').show();
+            $('.box-form-address').hide();
+        })
     </script>
 @endsection

@@ -16,7 +16,7 @@ class CreateSetCategoriesTable extends Migration
         Schema::create('set_categories', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('description');
+            $table->text('description');
             $table->longText('created_at')->default(\Carbon\Carbon::now()->valueOf());
             $table->longText('updated_at')->nullable();
             $table->integer('status')->default(1);
