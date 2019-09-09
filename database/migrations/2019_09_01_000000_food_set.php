@@ -16,6 +16,7 @@ class FoodSet extends Migration
         Schema::create('food_set', function (Blueprint $table) {
             $table->bigInteger('set_id')->unsigned();
             $table->bigInteger('food_id')->unsigned();
+            $table->integer('quantity');
         });
     }
 

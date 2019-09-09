@@ -31,9 +31,12 @@ Route::resource('/user','UserController');
 
 Route::resource('menu', 'MenuController');
 
-Route::resource('food', 'MenuController');
+Route::resource('food', 'FoodController');
 
-Route::resource('set', 'MenuController');
+Route::resource('set', 'SetController');
+
+Route::resource('profile', 'ProfileController');
+
 
 Route::get('/about-us', function (){
     return view('about-us');
@@ -42,11 +45,6 @@ Route::get('/about-us', function (){
 Route::get('/contact', function (){
     return view('contact');
 })->name('contact');
-
-Route::get('/profile', function (){
-    return view('profile-user');
-})->name('profile');
-
 
 //Route::get('/test', function (){
 //    $data = \App\Dish::find(2)->sets()->get();

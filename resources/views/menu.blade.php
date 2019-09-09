@@ -20,7 +20,7 @@
                        role="tab"
                        aria-controls="pills-food"
                        aria-selected="true">
-                        foods
+                        Foods
                     </a>
                 </li>
                 <li class="nav-item">
@@ -85,7 +85,8 @@
                         </div>
 
                     </div>
-                    <button type="submit" class="btn-incard btn3 flex-c-m size18 txt11 trans-0-4 m-10 m-auto">
+                    <button type="submit" id="btn-create-set"
+                            class="btn-incard btn3 flex-c-m size18 txt11 trans-0-4 m-10 m-auto">
                         Create set
                     </button>
                 </div>
@@ -93,111 +94,7 @@
             <div class="tab-pane fade" id="pills-set" role="tabpanel" aria-labelledby="pills-set-tab">
                 <div class="list-food scrollbar">
                     <div class="food-item">
-                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                            </div>
 
-                            <div class="text-blo3 flex-col-l-m">
-                                <a href="#" class="txt19 m-b-3">
-                                    Duis massa
-                                </a>
-
-                                <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                            </div>
-                        </div>
-                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                            </div>
-
-                            <div class="text-blo3 flex-col-l-m">
-                                <a href="#" class="txt19 m-b-3">
-                                    Duis massa
-                                </a>
-
-                                <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                            </div>
-                        </div>
-                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                            </div>
-
-                            <div class="text-blo3 flex-col-l-m">
-                                <a href="#" class="txt19 m-b-3">
-                                    Duis massa
-                                </a>
-
-                                <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                            </div>
-                        </div>
-                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                            </div>
-
-                            <div class="text-blo3 flex-col-l-m">
-                                <a href="#" class="txt19 m-b-3">
-                                    Duis massa
-                                </a>
-
-                                <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                            </div>
-                        </div>
-                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                            </div>
-
-                            <div class="text-blo3 flex-col-l-m">
-                                <a href="#" class="txt19 m-b-3">
-                                    Duis massa
-                                </a>
-
-                                <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                            </div>
-                        </div>
-                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                            </div>
-
-                            <div class="text-blo3 flex-col-l-m">
-                                <a href="#" class="txt19 m-b-3">
-                                    Duis massa
-                                </a>
-
-                                <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                            </div>
-                        </div>
-                        <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                            <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                                <a href="#"><img src="{{asset('/template/images/lunch-05.jpg')}}" alt="IMG-MENU"></a>
-                            </div>
-
-                            <div class="text-blo3 flex-col-l-m">
-                                <a href="#" class="txt19 m-b-3">
-                                    Duis massa
-                                </a>
-
-                                <span class="txt10 m-t-20">
-								$12.75
-							</span>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="total-box">
@@ -337,7 +234,8 @@
                                         <div class="col-sm-4 col-md-3">
                                             <div class="food-card">
                                                 <div class="food-card-content">
-                                                    <img src="{{$food->image}}"/>
+                                                    <img
+                                                        src="https://res.cloudinary.com/cloud-pj-sem2/image/upload/w_300,h_300,c_lpad,b_auto/{{$food->image}}"/>
                                                     <div class="info">
                                                         <div class="row amount-of-nutrition">
                                                             <div class="col-sm-6 offset-3" style="margin-left: 25%">
@@ -382,7 +280,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="food-card-footer">
-                                                    <h5>{{$food->name}}</h5>
+                                                    <h6 class="py-2">{{$food->name}}</h6>
                                                     <div class="d-flex justify-content-between">
                                                         <p class="price">{{$food->price}}$</p>
                                                         <a class="btn-add-food" data-id="{{$food->id}}">
@@ -401,190 +299,14 @@
                 </div>
             </div>
         </div>
-        <section class="kc-elm kc-css-671686 kc_row kc-main-combo">
-            <div class="kc-row-container  kc-container">
-                <div class="kc-wrap-columns">
-                    <div class="kc-elm kc-css-779759 kc_col-sm-12 kc_column kc_col-sm-12">
-                        <div class="kc-col-container">
-                            <div class="combo_title">
-                                <div class="combo_text"> Siêu tiết kiệm</div>
-                            </div>
-                        </div>
-                        <div class="kc-elm kc-css-893995 kc-title-wrap ">
-                            <h2 class="kc_title">Combo siêu hấp dẫn</h2>
-                        </div>
-                        <div class="kc-combo container">
-                            <ul class="row">
-                                <li class="col-md-3">
-                                    <div class="kc-item">
-                                        <div class="combo_thumb">
-                                            <img class="img-fluid"
-                                                 src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/combo-1-1.png"
-                                                 alt="">
-                                        </div>
-                                        <div class="combo_title_addcart">
-                                            <h3>Combo 01</h3>
-                                            <a href="/?add-to-cart=415"
-                                               class="button add_to_cart_button product_type_simple ajax_add_to_cart">Mua
-                                                hàng</a>
-                                        </div>
-                                        <div class="combo_info_price"> Cho 2 người
-                                            <span class="woocommerce-Price-amount amount">139.000
-                                            <span class="woocommerce-Price-currencySymbol">₫</span>
-                                        </span>
-                                        </div>
-                                        <div class="combo_desc"> 1 Pizza size S + 1 Salad + 1 Coca 390 ml</div>
-                                    </div>
-                                </li>
-                                <li class="col-md-3">
-                                    <div class="kc-item">
-                                        <div class="combo_thumb">
-                                            <img class="img-fluid"
-                                                 src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/combo-1-1.png"
-                                                 alt="">
-                                        </div>
-                                        <div class="combo_title_addcart">
-                                            <h3>Combo 01</h3>
-                                            <a href="/?add-to-cart=415"
-                                               class="button add_to_cart_button product_type_simple ajax_add_to_cart">Mua
-                                                hàng</a>
-                                        </div>
-                                        <div class="combo_info_price"> Cho 2 người
-                                            <span class="woocommerce-Price-amount amount">139.000
-                                            <span class="woocommerce-Price-currencySymbol">₫</span>
-                                        </span>
-                                        </div>
-                                        <div class="combo_desc"> 1 Pizza size S + 1 Salad + 1 Coca 390 ml</div>
-                                    </div>
-                                </li>
-                                <li class="col-md-3">
-                                    <div class="kc-item">
-                                        <div class="combo_thumb">
-                                            <img class="img-fluid"
-                                                 src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/combo-1-1.png"
-                                                 alt="">
-                                        </div>
-                                        <div class="combo_title_addcart">
-                                            <h3>Combo 01</h3>
-                                            <a href="/?add-to-cart=415"
-                                               class="button add_to_cart_button product_type_simple ajax_add_to_cart">Mua
-                                                hàng</a>
-                                        </div>
-                                        <div class="combo_info_price"> Cho 2 người
-                                            <span class="woocommerce-Price-amount amount">139.000
-                                            <span class="woocommerce-Price-currencySymbol">₫</span>
-                                        </span>
-                                        </div>
-                                        <div class="combo_desc"> 1 Pizza size S + 1 Salad + 1 Coca 390 ml</div>
-                                    </div>
-                                </li>
-                                <li class="col-md-3">
-                                    <div class="kc-item">
-                                        <div class="combo_thumb">
-                                            <img class="img-fluid"
-                                                 src="https://www.pizzaexpress.vn/wp-content/uploads/2018/06/combo-1-1.png"
-                                                 alt="">
-                                        </div>
-                                        <div class="combo_title_addcart">
-                                            <h3>Combo 01</h3>
-                                            <a href="/?add-to-cart=415"
-                                               class="button add_to_cart_button product_type_simple ajax_add_to_cart">Mua
-                                                hàng</a>
-                                        </div>
-                                        <div class="combo_info_price"> Cho 2 người
-                                            <span class="woocommerce-Price-amount amount">139.000
-                                            <span class="woocommerce-Price-currencySymbol">₫</span>
-                                        </span>
-                                        </div>
-                                        <div class="combo_desc"> 1 Pizza size S + 1 Salad + 1 Coca 390 ml</div>
-                                    </div>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="kc-elm kc-blog">
-            <div class="container">
-                <div class="combo_title">
-                    <div class="combo_text" style="color: #333"> Blog</div>
-                </div>
-                <h2 class="kc_title">Blog Mới Nhất</h2>
-                <div class="kc-list-blog">
-                    <ul class="row">
-                        <li class="col-md-4">
-                            <div class="home_blog_img">
-                                <img
-                                    src="https://www.pizzaexpress.vn/wp-content/uploads/2018/11/Quick-Easy-Spaghetti-Bolognese2-1.jpg"
-                                    alt="">
-                            </div>
-                            <h3><a href="https://www.pizzaexpress.vn/my-y/"
-                                   title="Giới thiệu về các loại Mỳ đang được phục vụ bởi Pizza Express">Giới thiệu về
-                                    các loại Mỳ đang được phục vụ bởi Pizza Express</a></h3>
-                            <div class="home_blog_des">Mỳ ý sốt bò băm, mỳ ý sốt kem, mỳ ý sốt thịt bò, mỳ...</div>
-                            <div class="home_blog_info">
-                                <div class="home_blog_cell">13/12/2018</div>
-                                <div class="home_blog_cell">
-                                    <span>0</span> Bình luận
-                                </div>
-                                <div class="home_blog_cell">
-                                    <a href="#">Đọc chi tiết </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-md-4">
-                            <div class="home_blog_img">
-                                <img
-                                    src="https://www.pizzaexpress.vn/wp-content/uploads/2018/11/Quick-Easy-Spaghetti-Bolognese2-1.jpg"
-                                    alt="">
-                            </div>
-                            <h3><a href="https://www.pizzaexpress.vn/my-y/"
-                                   title="Giới thiệu về các loại Mỳ đang được phục vụ bởi Pizza Express">Giới thiệu về
-                                    các loại Mỳ đang được phục vụ bởi Pizza Express</a></h3>
-                            <div class="home_blog_des">Mỳ ý sốt bò băm, mỳ ý sốt kem, mỳ ý sốt thịt bò, mỳ...</div>
-                            <div class="home_blog_info">
-                                <div class="home_blog_cell">13/12/2018</div>
-                                <div class="home_blog_cell">
-                                    <span>0</span> Bình luận
-                                </div>
-                                <div class="home_blog_cell">
-                                    <a href="#">Đọc chi tiết </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-md-4">
-                            <div class="home_blog_img">
-                                <img
-                                    src="https://www.pizzaexpress.vn/wp-content/uploads/2018/11/Quick-Easy-Spaghetti-Bolognese2-1.jpg"
-                                    alt="">
-                            </div>
-                            <h3><a href="https://www.pizzaexpress.vn/my-y/"
-                                   title="Giới thiệu về các loại Mỳ đang được phục vụ bởi Pizza Express">Giới thiệu về
-                                    các loại Mỳ đang được phục vụ bởi Pizza Express</a></h3>
-                            <div class="home_blog_des">Mỳ ý sốt bò băm, mỳ ý sốt kem, mỳ ý sốt thịt bò, mỳ...</div>
-                            <div class="home_blog_info">
-                                <div class="home_blog_cell">13/12/2018</div>
-                                <div class="home_blog_cell">
-                                    <span>0</span> Bình luận
-                                </div>
-                                <div class="home_blog_cell">
-                                    <a href="#">Đọc chi tiết </a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
 
     </div>
 
     <script>
 
         const btnAddFood = $('.btn-add-food');
-        var foodInBag = new Map(JSON.parse(localStorage.getItem('foods_in_bag'))) || new Map();
+        var foodsInBag = new Map(JSON.parse(localStorage.getItem('foods_in_bag'))) || new Map();
+        var setsInBag = new Map(JSON.parse(localStorage.getItem('sets_in_bag'))) || new Map();
         const listFoodInBag = $('#list-food');
         renderFoodInBag();
 
@@ -605,65 +327,68 @@
         });
 
         const handleChangeQuantity = function (id, quantity) {
-            console.log(quantity);
             updateQuantity(id, withValue, quantity)
         };
 
         function updateQuantity(id, type, payload) {
             id = parseInt(id);
-            const food = foodInBag.get(id);
+            const food = foodsInBag.get(id);
             var currentQuantity = food ? food.quantity : 0;
             switch (type) {
                 case increment:
-                    if (foodInBag.has(id)) {
-                        foodInBag.set(id, {...food, quantity: currentQuantity + 1});
+                    if (foodsInBag.has(id)) {
+                        foodsInBag.set(id, {...food, quantity: currentQuantity + 1});
                     } else {
                         $.get(`/api/food/${id}`)
                             .done(function (res) {
-                                foodInBag.set(res.id, {...res, quantity: 1})
-                                localStorage.foods_in_bag = JSON.stringify(Array.from(foodInBag.entries()));
+                                foodsInBag.set(res.id, {...res, quantity: 1});
+                                localStorage.foods_in_bag = JSON.stringify(Array.from(foodsInBag.entries()));
                                 renderFoodInBag();
                             });
                     }
+                    Toast.fire({
+                        type: 'success',
+                        title: `Adding to bag success!`,
+                    });
                     break;
                 case decrement:
-                    if (!foodInBag.has(id) || currentQuantity < 0) break;
+                    if (!foodsInBag.has(id) || currentQuantity < 0) break;
 
                     if (currentQuantity === 1) {
-                        foodInBag.delete(id)
+                        foodsInBag.delete(id)
                     } else {
-                        foodInBag.set(id, {...food, quantity: currentQuantity - 1})
+                        foodsInBag.set(id, {...food, quantity: currentQuantity - 1})
                     }
                     break;
                 case withValue:
-                    foodInBag.set(id, {...food, quantity: parseInt(payload)});
+                    foodsInBag.set(id, {...food, quantity: parseInt(payload)});
                     break;
                 case deleteFood:
-                    foodInBag.delete(id);
+                    foodsInBag.delete(id);
                     break;
                 default:
                     break;
             }
-            localStorage.foods_in_bag = JSON.stringify(Array.from(foodInBag.entries()));
+            localStorage.foods_in_bag = JSON.stringify(Array.from(foodsInBag.entries()));
             renderFoodInBag();
         }
 
 
-        function renderFoodInBag(foods = Array.from(foodInBag.values())) {
+        function renderFoodInBag(foods = Array.from(foodsInBag.values())) {
             var countFood = foods.reduce((a, b) => {
                 return a + b.quantity
             }, 0);
 
-            $('.bag-icon').attr('data-food',countFood);
+            $('.bag-icon').attr('data-food', countFood);
 
             let listFoodsHtml = foods.map(food => (
                 `<div class="blo3 flex-w flex-col-l-sm m-b-30">
                     <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
-                        <a href="#"><img src="${food.image}" alt="${food.name}"></a>
+                        <a href="#"><img src="https://res.cloudinary.com/cloud-pj-sem2/image/upload/w_300,h_300,c_lpad,b_auto/${food.image}" alt="${food.name}"></a>
                     </div>
                     <div class="text-blo3 flex-col-l-m">
                         <a href="#" class="txt19 m-b-3">
-                            ${food.name}
+                            ${food.name.length < 18 ? food.name : food.name.slice(0, 18) + ' ...'}
                         </a>
                         <div>
                             <div class="quantity">
@@ -686,6 +411,36 @@
 
             listFoodInBag.html(listFoodsHtml.join(''))
         }
+
+        $('#btn-create-set').click(function () {
+            if (foodsInBag.size <= 0) {
+                return;
+            }
+
+            const listFood = Array.from(foodsInBag.values()).map(food => ({
+                id: food.id,
+                quantity: food.quantity
+            }));
+
+
+            $.ajax({
+                method: 'post',
+                url: "/set",
+                data: {
+                    '_token': `{{ csrf_token() }}`,
+                    'currentUserLogged' : currentUserLogged,
+                    'listFood': listFood
+                }
+            }).done(function (data) {
+                const set = JSON.parse(data);
+                localStorage.removeItem('foods_in_bag');
+                foodsInBag = new Map();
+                renderFoodInBag();
+                setsInBag.set(set.id, set);
+                localStorage.sets_in_bag = JSON.stringify(Array.from(setsInBag.entries()));
+            });
+        })
+
 
     </script>
     {{--    <aside style="overflow: inherit" class="sidebar trans-0-4">--}}

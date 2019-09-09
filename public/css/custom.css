@@ -1,3 +1,6 @@
+.footer{
+    margin-top: 30px;
+}
 
 .box-shadow-header-custom{
     box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
@@ -220,26 +223,29 @@ xsigin/signup popup
     transition: opacity 0.3s 0, visibility 0 0;
 }
 .cd-user-modal.is-visible .cd-user-modal-container {
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0);
+    /*-webkit-transform: translateY(0);*/
+    /*-moz-transform: translateY(0);*/
+    /*-ms-transform: translateY(0);*/
+    /*-o-transform: translateY(0);*/
+    /*transform: translateY(0);*/
 }
 
 .cd-user-modal-container {
     position: relative;
-    width: 90%;
+    width: 100vw;
+    /*height: 100vh;*/
     max-width: 600px;
     background: #FFF;
-    margin: 3em auto 4em;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
     cursor: auto;
     border-radius: 0.25em;
-    -webkit-transform: translateY(-30px);
-    -moz-transform: translateY(-30px);
-    -ms-transform: translateY(-30px);
-    -o-transform: translateY(-30px);
-    transform: translateY(-30px);
+    /*-webkit-transform: translateY(-30px);*/
+    /*-moz-transform: translateY(-30px);*/
+    /*-ms-transform: translateY(-30px);*/
+    /*-o-transform: translateY(-30px);*/
+    /*transform: translateY(-30px);*/
     -webkit-transition-property: -webkit-transform;
     -moz-transition-property: -moz-transform;
     transition-property: transform;
@@ -247,6 +253,23 @@ xsigin/signup popup
     -moz-transition-duration: 0.3s;
     transition-duration: 0.3s;
 }
+.btn-login, btn-register{
+    cursor: pointer;
+    color: white;
+}
+
+.btn-login:nth-child(1){
+    background: rgba(22,22,22,0.74);
+}
+
+.btn-login:nth-child(2){
+    background: #0045ff;
+}
+
+.btn-login:nth-child(3){
+    background: #ff0000;
+}
+
 .cd-user-modal-container .cd-switcher::after {
     clear: both;
     content: "";
@@ -275,10 +298,8 @@ xsigin/signup popup
     background: #FFF;
     color: #505260;
 }
+
 @media only screen and (min-width: 600px) {
-    .cd-user-modal-container {
-        margin: 4em auto;
-    }
     .cd-user-modal-container .cd-switcher a {
         height: 70px;
         line-height: 70px;
@@ -403,12 +424,12 @@ xsigin/signup popup
     display: inline-block;
     position: absolute;
     left: -5px;
-    bottom: -35px;
+    bottom: -32.5px;
     background: rgba(215, 102, 102, 0.9);
-    padding: .8em;
+    padding: .5em;
     z-index: 2;
     color: #FFF;
-    font-size: 13px;
+    font-size: 12px;
     font-size: 0.8125rem;
     border-radius: 0.25em;
     /* prevent click and touch events */
@@ -431,6 +452,7 @@ xsigin/signup popup
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
 }
+
 .cd-form .cd-error-message.is-visible {
     opacity: 1;
     visibility: visible;
@@ -473,16 +495,13 @@ xsigin/signup popup
 }
 
 .cd-form-bottom-message {
-    position: absolute;
+    padding-bottom: 20px;
     width: 100%;
-    left: 0;
-    bottom: -30px;
     text-align: center;
     font-size: 14px;
     font-size: 0.875rem;
 }
 .cd-form-bottom-message a {
-    color: #FFF;
     text-decoration: underline;
 }
 
@@ -520,6 +539,7 @@ xsigin/signup popup
 .food-card{
     position: relative;
     background: white;
+    margin-bottom: 20px;
     border-radius: .5rem;
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
 }
@@ -570,10 +590,11 @@ xsigin/signup popup
     height: 30px;
     width: 30px;
     font-size: 24px;
-    background: #ccc;
+    background: #c00a27;
+    color: white!important;
     border: none;
     cursor: pointer;
-    transition: 500;
+    transition: 100ms;
 }
 
 .btn-add-food:hover{

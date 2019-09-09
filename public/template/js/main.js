@@ -141,7 +141,6 @@
     closeIcon.hide();
 
     $(btnToggleSideBar).on('click', function () {
-
         if (show) {
             $(sidebar).removeClass('show-sidebar');
             $(ovlSideBar).removeClass('show-overlay-sidebar');
@@ -165,6 +164,7 @@
         $(btnToggleSideBar).css('top','15%');
         bagIcon.show();
         closeIcon.hide();
+        show = false;
     });
 
     // var ovlSideBar = $('.overlay-sidebar');

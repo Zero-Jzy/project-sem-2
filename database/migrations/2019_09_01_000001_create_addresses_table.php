@@ -19,7 +19,6 @@ class CreateAddressesTable extends Migration
             $table->foreign('profile_id')->references('id')->on('profiles');
             $table->string('name');
             $table->string('phone');
-            $table->integer('code');
             $table->string('slug');
             $table->text('addressTxt');
             $table->longText('created_at')->default(\Carbon\Carbon::now()->valueOf());

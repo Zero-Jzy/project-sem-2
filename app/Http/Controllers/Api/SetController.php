@@ -1,16 +1,18 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\Set;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Log;
 
 class SetController extends Controller
 {
+
     public function __construct()
     {
-//        $this->middleware('auth');
+        $this->middleware('jwt.auth')->except(['index','show']);
     }
     /**
      * Display a listing of the resource.
@@ -40,26 +42,8 @@ class SetController extends Controller
      */
     public function store(Request $request)
     {
-//        Log::info($request);
-        $listFood = $request->get('listFood');
-        $currentUserLogged = $request->get('currentUserLogged');
-
-        $set = Set::create([
-            'name' => $currentUserLogged,
-            'type' => 2,
-            'category_id' => 1
-        ]);
-
-
-
-        foreach ($listFood as $food){
-            Log::info(gettype($food['id']) );
-
-            $set->food()->attach((integer) $food['id'], ['quantity' => $food['quantity']]);
-        };
-
-        $set->save();
-        return $set->toJson();
+        Log::info($request);
+        return 'ok';
     }
 
     /**

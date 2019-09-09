@@ -112,8 +112,8 @@ a {
 	line-height: 1.7;
 	color: #666666;
 	margin: 0px;
-	transition: all 0.4s;
-	-webkit-transition: all 0.4s;
+	transition: all 0.15s;
+	-webkit-transition: all 0.15s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
 }
@@ -157,14 +157,14 @@ textarea {
   outline: none;
 }
 
-textarea:focus, input:focus {
-  border-color: transparent !important;
-  box-shadow: 0 0 0px 2px #ec1d25;
-  -moz-box-shadow: 0 0 0px 2px #ec1d25;
-  -webkit-box-shadow: 0 0 0px 2px #ec1d25;
-  -o-box-shadow: 0 0 0px 2px #ec1d25;
-  -ms-box-shadow: 0 0 0px 2px #ec1d25;
-}
+/*textarea:focus, input:focus {*/
+/*  border-color: transparent !important;*/
+/*  box-shadow: 0 0 0px 2px #ec1d25;*/
+/*  -moz-box-shadow: 0 0 0px 2px #ec1d25;*/
+/*  -webkit-box-shadow: 0 0 0px 2px #ec1d25;*/
+/*  -o-box-shadow: 0 0 0px 2px #ec1d25;*/
+/*  -ms-box-shadow: 0 0 0px 2px #ec1d25;*/
+/*}*/
 
 input:focus::-webkit-input-placeholder { color:transparent; }
 input:focus:-moz-placeholder { color:transparent; }

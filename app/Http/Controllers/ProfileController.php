@@ -2,16 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Set;
+use App\Address;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 
-class SetController extends Controller
+class ProfileController extends Controller
 {
     public function __construct()
     {
-//        $this->middleware('auth');
+        $this->middleware('auth');
     }
+
     /**
      * Display a listing of the resource.
      *
@@ -19,7 +21,8 @@ class SetController extends Controller
      */
     public function index()
     {
-        //
+        $user = Auth::user();
+        return view('profile-user', ['user' => $user]);
     }
 
     /**
@@ -35,37 +38,37 @@ class SetController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-//        Log::info($request);
-        $listFood = $request->get('listFood');
-        $currentUserLogged = $request->get('currentUserLogged');
+        $name = $request->get('name');
+        $phone = $request->get('phone');
+        $profile_id = $request->get('profile_id');
+        $tinh = explode('--', $request->get('tinh'));
+        $huyen = explode('--', $request->get('huyen'));
+        $xa = explode('--', $request->get('xa'));
+        $address = $request->get('address');
 
-        $set = Set::create([
-            'name' => $currentUserLogged,
-            'type' => 2,
-            'category_id' => 1
+        $slug = $tinh[0] . '/' . $huyen[0] . '/' . $xa[0];
+        $addressTxt = $address . ', ' . $xa[1] . ', ' . $huyen[1] . ', ' . $tinh[1];
+
+        $reAddress = Address::create([
+            'profile_id' => $profile_id,
+            'name' => $name,
+            'phone' => $phone,
+            'slug' => $slug,
+            'addressTxt' => $addressTxt
         ]);
 
-
-
-        foreach ($listFood as $food){
-            Log::info(gettype($food['id']) );
-
-            $set->food()->attach((integer) $food['id'], ['quantity' => $food['quantity']]);
-        };
-
-        $set->save();
-        return $set->toJson();
+        return redirect()->back();
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -76,7 +79,7 @@ class SetController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -87,8 +90,8 @@ class SetController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -99,7 +102,7 @@ class SetController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

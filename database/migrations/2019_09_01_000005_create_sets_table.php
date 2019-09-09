@@ -16,8 +16,9 @@ class CreateSetsTable extends Migration
         Schema::create('sets', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
+            $table->integer('type');
             $table->bigInteger('category_id');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->longText('created_at')->default(\Carbon\Carbon::now()->valueOf());
             $table->longText('updated_at')->nullable();
             $table->integer('status')->default(1);

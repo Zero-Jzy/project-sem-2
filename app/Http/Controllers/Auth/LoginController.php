@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Validator;
 
 class LoginController extends Controller
 {
@@ -39,27 +42,51 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-//    public function login(Request $request)
-//    {
-//        $this->validateLogin($request);
-//
-//        if ($this->hasTooManyLoginAttempts($request)) {
-//            $this->fireLockoutEvent($request);
-//
-//            return $this->sendLockoutResponse($request);
-//        }
-//
-//        if(Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-//            // return redirect()->intended('dashboard');
-//        }  else {
-//            $this->incrementLoginAttempts($request);
-//            return response()->json([
-//                'error' => 'This account is not activated.'
-//            ], 401);
-//        }
-//
-//        $this->incrementLoginAttempts($request);
-//        return $this->sendFailedLoginResponse($request);
-//    }
+    public function login(Request $request)
+    {
+         $validate = Validator::make($request->all(),[
+             'email' => 'required|email',
+             'password' => 'required|string',
+         ]);
+
+         $res = [];
+        $res['hasError'] = true;
+         if($validate->errors()->count() >= 1){
+             $res['errors'] = $validate->errors();
+             return $res;
+         }
+
+        $user = User::where('email',$request['email'])->first();
+         Log::info($user);
+         if(!$user){
+             $res['errors']['email'][0] = 'Email does not exist!';
+             return $res;
+         }
+
+        if(!password_verify($request['password'], $user->password)){
+            $res['errors']['password'][0] = 'Password incorrect!';
+            return $res;
+        };
+
+        $res['hasError'] = false;
+
+        if (method_exists($this, 'hasTooManyLoginAttempts') &&
+            $this->hasTooManyLoginAttempts($request)) {
+            $this->fireLockoutEvent($request);
+
+            return $this->sendLockoutResponse($request);
+        }
+
+        if ($this->attemptLogin($request)) {
+            return $this->sendLoginResponse($request);
+        }
+
+        // If the login attempt was unsuccessful we will increment the number of attempts
+        // to login and redirect the user back to the login form. Of course, when this
+        // user surpasses their maximum number of attempts they will get locked out.
+        $this->incrementLoginAttempts($request);
+
+        return $this->sendFailedLoginResponse($request);
+    }
 
 }
