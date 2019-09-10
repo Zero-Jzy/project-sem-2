@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Set;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
@@ -42,15 +43,12 @@ class SetController extends Controller
     {
 //        Log::info($request);
         $listFood = $request->get('listFood');
-        $currentUserLogged = $request->get('currentUserLogged');
 
         $set = Set::create([
-            'name' => $currentUserLogged,
+            'name' => Carbon::now()->valueOf(),
             'type' => 2,
             'category_id' => 1
         ]);
-
-
 
         foreach ($listFood as $food){
             Log::info(gettype($food['id']) );

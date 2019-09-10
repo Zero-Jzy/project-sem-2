@@ -14,7 +14,7 @@
 
     const Toast = Swal.mixin({
         toast: true,
-        position: 'top-start',
+        position: 'bottom-start',
         showConfirmButton: false,
         timer: 3000
     });
@@ -197,7 +197,6 @@
             event.preventDefault();
             $form_signup.find('input[type="email"]').toggleClass('has-error').next('span').toggleClass('is-visible');
         });
-
 
         //IE9 placeholder fallback
         if (!Modernizr.input.placeholder) {

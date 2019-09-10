@@ -48,7 +48,6 @@
                             <a href="#" class="txt19 m-b-3">
                                 Duis massa
                             </a>
-
                             <span class="txt10 m-t-20">
 								$12.75
 							</span>
@@ -92,10 +91,8 @@
                 </div>
             </div>
             <div class="tab-pane fade" id="pills-set" role="tabpanel" aria-labelledby="pills-set-tab">
-                <div class="list-food scrollbar">
-                    <div class="food-item">
+                <div id="list-set" class="list-set scrollbar">
 
-                    </div>
                 </div>
                 <div class="total-box">
                     <div style="height: 30px">
@@ -308,7 +305,9 @@
         var foodsInBag = new Map(JSON.parse(localStorage.getItem('foods_in_bag'))) || new Map();
         var setsInBag = new Map(JSON.parse(localStorage.getItem('sets_in_bag'))) || new Map();
         const listFoodInBag = $('#list-food');
+        const listSetInBag = $('#list-set');
         renderFoodInBag();
+        renderSetInBag();
 
         var spinner = $('.quantity'),
             inputQuantity = spinner.find('input[type="number"]');
@@ -412,6 +411,22 @@
             listFoodInBag.html(listFoodsHtml.join(''))
         }
 
+        function renderSetInBag(sets = Array.from(setsInBag.values())){
+            var countSet = sets.reduce((a, b) => {
+                return a + b.quantity
+            }, 0);
+
+            $('.bag-icon').attr('data-set', countSet);
+
+            let listSetsHtml = sets.map(set => (
+                `<div>
+                    <p>${set.name}</p>
+                </div>`)
+            );
+
+            listSetInBag.html(listSetsHtml.join(''))
+        }
+
         $('#btn-create-set').click(function () {
             if (foodsInBag.size <= 0) {
                 return;
@@ -436,8 +451,9 @@
                 localStorage.removeItem('foods_in_bag');
                 foodsInBag = new Map();
                 renderFoodInBag();
-                setsInBag.set(set.id, set);
+                setsInBag.set(set.id, {...set, quantity: 1});
                 localStorage.sets_in_bag = JSON.stringify(Array.from(setsInBag.entries()));
+                renderSetInBag();
             });
         })
 
