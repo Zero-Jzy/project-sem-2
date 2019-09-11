@@ -33,7 +33,8 @@ class MyCreateFoodForm extends Component {
     state = {
         visible: true,
         submitting: false,
-        fileList: []
+        fileList: [],
+        imageKey: null
     };
 
     updateFileList = (fileList) => {
@@ -68,6 +69,12 @@ class MyCreateFoodForm extends Component {
         this.props.handleCancel()
     };
 
+    handleChangeImage = info => {
+        this.setState({
+            imageKey : info.file.respone
+        })
+    };
+
     render() {
         const {getFieldDecorator} = this.props.form;
 
@@ -79,123 +86,125 @@ class MyCreateFoodForm extends Component {
 
         return (
             <Form {...formItemLayout} layout={'vertical'} onSubmit={this.handleSubmit}>
-                <Row gutter={16}>
-                    <Col sm={12}>
-                        <Form.Item label='Name'>
-                            {getFieldDecorator('name', {
-                                rules: [
-                                    {
-                                        required: true,
-                                        message: 'Please input dish name',
-                                    },
-                                ],
-                            })(<Input/>)}
-                        </Form.Item>
-                    </Col>
-                    <Col sm={12}>
-                        <Form.Item label="Category">
-                            {getFieldDecorator('category', {
-                                rules: [{required: true, message: 'Please select dish category!'}],
-                            })(
-                                <Select
-                                    placeholder="Select a dish category!"
-                                    onChange={this.handleSelectChange}
-                                >
-                                    <Option value="1">1</Option>
-                                    <Option value="2">2</Option>
-                                </Select>
-                            )}
-                        </Form.Item>
-                    </Col>
-                </Row>
-                <Row gutter={16}>
-                    <Col span={8}>
-                        <Form.Item label={'Calo (g)'}>
-                            {getFieldDecorator('calo', {
-                                rules: [
-                                    {
-                                        required: true,
-                                        message: 'Please input calo',
-                                    },
-                                ],
-                            })(<InputNumber style={{width: '100%'}} min={0}/>)}
-                        </Form.Item>
-                    </Col>
-                    <Col span={8}>
-                        <Form.Item label={'Protein (g)'}>
-                            {getFieldDecorator('proteint', {
-                                rules: [
-                                    {
-                                        required: true,
-                                        message: 'Please input proteint',
-                                    },
-                                ],
-                            })(<InputNumber style={{width: '100%'}} min={0}/>)}
-                        </Form.Item>
-                    </Col>
-                    <Col span={8}>
-                        <Form.Item label={'Carbohydrate (g)'}>
-                            {getFieldDecorator('carbohydrate', {
-                                rules: [
-                                    {
-                                        required: true,
-                                        message: 'Please input carbohydrate',
-                                    },
-                                ],
-                            })(<InputNumber style={{width: '100%'}} min={0}/>)}
-                        </Form.Item>
-                    </Col>
-                    <Col span={8}>
-                        <Form.Item label={'Dietary Fiber (g)'}>
-                            {getFieldDecorator('dietary_fiber', {
-                                rules: [
-                                    {
-                                        required: true,
-                                        message: 'Please input dietary fiber',
-                                    },
-                                ],
-                            })(<InputNumber style={{width: '100%'}} min={0}/>)}
-                        </Form.Item>
-                    </Col>
-                    <Col span={8}>
-                        <Form.Item label={'Fat intaket (g)'}>
-                            {getFieldDecorator('fat_intaket', {
-                                rules: [
-                                    {
-                                        required: true,
-                                        message: 'Please input fat intaket',
-                                    },
-                                ],
-                            })(<InputNumber style={{width: '100%'}} min={0}/>)}
-                        </Form.Item>
-                    </Col>
-                </Row>
-                <Form.Item label="Vitamins">
-                    {getFieldDecorator('vitamins', {
-                        rules: [{required: true, message: 'Please input vitamins!'}],
-                    })(<Select
-                        mode="multiple"
-                        style={{width: '100%'}}
-                        placeholder="Please select"
-                    >
-                        {vitamins}
-                    </Select>)}
-                </Form.Item>
-                <Form.Item label="Minerals">
-                    {getFieldDecorator('minerals', {
-                        rules: [{required: true, message: 'Please input minerals!'}],
-                    })(<Select
-                        mode="multiple"
-                        style={{width: '100%'}}
-                        placeholder="Please select"
-                    >
-                        {minerals}
-                    </Select>)}
-                </Form.Item>
-                <Form.Item label="Images">
-                    <UploadImage updateFileList={this.updateFileList} fileList={this.state.fileList}
-                                 getFieldDecorator={getFieldDecorator}/>
-                    {this.props.form.getFieldError('images')}
+                {/*<Row gutter={16}>*/}
+                {/*    <Col sm={12}>*/}
+                {/*        <Form.Item label='Name'>*/}
+                {/*            {getFieldDecorator('name', {*/}
+                {/*                rules: [*/}
+                {/*                    {*/}
+                {/*                        required: true,*/}
+                {/*                        message: 'Please input dish name',*/}
+                {/*                    },*/}
+                {/*                ],*/}
+                {/*            })(<Input/>)}*/}
+                {/*        </Form.Item>*/}
+                {/*    </Col>*/}
+                {/*    <Col sm={12}>*/}
+                {/*        <Form.Item label="Category">*/}
+                {/*            {getFieldDecorator('category', {*/}
+                {/*                rules: [{required: true, message: 'Please select dish category!'}],*/}
+                {/*            })(*/}
+                {/*                <Select*/}
+                {/*                    placeholder="Select a dish category!"*/}
+                {/*                    onChange={this.handleSelectChange}*/}
+                {/*                >*/}
+                {/*                    <Option value="1">1</Option>*/}
+                {/*                    <Option value="2">2</Option>*/}
+                {/*                </Select>*/}
+                {/*            )}*/}
+                {/*        </Form.Item>*/}
+                {/*    </Col>*/}
+                {/*</Row>*/}
+                {/*<Row gutter={16}>*/}
+                {/*    <Col span={8}>*/}
+                {/*        <Form.Item label={'Calo (g)'}>*/}
+                {/*            {getFieldDecorator('calo', {*/}
+                {/*                rules: [*/}
+                {/*                    {*/}
+                {/*                        required: true,*/}
+                {/*                        message: 'Please input calo',*/}
+                {/*                    },*/}
+                {/*                ],*/}
+                {/*            })(<InputNumber style={{width: '100%'}} min={0}/>)}*/}
+                {/*        </Form.Item>*/}
+                {/*    </Col>*/}
+                {/*    <Col span={8}>*/}
+                {/*        <Form.Item label={'Protein (g)'}>*/}
+                {/*            {getFieldDecorator('proteint', {*/}
+                {/*                rules: [*/}
+                {/*                    {*/}
+                {/*                        required: true,*/}
+                {/*                        message: 'Please input proteint',*/}
+                {/*                    },*/}
+                {/*                ],*/}
+                {/*            })(<InputNumber style={{width: '100%'}} min={0}/>)}*/}
+                {/*        </Form.Item>*/}
+                {/*    </Col>*/}
+                {/*    <Col span={8}>*/}
+                {/*        <Form.Item label={'Carbohydrate (g)'}>*/}
+                {/*            {getFieldDecorator('carbohydrate', {*/}
+                {/*                rules: [*/}
+                {/*                    {*/}
+                {/*                        required: true,*/}
+                {/*                        message: 'Please input carbohydrate',*/}
+                {/*                    },*/}
+                {/*                ],*/}
+                {/*            })(<InputNumber style={{width: '100%'}} min={0}/>)}*/}
+                {/*        </Form.Item>*/}
+                {/*    </Col>*/}
+                {/*    <Col span={8}>*/}
+                {/*        <Form.Item label={'Dietary Fiber (g)'}>*/}
+                {/*            {getFieldDecorator('dietary_fiber', {*/}
+                {/*                rules: [*/}
+                {/*                    {*/}
+                {/*                        required: true,*/}
+                {/*                        message: 'Please input dietary fiber',*/}
+                {/*                    },*/}
+                {/*                ],*/}
+                {/*            })(<InputNumber style={{width: '100%'}} min={0}/>)}*/}
+                {/*        </Form.Item>*/}
+                {/*    </Col>*/}
+                {/*    <Col span={8}>*/}
+                {/*        <Form.Item label={'Fat intaket (g)'}>*/}
+                {/*            {getFieldDecorator('fat_intaket', {*/}
+                {/*                rules: [*/}
+                {/*                    {*/}
+                {/*                        required: true,*/}
+                {/*                        message: 'Please input fat intaket',*/}
+                {/*                    },*/}
+                {/*                ],*/}
+                {/*            })(<InputNumber style={{width: '100%'}} min={0}/>)}*/}
+                {/*        </Form.Item>*/}
+                {/*    </Col>*/}
+                {/*</Row>*/}
+                {/*<Form.Item label="Vitamins">*/}
+                {/*    {getFieldDecorator('vitamins', {*/}
+                {/*        rules: [{required: true, message: 'Please input vitamins!'}],*/}
+                {/*    })(<Select*/}
+                {/*        mode="multiple"*/}
+                {/*        style={{width: '100%'}}*/}
+                {/*        placeholder="Please select"*/}
+                {/*    >*/}
+                {/*        {vitamins}*/}
+                {/*    </Select>)}*/}
+                {/*</Form.Item>*/}
+                {/*<Form.Item label="Minerals">*/}
+                {/*    {getFieldDecorator('minerals', {*/}
+                {/*        rules: [{required: true, message: 'Please input minerals!'}],*/}
+                {/*    })(<Select*/}
+                {/*        mode="multiple"*/}
+                {/*        style={{width: '100%'}}*/}
+                {/*        placeholder="Please select"*/}
+                {/*    >*/}
+                {/*        {minerals}*/}
+                {/*    </Select>)}*/}
+                {/*</Form.Item>*/}
+                <Form.Item label="Image">
+                   <UploadImage
+                       getFieldDecorator={getFieldDecorator}
+                       updateFileList={this.updateFileList}
+                       fileList={this.state.fileList}
+                   />
                 </Form.Item>
                 <Form.Item wrapperCol={{span: 10, offset: 16}} style={{margin: 0}}>
                     <Popconfirm className='mr-3' placement="top" title={'Cancel ?'} onConfirm={this.handleCancel}

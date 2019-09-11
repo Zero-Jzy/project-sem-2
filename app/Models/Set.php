@@ -13,7 +13,7 @@ class Set extends Model
             ->withPivot('quantity');
     }
 
-    public function food(){
+    public function foods(){
         return $this->belongsToMany(Food::class, 'food_set','set_id','food_id')
             ->withPivot('quantity');
     }

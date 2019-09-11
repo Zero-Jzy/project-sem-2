@@ -14,7 +14,12 @@ class FoodController extends Controller
      */
     public function index()
     {
-        //
+        $foods = Food::all();
+
+        $data = [
+            'foods' => $foods
+        ];
+        return view('foods', $data);
     }
 
     /**
