@@ -19,7 +19,7 @@ class Set extends Model
     }
 
     public function set_category(){
-        return $this->belongsTo(SetCategory::class);
+        return $this->belongstoMany(SetCategory::class);
     }
 
 

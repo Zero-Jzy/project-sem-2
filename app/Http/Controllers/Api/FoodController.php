@@ -88,7 +88,7 @@ class FoodController extends Controller
 
         $food = new food();
         $food->name = $request->get('name');
-        $food->category = $request->get('category');
+        $food->price = $request->get('price');
         $food->calo = $request->get('calo');
         $food->protein = $request->get('protein');
         $food->dietary_fiber = $request->get('dietary_fiber');
@@ -96,7 +96,7 @@ class FoodController extends Controller
         $food->total_fat = $request->get('total_fat');
         $food->vitamins = join(',', $request->get('vitamins'));
         $food->minerals = join(',', $request->get('minerals'));
-        $image = $request['$image']['file']['thumbUrl'];
+        $image = $request['image']['file']['thumbUrl'];
         Cloudder::upload($image, null);
         $result = Cloudder::getResult();
         $image_id = $result['public_id'] . '.' . $result['format'];
