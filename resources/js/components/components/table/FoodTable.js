@@ -194,10 +194,14 @@ export default class FoodTable extends Component {
             dataIndex: 'category_id',
             render: (category_id, record) => `${record.category.name || null}`,
             filters: [
-                {text: 'Active', value: 'active'},
-                {text: 'Deleted', value: 'delete'},
-                {text: 'Vip', value: 'vip'},
-                {text: 'Banned', value: 'banned'},
+                {text: 'Vegetables', value: 1},
+                {text: 'Desserts', value: 2},
+                {text: 'Protein Food', value: 3},
+                {text: 'Barbecue', value: 4},
+                {text: 'Soups and stews‎', value: 5},
+                {text: 'Fried foods‎', value: 6},
+                {text: 'Boiled food', value: 7},
+                {text: 'Drinks', value: 8}
             ]
         },
         {
