@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class FoodCategory extends Model
 {
-    function foods(){
-        return $this->hasMany(Food::class);
+    public function foods(){
+        return $this->belongstoMany(Food::class,'food_category','category_id','food_id');
     }
 }

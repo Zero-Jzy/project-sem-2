@@ -14,12 +14,12 @@ class FoodController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('jwt.auth')->except(['index','show']);
+        $this->middleware('jwt.auth')->except(['index', 'show']);
     }
 
     /**
      * Display a listing of the resource.
-     *
+     *23.3
      * @return string
      */
     public function index()
@@ -32,7 +32,7 @@ class FoodController extends Controller
 
         $res['totalCount'] = $foods->count();
 
-        $res['keys'] = $foods->get()->map(function ($values){
+        $res['keys'] = $foods->get()->map(function ($values) {
             return $values->id;
         });
 
@@ -61,19 +61,47 @@ class FoodController extends Controller
      */
     public function store(Request $request)
     {
+//        $request->validate([
+//            'name' => 'required',
+//            'category' => 'required',
+//            'calo' => 'required',
+//            'protein' => 'required',
+//            'dietary_fiber' => 'required',
+//            'carbohydrate' => 'required',
+//            'total_fat' => 'require',
+//            'vitamins' => 'require',
+//            'minerals' => 'require',
+//            'images' => 'require'
+//        ], [
+//            'name.required' => 'Please input dish name',
+//            'category.required' => 'Please select dish category!',
+//            'calo.required' => 'Please input calo',
+//            'protein.required' => 'Please input proteint',
+//            'dietary_fiber.required' => 'Please input carbohydrate',
+//            'carbohydrate.required' => 'Please input dietary fiber',
+//            'total_fat.required' => 'Please input fat intaket',
+//            'vitamins.required' => 'Please input vitamins!',
+//            'minerals.required' => 'Please input minerals!',
+//            'images.required' => 'Please input minerals!',
+//        ]);
+
+        $food = new food();
+        $food->name = $request->get('name');
+        $food->price = $request->get('price');
+        $food->calo = $request->get('calo');
+        $food->protein = $request->get('protein');
+        $food->dietary_fiber = $request->get('dietary_fiber');
+        $food->carbohydrate = $request->get('carbohydrate');
+        $food->total_fat = $request->get('total_fat');
+        $food->vitamins = join(',', $request->get('vitamins'));
+        $food->minerals = join(',', $request->get('minerals'));
         $image = $request['image']['file']['thumbUrl'];
-//        $image2 = $request->get('image');
-
         Cloudder::upload($image, null);
-
         $result = Cloudder::getResult();
-
         $image_id = $result['public_id'] . '.' . $result['format'];
-
-        Log::info($image_id);
-//        Log::info($image2);
-
-//        return $image_id;
+        $food->image = $image_id;
+        $food->save();
+        return $food;
     }
 
     /**
@@ -96,6 +124,8 @@ class FoodController extends Controller
     public function edit($id)
     {
         //
+
+        return Food::find($id);
     }
 
     /**
@@ -108,6 +138,8 @@ class FoodController extends Controller
     public function update(Request $request, $id)
     {
         //
+
+        Food::find($id)->update($request->all());
     }
 
     /**
@@ -119,5 +151,6 @@ class FoodController extends Controller
     public function destroy($id)
     {
         //
+        Food::find($id)->update(['status' => -1]);
     }
 }
