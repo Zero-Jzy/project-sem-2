@@ -6,7 +6,7 @@
     var rightNavbar = $('.right-navbar a');
     var path = window.location.pathname;
 
-    if (['/menu', '/login', '/register', '/profile'].indexOf(path) !== -1) {
+    if (['/menu/food','/menu/set', '/login', '/register', '/profile'].indexOf(path) !== -1) {
         itemHeader.css('color', 'black');
         rightNavbar.css('color', '#000')
     }
@@ -14,7 +14,7 @@
 
     const Toast = Swal.mixin({
         toast: true,
-        position: 'bottom-start',
+        position: 'top-start',
         showConfirmButton: false,
         timer: 3000
     });

@@ -13,15 +13,14 @@ class UploadImageController extends Controller
 {
     public function upload(Request $request)
     {
-        $image = $request->get('images');
+        $image = $request['image'];
 
-            Cloudder::upload($image, null);
-            $result = Cloudder::getResult();
+        Cloudder::upload($image, null);
 
-            $image_id = $result['public_id'] . '.' . $result['format'];
+        $result = Cloudder::getResult();
 
-
-//        file_put_contents(storage_path() .'/foodSeeder.txt', var_export($newImage, true));
+        $image_id = $result['public_id'] . '.' . $result['format'];
+        Log::info($image_id);
 
         return $image_id;
 

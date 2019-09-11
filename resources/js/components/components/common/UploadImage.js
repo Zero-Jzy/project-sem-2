@@ -62,18 +62,17 @@ export default class UploadImage extends React.Component {
         return (
             <div className="clearfix">
                 {
-                    this.props.getFieldDecorator('images', {
+                    this.props.getFieldDecorator('image', {
                         rules: [{ required: true, message: 'Please input images!' }]
                     })(
                         <Upload
-                            name='images'
+                            name='image'
                             action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
                             listType="picture-card"
                             onPreview={this.handlePreview}
-
                             beforeUpload={this.beforeUpload}
                             onChange={this.handleChange}
-                            multiple={true}
+                            multiple={false}
                             fileList={this.props.fileList}
                         >
                             {this.props.fileList.length >= 4 ? null : uploadButton}

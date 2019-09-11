@@ -63,7 +63,7 @@
                             </li>
                             <li>
                                 <a class="{{Request::is('menu') ? 'active' : ''}}"
-                                   href="{{route('menu.index')}}">Menu</a>
+                                   href="{{route('food.index')}}">Menu</a>
                             </li>
                             <li>
                                 <a class="{{Request::is('about-us') ? 'active' : ''}}" href="{{route('about-us')}}">About</a>

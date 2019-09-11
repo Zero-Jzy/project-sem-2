@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Log;
+use JD\Cloudder\Facades\Cloudder;
 
 class FoodController extends Controller
 {
@@ -57,11 +58,23 @@ class FoodController extends Controller
      * Store a newly created resource in storage.
      *
      * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
+     * @return string
      */
     public function store(Request $request)
     {
+        $image = $request['image']['file']['thumbUrl'];
+//        $image2 = $request->get('image');
 
+        Cloudder::upload($image, null);
+
+        $result = Cloudder::getResult();
+
+        $image_id = $result['public_id'] . '.' . $result['format'];
+
+        Log::info($image_id);
+//        Log::info($image2);
+
+//        return $image_id;
     }
 
     /**

@@ -2,7 +2,8 @@ import React, {Component} from "react";
 import {connect} from 'react-redux'
 import axios from 'axios';
 
-import CreateDishModal from '../model/CreateDishModal'
+import CreateFoodModal from '../model/CreateFoodModal'
+import CreateSetModel from '../model/CreateSetModel'
 import {Table, Dropdown, Menu, Icon, Button, Select, Cascader, Modal, Input} from 'antd';
 const { Option } = Select;
 const {confirm} = Modal;
@@ -15,7 +16,7 @@ export default class FoodTable extends Component {
         results: 10,
         selectedRowKeys: [],
         keys: [],
-
+        optionAction: 'create_set'
     };
      columns = [
         {
@@ -105,8 +106,7 @@ export default class FoodTable extends Component {
                 }).catch(() => console.log('Oops errors!'));
             },
         });
-    }
-
+    };
 
     dropdownOption = (
         <Menu>
@@ -117,7 +117,7 @@ export default class FoodTable extends Component {
                 Delete
             </Menu.Item>
         </Menu>
-    )
+    );
 
     handleTableChange = (pagination, filters, sorter) => {
         const pager = {...this.state.pagination};
@@ -132,6 +132,11 @@ export default class FoodTable extends Component {
             sortOrder: sorter.order,
             ...filters,
         });
+    };
+
+    handleAction = () => {
+        this.setState({loading: true});
+
     };
 
     fetch = (params = {}) => {
@@ -178,7 +183,7 @@ export default class FoodTable extends Component {
         return (
             <div style={{margin: 25, padding: 25, background: "white"}}>
                 <div className="table_header">
-                    <CreateDishModal/>
+                    <CreateFoodModal/>
                 </div>
                 <Table
                     columns={this.columns}
@@ -196,16 +201,18 @@ export default class FoodTable extends Component {
                             select {this.state.selectedRowKeys.length} items</small>
                         <Select
                             disabled={this.state.selectedRowKeys.length <= 0}
-                            defaultValue="create_set"
                             style={{width: 120}}
-                            onChange={(a, b) => alert(a, b)}
+                            onChange={action => this.setState({
+                                optionAction: action
+                            })}
                         >
                             <Option value="create_set">Create set</Option>
                             <Option value="delete">Delete</Option>
                         </Select>
-                        <Button disabled={this.state.selectedRowKeys.length <= 0}>Go</Button>
+                        <Button onClick={this.handleAction} disabled={this.state.selectedRowKeys.length <= 0}>Go</Button>
                     </div>
                 </div>
+                <CreateSetModel/>
             </div>
 
         );
