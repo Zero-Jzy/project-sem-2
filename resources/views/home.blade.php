@@ -467,13 +467,13 @@
                     </div>
                 </div>
 
-                <div class="item-slick2 item3-slick2" style="background-image: url(https://ottolenghi.co.uk/media/wysiwyg/locations/NOPI-website--1122-1jpg.jpg);">
+                <div class="item-slick2 item3-slick2" style="background-image: url(https://boisedev.com/wp-content/uploads/2018/10/Grove-Oct-2018006s.jpg);">
                     <div class="wrap-content-slide2 p-t-115 p-b-208">
                         <div class="container">
                             <!-- - -->
                             <div class="title-event t-center m-b-52">
 								<span class="tit2 p-l-15 p-r-15">
-									Upcoming
+
 								</span>
 
                                 <h3 class="tit6 t-center p-l-15 p-r-15 p-t-3">
