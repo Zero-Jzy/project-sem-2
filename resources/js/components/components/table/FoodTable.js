@@ -5,7 +5,8 @@ import axios from 'axios';
 import CreateFoodModal from '../model/CreateFoodModal'
 import CreateSetModel from '../model/CreateSetModel'
 import {Table, Dropdown, Menu, Icon, Button, Select, Cascader, Modal, Input} from 'antd';
-const { Option } = Select;
+
+const {Option} = Select;
 const {confirm} = Modal;
 
 export default class FoodTable extends Component {
@@ -16,9 +17,10 @@ export default class FoodTable extends Component {
         results: 10,
         selectedRowKeys: [],
         keys: [],
-        optionAction: 'create_set'
+        optionAction: '',
+        showModelCreateSet: false
     };
-     columns = [
+    columns = [
         {
             title: 'Name',
             dataIndex: 'name',
@@ -27,7 +29,9 @@ export default class FoodTable extends Component {
         {
             title: 'Images',
             dataIndex: 'image',
-            render: image => (<img width={45} src={image} alt=""/>)
+            render: image => (<img width={45}
+                                   src={'https://res.cloudinary.com/cloud-pj-sem2/image/upload/w_300,h_300,c_lpad,b_auto/' + image}
+                                   alt=""/>)
 
         },
         {
@@ -135,8 +139,13 @@ export default class FoodTable extends Component {
     };
 
     handleAction = () => {
-        this.setState({loading: true});
+        console.log(1)
 
+        if (this.state.optionAction === 'create_set') {
+            this.setState({
+                showModelCreateSet: true
+            })
+        }
     };
 
     fetch = (params = {}) => {
@@ -164,6 +173,18 @@ export default class FoodTable extends Component {
 
     handleSelectChange = selectedRowKeys => {
         this.setState({selectedRowKeys});
+    };
+
+    handleChangeAction = value => {
+        this.setState({
+            optionAction: value
+        })
+    };
+
+    handleCancelCreateSet = e => {
+        this.setState({
+            showModelCreateSet: false,
+        });
     };
 
     render() {
@@ -202,14 +223,14 @@ export default class FoodTable extends Component {
                         <Select
                             disabled={this.state.selectedRowKeys.length <= 0}
                             style={{width: 120}}
-                            onChange={action => this.setState({
-                                optionAction: action
-                            })}
+                            onChange={this.handleChangeAction}
                         >
                             <Option value="create_set">Create set</Option>
                             <Option value="delete">Delete</Option>
                         </Select>
-                        <Button onClick={this.handleAction} disabled={this.state.selectedRowKeys.length <= 0}>Go</Button>
+                        <Button onClick={this.handleAction}
+                                disabled={this.state.selectedRowKeys.length <= 0}>Go</Button>
+                        <CreateSetModel handleCancel={this.handleCancelCreateSet} visible={this.state.showModelCreateSet}/>
                     </div>
                 </div>
                 <CreateSetModel/>

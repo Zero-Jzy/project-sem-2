@@ -26,7 +26,6 @@ class FoodController extends Controller
     {
 //        $foods = Food::join('food_categories', 'foods.category_id', '=', 'foods.id')->get();
         $data = Input::all();
-        Log::info($data);
         $foods = Food::with('category');
         $results = $data['results'] ?? false;
         $page = ($data['page'] ?? 1) - 1;

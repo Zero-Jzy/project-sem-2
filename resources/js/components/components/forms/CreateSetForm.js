@@ -51,8 +51,6 @@ class MyCreateSetForm extends Component {
     };
 
     handleCancel = () => {
-        this.props.form.resetFields();
-        this.removeImage();
         this.props.handleCancel()
     };
 
