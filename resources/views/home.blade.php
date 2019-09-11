@@ -473,7 +473,7 @@
                             <!-- - -->
                             <div class="title-event t-center m-b-52">
 								<span class="tit2 p-l-15 p-r-15">
-
+									Upcoming
 								</span>
 
                                 <h3 class="tit6 t-center p-l-15 p-r-15 p-t-3">

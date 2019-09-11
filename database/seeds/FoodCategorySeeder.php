@@ -14,6 +14,7 @@ class FoodCategorySeeder extends Seeder
     {
         DB::table('food_categories')->truncate();
         DB::table('food_categories')->insert([
+
             ['id' => 1, 'name' => 'Vegetables'],
 
             ['id' => 2, 'name' => 'Desserts'],
@@ -28,12 +29,7 @@ class FoodCategorySeeder extends Seeder
 
             ['id' => 7, 'name' => 'Boiled food'],
 
-            ['id' => 8, 'name' => 'Drinks'],
-
-
-
-
-
+            ['id' => 8, 'name' => 'Drinks']
 
 
 

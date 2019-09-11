@@ -92,9 +92,11 @@ class UserTable extends React.Component {
 
     handleReset = (clearFilters, dataIndex) => {
         clearFilters();
+
         this.setState(state => {
 
-        })
+        });
+
         this.setState({searchText: {...this.state.searchText, [dataIndex]: ''}});
     };
 
@@ -162,7 +164,7 @@ class UserTable extends React.Component {
             // results: pagination.pageSize,
             page: pagination.current,
             sortField: sorter.field,
-            sortOrder: sorter.order && sorter.order.substr(0, sorter.order.length - 3),
+            sortOrder: sorter.order && sorter.order.replace('end'),
             filters,
             filterDate,
             searchAddress

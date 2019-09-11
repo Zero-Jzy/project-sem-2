@@ -152,7 +152,6 @@
     renderFoodInBag();
     renderSetInBag();
 
-
     const btnUp = $('.quantity-up');
     const btnDown = $('.quantity-down');
 
@@ -372,7 +371,7 @@
 
         $.ajax({
             method: 'post',
-            url: "/set",
+            url: "/menu/set",
             data: {
                 '_token': `{{ csrf_token() }}`,
                 'currentUserLogged': currentUserLogged,

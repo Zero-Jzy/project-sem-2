@@ -19,7 +19,7 @@ class CreateFoodModal extends Component {
 
     onSubmit = a => {
         console.log('value ne :',a)
-    }
+    };
 
     render() {
         return (
@@ -35,7 +35,7 @@ class CreateFoodModal extends Component {
                     footer={null}
                     closable={false}
                 >
-                    <CreateFoodForm handleCancel={this.handleCancel} onSubmit={this.handleOk} />
+                    <CreateFoodForm handleCancel={this.handleCancel} onSubmit={this.onSubmit} />
                 </Modal>
             </div>
         );
