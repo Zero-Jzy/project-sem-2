@@ -7,12 +7,12 @@ export default class FormTest extends Component {
     render() {
         return (
             <div style={{padding: 25, margin: 25, background: 'white'}}>
-
                 <Upload
                     name='images'
-                    action="/api/upload-image"
-                    listType="picture-card"
+                    action='/api/upload-image'
+                    listType='picture-card'
                     multiple={true}
+                    onChange={(a) => console.log(a)}
                 >
                     <div>
                         <Icon type="plus" />

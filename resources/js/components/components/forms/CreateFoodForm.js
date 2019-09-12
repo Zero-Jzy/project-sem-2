@@ -33,7 +33,8 @@ class MyCreateFoodForm extends Component {
     state = {
         visible: true,
         submitting: false,
-        fileList: []
+        fileList: [],
+        imageKey: null
     };
 
     updateFileList = (fileList) => {
@@ -66,6 +67,12 @@ class MyCreateFoodForm extends Component {
         this.props.form.resetFields();
         this.removeImage();
         this.props.handleCancel()
+    };
+
+    handleChangeImage = info => {
+        this.setState({
+            imageKey : info.file.respone
+        })
     };
 
     render() {
@@ -192,10 +199,12 @@ class MyCreateFoodForm extends Component {
                         {minerals}
                     </Select>)}
                 </Form.Item>
-                <Form.Item label="Images">
-                    <UploadImage updateFileList={this.updateFileList} fileList={this.state.fileList}
-                                 getFieldDecorator={getFieldDecorator}/>
-                    {this.props.form.getFieldError('images')}
+                <Form.Item label="Image">
+                   <UploadImage
+                       getFieldDecorator={getFieldDecorator}
+                       updateFileList={this.updateFileList}
+                       fileList={this.state.fileList}
+                   />
                 </Form.Item>
                 <Form.Item wrapperCol={{span: 10, offset: 16}} style={{margin: 0}}>
                     <Popconfirm className='mr-3' placement="top" title={'Cancel ?'} onConfirm={this.handleCancel}

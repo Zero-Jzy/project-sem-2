@@ -64,7 +64,7 @@
                             </li>
                             <li>
                                 <a class="{{Request::is('menu') ? 'active' : ''}}"
-                                   href="{{route('menu.index')}}">Menu</a>
+                                   href="{{route('food.index')}}">Menu</a>
                             </li>
                             <li>
                                 <a class="{{Request::is('about-us') ? 'active' : ''}}" href="{{route('about-us')}}">About</a>
@@ -188,7 +188,7 @@
 
                 <div class="m-b-25">
 						<span class="fs-13 color2 m-r-5">
-							<i class="fa fa-twitter" aria-hidden="true"></i>
+							<i class="fab fa-twitter" aria-hidden="true"></i>
 						</span>
                     <a href="#" class="txt15">
                         @gumballwatterson
@@ -208,7 +208,7 @@
 
                 <div>
 						<span class="fs-13 color2 m-r-5">
-							<i class="fa fa-twitter" aria-hidden="true"></i>
+							<i class="fab fa-twitter"  aria-hidden="true"></i>
 						</span>
                     <a href="#" class="txt15">
                         @naruto
@@ -454,7 +454,6 @@
 {{-- =============================== END MODAL ===============================--}}
 
 <input id="current-user-logged" type="hidden" value="{{Auth::check() ? Auth::user()->id : null }}">
-
 
 <!--===============================================================================================-->
 <script type="text/javascript" src="{{asset('/lib/sweetalert2.all.min.js')}}"></script>

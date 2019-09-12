@@ -6,7 +6,7 @@
     var rightNavbar = $('.right-navbar a');
     var path = window.location.pathname;
 
-    if (['/menu', '/login', '/register', '/profile'].indexOf(path) !== -1) {
+    if (['/menu/food','/menu/set', '/login', '/register', '/profile'].indexOf(path) !== -1) {
         itemHeader.css('color', 'black');
         rightNavbar.css('color', '#000')
     }
@@ -197,7 +197,6 @@
             event.preventDefault();
             $form_signup.find('input[type="email"]').toggleClass('has-error').next('span').toggleClass('is-visible');
         });
-
 
         //IE9 placeholder fallback
         if (!Modernizr.input.placeholder) {

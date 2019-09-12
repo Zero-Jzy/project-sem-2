@@ -139,6 +139,10 @@
 
 }
 
+.blogs_title a.active{
+    color: red;
+}
+
 
 .list-food {
     height: 70vh;
@@ -581,7 +585,7 @@ xsigin/signup popup
     /* text-align: center; */
 }
 
-.btn-add-food{
+.btn-add{
     /* position: absolute; */
     display: flex;
     justify-content: center;
@@ -597,11 +601,11 @@ xsigin/signup popup
     transition: 100ms;
 }
 
-.btn-add-food:hover{
+.btn-add:hover{
     transform: scale(1.1)
 }
 
-.btn-add-food i {
+.btn-add i {
     margin: 4px 3px 3px 3px;
 }
 

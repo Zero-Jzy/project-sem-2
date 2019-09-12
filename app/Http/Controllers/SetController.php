@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Set;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
@@ -12,6 +13,7 @@ class SetController extends Controller
     {
 //        $this->middleware('auth');
     }
+
     /**
      * Display a listing of the resource.
      *
@@ -19,7 +21,12 @@ class SetController extends Controller
      */
     public function index()
     {
-        //
+        $set = Set::where('type',1)->get();
+
+        $data = [
+            'sets' => $set
+        ];
+        return view('sets', $data);
     }
 
     /**
@@ -35,37 +42,38 @@ class SetController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-//        Log::info($request);
+
         $listFood = $request->get('listFood');
-        $currentUserLogged = $request->get('currentUserLogged');
+        $totalValue = $request->get('totalValue');
 
         $set = Set::create([
-            'name' => $currentUserLogged,
+            'name' => Carbon::now()->valueOf(),
             'type' => 2,
             'category_id' => 1
         ]);
 
-
-
-        foreach ($listFood as $food){
-            Log::info(gettype($food['id']) );
-
-            $set->food()->attach((integer) $food['id'], ['quantity' => $food['quantity']]);
+        foreach ($listFood as $food) {
+            $set->foods()->attach((integer)$food['id'], ['quantity' => $food['quantity']]);
         };
-
         $set->save();
-        return $set->toJson();
+        Log::info($totalValue);
+
+
+        $data = array_merge($set->toArray(), $totalValue);
+
+
+        return response(json_encode($data));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -76,7 +84,7 @@ class SetController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -87,8 +95,8 @@ class SetController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -99,7 +107,7 @@ class SetController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

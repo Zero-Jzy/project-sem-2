@@ -36,11 +36,9 @@ Route::view('/ad/{any}', 'admin')
 
 Route::resource('/user','UserController');
 
-Route::resource('menu', 'MenuController');
+Route::resource('menu/food', 'FoodController');
 
-Route::resource('food', 'FoodController');
-
-Route::resource('set', 'SetController');
+Route::resource('menu/set', 'SetController');
 
 Route::resource('profile', 'ProfileController');
 
