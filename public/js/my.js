@@ -283,10 +283,8 @@
                 console.log(res.errors);
                 renderErrors(res.errors)
             }else {
-                window.location.href = '/menu';
+                window.location.href = '/menu/food';
             }
-        }).fail(function (res) {
-            alert(res)
         })
     });
 
