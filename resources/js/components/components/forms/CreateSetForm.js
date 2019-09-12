@@ -3,13 +3,10 @@ import axios from 'axios'
 import {
     Form,
     Input,
-    InputNumber,
     Select,
     Row,
     Col,
     Button,
-    Upload,
-    Icon,
     Popconfirm
 } from 'antd';
 import UploadImage from '../common/UploadImage'
@@ -24,6 +21,7 @@ class MyCreateSetForm extends Component {
         fileList: []
     };
 
+
     updateFileList = (fileList) => {
         this.setState({fileList: fileList})
     };
@@ -32,19 +30,12 @@ class MyCreateSetForm extends Component {
         this.setState({fileList: []})
     };
 
+
     handleSubmit = e => {
         e.preventDefault();
         this.props.form.validateFieldsAndScroll((err, values) => {
 
             if (!err) {
-                axios.post('/api/food', values)
-                    .then(res => {
-                        this.props.form.resetFields();
-                        this.removeImage()
-                    })
-                    .catch(err => {
-
-                    });
                 console.log('Received values of form: ', values);
             }
         });
@@ -57,11 +48,9 @@ class MyCreateSetForm extends Component {
     render() {
         const {getFieldDecorator} = this.props.form;
 
-        const formItemLayout = {
-            // labelCol: { span: 6 },
-            // wrapperCol: { span: 18 },
-        };
+        const {recordSelected} = this.props;
 
+        const formItemLayout = {}
 
         return (
             <Form {...formItemLayout} layout={'vertical'} onSubmit={this.handleSubmit}>
@@ -94,12 +83,16 @@ class MyCreateSetForm extends Component {
                         </Form.Item>
                     </Col>
                 </Row>
-                <Form.Item label="Foods">
+                <Form.Item>
                     {getFieldDecorator('foods', {
-                        initialValue: '',
-                        rules: [{required: true, message: 'Please input vitamins!'}],
-                    })(<Input type='text' />)}
+                        initialValue: recordSelected.map(item => item.id).join(','),
+                        rules: [{required: true, message: 'Please select food!'}],
+                    })(<Input type='hidden'/>)}
                 </Form.Item>
+
+                {recordSelected.map(item => (
+                    <div key={item.id}>{item.name}</div>
+                ))}
 
                 <Form.Item label="Images">
                     <UploadImage

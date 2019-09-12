@@ -19,7 +19,8 @@ export default class FoodTable extends Component {
         selectedRowKeys: [],
         keys: [],
         optionAction: '',
-        showModelCreateSet: false
+        showModelCreateSet: false,
+        searchText: ''
     };
 
 
@@ -108,7 +109,6 @@ export default class FoodTable extends Component {
         clearFilters();
         this.setState({ searchText: '' });
     };
-
 
     handleTableChange = (pagination, filters, sorter) => {
         const pager = {...this.state.pagination};
@@ -264,7 +264,7 @@ export default class FoodTable extends Component {
 
 
     render() {
-        const {selectedRowKeys} = this.state;
+        const { selectedRowKeys, data } = this.state;
         const rowSelection = {
             selectedRowKeys,
             onChange: this.handleSelectChange,
@@ -297,6 +297,7 @@ export default class FoodTable extends Component {
                         <small style={{position: "absolute", top: 34}}>Total
                             select {this.state.selectedRowKeys.length} items</small>
                         <Select
+                            placeholder={'Select action.'}
                             disabled={this.state.selectedRowKeys.length <= 0}
                             style={{width: 120}}
                             onChange={this.handleChangeAction}
@@ -306,7 +307,7 @@ export default class FoodTable extends Component {
                         </Select>
                         <Button onClick={this.handleAction}
                                 disabled={this.state.selectedRowKeys.length <= 0}>Go</Button>
-                        <CreateSetModel handleCancel={this.handleCancelCreateSet}
+                        <CreateSetModel recordSelected={data.filter(item => selectedRowKeys.indexOf(item.id) !== -1)} handleCancel={this.handleCancelCreateSet}
                                         visible={this.state.showModelCreateSet}/>
                     </div>
                 </div>
