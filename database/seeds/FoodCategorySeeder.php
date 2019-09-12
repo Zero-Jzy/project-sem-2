@@ -15,23 +15,21 @@ class FoodCategorySeeder extends Seeder
         DB::table('food_categories')->truncate();
         DB::table('food_categories')->insert([
 
-            ['id' => 1, 'name' => 'Vegetables'],
+            ['id' => 1, 'name' => 'Vegetables', 'description' =>'description'],
 
-            ['id' => 2, 'name' => 'Desserts'],
+            ['id' => 2, 'name' => 'Desserts', 'description' =>'description'],
 
-            ['id' => 3, 'name' => 'Protein Food'],
+            ['id' => 3, 'name' => 'Protein Food', 'description' =>'description'],
 
-            ['id' => 4, 'name' => 'Barbecue'],
+            ['id' => 4, 'name' => 'Barbecue', 'description' =>'description'],
 
-            ['id' => 5, 'name' => 'Soups and stews‎'],
+            ['id' => 5, 'name' => 'Soups and stews‎', 'description' =>'description'],
 
-            ['id' => 6, 'name' => 'Fried foods‎'],
+            ['id' => 6, 'name' => 'Fried foods‎', 'description' =>'description'],
 
-            ['id' => 7, 'name' => 'Boiled food'],
+            ['id' => 7, 'name' => 'Boiled food', 'description' =>'description'],
 
-            ['id' => 8, 'name' => 'Drinks']
-
-
+            ['id' => 8, 'name' => 'Drinks', 'description' =>'description']
 
         ]);
 

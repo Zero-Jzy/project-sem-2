@@ -23,6 +23,7 @@ Route::get('/', function (){
 Route::get('/checkout', function (){
     return view('checkout');
 })->name('checkout')->middleware('auth');
+
 Route::resource('/order', 'OrderController');
 
 //Route::get('/checkout-shipping',  )

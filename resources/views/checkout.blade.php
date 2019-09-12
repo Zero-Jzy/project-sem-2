@@ -7,9 +7,8 @@
                 @foreach(Auth::user()->addresses as $address)
                     <div class="address-box col-md-6" style="border: black solid 1px">
                         <div>
-                            <input class="add"
-                                   address-id="{{$address->id}}"
-                                   name="addressActive" type="radio">
+                            <input address-id="{{$address->id}}"
+                                   name="address" type="radio">
                         </div>
                         <div>
                             <h5>{{$address->name}}</h5>
@@ -29,14 +28,14 @@
             <div>
                 <button type="submit" style="border: black solid 1px">thanh toan khi nhan hang</button>
                 <button type="submit" style="border: black solid 1px">thanh toan vnpay</button>
+                <button class="add" type="submit" style="border: black solid 1px">Checkout</button>
             </div>
         </div>
         <script>
             $(document).ready(function () {
-                var gg = localStorage.getItem('foods_in_bag');
+                var gg = localStorage.getItem('sets_in_bag');
                 var son = Array.from(new Map(JSON.parse(gg)).values());
                 var htmlContent = '';
-                var arr = [];
                 for (var cartItem of son) {
                     htmlContent += `<div style="border: black solid 1px">
                             <p>Ten : ${cartItem.name}</p>
@@ -44,7 +43,6 @@
                             <p>So luong : ${cartItem.quantity}</p>
                             <p>Tien : ${cartItem.quantity * cartItem.price}</p>
                         </div>`
-                    arr.push(cartItem.quantity * cartItem.price);
                 }
 
                 var totalPrice = son.reduce((a,b)=>{
@@ -56,16 +54,20 @@
                 $('#cart-body').html(htmlContent);
                 const btn = $('.add');
                 btn.click(function () {
-                    var address_id = $(this).attr('address-id');
+                    var address_id = $("input[name='address']:checked").attr('address-id');
                     $.ajax({
                         method: 'post',
-                        url: "/order/",
+                        url: "/order",
                         data: {
                             '_token': `{{ csrf_token() }}`,
-                            'address_id': address_id
+                            'address_id': address_id,
+                            'listSet' : son
                         },
-                        success: function () {
-                            alert('ok');
+                        success: function (res) {
+                            if(res === 'done'){
+                                localStorage.removeItem('sets_in_bag');
+                                window.location.href = '/menu/food'
+                            }
                         },
                         error: function () {
                             alert('error');

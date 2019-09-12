@@ -133,7 +133,7 @@
                     </div>
 
                 </div>
-                <button type="submit" class="btn-incard btn3 flex-c-m size18 txt11 trans-0-4 m-10 m-auto">
+                <button type="submit" class="btn-incard btn3 flex-c-m size18 txt11 trans-0-4 m-10 m-auto" id="checkout">
                     Checkout
                 </button>
             </div>
@@ -143,6 +143,7 @@
 
 <script>
     const btnAddFood = $('.btn-add-food');
+    const btnChechout = $('#checkout');
     const btnAddSet = $('.btn-add-set');
     var foodsInBag = new Map(JSON.parse(localStorage.getItem('foods_in_bag'))) || new Map();
     var setsInBag = new Map(JSON.parse(localStorage.getItem('sets_in_bag'))) || new Map();
@@ -164,6 +165,10 @@
         const foodId = $(this).attr('data-id');
         updateQuantityFood(foodId, increment)
     });
+    btnChechout.click(function () {
+        window.location="/checkout";
+    });
+
 
     btnAddSet.click(function () {
         const setId = $(this).attr('data-id');
