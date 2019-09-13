@@ -19,49 +19,51 @@ class UserController extends Controller
     public function index()
     {
         $data = Input::all();
-        Log::info($data);
+
+
         $results = $data['results'] ?? false;
         $page = ($data['page'] ?? 1) - 1;
         $sortField = $data['sortField'] ?? false;
         $sortOrder = $data['sortOrder'] ?? false;
         $filterDate = json_decode($data['filterDate'] ?? '{}', true);
         $filterAddress = $data['filterAddress'] ?? false;
+        Log::info($data);
 
         $filters = [json_decode($data['filters'] ?? '{}', true)][0];
 //        Log::info('filter' ,$filters);
 
-        $users = User::join('profiles', 'users.id', '=', 'profiles.user_id');
+        $users = User::with(['profile','addresses']);
 
-        if($filterAddress){
-            $users->where('addressTxt','like', $filterAddress.'%' );
-        }
+//        if($filterAddress){
+//            $users->where('addressTxt','like', $filterAddress.'%' );
+//        }
 
-        if(!empty($filterDate)){
-//            Log::info(gettype($filterDate));
-            $users->where([
-                ['create_at', '>=', $filterDate['start']],
-                ['create_at', '<=', $filterDate['end']]
-            ]);
-        }
+//        if(!empty($filterDate)){
+////            Log::info(gettype($filterDate));
+//            $users->where([
+//                ['create_at', '>=', $filterDate['start']],
+//                ['create_at', '<=', $filterDate['end']]
+//            ]);
+//        }
 
-        if (!empty($filters)) {
-//            Log::info($filters);
-            foreach ($filters as $key => $values) {
-                if (!empty($values)) {
-                    if ($key === 'status' || $key === 'gender') {
-                        $users->whereIn($key , $values);
-                    } else {
-                        foreach ($values as $value) {
-                            $users->where($key, 'like', '%' . $value . '%');
-                        }
-                    }
-                }
-            }
-        }
+//        if (!empty($filters)) {
+////            Log::info($filters);
+//            foreach ($filters as $key => $values) {
+//                if (!empty($values)) {
+//                    if ($key === 'status' || $key === 'gender') {
+//                        $users->whereIn($key , $values);
+//                    } else {
+//                        foreach ($values as $value) {
+//                            $users->where($key, 'like', '%' . $value . '%');
+//                        }
+//                    }
+//                }
+//            }
+//        }
 
-        if ($sortField) {
-            $users->orderBy($sortField, $sortOrder);
-        }
+//        if ($sortField) {
+//            $users->orderBy($sortField, $sortOrder);
+//        }
 
         $res['totalCount'] = $users->count();
 
@@ -74,14 +76,6 @@ class UserController extends Controller
         $res['users'] = $users->get();
 
         return response($res);
-    }
-
-    public function getDataStock(){
-//        $data = User::select('create_at')->take(10)->get();
-        $data = User::all();
-
-        return response();
-
     }
 
     /**

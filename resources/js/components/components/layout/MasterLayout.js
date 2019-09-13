@@ -77,6 +77,12 @@ class MasterLayout extends Component {
                                     <span>Foods</span>
                                 </Link>
                             </Menu.Item>
+                            <Menu.Item key="/ad/set">
+                                <Link to="/ad/set">
+                                    <Icon type="none"/>
+                                    <span>Sets</span>
+                                </Link>
+                            </Menu.Item>
                             <Menu.Item key="ad/form">
                                 <Link to="/ad/form">
                                     <Icon type="form"/>

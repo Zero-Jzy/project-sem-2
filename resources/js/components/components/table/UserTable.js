@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
-import {Table, Button, Icon, Input, DatePicker, Cascader, Modal, Select} from 'antd'
+import {Table, Button, Icon, Input, DatePicker, Cascader, Modal, Select, Dropdown, Menu} from 'antd'
 import Highlighter from 'react-highlight-words';
 import {connect} from "react-redux";
 import {logoutUser} from '../../redux/actions/authAction';
@@ -134,6 +134,7 @@ class UserTable extends React.Component {
             // Read total count from server
             pagination.total = res.data.totalCount;
             // pagination.total = 20;
+            console.log(res.data)
             this.setState({
                 loading: false,
                 data: res.data.users,
@@ -207,35 +208,39 @@ class UserTable extends React.Component {
         return name
     }
 
+    dropdownOption = (
+        <Menu>
+            <Menu.Item>
+                Update
+            </Menu.Item>
+            <Menu.Item onClick={this.handleDelete}>
+                Delete
+            </Menu.Item>
+        </Menu>
+    );
+
     render() {
         console.log('component render');
 
         const columns = [
             {
                 title: 'Avatar',
-                dataIndex: 'avatar',
-                render: (avatar, record) => (
-                    <img className="avatar_in_list" src={avatar} alt={record.fisrt_name + ' ' + record.last_name}/>),
+                dataIndex: 'profile.avatar',
+                render: avatar => (
+                    <img className="avatar_in_list" src={avatar} alt="LO"/>),
             },
             {
                 title: 'Full Name',
-                dataIndex: 'name',
-                render: (name, record) => (
-                    <Link to={`/ad/user/${record.id}`}>{record.first_name} {record.last_name}</Link>),
+                dataIndex: 'full_name',
+                render: (profile,record) => (
+                    <Link to={`/ad/user/${record.profile.id}`}>{record.profile.first_name} {record.profile.last_name}</Link>),
                 // ...this.getColumnSearchProps('username'),
                 // width: '20%',
-            },
-            {
-                title: 'Username',
-                dataIndex: 'username',
-                sorter: true,
-                ...this.getColumnSearchProps('username'),
-                // width: '13%',
             },
 
             {
                 title: 'Gender',
-                dataIndex: 'gender',
+                dataIndex: 'profile.gender',
                 filters: [{text: 'Male', value: 'M'}, {text: 'Female', value: 'F'}, {text: 'Other', value: 'O'}],
             },
             {
@@ -246,37 +251,50 @@ class UserTable extends React.Component {
             {
                 title: 'Age',
                 dataIndex: 'profile.age',
-                render: (age, record) => `${record.age}`,
+                render: age => `${age}`,
                 sorter: true,
             },
             {
                 title: 'Phone',
-                dataIndex: 'phone',
+                dataIndex: 'profile.phone',
             },
             {
                 title: 'Address',
-                dataIndex: 'addressTxt',
-                render: address => (<p>{this.getName(address.split('@')[0])} <br/> {address.split('@')[1]}</p>)
+                dataIndex: 'addresses',
+                render: addresses => addresses.length > 0 ? 1 : 2
             },
             {
                 title: 'Create at',
                 dataIndex: 'create_at',
                 sorter: true,
-                render: create_at => `${moment(parseFloat(create_at)).format('YYYY-MM-DD')}`
+                render: create_at => `${moment(create_at).format('YYYY-MM-DD')}`
             },
             {
                 title: 'Status',
-                dataIndex: 'status',
-                filters: [
-                    {text: 'Active', value: 'active'},
-                    {text: 'Deleted', value: 'delete'},
-                    {text: 'Vip', value: 'vip'},
-                    {text: 'Banned', value: 'banned'},
-                ]
+                dataIndex: 'status'
                 // ,
-                // sorter: true,
-                // render: create_at => `${moment(parseFloat(create_at)).fromNow()}`
-            }
+                // filters: [
+                //     {text: 'Active', value: 'active'},
+                //     {text: 'Deleted', value: 'delete'},
+                //     {text: 'Vip', value: 'vip'},
+                //     {text: 'Banned', value: 'banned'},
+                // ]
+            //     // ,
+            //     // sorter: true,
+            //     // render: create_at => `${moment(parseFloat(create_at)).fromNow()}`
+            },
+            {
+                title: 'Operation',
+                fixed: 'right',
+                render: () => (
+                    <Dropdown overlay={this.dropdownOption}>
+                        <Button>
+                            <Icon type="unordered-list" className='pr-2'/>
+                            <Icon type="down"/>
+                        </Button>
+                    </Dropdown>
+                )
+            },
         ];
 
         const {selectedRowKeys, data, pagination, loading, results} = this.state;
