@@ -34,6 +34,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('/fontawesome/css/all.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('/css/custom.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('/css/menu.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('/css/checkout.css')}}">
     <script type="text/javascript" src="{{asset('/template/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
 
 </head>
@@ -187,7 +188,7 @@
 
                 <div class="m-b-25">
 						<span class="fs-13 color2 m-r-5">
-							<i class="fa fa-twitter" aria-hidden="true"></i>
+							<i class="fab fa-twitter" aria-hidden="true"></i>
 						</span>
                     <a href="#" class="txt15">
                         @gumballwatterson
@@ -207,7 +208,7 @@
 
                 <div>
 						<span class="fs-13 color2 m-r-5">
-							<i class="fa fa-twitter" aria-hidden="true"></i>
+							<i class="fab fa-twitter"  aria-hidden="true"></i>
 						</span>
                     <a href="#" class="txt15">
                         @naruto

@@ -1,50 +1,81 @@
 import React, {Component} from 'react'
-import axios from 'axios'
 import {
     Form,
     Input,
-    InputNumber,
     Select,
     Row,
     Col,
     Button,
-    Upload,
-    Icon,
-    Popconfirm
+    Popconfirm,
+    InputNumber,
+    message,
 } from 'antd';
 import UploadImage from '../common/UploadImage'
 
 const {Option} = Select;
 
-
 class MyCreateSetForm extends Component {
     state = {
         visible: true,
         submitting: false,
-        fileList: []
+        fileList: [],
+        foods: [],
+        loading: false
     };
+
+    componentWillReceiveProps(nextProps, nextContext) {
+        if (this.state.foods.length <= 0) {
+            this.setState({
+                foods: nextProps.recordSelected.map(food => ({id: food.id, quantity: 1}))
+            })
+        }
+    }
 
     updateFileList = (fileList) => {
         this.setState({fileList: fileList})
     };
 
     removeImage = () => {
-        this.setState({fileList: []})
+        this.setState({
+            fileList: [],
+            foods: []
+        });
+        this.props.form.setFieldsValue({
+            foods: []
+        });
     };
+
+    foods = this.props.recordSelected.map(food => ({
+        id: food.id,
+        quantity: 1
+    }));
 
     handleSubmit = e => {
         e.preventDefault();
+        this.setState({
+            loading: true
+        })
         this.props.form.validateFieldsAndScroll((err, values) => {
-
             if (!err) {
-                axios.post('/api/food', values)
+                axios.post('/api/set', values)
                     .then(res => {
-                        this.props.form.resetFields();
-                        this.removeImage()
+                        this.setState({
+                            loading: false
+                        });
+                        if (res.status === 200) {
+                            this.props.form.resetFields();
+                            this.removeImage();
+                            this.props.handleCancel();
+                            message.success("Create set success!")
+                        }
                     })
                     .catch(err => {
-
+                        alert(err);
+                        this.setState({
+                            loading: false
+                        })
                     });
+
                 console.log('Received values of form: ', values);
             }
         });
@@ -54,14 +85,22 @@ class MyCreateSetForm extends Component {
         this.props.handleCancel()
     };
 
+    handleChangeQuantity = (value, id) => {
+        var foods = this.state.foods;
+        let newFoods = foods.map(food => food.id === id ? {...food, quantity: value} : {...food});
+        this.setState({foods: newFoods});
+
+        this.props.form.setFieldsValue({
+            foods: newFoods
+        });
+    };
+
     render() {
         const {getFieldDecorator} = this.props.form;
 
-        const formItemLayout = {
-            // labelCol: { span: 6 },
-            // wrapperCol: { span: 18 },
-        };
+        const {recordSelected} = this.props;
 
+        const formItemLayout = {}
 
         return (
             <Form {...formItemLayout} layout={'vertical'} onSubmit={this.handleSubmit}>
@@ -89,17 +128,31 @@ class MyCreateSetForm extends Component {
                                 >
                                     <Option value="1">1</Option>
                                     <Option value="2">2</Option>
+                                    <Option value="3">3</Option>
                                 </Select>
                             )}
                         </Form.Item>
                     </Col>
                 </Row>
-                <Form.Item label="Foods">
+                <Form.Item className="m-0 p-0">
                     {getFieldDecorator('foods', {
-                        initialValue: '',
-                        rules: [{required: true, message: 'Please input vitamins!'}],
-                    })(<Input type='text' />)}
+                        initialValue: this.state.foods,
+                        rules: [{required: true, message: 'Please select food!'}],
+                    })(<Input type='hidden'/>)}
                 </Form.Item>
+
+                {recordSelected.map(item => (
+                    <div key={item.id}>
+                        {item.name}
+                        {getFieldDecorator(`quantity:${item.id}`,{
+                            initialValue: 1,
+                        })(<InputNumber
+                            min={1}
+                            onChange={value => this.handleChangeQuantity(value, item.id)}
+                            size="small"/>)}
+
+                    </div>
+                ))}
 
                 <Form.Item label="Images">
                     <UploadImage
@@ -107,15 +160,14 @@ class MyCreateSetForm extends Component {
                         fileList={this.state.fileList}
                         getFieldDecorator={getFieldDecorator}
                     />
-                    {this.props.form.getFieldError('images')}
                 </Form.Item>
 
-                <Form.Item wrapperCol={{span: 10, offset: 16}} style={{margin: 0}}>
+                <Form.Item wrapperCol={{span: 10, offset: 14}} style={{margin: 0}}>
                     <Popconfirm className='mr-3' placement="top" title={'Cancel ?'} onConfirm={this.handleCancel}
                                 okText="Yes" cancelText="No">
                         <Button>Cancel</Button>
                     </Popconfirm>
-                    <Button type="primary" htmlType="submit">
+                    <Button type="primary" loading={this.state.loading} htmlType="submit">
                         Submit
                     </Button>
                 </Form.Item>

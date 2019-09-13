@@ -60,6 +60,7 @@ class SetController extends Controller
         foreach ($listFood as $food) {
             $set->foods()->attach((integer)$food['id'], ['quantity' => $food['quantity']]);
         };
+
         $set->save();
         Log::info($totalValue);
 

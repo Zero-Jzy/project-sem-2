@@ -71,9 +71,21 @@ class MyCreateFoodForm extends Component {
 
     handleChangeImage = info => {
         this.setState({
-            imageKey : info.file.respone
+            imageKey: info.file.respone
         })
     };
+
+    categories = [
+        {text: 'Vegetables', value: 1},
+        {text: 'Desserts', value: 2},
+        {text: 'Protein Food', value: 3},
+        {text: 'Barbecue', value: 4},
+        {text: 'Soups and stews‎', value: 5},
+        {text: 'Fried foods‎', value: 6},
+        {text: 'Boiled food', value: 7},
+        {text: 'Drinks', value: 8}
+    ].map(item => (<Option value={item.value}>{item.text}</Option>));
+
 
     render() {
         const {getFieldDecorator} = this.props.form;
@@ -86,35 +98,29 @@ class MyCreateFoodForm extends Component {
 
         return (
             <Form {...formItemLayout} layout={'vertical'} onSubmit={this.handleSubmit}>
-                <Row gutter={16}>
-                    <Col sm={12}>
-                        <Form.Item label='Name'>
-                            {getFieldDecorator('name', {
-                                rules: [
-                                    {
-                                        required: true,
-                                        message: 'Please input dish name',
-                                    },
-                                ],
-                            })(<Input/>)}
-                        </Form.Item>
-                    </Col>
-                    <Col sm={12}>
-                        <Form.Item label="Category">
-                            {getFieldDecorator('category', {
-                                rules: [{required: true, message: 'Please select dish category!'}],
-                            })(
-                                <Select
-                                    placeholder="Select a dish category!"
-                                    onChange={this.handleSelectChange}
-                                >
-                                    <Option value="1">1</Option>
-                                    <Option value="2">2</Option>
-                                </Select>
-                            )}
-                        </Form.Item>
-                    </Col>
-                </Row>
+                <Form.Item label='Name'>
+                    {getFieldDecorator('name', {
+                        rules: [
+                            {
+                                required: true,
+                                message: 'Please input dish name',
+                            },
+                        ],
+                    })(<Input/>)}
+                </Form.Item>
+
+                <Form.Item label="Category">
+                    {getFieldDecorator('category', {
+                        rules: [{required: true, message: 'Please select dish category!'}],
+                    })(
+                        <Select
+                            placeholder="Select a dish category!"
+                            mode="multiple"
+                        >
+                            {this.categories}
+                        </Select>
+                    )}
+                </Form.Item>
                 <Row gutter={16}>
                     <Col span={8}>
                         <Form.Item label={'Calo (g)'}>
@@ -200,11 +206,11 @@ class MyCreateFoodForm extends Component {
                     </Select>)}
                 </Form.Item>
                 <Form.Item label="Image">
-                   <UploadImage
-                       getFieldDecorator={getFieldDecorator}
-                       updateFileList={this.updateFileList}
-                       fileList={this.state.fileList}
-                   />
+                    <UploadImage
+                        getFieldDecorator={getFieldDecorator}
+                        updateFileList={this.updateFileList}
+                        fileList={this.state.fileList}
+                    />
                 </Form.Item>
                 <Form.Item wrapperCol={{span: 10, offset: 16}} style={{margin: 0}}>
                     <Popconfirm className='mr-3' placement="top" title={'Cancel ?'} onConfirm={this.handleCancel}

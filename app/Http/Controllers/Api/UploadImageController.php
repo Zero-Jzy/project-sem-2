@@ -14,11 +14,8 @@ class UploadImageController extends Controller
     public function upload(Request $request)
     {
         $image = $request['image'];
-
         Cloudder::upload($image, null);
-
         $result = Cloudder::getResult();
-
         $image_id = $result['public_id'] . '.' . $result['format'];
         Log::info($image_id);
 
