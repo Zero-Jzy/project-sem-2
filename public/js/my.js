@@ -260,10 +260,8 @@
             if(res.hasError){
                 renderErrors(res.errors)
             }else {
-                window.location.href = '/';
+                window.location.href = '/menu/food';
             }
-        }).fail(function (res) {
-            alert(res)
         })
     });
 
@@ -279,7 +277,6 @@
             data: data,
         }).done(function (res) {
             if(res.hasError){
-                console.log(res.errors);
                 renderErrors(res.errors)
             }else {
                 window.location.href = '/menu/food';
