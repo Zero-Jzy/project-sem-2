@@ -19,7 +19,6 @@ class FoodSeeder extends Seeder
                     array (
                         'id' => 1,
                         'name' => 'rice',
-                        'category_id' => 1,
                         'price' => 1.9,
                         'image' => 'ollmonnrrofgsh3t2lpo.jpg',
                         'calo' => 1590,
@@ -34,7 +33,6 @@ class FoodSeeder extends Seeder
                     array (
                         'id' => 2,
                         'name' => 'Fried rice, pickles, beef',
-                        'category_id' => 1,
                         'price' => 2.8,
                         'image' => 'qdbokkbwt2xxrbwbq0gs.jpg',
                         'calo' => 2470,
@@ -49,7 +47,6 @@ class FoodSeeder extends Seeder
                     array (
                         'id' => 3,
                         'name' => 'boiled cabbages',
-                        'category_id' => '4',
                         'price' => 1.8,
                         'image' => 'w0ou4jdiuqlq1t3ehwx0.jpg',
                         'calo' => 1980,
@@ -64,7 +61,6 @@ class FoodSeeder extends Seeder
                     array (
                         'id' => 4,
                         'name' => 'Boiled Chinese cabbage',
-                        'category_id' => 4,
                         'price' => 2.7,
                         'image' => 'nwansgfy24q05zcd2fye.jpg',
                         'calo' => 1940,
@@ -79,7 +75,6 @@ class FoodSeeder extends Seeder
                     array (
                         'id' => 5,
                         'name' => 'boiled vegetables',
-                        'category_id' => 4,
                         'price' => 2.9,
                         'image' => 'vth6hgtqvomngxeo3dd1.jpg',
                         'calo' => 2110,
@@ -94,7 +89,6 @@ class FoodSeeder extends Seeder
                     array (
                         'id' => 6,
                         'name' => 'vegetable soup',
-                        'category_id' => 4,
                         'price' => 1.1,
                         'image' => 'xky0ikudcrviztv2mhzx.jpg',
                         'calo' => 2040,
@@ -109,7 +103,6 @@ class FoodSeeder extends Seeder
                     array (
                         'id' => 7,
                         'name' => 'salad',
-                        'category_id' => 4,
                         'price' => 2.5,
                         'image' => 'qby9srczxxhlcrziwccq.jpg',
                         'calo' => 1500,
@@ -124,7 +117,6 @@ class FoodSeeder extends Seeder
                     array (
                         'id' => 8,
                         'name' => 'Five-flavored fried chicken',
-                        'category_id' => 4,
                         'price' => 0.9,
                         'image' => 'xjbixmuximzwvmbwhbon.jpg',
                         'calo' => 1650,
@@ -139,7 +131,6 @@ class FoodSeeder extends Seeder
                     array (
                         'id' => 9,
                         'name' => 'boiled pork',
-                        'category_id' => 3,
                         'price' => 2.7,
                         'image' => 'gfmwvlqfjvzd5j5guq3w.jpg',
                         'calo' => 1690,
@@ -154,7 +145,6 @@ class FoodSeeder extends Seeder
                     array (
                         'id' => 10,
                         'name' => 'Basa Frish',
-                        'category_id' => 3,
                         'price' => 0.9,
                         'image' => 'vr7ta2uxigkczs99dyrj.jpg',
                         'calo' => 1910,
@@ -169,7 +159,6 @@ class FoodSeeder extends Seeder
                     array (
                         'id' => 11,
                         'name' => 'Stewed pork leg with bell peppers',
-                        'category_id' => 3,
                         'price' => 0.9,
                         'image' => 'ljfckfcyrgmjuexosxqi.jpg',
                         'calo' => 2670,
@@ -184,7 +173,6 @@ class FoodSeeder extends Seeder
                     array (
                         'id' => 12,
                         'name' => 'bean sprouts',
-                        'category_id' => 4,
                         'price' => 1.8,
                         'image' => 'yiqgdenawgezfklpiu6p.jpg',
                         'calo' => 2540,
@@ -199,7 +187,6 @@ class FoodSeeder extends Seeder
                     array (
                         'id' => 13,
                         'name' => 'cowpea',
-                        'category_id' => 4,
                         'price' => 1.1,
                         'image' => 'kifo8ntlbqxotysa271j.jpg',
                         'calo' => 2390,
@@ -214,7 +201,6 @@ class FoodSeeder extends Seeder
                     array (
                         'id' => 14,
                         'name' => 'tofu in tomato sauce',
-                        'category_id' => 4,
                         'price' => 2.8,
                         'image' => 'cd5jrlkareyjaullgbts.jpg',
                         'calo' => 1660,
@@ -229,7 +215,6 @@ class FoodSeeder extends Seeder
                     array (
                         'id' => 15,
                         'name' => 'meat stock ship',
-                        'category_id' => 3,
                         'price' => 2.6,
                         'image' => 'euqvry3g5ad6fjnzzgsk.jpg',
                         'calo' => 2360,
@@ -244,7 +229,6 @@ class FoodSeeder extends Seeder
                     array (
                         'id' => 16,
                         'name' => 'meat skewer',
-                        'category_id' => 3,
                         'price' => 2.4,
                         'image' => 'yiumavebo4odyujwddte.jpg',
                         'calo' => 1690,
@@ -259,7 +243,6 @@ class FoodSeeder extends Seeder
                     array (
                         'id' => 17,
                         'name' => 'Meat rolls',
-                        'category_id' => 3,
                         'price' => 2.8,
                         'image' => 'l7tfuc6vzgmfcdswy4rm.jpg',
                         'calo' => 2280,
@@ -274,7 +257,6 @@ class FoodSeeder extends Seeder
                     array (
                         'id' => 18,
                         'name' => 'sweet and sour ribs',
-                        'category_id' => 3,
                         'price' => 0.7,
                         'image' => 'pn2rhxoqwpvr5qcty3ra.png',
                         'calo' => 1970,
@@ -289,7 +271,6 @@ class FoodSeeder extends Seeder
                     array (
                         'id' => 19,
                         'name' => 'Braised fish',
-                        'category_id' => 3,
                         'price' => 1.3,
                         'image' => 'dxtun4oq04v8yferh79v.png',
                         'calo' => 2120,
@@ -304,7 +285,6 @@ class FoodSeeder extends Seeder
                     array (
                         'id' => 20,
                         'name' => 'Sesame',
-                        'category_id' => 2,
                         'price' => 2.1,
                         'image' => 'n6sp7zqzw0bzbt2lm7re.jpg',
                         'calo' => 1800,
@@ -319,7 +299,6 @@ class FoodSeeder extends Seeder
                     array (
                         'id' => 21,
                         'name' => 'Brown rice',
-                        'category_id' => 1,
                         'price' => 1.5,
                         'image' => 'uavculttzzphghklrms0.jpg',
                         'calo' => 2480,
@@ -334,7 +313,6 @@ class FoodSeeder extends Seeder
                     array (
                         'id' => 22,
                         'name' => 'Boiled cauliflower',
-                        'category_id' => 4,
                         'price' => 2.5,
                         'image' => 'o9cnpgeykz83sngs1s1d.jpg',
                         'calo' => 2120,
@@ -349,7 +327,6 @@ class FoodSeeder extends Seeder
                     array (
                         'id' => 23,
                         'name' => 'omelet',
-                        'category_id' => 3,
                         'price' => 0.5,
                         'image' => 'yddhagtnxwe0olyajvwh.jpg',
                         'calo' => 2070,
@@ -364,7 +341,6 @@ class FoodSeeder extends Seeder
                     array (
                         'id' => 24,
                         'name' => 'groundnut',
-                        'category_id' => 2,
                         'price' => 1.1,
                         'image' => 'lspwxz7cchuv18dfahfu.jpg',
                         'calo' => 1580,
@@ -379,7 +355,6 @@ class FoodSeeder extends Seeder
                     array (
                         'id' => 25,
                         'name' => 'Boiled carrots',
-                        'category_id' => 3,
                         'price' => 0.8,
                         'image' => 'qco0zewd4gld5iqgpxlj.jpg',
                         'calo' => 2780,
@@ -394,7 +369,6 @@ class FoodSeeder extends Seeder
                     array (
                         'id' => 26,
                         'name' => 'boiled chicken',
-                        'category_id' => 3,
                         'price' => 2.5,
                         'image' => 'twklrpvjof78m8lkabxd.jpg',
                         'calo' => 2270,
@@ -409,7 +383,6 @@ class FoodSeeder extends Seeder
                     array (
                         'id' => 27,
                         'name' => 'Fried sausage',
-                        'category_id' => 3,
                         'price' => 1.3,
                         'image' => 'yjxsuydaipsqudgyosoy.jpg',
                         'calo' => 2240,
@@ -424,7 +397,6 @@ class FoodSeeder extends Seeder
                     array (
                         'id' => 28,
                         'name' => 'roasted meat with pan',
-                        'category_id' => 3,
                         'price' => 2.1,
                         'image' => 'xscc0ekoqrgez8fq5zmb.jpg',
                         'calo' => 2330,
@@ -439,7 +411,6 @@ class FoodSeeder extends Seeder
                     array (
                         'id' => 29,
                         'name' => 'fish fry',
-                        'category_id' => 3,
                         'price' => 2.1,
                         'image' => 'bbd199qwfhnke5faorsu.jpg',
                         'calo' => 2520,
@@ -454,7 +425,6 @@ class FoodSeeder extends Seeder
                     array (
                         'id' => 30,
                         'name' => 'fried meat',
-                        'category_id' => 3,
                         'price' => 1.1,
                         'image' => 'mfqikojoqeiprxnbeyrp.jpg',
                         'calo' => 2760,
@@ -469,7 +439,6 @@ class FoodSeeder extends Seeder
                     array (
                         'id' => 31,
                         'name' => 'kimchi',
-                        'category_id' => 4,
                         'price' => 3,
                         'image' => 'uvkegromok7dfcv5wd6u.jpg',
                         'calo' => 2070,

@@ -120,7 +120,7 @@ export default class FoodTable extends Component {
             results: pagination.pageSize,
             page: pagination.current,
             sortField: sorter.field,
-            sortOrder: sorter.order,
+            sortOrder:  sorter.order ? sorter.order.replace('end','') : sorter.order,
             ...filters,
         });
     };
@@ -143,6 +143,7 @@ export default class FoodTable extends Component {
             }
         }).then(res => {
             const data = res.data;
+            console.log(data);
             const pagination = {...this.state.pagination};
             // Read total count from server
             pagination.total = data.totalCount;
@@ -191,8 +192,8 @@ export default class FoodTable extends Component {
         },
         {
             title: 'Category',
-            dataIndex: 'category_id',
-            render: (category_id, record) => `${record.category.name || null}`,
+            dataIndex: 'categories',
+            render: categories => categories.map(category => (<div key={category.id}>-{category.name}</div>)),
             filters: [
                 {text: 'Vegetables', value: 1},
                 {text: 'Desserts', value: 2},
@@ -233,8 +234,8 @@ export default class FoodTable extends Component {
                     sorter: true
                 },
                 {
-                    title: 'Fat',
-                    dataIndex: 'fat',
+                    title: 'Total fat',
+                    dataIndex: 'total_fat',
                     sorter: true
                 },
                 {
@@ -261,7 +262,6 @@ export default class FoodTable extends Component {
         },
 
     ];
-
 
     render() {
         const { selectedRowKeys, data } = this.state;
@@ -297,7 +297,7 @@ export default class FoodTable extends Component {
                         <small style={{position: "absolute", top: 34}}>Total
                             select {this.state.selectedRowKeys.length} items</small>
                         <Select
-                            placeholder={'Select action.'}
+                            placeholder="Select action"
                             disabled={this.state.selectedRowKeys.length <= 0}
                             style={{width: 120}}
                             onChange={this.handleChangeAction}

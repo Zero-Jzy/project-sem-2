@@ -1,5 +1,6 @@
 <?php
 
+use App\FoodCategory;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -18,10 +19,10 @@ class DatabaseSeeder extends Seeder
             ProfileSeeder::class,
             AdminSeeder::class,
 //            AddressSeeder::class,
-            FoodCategorySeeder::class,
-            SetCategorySeeder::class,
             FoodSeeder::class,
-
+            FoodCategorySeeder::class,
+            CategoryFoodSeeder::class,
+            CategorySetSeeder::class,
             SetSeeder::class,
             FoodSetSeeder::class
         ]);

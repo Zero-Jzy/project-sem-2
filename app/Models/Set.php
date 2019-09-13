@@ -18,9 +18,7 @@ class Set extends Model
             ->withPivot('quantity');
     }
 
-    public function set_category(){
-        return $this->belongstoMany(SetCategory::class);
+    public function category(){
+        return $this->belongsTo(SetCategory::class);
     }
-
-
 }

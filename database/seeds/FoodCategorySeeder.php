@@ -31,9 +31,6 @@ class FoodCategorySeeder extends Seeder
 
             ['id' => 8, 'name' => 'Drinks', 'description' => 'description8']
 
-
-
         ]);
-
     }
 }

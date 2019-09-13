@@ -63,7 +63,7 @@ export default class UploadImage extends React.Component {
             <div className="clearfix">
                 {
                     this.props.getFieldDecorator('image', {
-                        rules: [{ required: true, message: 'Please input images!' }]
+                        rules: [{ required: true, message: 'Please input image!' }]
                     })(
                         <Upload
                             name='image'
