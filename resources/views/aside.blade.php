@@ -192,7 +192,7 @@
                 });
                 break;
             case decrement:
-                if (!foodsInBag.has(id) || currentQuantity < 0) break;
+                if (!foodsInBag.has(id) || currentQuantity <= 0) break;
 
                 if (currentQuantity === 1) {
                     foodsInBag.delete(id)
@@ -264,7 +264,7 @@
         $('.bag-icon').attr('data-food', countFood);
         $('#food-count').html(countFood);
         let listFoodsHtml = foods.map(food => (
-            `<div class="blo3 flex-w flex-col-l-sm m-b-30">
+            `<div class="blo3 flex-w flex-col-l-sm m-b-30138">
                     <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
                         <a href="#"><img src="https://res.cloudinary.com/cloud-pj-sem2/image/upload/w_300,h_300,c_lpad,b_auto/${food.image}" alt="${food.name}"></a>
                     </div>
@@ -274,7 +274,7 @@
                         </a>
                         <div>
                             <div class="quantity">
-                                 <input onchange="updateQuantityFood(${food.id}, withValue, ${food.quantity})" type="number" min="1" step="1" data-id="${food.id}" value="${food.quantity}">
+                                 <input onchange="updateQuantityFood(${food.id}, withValue, this.value)" type="number" min="1" step="1" data-id="${food.id}" value="${food.quantity}">
                                  <div class="quantity-nav">
                                      <div onclick="updateQuantityFood(${food.id}, increment)" class="quantity-button quantity-up">+</div>
                                      <div onclick="updateQuantityFood(${food.id}, decrement)" class="quantity-button quantity-down">-</div>

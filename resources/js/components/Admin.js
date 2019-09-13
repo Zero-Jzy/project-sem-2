@@ -8,6 +8,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import PrivateRoute from "./components/common/PrivateRoute";
 import UserTable from './components/table/UserTable'
 import FoodTable from './components/table/FoodTable';
+import SetTable from "./components/table/SetTable";
 import TestTable from './components/table/TestTable';
 import UserDetail from './components/UserDetail';
 import FormTest from './components/FormTest'
@@ -46,6 +47,7 @@ export default class Admin extends React.Component {
                             <MasterLayout>
                                 <PrivateRoute exact path="/ad" component={Dashboard}/>
                                 <PrivateRoute exact path="/ad/food" component={FoodTable}/>
+                                <PrivateRoute exact path="/ad/set" component={SetTable}/>
                                 <PrivateRoute exact path="/ad/user" component={UserTable}/>
                                 <PrivateRoute exact path="/ad/test" component={TestTable}/>
                                 <PrivateRoute exact path="/ad/form" component={FormTest}/>

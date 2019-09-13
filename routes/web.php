@@ -35,7 +35,6 @@ Route::resource('menu/set', 'SetController');
 
 Route::resource('profile', 'ProfileController');
 
-
 Route::get('/about-us', function (){
     return view('about-us');
 })->name('about-us');

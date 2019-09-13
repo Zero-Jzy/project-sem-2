@@ -16,8 +16,6 @@ class CreateFoodsTable extends Migration
         Schema::create('foods', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->bigInteger('category_id')->unsigned();
-            $table->foreign('category_id')->references('id')->on('food_categories');
             $table->decimal('price');
             $table->string('image');
             $table->float('calo');

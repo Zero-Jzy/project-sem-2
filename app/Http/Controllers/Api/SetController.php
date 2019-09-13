@@ -7,7 +7,9 @@ use App\Set;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Log;
+use JD\Cloudder\Facades\Cloudder;
 
 class SetController extends Controller
 {
@@ -23,7 +25,35 @@ class SetController extends Controller
      */
     public function index()
     {
-        //
+        $data = Input::all();
+
+        $results = $data['results'] ?? 10;
+        $nameSearch = $data['name'] ?? false;
+        $sortField = $data['sortField'] ?? false;
+        $sortOrder = $data['sortOrder'] ?? false;
+        $page = ($data['page'] ?? 1) - 1;
+
+        $sets = Set::with(['category','foods']);
+
+        $res['totalCount'] = $sets->count();
+
+        if ($nameSearch) {
+            $sets->where('name', 'like', '%' . $nameSearch[0] . '%');
+        }
+
+        if ($sortField) {
+            $sets->orderBy($sortField, $sortOrder);
+        }
+
+        $res['keys'] = $sets->get()->map(function ($values) {
+            return $values->id;
+        });
+
+        $sets->skip($page * $results)->take($results);
+
+        $res['sets'] = $sets->get();
+
+        return response($res);
     }
 
     /**
@@ -44,6 +74,28 @@ class SetController extends Controller
      */
     public function store(Request $request)
     {
+        $foods =  $request->get('foods');
+
+        $set = Set::create([
+            'name' =>  $request->get('name'),
+            'type' => 1,
+            'category_id' => (int)$request->get('category_id')
+        ]);
+
+        foreach ($foods as $food){
+            $set->foods()->attach($food['id'], ['quantity' => $food['quantity']]);
+        }
+
+        $image = $request['image']['file']['thumbUrl'];
+        Cloudder::upload($image, null);
+        $result = Cloudder::getResult();
+        $image_id = $result['public_id'] . '.' . $result['format'];
+        $set->image = $image_id;
+
+
+        $set->save();
+//
+        return $set->toJson();
     }
 
     /**
