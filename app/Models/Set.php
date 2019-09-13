@@ -20,7 +20,5 @@ class Set extends Model
 
     public function set_category(){
         return $this->belongstoMany(SetCategory::class);
-    }
-
-
+    }git
 }
