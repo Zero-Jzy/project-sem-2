@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\OrderShipped;
 use App\Order;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -17,7 +18,8 @@ class OrderController extends Controller
      */
     public function index()
     {
-        return 'hih';
+//        Mail::to(Auth::user()->email)->send(new OrderShipped());
+//        return view('checkout');
     }
 
     /**
@@ -53,8 +55,8 @@ class OrderController extends Controller
 
         $order->save();
 
-
-//        Mail::send('send-emaik', array('email' => 'boydola.nvs@gmail.com', 'content'=>'Order thanh cong'), function($message){
+//        Mail::send('send-email', array('email' => 'boydola.nvs@gmail.com', 'content'=>'Order thanh cong'), function($message){
+//            dd(11111);
 //            $message->to('sonnvth1807031@fpt.edu.vn')->subject('xax thuc don hang');
 //        });
 

@@ -22,17 +22,26 @@
                         </button>
                     </div>
                 @endforeach
+                <div class="add-new-address">
+                    <button id="btn-add-address" style="border: black solid 1px">
+                        them dia chi
+                    </button>
+                </div>
             </div>
             <div id="cart-body">
             </div>
             <div>
-                <button type="submit" style="border: black solid 1px">thanh toan khi nhan hang</button>
-                <button type="submit" style="border: black solid 1px">thanh toan vnpay</button>
+                <input type="radio">thanh toan khi nhan hang</input>
+                <input type="radio">thanh toan vnpay</input>
                 <button class="add" type="submit" style="border: black solid 1px">Checkout</button>
             </div>
         </div>
         <script>
             $(document).ready(function () {
+                const add_address = $('#btn-add-address');
+                add_address.click(function () {
+                    window.location.href = '/profile'
+                });
                 var gg = localStorage.getItem('sets_in_bag');
                 var son = Array.from(new Map(JSON.parse(gg)).values());
                 var htmlContent = '';
