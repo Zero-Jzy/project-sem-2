@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Food;
+use App\FoodCategory;
 use Illuminate\Http\Request;
 
 class FoodController extends Controller
@@ -16,9 +17,13 @@ class FoodController extends Controller
     {
         $foods = Food::all();
 
+        $categories = FoodCategory::take(6)->get();
+
         $data = [
-            'foods' => $foods
+            'foods' => $foods,
+            'categories' => $categories
         ];
+
         return view('foods', $data);
     }
 
