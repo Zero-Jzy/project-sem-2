@@ -64,28 +64,28 @@
                 <div class="total-content total-food">
                     <div class="row ml-0">
                         <div class="col-6">
-                            <span id="calo">0</span>
+                            <span class="calo">0</span>
                         </div>
                         <div class="col-6">
-                            <span id="protein">0</span>
+                            <span class="protein">0</span>
                         </div>
                         <div class="col-6">
-                            <span id="dietary_fiber">0</span>
+                            <span class="dietary_fiber">0</span>
                         </div>
                         <div class="col-6">
-                            <span id="carbohydrate">0</span>
+                            <span class="carbohydrate">0</span>
                         </div>
                         <div class="col-6">
-                            <span id="total_fat">0</span>
+                            <span class="total_fat">0</span>
                         </div>
                         <div class="col-6">
-                            <span id="price">0</span>
+                            <span class="price">0</span>
                         </div>
                         <div class="col-12">
-                            <span id="vitamins"></span>
+                            <span class="vitamins"></span>
                         </div>
                         <div class="col-12">
-                            <span id="minerals"></span>
+                            <span class="minerals"></span>
                         </div>
                     </div>
 
@@ -107,28 +107,28 @@
                 <div class="total-content total-set">
                     <div class="row ml-0">
                         <div class="col-6">
-                            <span id="calo">0</span>
+                            <span class="calo">23</span>
                         </div>
                         <div class="col-6">
-                            <span id="protein">0</span>
+                            <span class="protein">234</span>
                         </div>
                         <div class="col-6">
-                            <span id="dietary_fiber">0</span>
+                            <span class="dietary_fiber">234</span>
                         </div>
                         <div class="col-6">
-                            <span id="carbohydrate">0</span>
+                            <span class="carbohydrate">234</span>
                         </div>
                         <div class="col-6">
-                            <span id="total_fat">0</span>
+                            <span class="total_fat">234</span>
                         </div>
                         <div class="col-6">
-                            <span id="price">0</span>
+                            <span class="price">0</span>
                         </div>
                         <div class="col-12">
-                            <span id="vitamins"></span>
+                            <span class="vitamins"></span>
                         </div>
                         <div class="col-12">
-                            <span id="minerals"></span>
+                            <span class="minerals"></span>
                         </div>
                     </div>
 
@@ -210,6 +210,7 @@
             default:
                 break;
         }
+
         localStorage.foods_in_bag = JSON.stringify(Array.from(foodsInBag.entries()));
         renderFoodInBag();
     }
@@ -328,12 +329,12 @@
 
     function renderTotal(nameClass, arr) {
         let totalSetBox = $(`.${nameClass}`),
-            calo = totalSetBox.find('#calo'),
-            protein = totalSetBox.find('#protein'),
-            dietary_fiber = totalSetBox.find('#dietary_fiber'),
-            carbohydrate = totalSetBox.find('#carbohydrate'),
-            total_fat = totalSetBox.find('#total_fat'),
-            price = totalSetBox.find('#price');
+            calo = totalSetBox.find('.calo'),
+            protein = totalSetBox.find('.protein'),
+            dietary_fiber = totalSetBox.find('.dietary_fiber'),
+            carbohydrate = totalSetBox.find('.carbohydrate'),
+            total_fat = totalSetBox.find('.total_fat'),
+            price = totalSetBox.find('.price');
 
         var totalValue = getTotalValue(arr);
 
