@@ -37,6 +37,11 @@
     <link rel="stylesheet" type="text/css" href="{{asset('/css/checkout.css')}}">
     <script type="text/javascript" src="{{asset('/template/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
 
+    <link href="https://sandbox.vnpayment.vn/paymentv2/lib/vnpay/vnpay.css" rel="stylesheet"/>
+    <link href="{{asset('/css/jumbotron-narrow.css')}}" rel="stylesheet"/>
+    <script src="https://sandbox.vnpayment.vn/paymentv2/lib/vnpay/vnpay.js"></script>
+
+
 </head>
 <body class="animsition">
 <header>
@@ -63,7 +68,7 @@
                                 <a class="{{Request::is('/') ? 'active' : ''}}" href="{{route('home')}}">Home</a>
                             </li>
                             <li>
-                                <a class="{{Request::is('menu') ? 'active' : ''}}"
+                                <a class="{{Request::is(['menu/food','menu/set']) ? 'active' : ''}}"
                                    href="{{route('food.index')}}">Menu</a>
                             </li>
                             <li>

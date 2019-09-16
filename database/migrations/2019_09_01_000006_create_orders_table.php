@@ -19,9 +19,11 @@ class CreateOrdersTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->bigInteger('address_id');
             $table->foreign('address_id')->references('id')->on('addresses');
+            $table->decimal('amount');
+            $table->string('type');
             $table->longText('created_at')->default(\Carbon\Carbon::now()->valueOf());
             $table->longText('updated_at')->nullable();
-            $table->integer('status')->default(1);
+            $table->integer('status')->default(0);
         });
     }
 

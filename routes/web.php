@@ -12,6 +12,8 @@
 */
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 
 Auth::routes();
@@ -50,6 +52,16 @@ Route::get('/about-us', function (){
 Route::get('/contact', function (){
     return view('contact');
 })->name('contact');
+
+Route::get('/checkout_success', function (){
+    $type = Input::get('payment_success');
+    $mes = 'Checkout successful!';
+    if($type) $mes = 'Transaction successful!';
+
+    return view('checkout_success',['mes'=> $mes]);
+});
+
+
 
 //Route::get('/test', function (){
 //    $data = \App\Dish::find(2)->sets()->get();
