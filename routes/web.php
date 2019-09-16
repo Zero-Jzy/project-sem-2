@@ -20,6 +20,14 @@ Route::get('/', function (){
     return view('home');
 })->name('home');
 
+Route::get('/checkout', function (){
+    return view('checkout');
+})->name('checkout')->middleware('auth');
+
+Route::resource('/order', 'OrderController');
+
+//Route::get('/checkout-shipping',  )
+
 Route::get('/ad', function (){
     return view('admin');
 });
@@ -34,7 +42,6 @@ Route::resource('menu/food', 'FoodController');
 Route::resource('menu/set', 'SetController');
 
 Route::resource('profile', 'ProfileController');
-
 
 Route::get('/about-us', function (){
     return view('about-us');

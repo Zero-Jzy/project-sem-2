@@ -34,6 +34,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('/fontawesome/css/all.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('/css/custom.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('/css/menu.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('/css/checkout.css')}}">
     <script type="text/javascript" src="{{asset('/template/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
 
 </head>

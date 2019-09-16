@@ -19,7 +19,7 @@ class CreateSetModal extends Component {
                     footer={null}
                     closable={false}
                 >
-                    <CreateSetForm handleCancel={this.props.handleCancel} onSubmit={this.handleOk} />
+                    <CreateSetForm recordSelected={this.props.recordSelected} handleCancel={this.props.handleCancel} onSubmit={this.handleOk} />
                 </Modal>
             </div>
         );

@@ -26,11 +26,31 @@ class FoodController extends Controller
     {
 //        $foods = Food::join('food_categories', 'foods.category_id', '=', 'foods.id')->get();
         $data = Input::all();
-        $foods = Food::with('category');
-        $results = $data['results'] ?? false;
+
+        $results = $data['results'] ?? 10;
+        $nameSearch = $data['name'] ?? false;
+        $sortField = $data['sortField'] ?? false;
+        $sortOrder = $data['sortOrder'] ?? false;
+        $category_id = $data['categories'] ?? false;
         $page = ($data['page'] ?? 1) - 1;
 
+        $foods = Food::with('categories');
+
         $res['totalCount'] = $foods->count();
+
+        if ($nameSearch) {
+            $foods->where('name', 'like', '%' . $nameSearch[0] . '%');
+        }
+
+        if ($sortField) {
+            $foods->orderBy($sortField, $sortOrder);
+        }
+
+        if ($category_id) {
+            $foods->whereHas('categories', function($q) use ($category_id) {
+               return $q->whereIn('id', $category_id);
+            });
+        }
 
         $res['keys'] = $foods->get()->map(function ($values) {
             return $values->id;

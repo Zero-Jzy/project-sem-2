@@ -15,10 +15,10 @@ class Food extends Model
         )->withPivot('quantity');
     }
 
-    function category(){
+    function categories(){
         return $this->belongstoMany(
             FoodCategory::class,
-            'food_category',
+            'category_food',
             'food_id',
             'category_id'
         );
