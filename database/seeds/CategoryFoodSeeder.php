@@ -94,6 +94,12 @@ class CategoryFoodSeeder extends Seeder
             ['food_id' => 30, 'category_id' => 6],
             ['food_id' => 31, 'category_id' => 1],
             ['food_id' => 31, 'category_id' => 3],
+            ['food_id' => 32, 'category_id' => 8],
+            ['food_id' => 33, 'category_id' => 8],
+            ['food_id' => 34, 'category_id' => 8],
+            ['food_id' => 35, 'category_id' => 8],
+            ['food_id' => 36, 'category_id' => 8],
+            ['food_id' => 37, 'category_id' => 8],
 
 
 
