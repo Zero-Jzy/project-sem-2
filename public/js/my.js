@@ -282,6 +282,10 @@
         })
     });
 
+    $('#btn-login-google').click(function () {
+        window.location.href='/redirect'
+    });
+
     function renderErrors(errors){
         let errFields = Object.keys(errors);
         for (let field of errFields){
