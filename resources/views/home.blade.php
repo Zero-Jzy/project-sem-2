@@ -309,73 +309,73 @@
                             </div>
 
                             <!-- Block2 -->
-{{--                            <div class="blo2 flex-w flex-str flex-col-c-m-lg animated visible-false" data-appear="zoomIn">--}}
-{{--                                <!-- Pic block2 -->--}}
-{{--                                <a href="#" class="wrap-pic-blo2 bg1-blo2" style="background-image: url(https://www.grand-hotel-uriage.com/media/cache/jadro_resize/rc/t3vZi00r1563956452/jadroRoot/medias/5c237ef54140d/dg-4-avec-credit-photo-basse-def.jpg);">--}}
-{{--                                    <div class="time-event size10 txt6 effect1">--}}
-{{--										<span class="txt-effect1 flex-c-m t-center">--}}
-{{--											23 August 2019 - 23 September 2019--}}
-{{--										</span>--}}
-{{--                                    </div>--}}
-{{--                                </a>--}}
+                            <div class="blo2 flex-w flex-str flex-col-c-m-lg animated visible-false" data-appear="zoomIn">
+                                <!-- Pic block2 -->
+                                <a href="#" class="wrap-pic-blo2 bg1-blo2" style="background-image: url({{asset('/images/res29.jpg')}});">
+                                    <div class="time-event size10 txt6 effect1">
+										<span class="txt-effect1 flex-c-m t-center">
+											23 August 2019 - 23 September 2019
+										</span>
+                                    </div>
+                                </a>
 
-{{--                                <!-- Text block2 -->--}}
-{{--                                <div class="wrap-text-blo2 flex-col-c-m p-l-40 p-r-40 p-t-45 p-b-30">--}}
-{{--                                    <h4 class="tit7 t-center m-b-10">--}}
-{{--                                        Pato Restaurant's Birthday Month--}}
-{{--                                    </h4>--}}
+                                <!-- Text block2 -->
+                                <div class="wrap-text-blo2 flex-col-c-m p-l-40 p-r-40 p-t-45 p-b-30">
+                                    <h4 class="tit7 t-center m-b-10">
+                                        Pato Restaurant's Birthday Month
+                                    </h4>
 
-{{--                                    <p class="t-center">--}}
-{{--                                        On the occasion of Pato Restaurant's birthday, we jubilantly opened a series of events to reduce prices for each meal to thank our customers for the birthday of the restaurant.									</p>--}}
+                                    <p class="t-center">
+                                        On the occasion of Pato Restaurant's birthday, we jubilantly opened a series of events to reduce prices for each meal to thank our customers for the birthday of the restaurant.									</p>
 
-{{--                                    <div class="flex-sa-m flex-w w-full m-t-40">--}}
-{{--                                        <div class="size11 flex-col-c-m">--}}
-{{--											<span class="dis-block t-center txt7 m-b-2 days">--}}
-{{--												30--}}
-{{--											</span>--}}
+                                    <div class="flex-sa-m flex-w w-full m-t-40">
+                                        <div class="size11 flex-col-c-m">
+											<span class="dis-block t-center txt7 m-b-2 days">
+												30
+											</span>
 
-{{--                                            <span class="dis-block t-center txt8">--}}
-{{--												Days--}}
-{{--											</span>--}}
-{{--                                        </div>--}}
+                                            <span class="dis-block t-center txt8">
+												Days
+											</span>
+                                        </div>
 
-{{--                                        <div class="size11 flex-col-c-m">--}}
-{{--											<span class="dis-block t-center txt7 m-b-2 hours">--}}
-{{--												12--}}
-{{--											</span>--}}
+                                        <div class="size11 flex-col-c-m">
+											<span class="dis-block t-center txt7 m-b-2 hours">
+												12
+											</span>
 
-{{--                                            <span class="dis-block t-center txt8">--}}
-{{--												Hours--}}
-{{--											</span>--}}
-{{--                                        </div>--}}
+                                            <span class="dis-block t-center txt8">
+												Hours
+											</span>
+                                        </div>
 
-{{--                                        <div class="size11 flex-col-c-m">--}}
-{{--											<span class="dis-block t-center txt7 m-b-2 minutes">--}}
-{{--												59--}}
-{{--											</span>--}}
+                                        <div class="size11 flex-col-c-m">
+											<span class="dis-block t-center txt7 m-b-2 minutes">
+												59
+											</span>
 
-{{--                                            <span class="dis-block t-center txt8">--}}
-{{--												Minutes--}}
-{{--											</span>--}}
-{{--                                        </div>--}}
+                                            <span class="dis-block t-center txt8">
+												Minutes
+											</span>
+                                        </div>
 
-{{--                                        <div class="size11 flex-col-c-m">--}}
-{{--											<span class="dis-block t-center txt7 m-b-2 seconds">--}}
-{{--												56--}}
-{{--											</span>--}}
+                                        <div class="size11 flex-col-c-m">
+											<span class="dis-block t-center txt7 m-b-2 seconds">
+												56
+											</span>
 
-{{--                                            <span class="dis-block t-center txt8">--}}
-{{--												Seconds--}}
-{{--											</span>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
+                                            <span class="dis-block t-center txt8">
+												Seconds
+											</span>
+                                        </div>
+                                    </div>
 
-{{--                                    <a href="#" class="txt4 m-t-40">--}}
-{{--                                        View Details--}}
-{{--                                        <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>--}}
-{{--                                    </a>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
+                                    <a href="#" class="txt4 m-t-40">
+                                        View Details
+                                        <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -395,74 +395,74 @@
                             </div>
 
                             <!-- Block2 -->
-{{--                            <div class="blo2 flex-w flex-str flex-col-c-m-lg animated visible-false" data-appear="fadeInDown">--}}
-{{--                                <!-- Pic block2 -->--}}
-{{--                                <a href="#" class="wrap-pic-blo2 bg2-blo2" style="background-image: url(https://www.mediterraneosorrento.com/wp-content/uploads/2017/12/Vesuvio-Roof-Restaurant-17-840x560.jpg);">--}}
-{{--                                    <div class="time-event size10 txt6 effect1">--}}
-{{--										<span class="txt-effect1 flex-c-m">--}}
-{{--											23 August 2019 - 23 September 2019--}}
-{{--										</span>--}}
-{{--                                    </div>--}}
-{{--                                </a>--}}
+                            <div class="blo2 flex-w flex-str flex-col-c-m-lg animated visible-false" data-appear="fadeInDown">
+                                <!-- Pic block2 -->
+                                <a href="#" class="wrap-pic-blo2 bg2-blo2" style="background-image: url({{asset('/images/res30.jpg')}});">
+                                    <div class="time-event size10 txt6 effect1">
+										<span class="txt-effect1 flex-c-m">
+											23 August 2019 - 23 September 2019
+										</span>
+                                    </div>
+                                </a>
 
-{{--                                <!-- Text block2 -->--}}
-{{--                                <div class="wrap-text-blo2 flex-col-c-m p-l-40 p-r-40 p-t-45 p-b-30">--}}
-{{--                                    <h4 class="tit7 t-center m-b-10">--}}
-{{--                                        Pato Restaurant's Birthday Month--}}
-{{--                                    </h4>--}}
+                                <!-- Text block2 -->
+                                <div class="wrap-text-blo2 flex-col-c-m p-l-40 p-r-40 p-t-45 p-b-30">
+                                    <h4 class="tit7 t-center m-b-10">
+                                        Pato Restaurant's Birthday Month
+                                    </h4>
 
-{{--                                    <p class="t-center">--}}
-{{--                                        On the occasion of Pato Restaurant's birthday, we jubilantly opened a series of events to reduce prices for each meal to thank our customers for the birthday of the restaurant.									</p>--}}
-{{--                                    </p>--}}
+                                    <p class="t-center">
+                                        On the occasion of Pato Restaurant's birthday, we jubilantly opened a series of events to reduce prices for each meal to thank our customers for the birthday of the restaurant.									</p>
+                                    </p>
 
-{{--                                    <div class="flex-sa-m flex-w w-full m-t-40">--}}
-{{--                                        <div class="size11 flex-col-c-m">--}}
-{{--											<span class="dis-block t-center txt7 m-b-2 days">--}}
-{{--												30--}}
-{{--											</span>--}}
+                                    <div class="flex-sa-m flex-w w-full m-t-40">
+                                        <div class="size11 flex-col-c-m">
+											<span class="dis-block t-center txt7 m-b-2 days">
+												30
+											</span>
 
-{{--                                            <span class="dis-block t-center txt8">--}}
-{{--												Days--}}
-{{--											</span>--}}
-{{--                                        </div>--}}
+                                            <span class="dis-block t-center txt8">
+												Days
+											</span>
+                                        </div>
 
-{{--                                        <div class="size11 flex-col-c-m">--}}
-{{--											<span class="dis-block t-center txt7 m-b-2 hours">--}}
-{{--												12--}}
-{{--											</span>--}}
+                                        <div class="size11 flex-col-c-m">
+											<span class="dis-block t-center txt7 m-b-2 hours">
+												12
+											</span>
 
-{{--                                            <span class="dis-block t-center txt8">--}}
-{{--												Hours--}}
-{{--											</span>--}}
-{{--                                        </div>--}}
+                                            <span class="dis-block t-center txt8">
+												Hours
+											</span>
+                                        </div>
 
-{{--                                        <div class="size11 flex-col-c-m">--}}
-{{--											<span class="dis-block t-center txt7 m-b-2 minutes">--}}
-{{--												59--}}
-{{--											</span>--}}
+                                        <div class="size11 flex-col-c-m">
+											<span class="dis-block t-center txt7 m-b-2 minutes">
+												59
+											</span>
 
-{{--                                            <span class="dis-block t-center txt8">--}}
-{{--												Minutes--}}
-{{--											</span>--}}
-{{--                                        </div>--}}
+                                            <span class="dis-block t-center txt8">
+												Minutes
+											</span>
+                                        </div>
 
-{{--                                        <div class="size11 flex-col-c-m">--}}
-{{--											<span class="dis-block t-center txt7 m-b-2 seconds">--}}
-{{--												56--}}
-{{--											</span>--}}
+                                        <div class="size11 flex-col-c-m">
+											<span class="dis-block t-center txt7 m-b-2 seconds">
+												56
+											</span>
 
-{{--                                            <span class="dis-block t-center txt8">--}}
-{{--												Seconds--}}
-{{--											</span>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
+                                            <span class="dis-block t-center txt8">
+												Seconds
+											</span>
+                                        </div>
+                                    </div>
 
-{{--                                    <a href="#" class="txt4 m-t-40">--}}
-{{--                                        View Details--}}
-{{--                                        <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>--}}
-{{--                                    </a>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
+                                    <a href="#" class="txt4 m-t-40">
+                                        View Details
+                                        <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
