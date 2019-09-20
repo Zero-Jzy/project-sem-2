@@ -3,7 +3,32 @@
 *{
 padding:0;
 }
-
+.py-2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.1;
+    -webkit-line-clamp: 2;
+    height: 44px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.info {
+    padding: 10px;
+    transition: 0.4s ease;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+}
+.food-card {
+    position: relative;
+}
+.food-card:hover .info {
+    opacity: 1;
+}
 img {
     max-width: 100%;
     height: auto;
