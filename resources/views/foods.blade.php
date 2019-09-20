@@ -33,9 +33,9 @@
             <div class="kc_wrapper ui-tabs kc_clearfix">
                 <ul class="kc_tabs_nav ui-tabs-nav kc_clearfix d-flex justify-content-between py-5 px-3">
                     @foreach($categories as $category)
-{{--                        <li class="ui-tabs-active"--}}
-{{--                            style="background: url('https://www.pizzaexpress.vn/wp-content/themes/dinhcode/img/icon_pizza_active.png')center top 10px no-repeat;height: 100px;">--}}
-{{--                            <a href="#pizza" data-prevent="scroll">{{$category->name}}</a>--}}
+                        <li class="ui-tabs-active"
+                            style="background: url('https://www.pizzaexpress.vn/wp-content/themes/dinhcode/img/icon_pizza_active.png')center top 10px no-repeat;height: 100px;">
+                            <a href="#pizza" data-prevent="scroll">{{$category->name}}</a>
                         </li>
                     @endforeach
                 </ul>
