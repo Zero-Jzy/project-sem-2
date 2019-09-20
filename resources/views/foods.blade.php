@@ -52,48 +52,6 @@
                                                 <div class="food-card-content">
                                                     <img
                                                         src="https://res.cloudinary.com/cloud-pj-sem2/image/upload/w_300,h_300,c_lpad,b_auto/{{$food->image}}"/>
-                                                    <div class="info">
-                                                        <div class="row amount-of-nutrition">
-                                                            <div class="col-sm-6 offset-3" style="margin-left: 25%">
-                                                                <span>Calo</span>
-                                                                <div class="low">
-                                                                    <span>{{$food->calo}}</span><small>&nbsp;(g)</small>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-6">
-                                                                <span>Protein</span>
-                                                                <div class="normal">
-                                                                    <span>{{$food->protein}}</span><small>&nbsp;(g)</small>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-6">
-                                                                <span>Dietary fiber</span>
-                                                                <div class="very-high">
-                                                                    <span>{{$food->dietary_fiber}}</span><small>&nbsp;(g)</small>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-6">
-                                                                <span>Carbohydrate</span>
-                                                                <div class="high">
-                                                                    <span>{{$food->carbohydrate}}</span><small>&nbsp;(g)</small>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-6">
-                                                                <span>Total fat</span>
-                                                                <div class="very-low">
-                                                                    <span>{{$food->total_fat}}</span><small>&nbsp;(g)</small>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row mt-3">
-                                                            <div class="col-sm-12">
-                                                                <span>Vitamins: {{$food->vitamins}}</span>
-                                                            </div>
-                                                            <div class="col-sm-12">
-                                                                <span>Minerals: {{$food->minerals}} </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
                                                 </div>
                                                 <div class="food-card-footer">
                                                     <h6 class="py-2">{{$food->name}}</h6>
@@ -104,6 +62,48 @@
                                                         </a>
                                                     </div>
 
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row amount-of-nutrition">
+                                                        <div class="col-sm-12" style="">
+                                                            <span>Calo</span>
+                                                            <div class="low">
+                                                                <span>{{$food->calo}}</span><small>&nbsp;(g)</small>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12">
+                                                            <span>Protein</span>
+                                                            <div class="normal">
+                                                                <span>{{$food->protein}}</span><small>&nbsp;(g)</small>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12">
+                                                            <span>Dietary fiber</span>
+                                                            <div class="very-high">
+                                                                <span>{{$food->dietary_fiber}}</span><small>&nbsp;(g)</small>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12">
+                                                            <span>Carbohydrate</span>
+                                                            <div class="high">
+                                                                <span>{{$food->carbohydrate}}</span><small>&nbsp;(g)</small>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12">
+                                                            <span>Total fat</span>
+                                                            <div class="very-low">
+                                                                <span>{{$food->total_fat}}</span><small>&nbsp;(g)</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-sm-12">
+                                                            <span>Vitamins: {{$food->vitamins}}</span>
+                                                        </div>
+                                                        <div class="col-sm-12">
+                                                            <span>Minerals: {{$food->minerals}} </span>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
