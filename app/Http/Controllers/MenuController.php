@@ -56,7 +56,7 @@ class MenuController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('view');
     }
 
     /**

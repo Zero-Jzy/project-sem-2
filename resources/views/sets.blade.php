@@ -59,46 +59,58 @@
                                                     <img
                                                         src="https://res.cloudinary.com/cloud-pj-sem2/image/upload/w_300,h_300,c_lpad,b_auto/{{$set->image}}"/>
                                                     <div class="info">
+
+
+
+
+
+
+
+
 {{--                                                        <div class="row amount-of-nutrition">--}}
 {{--                                                            <div class="col-sm-6 offset-3" style="margin-left: 25%">--}}
 {{--                                                                <span>Calo</span>--}}
 {{--                                                                <div class="low">--}}
-{{--                                                                    <span>{{$food->calo}}</span><small>&nbsp;(g)</small>--}}
+{{--                                                                    <span>{{$set->calo}}</span><small>&nbsp;(g)</small>--}}
 {{--                                                                </div>--}}
 {{--                                                            </div>--}}
 {{--                                                            <div class="col-sm-6">--}}
 {{--                                                                <span>Protein</span>--}}
 {{--                                                                <div class="normal">--}}
-{{--                                                                    <span>{{$food->protein}}</span><small>&nbsp;(g)</small>--}}
+{{--                                                                    <span>{{$set->protein}}</span><small>&nbsp;(g)</small>--}}
 {{--                                                                </div>--}}
 {{--                                                            </div>--}}
 {{--                                                            <div class="col-sm-6">--}}
 {{--                                                                <span>Dietary fiber</span>--}}
 {{--                                                                <div class="very-high">--}}
-{{--                                                                    <span>{{$food->dietary_fiber}}</span><small>&nbsp;(g)</small>--}}
+{{--                                                                    <span>{{$set->dietary_fiber}}</span><small>&nbsp;(g)</small>--}}
 {{--                                                                </div>--}}
 {{--                                                            </div>--}}
 {{--                                                            <div class="col-sm-6">--}}
 {{--                                                                <span>Carbohydrate</span>--}}
 {{--                                                                <div class="high">--}}
-{{--                                                                    <span>{{$food->carbohydrate}}</span><small>&nbsp;(g)</small>--}}
+{{--                                                                    <span>{{$set->carbohydrate}}</span><small>&nbsp;(g)</small>--}}
 {{--                                                                </div>--}}
 {{--                                                            </div>--}}
 {{--                                                            <div class="col-sm-6">--}}
 {{--                                                                <span>Total fat</span>--}}
 {{--                                                                <div class="very-low">--}}
-{{--                                                                    <span>{{$food->total_fat}}</span><small>&nbsp;(g)</small>--}}
+{{--                                                                    <span>{{$set->total_fat}}</span><small>&nbsp;(g)</small>--}}
 {{--                                                                </div>--}}
 {{--                                                            </div>--}}
 {{--                                                        </div>--}}
 {{--                                                        <div class="row mt-3">--}}
 {{--                                                            <div class="col-sm-12">--}}
-{{--                                                                <span>Vitamins: {{$food->vitamins}}</span>--}}
+{{--                                                                <span>Vitamins: {{$set->vitamins}}</span>--}}
 {{--                                                            </div>--}}
 {{--                                                            <div class="col-sm-12">--}}
-{{--                                                                <span>Minerals: {{$food->minerals}} </span>--}}
+{{--                                                                <span>Minerals: {{$set->minerals}} </span>--}}
 {{--                                                            </div>--}}
 {{--                                                        </div>--}}
+
+
+
+
                                                     </div>
                                                 </div>
                                                 <div class="food-card-footer">

@@ -19,7 +19,7 @@ class OrderController extends Controller
     public function index()
     {
 //        Mail::to(Auth::user()->email)->send(new OrderShipped());
-//        return view('checkout');
+//        return view.blade.php('checkout');
     }
 
     /**

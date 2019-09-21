@@ -520,7 +520,7 @@ xsigin/signup popup
     background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-close.svg") no-repeat center center;
     text-indent: 100%;
     white-space: nowrap;
-    overflow: hidden;
+
 }
 @media only screen and (min-width: 1170px) {
     .cd-close-form {
@@ -800,3 +800,103 @@ input[type=number]
     position: absolute;
     bottom: 10px;
 }
+/*css detail-set*/
+.slide-thumbnail{
+    margin-top: 100px;
+}
+.newarrival{
+    background: green;
+    width: 50px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+.col-md-7 h2{
+    color: #555;
+}
+.stars{
+    height: 15px;
+}
+.price{
+    color: #FE980F;
+    font-size: 26px;
+    font-weight: bold;
+    padding-top: 2px;
+}
+input{
+    border:1px solid #ccc;
+    font-weight: bold;
+    height: 33px;
+    text-align: center;
+    width: 30px;
+}
+
+.cart{
+    background: #FE980F;
+    color: #FFFFFF;
+    font-size: 15px;
+    margin-left: 20px;
+    padding:6px;
+}
+
+.nna-quantity input {
+    width: 62px;
+    height: 30px;
+    line-height: 1.65;
+    float: left;
+    display: block;
+    padding: 0;
+    margin: 0;
+    padding-left: 18px;
+    border: 1px solid #eee;
+}
+
+.nna-quantity input:focus {
+    outline: 0;
+}
+
+.nna-quantity-nav {
+    float: left;
+    position: relative;
+    height: 30px;
+}
+
+.nna-quantity-button {
+    position: relative;
+    cursor: pointer;
+    border-left: 1px solid #eee;
+    width: 20px;
+    text-align: center;
+    color: #333;
+    font-size: 13px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif !important;
+    line-height: 1.7;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    height: 50%;
+    line-height: 15px;
+}
+
+.nna-quantity-button.quantity-up {
+    position: absolute;
+    top: 0;
+    border-bottom: 1px solid #eee;
+}
+
+.nna-quantity-button.quantity-down {
+    position: absolute;
+    bottom: -1px;
+}
+/*carousel*/
+.nna-carousel{
+  /*margin-top:70px;*/
+  /*  margin-bottom: 70px;*/
+    margin: 70px;
+}
+
+
