@@ -2,36 +2,10 @@
 @section('content')
     <div class="container slide-thumbnail">
         <div class="row">
-            <div class="col-md-5">
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img
-                                src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2019/08/931/524/golden-retriever-istock.jpg?ve=1&tl=1"
-                                class="d-block w-100" alt="1">
-                        </div>
-                        <div class="carousel-item">
-                            <img
-                                src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2019/08/931/524/golden-retriever-istock.jpg?ve=1&tl=1"
-                                class="d-block w-100" alt="2">
-                        </div>
-                        <div class="carousel-item">
-                            <img
-                                src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2019/08/931/524/golden-retriever-istock.jpg?ve=1&tl=1"
-                                class="d-block w-100" alt="3">
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
+            <div class="col-md-6">
+                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2019/08/931/524/golden-retriever-istock.jpg?ve=1&tl=1" class="img-fluid" alt="Responsive image">
             </div>
-            <div class="col-md-7">
+            <div class="col-md-6">
                 <p class="newarrival text-center">NEW</p>
                 <h2>Healthy food</h2>
                 <p>Product Code:dgjsgj</p>
@@ -56,35 +30,50 @@
         </div>
     </div>
 
+<div class="nna-container">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card shadow" style="width: 20rem;">
+                <div class="inner">
+                    <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2019/08/931/524/golden-retriever-istock.jpg?ve=1&tl=1" class="card-img-top" alt="1">
+                </div>
 
-    <div class="nna-carousel">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2019/08/931/524/golden-retriever-istock.jpg?ve=1&tl=1" class="d-block w-100" alt="1">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2019/08/931/524/golden-retriever-istock.jpg?ve=1&tl=1" class="d-block w-100" alt="2">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2019/08/931/524/golden-retriever-istock.jpg?ve=1&tl=1" class="d-block w-100" alt="3">
+                <div class="card-body ">
+                    <h5 class="card-title">Design</h5>
+                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <a href="#" class="btn btn-success">Learn More...</a>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
+        <div class="col-md-4">
+            <div class="card shadow" style="width: 20rem;">
+                <div class="inner">
+                    <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2019/08/931/524/golden-retriever-istock.jpg?ve=1&tl=1" class="card-img-top" alt="2">
+                </div>
+
+                <div class="card-body ">
+                    <h5 class="card-title">Design</h5>
+                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <a href="#" class="btn btn-success">Learn More...</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow" style="width: 20rem;">
+                <div class="inner">
+                    <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2019/08/931/524/golden-retriever-istock.jpg?ve=1&tl=1" class="card-img-top" alt="3">
+                </div>
+
+                <div class="card-body ">
+                    <h5 class="card-title">Design</h5>
+                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <a href="#" class="btn btn-success">Learn More...</a>
+                </div>
+            </div>
+        </div>
+
     </div>
+</div>
 
 
 @endsection
