@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- Title Page -->
-<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url('https://media-cdn.tripadvisor.com/media/photo-w/17/cb/0d/9d/photo1jpg.jpg'); background-position: center">
+<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url({{asset('/images/about1.jpg')}}); background-position: center">
     <h2 class="tit6 t-center">
 
     </h2>
@@ -27,7 +27,7 @@
 
 
 <!-- Video -->
-<section class="" style="background-image: url(https://znews-photo.zadn.vn/w660/Uploaded/rotntt/2015_10_19/hemquan20.jpg);">
+<section class="" style="background-image: url({{asset('/images/about2.jpg')}});">
     <div class="content-video t-center p-t-225 p-b-250">
 			<!--<span class="tit2 p-l-15 p-r-15">
 
@@ -67,7 +67,7 @@
 
             <div class="col-md-6 p-b-30">
                 <div class="wrap-pic-delicious size2 bo-rad-10 hov-img-zoom m-l-r-auto">
-                    <img src="http://www.yeutretho.vn/files/2016/08/18/thuc-don-sieu-tiet-kiem-25-nghin-dongbua-cua-vo-chong-tre-gay-bao-mang-1.jpg" alt="IMG-OUR">
+                    <img src="{{asset('/images/about3.jpg')}}" alt="IMG-OUR">
                 </div>
             </div>
         </div>
@@ -77,7 +77,7 @@
         <div class="row p-t-170">
             <div class="col-md-6 p-b-30">
                 <div class="wrap-pic-romantic size2 bo-rad-10 hov-img-zoom m-l-r-auto">
-                    <img src="https://hoamaifood.com/wp-content/uploads/2019/06/thuc_don_hap_dan_giup_ban_ngon_hon.png" alt="IMG-OUR">
+                    <img src="{{asset('/images/about4.png')}}" alt="IMG-OUR">
                 </div>
             </div>
 
@@ -102,7 +102,7 @@
 
 
 <!-- Banner -->
-<div class="parallax0 parallax100" style="background-image: url(http://suatantuanh.com.vn/upload/files/baiviet/suat_an_5_1%5B1%5D.jpg);">
+<div class="parallax0 parallax100" style="background-image: url({{asset('/images/about5.jpg')}});">
     <div class="overlay0-parallax t-center size33"></div>
 </div>
 
@@ -123,7 +123,7 @@
                 <!-- -Block5 -->
                 <div class="blo5 pos-relative p-t-60">
                     <div class="pic-blo5 size14 bo4 wrap-cir-pic hov-img-zoom ab-c-t">
-                        <a href="#"><img src="https://nguoidothi.net.vn/Image/Y-2017-04/jack-lee1.jpg" alt="IGM-AVATAR"></a>
+                        <a href="#"><img src="{{asset('/images/chef1.jpg')}}" alt="IGM-AVATAR"></a>
                     </div>
 
                     <div class="text-blo5 size34 t-center bo-rad-10 bo7 p-t-90 p-l-35 p-r-35 p-b-30">
@@ -146,7 +146,7 @@
                 <!-- -Block5 -->
                 <div class="blo5 pos-relative p-t-60 ">
                     <div class="pic-blo5 size14 bo4 wrap-cir-pic hov-img-zoom ab-c-t">
-                        <a href="#"><img src="https://sthc.edu.vn/wp-content/uploads/2017/05/lop-bep-viet-nam.jpg" alt="IGM-AVATAR"></a>
+                        <a href="#"><img src="{{asset('/images/chef2.jpg')}}" alt="IGM-AVATAR"></a>
                     </div>
 
                     <div class="text-blo5 size34 t-center bo-rad-10 bo7 p-t-90 p-l-35 p-r-35 p-b-30">
@@ -169,7 +169,7 @@
                 <!-- -Block5 -->
                 <div class="blo5 pos-relative p-t-60">
                     <div class="pic-blo5 size14 bo4 wrap-cir-pic hov-img-zoom ab-c-t">
-                        <a href="#"><img src="https://icdn.dantri.com.vn/thumb_w/640/a96ec05089/2017/11/08/img20171108213857802-67793.jpg" alt="IGM-AVATAR"></a>
+                        <a href="#"><img src="{{asset('/images/chef3.jpg')}}" alt="IGM-AVATAR"></a>
                     </div>
 
                     <div class="text-blo5 size34 t-center bo-rad-10 bo7 p-t-90 p-l-35 p-r-35 p-b-30">
