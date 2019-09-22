@@ -541,6 +541,7 @@ xsigin/signup popup
 
 /*Start food-card css*/
 .food-card{
+    min-height: 330px;
     position: relative;
     background: white;
     margin-bottom: 20px;
@@ -549,7 +550,7 @@ xsigin/signup popup
 }
 
 .food-card .food-card-content{
-    position: relative;
+    /*position: relative;*/
 }
 
 .food-card .food-card-content img{
@@ -578,7 +579,8 @@ xsigin/signup popup
     padding: .5rem 1rem;
     /* justify-content: space-between; */
     /* display: flex; */
-    z-index: 2;
+    z-index: 1;
+    min-height: 100px;
 }
 
 .food-card-footer h5{
@@ -624,6 +626,7 @@ xsigin/signup popup
 
 .food-card .amount-of-nutrition > div > span{
     font-size: 14px;
+    font-weight: 600;
 }
 
 .food-card .amount-of-nutrition > div > div{
@@ -774,4 +777,26 @@ input[type=number]
 
 .btn-toggle-sidebar i{
     font-size: 24px;
+}
+
+/*css sửa tràn gd trang food'*/
+.nna-text-bold{
+    font-weight: 600;
+}
+
+.nna-font-size-14{
+    font-size: 14px;
+}
+
+.nna-text-white{
+    color: white;
+}
+
+.nna-text-gray{
+    color: #5c5c5c;
+}
+
+.nna-abs-bottom-10{
+    position: absolute;
+    bottom: 10px;
 }

@@ -17,8 +17,8 @@ class Set extends Model
         return $this->belongsToMany(Food::class, 'food_set','set_id','food_id')
             ->withPivot('quantity');
     }
-
     public function category(){
         return $this->belongsTo(SetCategory::class);
     }
+
 }
