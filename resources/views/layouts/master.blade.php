@@ -39,7 +39,11 @@
 
     <link href="https://sandbox.vnpayment.vn/paymentv2/lib/vnpay/vnpay.css" rel="stylesheet"/>
     <link href="{{asset('/css/jumbotron-narrow.css')}}" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="{{ asset('/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/owl.theme.default.min.css') }}">
     <script src="https://sandbox.vnpayment.vn/paymentv2/lib/vnpay/vnpay.js"></script>
+
 
 
 
@@ -490,5 +494,10 @@
 <script src="{{asset('/template/js/main.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 <script src="{{asset('/js/my.js')}}"></script>
+
+
+
+{{--<script src="{{ asset("js/jquery/dist/jquery.min.js") }}"></script>--}}
+
 </body>
 </html>
