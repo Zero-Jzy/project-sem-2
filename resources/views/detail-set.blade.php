@@ -12,11 +12,7 @@
             </div>
             <div class="col-md-6">
                 <p class="newarrival text-center">NEW</p>
-                <h3><b>Five flavored fried chicken</b></h3>
-
-                <img
-                    src="https://www.pinclipart.com/picdir/middle/230-2301560_rate-5-star-if-you-like-this-template.pnghttps://www.pinclipart.com/picdir/middle/230-2301560_rate-5-star-if-you-like-this-template.png"
-                    class="stars">
+                <h4><b>Five flavored fried chicken</b></h4>
                 <p class="price"> USD $15.00</p>
                 <b>Nutritional Ingredients</b>
                 <p><b>- Calo:</b> 234.5</p>
