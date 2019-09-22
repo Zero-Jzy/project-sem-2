@@ -11,6 +11,7 @@
     width: 16px
 }
 
+
 .scrollbar::-webkit-scrollbar-track {
     background-color: #fff
 }
@@ -914,7 +915,7 @@ margin: 8%;
 .inner:hover img{
     transform: scale(1.5);
 }
-/**/
+/*!*băng trượt phần dưới*/
 .owl-prev{
     left: -30px;
 }
