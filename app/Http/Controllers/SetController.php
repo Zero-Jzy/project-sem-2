@@ -52,9 +52,10 @@ class SetController extends Controller
         $totalValue = $request->get('totalValue');
 
         $set = Set::create([
-            'name' => Carbon::now()->valueOf(),
+            'name' =>'mon an default',
             'type' => 2,
-            'category_id' => 1
+            'category_id' => 1,
+            'image' => 'food_default_z6gsw3.png'
         ]);
 
         foreach ($listFood as $food) {
