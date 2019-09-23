@@ -279,7 +279,61 @@
             }else {
                 window.location.href = '/menu/food';
             }
-        })
+        });
+
+
+
+
+
+    });
+
+    const caloValues = [1800, 2000, 2400, 2800];
+    const proteinValues = [1, 1.2, 1.4, 1.8];
+    const totalFatValues = [30, 50, 83, 100];
+    const carbohydrateValues = [150, 225, 325, 350];
+    const dietaryFiberValues = [25, 32, 42, 60];
+    const levelValues = ['very-low', 'low', 'normal', 'high', 'very-high'];
+
+    const calo = 'calo';
+    const protein = 'protein';
+    const total_fat = 'total_fat';
+    const carbohydrate = 'carbohydrate';
+    const dietary_fiber = 'dietary_fiber';
+
+    function getLevel(value, type) {
+        switch (type) {
+            case calo:
+                return getTypeLevel(caloValues,value);
+            case protein:
+                return getTypeLevel(proteinValues,value);
+            case total_fat:
+                return getTypeLevel(totalFatValues,value);
+            case carbohydrate:
+                return getTypeLevel(carbohydrateValues,value);
+            case dietary_fiber:
+                return getTypeLevel(dietaryFiberValues,value);
+            default:
+                break;
+        }
+    }
+
+    function getTypeLevel(values, value) {
+        var index = 0;
+        if (value <= values[0]) index = 0;
+        if (value > values[values.length - 1]) index = values.length;
+        for (let i = 0; i < values.length - 1; i++) {
+            if (value > values[i] && value <= values[i + 1]) {
+                index = i + 1;
+            }
+        }
+        return levelValues[index];
+    }
+
+    $('.nutrition-index').each(function () {
+        let valueType = $(this).attr('data-type');
+        let value= $(this).attr('data-content');
+        let level = getLevel(value, valueType);
+        $(this).addClass(level);
     });
 
     function renderErrors(errors){

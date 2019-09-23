@@ -622,12 +622,12 @@ xsigin/signup popup
 }
 
 .food-card .amount-of-nutrition > div{
-    padding: .3rem .6em;
+    padding: 0 .6em;
 }
 
 .food-card .amount-of-nutrition > div > span{
-    font-size: 14px;
-    font-weight: 600;
+    font-size: .8em;
+    font-weight: 500;
 }
 
 .food-card .amount-of-nutrition > div > div{
@@ -781,12 +781,10 @@ input[type=number]
 }
 
 /*css sửa tràn gd trang food'*/
-.nna-text-bold{
-    font-weight: 600;
-}
 
 .nna-font-size-14{
-    font-size: 14px;
+    font-size: .8em;
+    font-weight: 600;
 }
 
 .nna-text-white{
@@ -935,3 +933,15 @@ margin: 8%;
 }
 
 
+.board-color{
+    position: fixed;
+    left: 0;
+    top: 55%;
+}
+.board-color > div{
+    text-align: center;
+    width: 100px;
+    padding: 5px;
+    font-weight: 500;
+    color: #2a2a2a;
+}
