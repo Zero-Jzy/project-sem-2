@@ -5,7 +5,7 @@
     <section class="section-slide">
         <div class="wrap-slick1">
             <div class="slick1">
-                <div class="item-slick1 item1-slick1" style="background-image: url(http://maichauhideaway.com/wp-content/uploads/2017/08/Restaurant-1-1.jpg);">
+                <div class="item-slick1 item1-slick1" style="background-image: url({{asset('/images/res11.jpg')}});">
                     <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
 							Welcome to
@@ -24,7 +24,7 @@
                     </div>
                 </div>
 
-                <div class="item-slick1 item2-slick1" style="background-image: url(http://3.bp.blogspot.com/-J1oJWyGafjA/Uwq-E_2W0dI/AAAAAAAAC3Q/A_jwJlK1SAc/s1600/Banyu+Mili+Resto.jpg);">
+                <div class="item-slick1 item2-slick1" style="background-image: url({{asset('/images/res12.jpg')}});">
                     <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="rollIn">
 							Welcome to
@@ -43,7 +43,7 @@
                     </div>
                 </div>
 
-                <div class="item-slick1 item3-slick1" style="background-image: url(http://www.centrale-beirut.com/wp-content/uploads/2017/02/2-1600x780.jpg);">
+                <div class="item-slick1 item3-slick1" style="background-image: url({{asset('/images/res13.jpg')}});">
                     <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="rotateInDownLeft">
 							Welcome to
@@ -93,7 +93,7 @@
 
                 <div class="col-md-6 p-b-30">
                     <div class="wrap-pic-welcome size2 bo-rad-10 hov-img-zoom m-l-r-auto">
-                        <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/10/02/12/kahani-interior-chelsea-restaurant.jpg?w968h681" alt="IMG-OUR">
+                        <img src="{{asset('/images/res14.jpg')}}" alt="IMG-OUR">
                     </div>
                 </div>
             </div>
@@ -102,7 +102,7 @@
 
     <!-- Intro -->
     <section class="section-intro">
-        <div class="header-intro parallax100 t-center p-t-135 p-b-158" style="background-image: url(https://d1vp8nomjxwyf1.cloudfront.net/wp-content/uploads/sites/156/2017/06/11144306/A4_restaurant-Le-Bivouac-1800x1200.jpg);">
+        <div class="header-intro parallax100 t-center p-t-135 p-b-158" style="background-image: url({{asset('/images/res15.jpg')}});">
 			<span class="tit2 p-l-15 p-r-15">
 				Discover
 			</span>
@@ -119,7 +119,7 @@
                         <!-- Block1 -->
                         <div class="blo1">
                             <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom">
-                                <a href="#"><img src="https://mypithoragarh.com/wp-content/uploads/2017/07/Quality-Restaurant-Pithoragarh.jpg" alt="IMG-INTRO"></a>
+                                <a href="#"><img src="{{asset('/images/res16.jpg')}}" alt="IMG-INTRO"></a>
                             </div>
 
                             <div class="wrap-text-blo1 p-t-35">
@@ -143,7 +143,7 @@
                         <!-- Block1 -->
                         <div class="blo1">
                             <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom">
-                                <a href="#"><img src="https://www.familyfoodonthetable.com/wp-content/uploads/2018/01/Southwest-chicken-skillet-dinner-2.jpg" alt="IMG-INTRO"></a>
+                                <a href="#"><img src="{{asset('/images/res17.jpg')}}" alt="IMG-INTRO"></a>
                             </div>
 
                             <div class="wrap-text-blo1 p-t-35">
@@ -167,7 +167,7 @@
                         <!-- Block1 -->
                         <div class="blo1">
                             <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom">
-                                <a href="#"><img src="https://i1.wp.com/www.trifocusfitnessacademy.co.za/wp-content/uploads/2019/07/shutterstock_1403159381.jpg?fit=800%2C533&ssl=1" alt="IMG-INTRO"></a>
+                                <a href="#"><img src="{{asset('/images/res18.jpg')}}" alt="IMG-INTRO"></a>
                             </div>
 
                             <div class="wrap-text-blo1 p-t-35">
@@ -211,7 +211,7 @@
                         <div class="col-sm-6">
                             <!-- Item our menu -->
                             <div class="item-ourmenu bo-rad-10 hov-img-zoom pos-relative m-t-30">
-                                <img src="https://trithucvn.net/wp-content/uploads/2018/09/bua-sang-maxpixel.jpg" alt="IMG-MENU">
+                                <img src="{{asset('/images/res19.jpg')}}" alt="IMG-MENU">
 
                                 <!-- Button2 -->
                                 <a href="#" class="btn2 flex-c-m txt5 ab-c-m size4">
@@ -223,7 +223,7 @@
                         <div class="col-sm-6">
                             <!-- Item our menu -->
                             <div class="item-ourmenu bo-rad-10 hov-img-zoom pos-relative m-t-30">
-                                <img src="http://afamilycdn.com/2017/img20170817103046287.jpg" alt="IMG-MENU">
+                                <img src="{{asset('/images/res20.jpg')}}" alt="IMG-MENU">
 
                                 <!-- Button2 -->
                                 <a href="#" class="btn2 flex-c-m txt5 ab-c-m size5">
@@ -235,7 +235,7 @@
                         <div class="col-12">
                             <!-- Item our menu -->
                             <div class="item-ourmenu bo-rad-10 hov-img-zoom pos-relative m-t-30">
-                                <img src="https://media.ex-cdn.com/EXP/media.cpcs.vn/files/phamhuyen/2019/01/13/thu_3-2137.jpg" alt="IMG-MENU">
+                                <img src="{{asset('/images/res21.jpg')}}" alt="IMG-MENU">
 
                                 <!-- Button2 -->
                                 <a href="#" class="btn2 flex-c-m txt5 ab-c-m size6">
@@ -251,7 +251,7 @@
                         <div class="col-12">
                             <!-- Item our menu -->
                             <div class="item-ourmenu bo-rad-10 hov-img-zoom pos-relative m-t-30">
-                                <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BBVvYBp.img?h=351&w=624&m=6&q=60&o=f&l=f" alt="IMG-MENU">
+                                <img src="{{asset('/images/res22.jpg')}}" alt="IMG-MENU">
 
                                 <!-- Button2 -->
                                 <a href="#" class="btn2 flex-c-m txt5 ab-c-m size7">
@@ -263,7 +263,7 @@
                         <div class="col-12">
                             <!-- Item our menu -->
                             <div class="item-ourmenu bo-rad-10 hov-img-zoom pos-relative m-t-30">
-                                <img src="http://assets.kraftfoods.com/recipe_images/opendeploy/204595_640x428.jpg" alt="IMG-MENU">
+                                <img src="{{asset('/images/res23.jpg')}}" alt="IMG-MENU">
 
                                 <!-- Button2 -->
                                 <a href="#" class="btn2 flex-c-m txt5 ab-c-m size8">
@@ -275,7 +275,7 @@
                         <div class="col-12">
                             <!-- Item our menu -->
                             <div class="item-ourmenu bo-rad-10 hov-img-zoom pos-relative m-t-30">
-                                <img src="http://media.travelvegas.com/wp-content/uploads/happyhour.jpg" alt="IMG-MENU">
+                                <img src="{{asset('/images/res24.jpg')}}" alt="IMG-MENU">
 
                                 <!-- Button2 -->
                                 <a href="#" class="btn2 flex-c-m txt5 ab-c-m size9">
@@ -294,7 +294,7 @@
     <section class="section-event">
         <div class="wrap-slick2">
             <div class="slick2">
-                <div class="item-slick2 item1-slick2" style="background-image: url(https://s3-eu-west-2.amazonaws.com/assets.ting-shangri-la.com/images/hero--desktop/255-shangri-la-hotel-at-the-shard-london-ting-restaurant-night-empty.jpg);">
+                <div class="item-slick2 item1-slick2" style="background-image: url({{asset('/images/res25.jpg')}});">
                     <div class="wrap-content-slide2 p-t-115 p-b-208">
                         <div class="container">
                             <!-- - -->
@@ -309,78 +309,78 @@
                             </div>
 
                             <!-- Block2 -->
-{{--                            <div class="blo2 flex-w flex-str flex-col-c-m-lg animated visible-false" data-appear="zoomIn">--}}
-{{--                                <!-- Pic block2 -->--}}
-{{--                                <a href="#" class="wrap-pic-blo2 bg1-blo2" style="background-image: url(https://www.grand-hotel-uriage.com/media/cache/jadro_resize/rc/t3vZi00r1563956452/jadroRoot/medias/5c237ef54140d/dg-4-avec-credit-photo-basse-def.jpg);">--}}
-{{--                                    <div class="time-event size10 txt6 effect1">--}}
-{{--										<span class="txt-effect1 flex-c-m t-center">--}}
-{{--											23 August 2019 - 23 September 2019--}}
-{{--										</span>--}}
-{{--                                    </div>--}}
-{{--                                </a>--}}
+                            <div class="blo2 flex-w flex-str flex-col-c-m-lg animated visible-false" data-appear="zoomIn">
+                                <!-- Pic block2 -->
+                                <a href="#" class="wrap-pic-blo2 bg1-blo2" style="background-image: url({{asset('/images/res29.jpg')}});">
+                                    <div class="time-event size10 txt6 effect1">
+										<span class="txt-effect1 flex-c-m t-center">
+											23 August 2019 - 23 September 2019
+										</span>
+                                    </div>
+                                </a>
 
-{{--                                <!-- Text block2 -->--}}
-{{--                                <div class="wrap-text-blo2 flex-col-c-m p-l-40 p-r-40 p-t-45 p-b-30">--}}
-{{--                                    <h4 class="tit7 t-center m-b-10">--}}
-{{--                                        Pato Restaurant's Birthday Month--}}
-{{--                                    </h4>--}}
+                                <!-- Text block2 -->
+                                <div class="wrap-text-blo2 flex-col-c-m p-l-40 p-r-40 p-t-45 p-b-30">
+                                    <h4 class="tit7 t-center m-b-10">
+                                        Pato Restaurant's Birthday Month
+                                    </h4>
 
-{{--                                    <p class="t-center">--}}
-{{--                                        On the occasion of Pato Restaurant's birthday, we jubilantly opened a series of events to reduce prices for each meal to thank our customers for the birthday of the restaurant.									</p>--}}
+                                    <p class="t-center">
+                                        On the occasion of Pato Restaurant's birthday, we jubilantly opened a series of events to reduce prices for each meal to thank our customers for the birthday of the restaurant.									</p>
 
-{{--                                    <div class="flex-sa-m flex-w w-full m-t-40">--}}
-{{--                                        <div class="size11 flex-col-c-m">--}}
-{{--											<span class="dis-block t-center txt7 m-b-2 days">--}}
-{{--												30--}}
-{{--											</span>--}}
+                                    <div class="flex-sa-m flex-w w-full m-t-40">
+                                        <div class="size11 flex-col-c-m">
+											<span class="dis-block t-center txt7 m-b-2 days">
+												30
+											</span>
 
-{{--                                            <span class="dis-block t-center txt8">--}}
-{{--												Days--}}
-{{--											</span>--}}
-{{--                                        </div>--}}
+                                            <span class="dis-block t-center txt8">
+												Days
+											</span>
+                                        </div>
 
-{{--                                        <div class="size11 flex-col-c-m">--}}
-{{--											<span class="dis-block t-center txt7 m-b-2 hours">--}}
-{{--												12--}}
-{{--											</span>--}}
+                                        <div class="size11 flex-col-c-m">
+											<span class="dis-block t-center txt7 m-b-2 hours">
+												12
+											</span>
 
-{{--                                            <span class="dis-block t-center txt8">--}}
-{{--												Hours--}}
-{{--											</span>--}}
-{{--                                        </div>--}}
+                                            <span class="dis-block t-center txt8">
+												Hours
+											</span>
+                                        </div>
 
-{{--                                        <div class="size11 flex-col-c-m">--}}
-{{--											<span class="dis-block t-center txt7 m-b-2 minutes">--}}
-{{--												59--}}
-{{--											</span>--}}
+                                        <div class="size11 flex-col-c-m">
+											<span class="dis-block t-center txt7 m-b-2 minutes">
+												59
+											</span>
 
-{{--                                            <span class="dis-block t-center txt8">--}}
-{{--												Minutes--}}
-{{--											</span>--}}
-{{--                                        </div>--}}
+                                            <span class="dis-block t-center txt8">
+												Minutes
+											</span>
+                                        </div>
 
-{{--                                        <div class="size11 flex-col-c-m">--}}
-{{--											<span class="dis-block t-center txt7 m-b-2 seconds">--}}
-{{--												56--}}
-{{--											</span>--}}
+                                        <div class="size11 flex-col-c-m">
+											<span class="dis-block t-center txt7 m-b-2 seconds">
+												56
+											</span>
 
-{{--                                            <span class="dis-block t-center txt8">--}}
-{{--												Seconds--}}
-{{--											</span>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
+                                            <span class="dis-block t-center txt8">
+												Seconds
+											</span>
+                                        </div>
+                                    </div>
 
-{{--                                    <a href="#" class="txt4 m-t-40">--}}
-{{--                                        View Details--}}
-{{--                                        <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>--}}
-{{--                                    </a>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
+                                    <a href="#" class="txt4 m-t-40">
+                                        View Details
+                                        <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="item-slick2 item2-slick2" style="background-image: url(http://www.grandpalladiumjamaicaresort.com/images/slides/slide-48.jpg);">
+                <div class="item-slick2 item2-slick2" style="background-image: url({{asset('/images/res26.jpg')}});">
                     <div class="wrap-content-slide2 p-t-115 p-b-208">
                         <div class="container">
                             <!-- - -->
@@ -395,79 +395,79 @@
                             </div>
 
                             <!-- Block2 -->
-{{--                            <div class="blo2 flex-w flex-str flex-col-c-m-lg animated visible-false" data-appear="fadeInDown">--}}
-{{--                                <!-- Pic block2 -->--}}
-{{--                                <a href="#" class="wrap-pic-blo2 bg2-blo2" style="background-image: url(https://www.mediterraneosorrento.com/wp-content/uploads/2017/12/Vesuvio-Roof-Restaurant-17-840x560.jpg);">--}}
-{{--                                    <div class="time-event size10 txt6 effect1">--}}
-{{--										<span class="txt-effect1 flex-c-m">--}}
-{{--											23 August 2019 - 23 September 2019--}}
-{{--										</span>--}}
-{{--                                    </div>--}}
-{{--                                </a>--}}
+                            <div class="blo2 flex-w flex-str flex-col-c-m-lg animated visible-false" data-appear="fadeInDown">
+                                <!-- Pic block2 -->
+                                <a href="#" class="wrap-pic-blo2 bg2-blo2" style="background-image: url({{asset('/images/res30.jpg')}});">
+                                    <div class="time-event size10 txt6 effect1">
+										<span class="txt-effect1 flex-c-m">
+											23 August 2019 - 23 September 2019
+										</span>
+                                    </div>
+                                </a>
 
-{{--                                <!-- Text block2 -->--}}
-{{--                                <div class="wrap-text-blo2 flex-col-c-m p-l-40 p-r-40 p-t-45 p-b-30">--}}
-{{--                                    <h4 class="tit7 t-center m-b-10">--}}
-{{--                                        Pato Restaurant's Birthday Month--}}
-{{--                                    </h4>--}}
+                                <!-- Text block2 -->
+                                <div class="wrap-text-blo2 flex-col-c-m p-l-40 p-r-40 p-t-45 p-b-30">
+                                    <h4 class="tit7 t-center m-b-10">
+                                        Pato Restaurant's Birthday Month
+                                    </h4>
 
-{{--                                    <p class="t-center">--}}
-{{--                                        On the occasion of Pato Restaurant's birthday, we jubilantly opened a series of events to reduce prices for each meal to thank our customers for the birthday of the restaurant.									</p>--}}
-{{--                                    </p>--}}
+                                    <p class="t-center">
+                                        On the occasion of Pato Restaurant's birthday, we jubilantly opened a series of events to reduce prices for each meal to thank our customers for the birthday of the restaurant.									</p>
+                                    </p>
 
-{{--                                    <div class="flex-sa-m flex-w w-full m-t-40">--}}
-{{--                                        <div class="size11 flex-col-c-m">--}}
-{{--											<span class="dis-block t-center txt7 m-b-2 days">--}}
-{{--												30--}}
-{{--											</span>--}}
+                                    <div class="flex-sa-m flex-w w-full m-t-40">
+                                        <div class="size11 flex-col-c-m">
+											<span class="dis-block t-center txt7 m-b-2 days">
+												30
+											</span>
 
-{{--                                            <span class="dis-block t-center txt8">--}}
-{{--												Days--}}
-{{--											</span>--}}
-{{--                                        </div>--}}
+                                            <span class="dis-block t-center txt8">
+												Days
+											</span>
+                                        </div>
 
-{{--                                        <div class="size11 flex-col-c-m">--}}
-{{--											<span class="dis-block t-center txt7 m-b-2 hours">--}}
-{{--												12--}}
-{{--											</span>--}}
+                                        <div class="size11 flex-col-c-m">
+											<span class="dis-block t-center txt7 m-b-2 hours">
+												12
+											</span>
 
-{{--                                            <span class="dis-block t-center txt8">--}}
-{{--												Hours--}}
-{{--											</span>--}}
-{{--                                        </div>--}}
+                                            <span class="dis-block t-center txt8">
+												Hours
+											</span>
+                                        </div>
 
-{{--                                        <div class="size11 flex-col-c-m">--}}
-{{--											<span class="dis-block t-center txt7 m-b-2 minutes">--}}
-{{--												59--}}
-{{--											</span>--}}
+                                        <div class="size11 flex-col-c-m">
+											<span class="dis-block t-center txt7 m-b-2 minutes">
+												59
+											</span>
 
-{{--                                            <span class="dis-block t-center txt8">--}}
-{{--												Minutes--}}
-{{--											</span>--}}
-{{--                                        </div>--}}
+                                            <span class="dis-block t-center txt8">
+												Minutes
+											</span>
+                                        </div>
 
-{{--                                        <div class="size11 flex-col-c-m">--}}
-{{--											<span class="dis-block t-center txt7 m-b-2 seconds">--}}
-{{--												56--}}
-{{--											</span>--}}
+                                        <div class="size11 flex-col-c-m">
+											<span class="dis-block t-center txt7 m-b-2 seconds">
+												56
+											</span>
 
-{{--                                            <span class="dis-block t-center txt8">--}}
-{{--												Seconds--}}
-{{--											</span>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
+                                            <span class="dis-block t-center txt8">
+												Seconds
+											</span>
+                                        </div>
+                                    </div>
 
-{{--                                    <a href="#" class="txt4 m-t-40">--}}
-{{--                                        View Details--}}
-{{--                                        <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>--}}
-{{--                                    </a>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
+                                    <a href="#" class="txt4 m-t-40">
+                                        View Details
+                                        <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="item-slick2 item3-slick2" style="background-image: url(https://boisedev.com/wp-content/uploads/2018/10/Grove-Oct-2018006s.jpg);">
+                <div class="item-slick2 item3-slick2" style="background-image: url({{asset('/images/res27.jpg')}});">
                     <div class="wrap-content-slide2 p-t-115 p-b-208">
                         <div class="container">
                             <!-- - -->
@@ -484,7 +484,7 @@
                             <!-- Block2 -->
                             <div class="blo2 flex-w flex-str flex-col-c-m-lg animated visible-false" data-appear="rotateInUpLeft">
                                 <!-- Pic block2 -->
-                                <a href="#" class="wrap-pic-blo2 bg3-blo2" style="background-image: url(https://u.tfstatic.com/restaurant_photos/239/221239/169/612/restaurant-puur-het-restaurant-2ba49.jpg);">
+                                <a href="#" class="wrap-pic-blo2 bg3-blo2" style="background-image: url({{asset('/images/res28.jpg')}});">
                                     <div class="time-event size10 txt6 effect1">
 										<span class="txt-effect1 flex-c-m">
 											23 August 2019 - 23 September 2019
@@ -583,7 +583,7 @@
                     <div class="wrap-content-slide3 p-b-50 p-t-50">
                         <div class="container">
                             <div class="pic-review size14 bo4 wrap-cir-pic m-l-r-auto animated visible-false" data-appear="zoomIn">
-                                <img src="https://banner2.kisspng.com/20180427/sce/kisspng-darwin-watterson-gumball-watterson-anais-watterson-5ae3b30fc698a5.9701967315248719518135.jpg" alt="IGM-AVATAR">
+                                <img src="{{asset('/images/darwin.jpg')}}" alt="IGM-AVATAR">
                             </div>
 
                             <div class="content-review m-t-33 animated visible-false" data-appear="fadeInUp">
@@ -611,7 +611,7 @@
                     <div class="wrap-content-slide3 p-b-50 p-t-50">
                         <div class="container">
                             <div class="pic-review size14 bo4 wrap-cir-pic m-l-r-auto animated visible-false" data-appear="zoomIn">
-                                <img src="http://icdn.dantri.com.vn/2018/2-1516360798328.jpg" alt="IGM-AVATAR">
+                                <img src="{{asset('/images/ozawa.jpg')}}" alt="IGM-AVATAR">
                             </div>
 
                             <div class="content-review m-t-33 animated visible-false" data-appear="fadeInUp">
@@ -639,7 +639,7 @@
                     <div class="wrap-content-slide3 p-b-50 p-t-50">
                         <div class="container">
                             <div class="pic-review size14 bo4 wrap-cir-pic m-l-r-auto animated visible-false" data-appear="zoomIn">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Seth_Rollins_in_September_2016.jpg" alt="IGM-AVATAR">
+                                <img src="{{asset('/images/rolins.jpg')}}" alt="IGM-AVATAR">
                             </div>
 
                             <div class="content-review m-t-33 animated visible-false" data-appear="fadeInUp">

@@ -119,6 +119,48 @@
                                                     </div>
 
                                                 </div>
+                                                <div class="info">
+                                                    <div class="row amount-of-nutrition">
+                                                        <div class="col-sm-12" style="">
+                                                            <span>Calo</span>
+                                                            <div class="low">
+                                                                <span>{{$food->calo}}</span><small>&nbsp;(g)</small>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12">
+                                                            <span>Protein</span>
+                                                            <div class="normal">
+                                                                <span>{{$food->protein}}</span><small>&nbsp;(g)</small>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12">
+                                                            <span>Dietary fiber</span>
+                                                            <div class="very-high">
+                                                                <span>{{$food->dietary_fiber}}</span><small>&nbsp;(g)</small>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12">
+                                                            <span>Carbohydrate</span>
+                                                            <div class="high">
+                                                                <span>{{$food->carbohydrate}}</span><small>&nbsp;(g)</small>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12">
+                                                            <span>Total fat</span>
+                                                            <div class="very-low">
+                                                                <span>{{$food->total_fat}}</span><small>&nbsp;(g)</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-sm-12">
+                                                            <span>Vitamins: {{$food->vitamins}}</span>
+                                                        </div>
+                                                        <div class="col-sm-12">
+                                                            <span>Minerals: {{$food->minerals}} </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     @endforeach
