@@ -79,7 +79,7 @@ class SetController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('detail-set');
     }
 
     /**

@@ -82,3 +82,4 @@ Route::get('/checkout_success', function (){
 //  Route::get('/password/reset', 'AdminAuth\ForgotPasswordController@showLinkRequestForm')->name('password.reset');
 //  Route::get('/password/reset/{token}', 'AdminAuth\ResetPasswordController@showResetForm');
 //});
+
