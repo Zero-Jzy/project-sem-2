@@ -286,6 +286,16 @@ $('#btn-login').click(function () {
     });
 
 
+    $('#btn-login-google').click(function () {
+        window.location.href='/redirect'
+    });
+
+    function renderErrors(errors){
+        let errFields = Object.keys(errors);
+        for (let field of errFields){
+            let errField = $(`input[name=${field}]`).next();
+            errField.html(errors[field][0]).addClass('is-visible')
+
 });
 
 const caloValues = [1800, 2000, 2400, 2800];

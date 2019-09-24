@@ -392,7 +392,7 @@
                 <p class="fieldset">
                     <input type="button" id="btn-login" class="full-width has-padding btn my-2 btn-login" value="Login">
                     <input type="button" class="full-width has-padding btn my-2 btn-login" value="Login with facebook">
-                    <input type="button" class="full-width has-padding btn my-2 btn-login" value="Login with google">
+                    <input type="button" id="btn-login-google" class="full-width has-padding btn my-2 btn-login" value="Login with google">
                 </p>
 
             </form>
