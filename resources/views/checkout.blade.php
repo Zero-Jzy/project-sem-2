@@ -181,7 +181,7 @@
                     <div class="col-md-4">
                         <div class="type-payments">
                             <label class="form-check-label">
-                                <input name="type_payment" type="radio" class="form-check-input" value="COD">
+                                <input checked name="type_payment" type="radio" class="form-check-input" value="COD">
                                 Payment on delivery
                             </label>
                             <label class="form-check-label">
@@ -238,7 +238,7 @@
                                 <div class="pro-quantity">x ${cartItem.quantity}</div>
                             </div>
                             <div class="col-md-2">
-                                <div class="pro-price">${Math.round(cartItem.quantity * cartItem.price)}</div>
+                                <div class="pro-price">${Math.round(cartItem.quantity * cartItem.price)}$</div>
                             </div>
                         </div>`;
             }
@@ -246,7 +246,7 @@
             var totalPrice = listSet.reduce((a, b) => {
                 return a + b.quantity * b.price
             }, 0);
-            totalPrice = new Intl.NumberFormat('de-DE', {style: 'currency', currency: 'EUR'}).format(totalPrice)
+            totalPrice = new Intl.NumberFormat('de-DE', {style: 'currency', currency: 'USD'}).format(totalPrice)
             $('.js-total').html(totalPrice);
             htmlContent += `${totalPrice}`;
 
