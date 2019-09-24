@@ -23,7 +23,10 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/checkout', function () {
+Route::get('/redirect', 'LoginGoogleController@redirect');
+Route::get('/callback', 'LoginGoogleController@callback');
+
+Route::get('/checkout', function (){
     return view('checkout');
 })->name('checkout')->middleware('auth');
 

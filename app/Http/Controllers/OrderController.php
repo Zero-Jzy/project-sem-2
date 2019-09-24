@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\OrderShipped;
-use App\Order;
+use App\Address;
+use http\Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Mail;
+use Mail;
+use App\Http\Requests;
+use App\Order;
+use OrderDetail;
 
 class OrderController extends Controller
 {
@@ -18,8 +22,6 @@ class OrderController extends Controller
      */
     public function index()
     {
-//        Mail::to(Auth::user()->email)->send(new OrderShipped());
-//        return view.blade.php('checkout');
     }
 
     /**
@@ -40,38 +42,49 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        $user_id = Auth::user()->id;
-        $listSet = $request->get('listSet');
-        $address_id = $request->get('address_id');
-        $type_payment = $request->get('type_payment');
-        $amount = 0;
+        DB::beginTransaction();
+        try{
+            $user_id = Auth::user()->id;
+            $listSet = $request->get('listSet');
+            $address_id = $request->get('address_id');
+            $type_payment = $request->get('type_payment');
+            $amount = 0;
 
-        foreach ($listSet as $set) {
-            $amount += $set['quantity'] * $set['price'];
-        };
+            foreach ($listSet as $set) {
+                $amount += $set['quantity'] * $set['price'];
+            };
 
-        $order = Order::create([
-            'user_id' => $user_id,
-            'address_id' => $address_id,
-            'amount' => $amount,
-            'type' => $type_payment
-        ]);
+            $order = Order::create([
+                'user_id' => $user_id,
+                'address_id' => $address_id,
+                'amount' => $amount,
+                'type' => $type_payment
+            ]);
 
-        foreach ($listSet as $set) {
-            $order->sets()->attach((integer)$set['id'], ['quantity' => $set['quantity']]);
-        };
+            foreach ($listSet as $set) {
+                $order->sets()->attach((integer)$set['id'], ['quantity' => $set['quantity']]);
+            };
 
-        $order->save();
+            $order->save();
 
-//        Mail::send('send-email', array('email' => 'boydola.nvs@gmail.com', 'content'=>'Order thanh cong'), function($message){
-//            dd(11111);
-//            $message->to('sonnvth1807031@fpt.edu.vn')->subject('xax thuc don hang');
-//        });
-        if ($order['type'] === 'VNPAY') {
-            return $this->createPayment($order);
+            if ($order['type'] === 'VNPAY') {
+                return $this->createPayment($order);
+            }
+            Log::info($listSet);
+            $address = Address::find($address_id);
+            $data = ['order'=> $address, 'list' => $listSet,'amount' => $amount];
+            Mail::send('send', $data, function($message) {
+                $message->to(Auth::user()->email, Auth::user()->firstname)->subject('Thong bao xac nhan don hang');
+                $message->from('boydola.nvs@gmail.com','Pato');
+            });
+
+            DB::commit();
+            return 'done';}
+            catch (Exception $e) {
+            report($e);
+            DB::rollBack();
+            return false;
         }
-
-        return 'done';
     }
 
     function createPayment($order)
