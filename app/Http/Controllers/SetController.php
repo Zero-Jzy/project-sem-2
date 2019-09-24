@@ -61,7 +61,7 @@ class SetController extends Controller
             'name' =>'mon an default',
             'type' => 2,
             'category_id' => 1,
-            'image' => 'food_default_z6gsw3.png'
+            'image' => 'food_default_z6gsw3.png',
             'price' => $price
         ]);
 
