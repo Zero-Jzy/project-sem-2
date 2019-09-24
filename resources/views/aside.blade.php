@@ -275,7 +275,7 @@
         $('.bag-icon').attr('data-food', countFood);
         $('#food-count').html(countFood);
         let listFoodsHtml = foods.map(food => (
-            `<div class="blo3 flex-w flex-col-l-sm m-b-30138">
+            `<div class="blo3 flex-w my-2 flex-col-l-sm m-b-30138">
                     <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
                         <a href="#"><img src="https://res.cloudinary.com/cloud-pj-sem2/image/upload/w_300,h_300,c_lpad,b_auto/${food.image}" alt="${food.name}"></a>
                     </div>
@@ -347,12 +347,12 @@
 
         var totalValue = getTotalValue(arr);
 
-        calo.html(totalValue.calo);
-        protein.html(totalValue.protein);
-        dietary_fiber.html(totalValue.dietary_fiber);
-        carbohydrate.html(totalValue.carbohydrate);
-        total_fat.html(totalValue.total_fat);
-        price.html(totalValue.price);
+        calo.html('Calo: '+totalValue.calo);
+        protein.html('Protein: ' + totalValue.protein);
+        dietary_fiber.html('Dietary Fiber: '+totalValue.dietary_fiber);
+        carbohydrate.html('Carbohydrate: '+totalValue.carbohydrate);
+        total_fat.html('Total fat: '+totalValue.total_fat);
+        price.html('Price: ' + totalValue.price);
     }
 
     function getTotalValue(arr) {

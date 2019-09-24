@@ -14,9 +14,9 @@ class FoodSeeder extends Seeder
     {
         DB::table('foods')->truncate();
         DB::table('foods')->insert(
-            array (
+            array(
                 0 =>
-                    array (
+                    array(
                         'id' => 1,
                         'name' => 'rice',
                         'price' => 1.9,
@@ -30,7 +30,7 @@ class FoodSeeder extends Seeder
                         'minerals' => 'I,K,F,Se,Mn',
                     ),
                 1 =>
-                    array (
+                    array(
                         'id' => 2,
                         'name' => 'Fried rice, pickles, beef',
                         'price' => 2.8,
@@ -44,7 +44,7 @@ class FoodSeeder extends Seeder
                         'minerals' => 'Mg,Se,Fe,Fe,Na',
                     ),
                 2 =>
-                    array (
+                    array(
                         'id' => 3,
                         'name' => 'boiled cabbages',
                         'price' => 1.8,
@@ -58,7 +58,7 @@ class FoodSeeder extends Seeder
                         'minerals' => 'Cl,K,Mg',
                     ),
                 3 =>
-                    array (
+                    array(
                         'id' => 4,
                         'name' => 'Boiled Chinese cabbage',
                         'price' => 2.7,
@@ -72,7 +72,7 @@ class FoodSeeder extends Seeder
                         'minerals' => 'I,Se',
                     ),
                 4 =>
-                    array (
+                    array(
                         'id' => 5,
                         'name' => 'boiled vegetables',
                         'price' => 2.9,
@@ -86,7 +86,7 @@ class FoodSeeder extends Seeder
                         'minerals' => 'Zn,Cu,Se,Se',
                     ),
                 5 =>
-                    array (
+                    array(
                         'id' => 6,
                         'name' => 'vegetable soup',
                         'price' => 1.1,
@@ -100,7 +100,7 @@ class FoodSeeder extends Seeder
                         'minerals' => 'Zn,Cr',
                     ),
                 6 =>
-                    array (
+                    array(
                         'id' => 7,
                         'name' => 'salad',
                         'price' => 2.5,
@@ -114,7 +114,7 @@ class FoodSeeder extends Seeder
                         'minerals' => 'Na,K,I',
                     ),
                 7 =>
-                    array (
+                    array(
                         'id' => 8,
                         'name' => 'Five-flavored fried chicken',
                         'price' => 0.9,
@@ -128,7 +128,7 @@ class FoodSeeder extends Seeder
                         'minerals' => 'Cl,Na,F',
                     ),
                 8 =>
-                    array (
+                    array(
                         'id' => 9,
                         'name' => 'boiled pork',
                         'price' => 2.7,
@@ -142,7 +142,7 @@ class FoodSeeder extends Seeder
                         'minerals' => 'Mg,Cl,Fe,Ca,F',
                     ),
                 9 =>
-                    array (
+                    array(
                         'id' => 10,
                         'name' => 'Basa Frish',
                         'price' => 0.9,
@@ -156,7 +156,7 @@ class FoodSeeder extends Seeder
                         'minerals' => 'K,Fe,Na',
                     ),
                 10 =>
-                    array (
+                    array(
                         'id' => 11,
                         'name' => 'Stewed pork leg with bell peppers',
                         'price' => 0.9,
@@ -170,7 +170,7 @@ class FoodSeeder extends Seeder
                         'minerals' => 'Zn,Fe',
                     ),
                 11 =>
-                    array (
+                    array(
                         'id' => 12,
                         'name' => 'bean sprouts',
                         'price' => 1.8,
@@ -184,7 +184,7 @@ class FoodSeeder extends Seeder
                         'minerals' => 'Fe,Cr',
                     ),
                 12 =>
-                    array (
+                    array(
                         'id' => 13,
                         'name' => 'cowpea',
                         'price' => 1.1,
@@ -198,7 +198,7 @@ class FoodSeeder extends Seeder
                         'minerals' => 'Se,Fe',
                     ),
                 13 =>
-                    array (
+                    array(
                         'id' => 14,
                         'name' => 'tofu in tomato sauce',
                         'price' => 2.8,
@@ -212,7 +212,7 @@ class FoodSeeder extends Seeder
                         'minerals' => 'F,Na,Mn,Se',
                     ),
                 14 =>
-                    array (
+                    array(
                         'id' => 15,
                         'name' => 'meat stock ship',
                         'price' => 2.6,
@@ -226,7 +226,7 @@ class FoodSeeder extends Seeder
                         'minerals' => 'Mn,Na,Ca,Ca,Zn',
                     ),
                 15 =>
-                    array (
+                    array(
                         'id' => 16,
                         'name' => 'meat skewer',
                         'price' => 2.4,
@@ -240,7 +240,7 @@ class FoodSeeder extends Seeder
                         'minerals' => 'Cr,Ca,Fe,Cl,Zn',
                     ),
                 16 =>
-                    array (
+                    array(
                         'id' => 17,
                         'name' => 'Meat rolls',
                         'price' => 2.8,
@@ -254,7 +254,7 @@ class FoodSeeder extends Seeder
                         'minerals' => 'Se,F,Mg',
                     ),
                 17 =>
-                    array (
+                    array(
                         'id' => 18,
                         'name' => 'sweet and sour ribs',
                         'price' => 0.7,
@@ -268,7 +268,7 @@ class FoodSeeder extends Seeder
                         'minerals' => 'Cr,Se,Na',
                     ),
                 18 =>
-                    array (
+                    array(
                         'id' => 19,
                         'name' => 'Braised fish',
                         'price' => 1.3,
@@ -282,7 +282,7 @@ class FoodSeeder extends Seeder
                         'minerals' => 'Mg,F,Cu,Zn,Ca',
                     ),
                 19 =>
-                    array (
+                    array(
                         'id' => 20,
                         'name' => 'Sesame',
                         'price' => 2.1,
@@ -296,7 +296,7 @@ class FoodSeeder extends Seeder
                         'minerals' => 'I,K,Cl',
                     ),
                 20 =>
-                    array (
+                    array(
                         'id' => 21,
                         'name' => 'Brown rice',
                         'price' => 1.5,
@@ -310,7 +310,7 @@ class FoodSeeder extends Seeder
                         'minerals' => 'I,K,K,Na',
                     ),
                 21 =>
-                    array (
+                    array(
                         'id' => 22,
                         'name' => 'Boiled cauliflower',
                         'price' => 2.5,
@@ -324,7 +324,7 @@ class FoodSeeder extends Seeder
                         'minerals' => 'Cu,Mg',
                     ),
                 22 =>
-                    array (
+                    array(
                         'id' => 23,
                         'name' => 'omelet',
                         'price' => 0.5,
@@ -338,7 +338,7 @@ class FoodSeeder extends Seeder
                         'minerals' => 'Ca,Na,Ca,I',
                     ),
                 23 =>
-                    array (
+                    array(
                         'id' => 24,
                         'name' => 'groundnut',
                         'price' => 1.1,
@@ -352,7 +352,7 @@ class FoodSeeder extends Seeder
                         'minerals' => 'I,K,Na',
                     ),
                 24 =>
-                    array (
+                    array(
                         'id' => 25,
                         'name' => 'Boiled carrots',
                         'price' => 0.8,
@@ -366,7 +366,7 @@ class FoodSeeder extends Seeder
                         'minerals' => 'Cr,Mg,Mn,I',
                     ),
                 25 =>
-                    array (
+                    array(
                         'id' => 26,
                         'name' => 'boiled chicken',
                         'price' => 2.5,
@@ -380,7 +380,7 @@ class FoodSeeder extends Seeder
                         'minerals' => 'Fe,K,Zn,I',
                     ),
                 26 =>
-                    array (
+                    array(
                         'id' => 27,
                         'name' => 'Fried sausage',
                         'price' => 1.3,
@@ -394,7 +394,7 @@ class FoodSeeder extends Seeder
                         'minerals' => 'Na,Mn,Mn,Na',
                     ),
                 27 =>
-                    array (
+                    array(
                         'id' => 28,
                         'name' => 'roasted meat with pan',
                         'price' => 2.1,
@@ -408,7 +408,7 @@ class FoodSeeder extends Seeder
                         'minerals' => 'F,I',
                     ),
                 28 =>
-                    array (
+                    array(
                         'id' => 29,
                         'name' => 'fish fry',
                         'price' => 2.1,
@@ -422,7 +422,7 @@ class FoodSeeder extends Seeder
                         'minerals' => 'I,Cr,Ca,Cr',
                     ),
                 29 =>
-                    array (
+                    array(
                         'id' => 30,
                         'name' => 'fried meat',
                         'price' => 1.1,
@@ -436,7 +436,7 @@ class FoodSeeder extends Seeder
                         'minerals' => 'Na,I,F,Na,I',
                     ),
                 30 =>
-                    array (
+                    array(
                         'id' => 31,
                         'name' => 'kimchi',
                         'price' => 3,
@@ -450,11 +450,11 @@ class FoodSeeder extends Seeder
                         'minerals' => 'F,I,Mg,Na',
                     ),
                 31 =>
-                    array (
+                    array(
                         'id' => 32,
                         'name' => 'coca',
                         'price' => 0.5,
-                        'image' => 'https://kidsplaza-1.cdn.vccloud.vn/media/wysiwyg/product/be-an-be-uong/nuoc-ngot-co-ga-cocacola-nhat-160ml-1.jpg',
+                        'image' => 'osygda4q0zhniq35lzpb.jpg',
                         'calo' => 139,
                         'protein' => 1.7,
                         'dietary_fiber' => 31,
@@ -464,11 +464,11 @@ class FoodSeeder extends Seeder
                         'minerals' => 'Na,K,Ca,C',
                     ),
                 32 =>
-                    array (
+                    array(
                         'id' => 33,
                         'name' => 'lemonade',
                         'price' => 0.5,
-                        'image' => 'https://media.ex-cdn.com/EXP/media.cpcs.vn/files/f1/a799232428fa8334640045670a2cdd0b.jpg',
+                        'image' => 'x4hfatb3rej6tres3fmt.jpg',
                         'calo' => 23,
                         'protein' => 0.4,
                         'dietary_fiber' => 2.5,
@@ -478,11 +478,11 @@ class FoodSeeder extends Seeder
                         'minerals' => 'Ca,Fe,Mg,P,K,Na,Cu,Mn',
                     ),
                 33 =>
-                    array (
+                    array(
                         'id' => 34,
                         'name' => 'orange juice',
                         'price' => 0.5,
-                        'image' => 'https://pulcinelladubai.com/wp-content/uploads/2018/12/saladfusion-orange-juice.jpg',
+                        'image' => 'km6bznoj3zysbyuiafch.jpg',
                         'calo' => 44,
                         'protein' => 0.7,
                         'dietary_fiber' => 2.5,
@@ -492,11 +492,11 @@ class FoodSeeder extends Seeder
                         'minerals' => 'Ca,Fe,Mg',
                     ),
                 34 =>
-                    array (
+                    array(
                         'id' => 35,
                         'name' => 'apple juice',
                         'price' => 0.5,
-                        'image' => 'https://pulcinelladubai.com/wp-content/uploads/2018/12/saladfusion-orange-juice.jpg',
+                        'image' => 'atwv1vwq6yf1grc9ynlm.jpg',
                         'calo' => 45,
                         'protein' => 0.5,
                         'dietary_fiber' => 2.5,
@@ -506,11 +506,11 @@ class FoodSeeder extends Seeder
                         'minerals' => 'Ca,Fe,Mg',
                     ),
                 35 =>
-                    array (
+                    array(
                         'id' => 36,
                         'name' => 'mineral water',
                         'price' => 0.2,
-                        'image' => 'http://sangphatwater.com/upload/sanpham/thung-nuoc-khoang-lavie-750ml-4853.jpg',
+                        'image' => 'z89ummr2a5mbvz2nyayz.jpg',
                         'calo' => 12,
                         'protein' => 0.5,
                         'dietary_fiber' => 1.5,
@@ -520,11 +520,11 @@ class FoodSeeder extends Seeder
                         'minerals' => 'I,Mg,K,Ca,F,Mn,Fe,Co,Cu',
                     ),
                 36 =>
-                    array (
+                    array(
                         'id' => 37,
                         'name' => 'iced tea',
                         'price' => 0.1,
-                        'image' => 'https://olongha.cdn.vccloud.vn/wp-content/uploads/2018/02/IMG_7590-Copy-2808x1404.jpg',
+                        'image' => 'knruxkrgbrairj4ub2yv.jpg',
                         'calo' => 1,
                         'protein' => 0.1,
                         'dietary_fiber' => 0.5,
@@ -533,8 +533,6 @@ class FoodSeeder extends Seeder
                         'vitamins' => 'A,B2,B3,B5,C,E',
                         'minerals' => 'Caffeine,Enzyme,Amino acids,Polyphenols',
                     ),
-
-
             ));
 
     }

@@ -21,6 +21,7 @@ class SetSeeder extends Seeder
                     'category_id' => 1,
                     'type' => 1,
                     'image' => 'pu1geam0w9yo5no4zuyj.jpg',
+                    'price' => rand(2,5)
                 ),
             1 =>
                 array (
@@ -29,6 +30,7 @@ class SetSeeder extends Seeder
                     'category_id' => 2,
                     'type' => 1,
                     'image' => 'ypjsqs280nahdt9uphco.jpg',
+                    'price' => rand(2,5)
                 ),
             2 =>
                 array (
@@ -37,6 +39,7 @@ class SetSeeder extends Seeder
                     'category_id' => 3,
                     'type' => 1,
                     'image' => 'bbtqehjqvjcg0hrcisq0.jpg',
+                    'price' => rand(2,5)
                 ),
             3 =>
                 array (
@@ -45,6 +48,7 @@ class SetSeeder extends Seeder
                     'category_id' => 2,
                     'type' => 1,
                     'image' => 'p6w6x5a1zlufgbc25yyf.jpg',
+                    'price' => rand(2,5)
                 ),
             4 =>
                 array (
@@ -53,6 +57,7 @@ class SetSeeder extends Seeder
                     'category_id' => 1,
                     'type' => 1,
                     'image' => 'lwtwmgjlfhzunyleys85.jpg',
+                    'price' => rand(2,5)
                 ),
             5 =>
                 array (
@@ -61,6 +66,7 @@ class SetSeeder extends Seeder
                     'category_id' => 3,
                     'type' => 1,
                     'image' => 'v5qqlso9glhtus3gncb0.jpg',
+                    'price' => rand(2,5)
                 ),
             6 =>
                 array (
@@ -69,6 +75,7 @@ class SetSeeder extends Seeder
                     'category_id' => 2,
                     'type' => 1,
                     'image' => 'rohforomjjwmlzj2yaow.jpg',
+                    'price' => rand(2,5)
                 ),
             7 =>
                 array (
@@ -77,6 +84,7 @@ class SetSeeder extends Seeder
                     'category_id' => 1,
                     'type' => 1,
                     'image' => 'cgqhlicghps5esdajvd0.jpg',
+                    'price' => rand(2,5)
                 ),
             8 =>
                 array (
@@ -85,6 +93,7 @@ class SetSeeder extends Seeder
                     'category_id' => 1,
                     'type' => 1,
                     'image' => 'cfiac8ocokj3xckaqhql.jpg',
+                    'price' => rand(2,5)
                 ),
             9 =>
                 array (
@@ -93,6 +102,7 @@ class SetSeeder extends Seeder
                     'category_id' => 3,
                     'type' => 1,
                     'image' => 'mosmdiqdektc6gwkuxql.jpg',
+                    'price' => rand(2,5)
                 ),
             10 =>
                 array (
@@ -101,6 +111,7 @@ class SetSeeder extends Seeder
                     'category_id' => 1,
                     'type' => 1,
                     'image' => 'wmbh76uwzmhxdtsogjkg.jpg',
+                    'price' => rand(2,5)
                 ),
             11 =>
                 array (
@@ -109,6 +120,7 @@ class SetSeeder extends Seeder
                     'category_id' => 2,
                     'type' => 1,
                     'image' => 'j6g0ednhkehhglbrxuoc.jpg',
+                    'price' => rand(2,5)
                 ),
             12 =>
                 array (
@@ -117,6 +129,7 @@ class SetSeeder extends Seeder
                     'category_id' => 1,
                     'type' => 1,
                     'image' => 'aukvzqz8uibjfbedivn2.jpg',
+                    'price' => rand(2,5)
                 ),
             13 =>
                 array (
@@ -125,6 +138,7 @@ class SetSeeder extends Seeder
                     'category_id' => 3,
                     'type' => 1,
                     'image' => 'nyipfcldxplgfjqcaoxu.jpg',
+                    'price' => rand(2,5)
                 ),
             14 =>
                 array (
@@ -133,6 +147,7 @@ class SetSeeder extends Seeder
                     'category_id' => 1,
                     'type' => 1,
                     'image' => 'qvahsf02mni6lnqki8ph.jpg',
+                    'price' => rand(2,5)
                 ),
             15 =>
                 array (
@@ -141,6 +156,7 @@ class SetSeeder extends Seeder
                     'category_id' => 2,
                     'type' => 1,
                     'image' => 'fjctutq81yp5pgdbvnzn.jpg',
+                    'price' => rand(2,5)
                 ),
             16 =>
                 array (
@@ -149,6 +165,7 @@ class SetSeeder extends Seeder
                     'category_id' => 2,
                     'type' => 1,
                     'image' => 'loism3qiuhnltrvtftip.jpg',
+                    'price' => rand(2,5)
                 ),
             17 =>
                 array (
@@ -157,6 +174,7 @@ class SetSeeder extends Seeder
                     'category_id' => 1,
                     'type' => 1,
                     'image' => 'dwp822dx3nttwi6xgkr4.jpg',
+                    'price' => rand(2,5)
                 ),
             18 =>
                 array (
@@ -165,6 +183,7 @@ class SetSeeder extends Seeder
                     'category_id' => 3,
                     'type' => 1,
                     'image' => 'exqjswohtjnrwlwjstry.jpg',
+                    'price' => rand(2,5)
                 ),
             19 =>
                 array (
@@ -173,6 +192,7 @@ class SetSeeder extends Seeder
                     'category_id' => 2,
                     'type' => 1,
                     'image' => 'bedj7jvbnx5ggcvvtbkd.jpg',
+                    'price' => rand(2,5)
                 ),
             20 =>
                 array (
@@ -181,6 +201,7 @@ class SetSeeder extends Seeder
                     'category_id' => 1,
                     'type' => 1,
                     'image' => 'beu9yd5l1jga6ztmqxxt.jpg',
+                    'price' => rand(2,5)
                 ),
         ));
     }

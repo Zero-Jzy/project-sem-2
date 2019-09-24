@@ -3,7 +3,7 @@
 
 
 @section('content')
-    <div class="container slide-thumbnail">
+    <div style="padding: top" class="container slide-thumbnail">
         <div class="row">
             <div class="col-md-6">
                 <img

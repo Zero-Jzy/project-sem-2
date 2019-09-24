@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Food;
 use App\FoodCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Log;
 
 class FoodController extends Controller
 {
@@ -15,12 +17,19 @@ class FoodController extends Controller
      */
     public function index()
     {
-        $foods = Food::all();
+        $category_id = Input::get('category');
+        $foods = Food::with('categories');
 
-        $categories = FoodCategory::take(6)->get();
+        if ($category_id) {
+            $foods->whereHas('categories', function($q) use ($category_id) {
+                return $q->where('id', $category_id);
+            });
+        }
+
+        $categories = FoodCategory::all();
 
         $data = [
-            'foods' => $foods,
+            'foods' => $foods->get(),
             'categories' => $categories
         ];
 

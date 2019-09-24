@@ -1,34 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Sriracha&display=swap');
 
-*{
-padding:0;
-}
-.py-2 {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    line-height: 1.1;
-    -webkit-line-clamp: 2;
-    height: 44px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-}
+/*.py-2 {*/
+/*    overflow: hidden;*/
+/*    text-overflow: ellipsis;*/
+/*    line-height: 1.1;*/
+/*    -webkit-line-clamp: 2;*/
+/*    height: 44px;*/
+/*    display: -webkit-box;*/
+/*    -webkit-box-orient: vertical;*/
+/*}*/
 .info {
     padding: 10px;
     transition: 0.4s ease;
     opacity: 0;
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     background: #fff;
 }
 .food-card {
     position: relative;
 }
-.food-card:hover .info {
-    opacity: 1;
-}
+/*.food-card:hover .info {*/
+/*    opacity: 1;*/
+/*}*/
+
 img {
     max-width: 100%;
     height: auto;
@@ -56,10 +51,11 @@ ul.products > li {
 }
 
 .kc_wrapper.ui-tabs.kc_clearfix ul li a {
-    padding-top: 60px;
+    padding-top: 32 px;
     display: inline-block;
     font-size: 30px;
-    color: #c00a27;
+    color: #9b9b9b;
+    /*color: #c00a27;*/
     font-family: Sriracha;
 }
 
@@ -409,4 +405,8 @@ ul.dc_columns li .product_item .cart button.button {
     font-weight: 600;
     text-transform: uppercase;
     line-height: 0;
+}
+
+.ui-tabs-active a{
+    color: #c00a27 !important;
 }
