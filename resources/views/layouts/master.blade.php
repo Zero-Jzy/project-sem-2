@@ -40,11 +40,10 @@
     <link href="https://sandbox.vnpayment.vn/paymentv2/lib/vnpay/vnpay.css" rel="stylesheet"/>
     <link href="{{asset('/css/jumbotron-narrow.css')}}" rel="stylesheet"/>
 
+    <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/owl.theme.default.min.css') }}">
     <script src="https://sandbox.vnpayment.vn/paymentv2/lib/vnpay/vnpay.js"></script>
-
-
 </head>
 <body class="animsition">
 <header>
@@ -89,20 +88,6 @@
                 </div>
                 <!-- Right Navbar -->
                 <div class="right-navbar">
-                    {{--    @if (Route::has('login'))--}}
-                    {{--        <div class="top-right links">--}}
-                    {{--            @auth--}}
-                    {{--                <a href="{{ url('/home') }}">Home</a>--}}
-                    {{--            @else--}}
-                    {{--                <a href="{{ route('login') }}">Login</a>--}}
-
-                    {{--                @if (Route::has('register'))--}}
-                    {{--                    <a href="{{ route('register') }}">Register</a>--}}
-                    {{--                @endif--}}
-                    {{--            @endauth--}}
-                    {{--        </div>--}}
-                    {{--    @endif--}}
-
                     @if (Route::has('login'))
                         <ul class="top-right links">
                             @auth
@@ -497,11 +482,9 @@
 <script type="text/javascript" src="{{asset('/template/vendor/lightbox2/js/lightbox.min.js')}}"></script>
 <!--===============================================================================================-->
 <script src="{{asset('/template/js/main.js')}}"></script>
+<script src="{{asset('/js/app.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 <script src="{{asset('/js/my.js')}}"></script>
-
-
 {{--<script src="{{ asset("js/jquery/dist/jquery.min.js") }}"></script>--}}
-
 </body>
 </html>

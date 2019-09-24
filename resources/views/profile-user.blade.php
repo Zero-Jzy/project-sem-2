@@ -1,7 +1,6 @@
 @extends('layouts.master' , ['title' => 'Profile'])
 @section('content')
     <style>
-
         * {
             box-sizing: border-box;
         }
@@ -188,15 +187,16 @@
                             <ul class="nav nav-tabs" style="width: 100%;">
                                 <li style="padding-top: 30px" class="">
                                     <a class="nav-link active" data-toggle="tab" href="#content"
-                                       style="display: flex;align-items: center;"><i class="fas fa-user"
-                                                                                     style="flex: 0 0 20%;text-align: center;padding-right: 26px;"></i>Thông
-                                        tin tài khoản</a>
+                                       style="display: flex;align-items: center;">
+                                        <i class="fas fa-user" style="flex: 0 0 20%;text-align: center;padding-right: 26px;"></i>
+                                        Thông tin tài khoản
+                                    </a>
                                 </li>
                                 <li style="padding-top: 30px" class="">
                                     <a class="nav-link" data-toggle="tab" href="#content1"
-                                       style="display: flex;align-items: center;"><i class="fas fa-map-marker-alt"
-                                                                                     style="flex: 0 0 20%;text-align: center;padding-right: 26px;"></i>Sổđịa
-                                        chỉ</a>
+                                       style="display: flex;align-items: center;">
+                                        <i class="fas fa-map-marker-alt" style="flex: 0 0 20%;text-align: center;padding-right: 26px;"></i>
+                                        Sổ địa chỉ</a>
                                 </li>
                             </ul>
                         </div>
@@ -371,6 +371,31 @@
             </div>
         </div>
     </section>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
 
