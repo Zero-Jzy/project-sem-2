@@ -4,7 +4,12 @@ var itemHeader = $('.wrap_menu a, .wrap_menu li a');
 var rightNavbar = $('.right-navbar a');
 var path = window.location.pathname;
 
-if (['/menu/food', '/menu/set', '/login', '/register', '/profile', '/checkout_success', '/checkout'].indexOf(path) !== -1) {
+if (['/login', '/register', '/profile', '/checkout_success', '/checkout'].indexOf(path) !== -1) {
+    itemHeader.css('color', 'black');
+    rightNavbar.css('color', '#000')
+}
+
+if(path.includes('menu')){
     itemHeader.css('color', 'black');
     rightNavbar.css('color', '#000')
 }
