@@ -12,11 +12,11 @@
 {{--                -----}}
 {{--                <button href="{{route('set.index')}}" type="button" class="btn btn-default">set</button>--}}
 {{--                <button type="button" class="btn btn-primary btn-sm">{{'food'}}</button>--}}
-{{--                <button type="button" class="btn btn-secondary btn-sm">{{set}}</button>--}}
+{{--                <button type="button" class="btn btn-secondary btn-sm">{{'set'}}</button>--}}
 
-{{--                <a class="{{Request::is('menu/food') ? 'active' : ''}}" href="{{route('food.index')}}">Foods</a>--}}
-{{--                -----}}
-{{--                <a class="{{Request::is('menu/set') ? 'active' : ''}}" href="{{route('set.index')}}">Sets</a>--}}
+                <a class="{{Request::is('menu/food') ? 'active' : ''}}" href="{{route('food.index')}}">Foods</a>
+                ---
+                <a class="{{Request::is('menu/set') ? 'active' : ''}}" href="{{route('set.index')}}">Sets</a>
             </div>
 
             <div class="divider_inner divider_line3" style="
@@ -33,16 +33,17 @@
                 <span class="line_text">Thực đơn</span>
             </div>
         </div>
-
-
         <div class="container kc-elm kc-css-410377 kc_tabs group tabs_thucdon">
             <div class="kc_wrapper ui-tabs kc_clearfix">
-                <ul class="kc_tabs_nav ui-tabs-nav kc_clearfix d-flex justify-content-between py-5 px-3">
-                    @foreach($categories as $category)
-                    {{--                        <li class="ui-tabs-active"--}}
-                    {{--                            style="background: url('https://www.pizzaexpress.vn/wp-content/themes/dinhcode/img/icon_pizza_active.png')center top 10px no-repeat;height: 100px;">--}}
-                    {{--                            <a href="#pizza" data-prevent="scroll">{{$category->name}}</a>--}}
+                <ul class="list-food-category kc_tabs_nav ui-tabs-nav kc_clearfix d-flex justify-content-between py-5 px-3">
+                    <li data-id="0">
+                        <a href="/menu/food" data-prevent="scroll">All</a>
                     </li>
+                    @foreach($categories as $category)
+                        <li data-id="{{$category->id}}">
+                            <a href="/menu/food?category={{$category->id}}"
+                               data-prevent="scroll">{{$category->name}}</a>
+                        </li>
                     @endforeach
                 </ul>
                 <div id="pizza"
@@ -62,7 +63,8 @@
                                                         <div class="row amount-of-nutrition">
                                                             <div class="col-sm-6 offset-3" style="Fmargin-left: 25%">
                                                                 <span class="nna-text-bold nna-font-size-14">Calo</span>
-                                                                <div class="low">
+                                                                <div class="nutrition-index" data-type="calo"
+                                                                     data-content="{{$food->calo}}">
                                                                     <span
                                                                         class="nna-font-size-14">{{$food->calo}}</span><small>&nbsp;(g)</small>
                                                                 </div>
@@ -70,21 +72,24 @@
                                                             <div class="col-sm-6">
                                                                 <span
                                                                     class="nna-text-bold nna-font-size-14">Protein</span>
-                                                                <div class="normal">
+                                                                <div class="nutrition-index" data-type="protein"
+                                                                     data-content="{{$food->protein}}">
                                                                     <span
                                                                         class="nna-font-size-14">{{$food->protein}}</span><small>&nbsp;(g)</small>
                                                                 </div>
                                                             </div>
                                                             <div class="col-sm-6">
                                                                 <span class="nna-text-bold nna-font-size-14">Dietary fiber</span>
-                                                                <div class="very-high">
+                                                                <div class="nutrition-index" data-type="dietary_fiber"
+                                                                     data-content="{{$food->dietary_fiber}}">
                                                                     <span
                                                                         class="nna-font-size-14">{{$food->dietary_fiber}}</span><small>&nbsp;(g)</small>
                                                                 </div>
                                                             </div>
                                                             <div class="col-sm-6">
                                                                 <span class="nna-text-bold nna-font-size-14">Carbohydrate</span>
-                                                                <div class="high">
+                                                                <div class="nutrition-index" data-type="carbohydrate"
+                                                                     data-content="{{$food->carbohydrate}}">
                                                                     <span
                                                                         class="nna-font-size-14">{{$food->carbohydrate}}</span><small>&nbsp;(g)</small>
                                                                 </div>
@@ -92,12 +97,14 @@
                                                             <div class="col-sm-6">
                                                                 <span
                                                                     class="nna-text-bold nna-font-size-14">Total fat</span>
-                                                                <div class="very-low">
-                                                                    <span  class="nna-font-size-14">{{$food->total_fat}}</span><small>&nbsp;(g)</small>
+                                                                <div class="nutrition-index" data-type="total_fat"
+                                                                     data-content="{{$food->total_fat}}">
+                                                                    <span
+                                                                        class="nna-font-size-14">{{$food->total_fat}}</span><small>&nbsp;(g)</small>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="row mt-3">
+                                                        <div class="row mt-1">
                                                             <div class="col-sm-12">
                                                                 <span
                                                                     class="nna-font-size-14 nna-text-bold nna-text-gray">Vitamins: {{$food->vitamins}}</span>
@@ -110,57 +117,16 @@
                                                     </div>
                                                 </div>
                                                 <div class="food-card-footer">
-                                                    <h6 class="py-2">{{$food->name}}</h6>
-                                                    <div class="d-flex justify-content-between nna-abs-bottom-10">
+                                                    <h6 class="py-2">{{strlen($food->name) < 18 ? $food->name : substr($food->name,0,18)." ..."}}</h6>
+                                                    <div class="d-flex justify-content-between">
                                                         <p class="price">{{$food->price}}$</p>
-                                                        <a class="btn-add btn-add-food ml-3"  data-id="{{$food->id}}">
+                                                        <a class="btn-add btn-add-food ml-3" data-id="{{$food->id}}">
                                                             <i class="fal fa-plus"></i>
                                                         </a>
                                                     </div>
 
                                                 </div>
-                                                <div class="info">
-                                                    <div class="row amount-of-nutrition">
-                                                        <div class="col-sm-12" style="">
-                                                            <span>Calo</span>
-                                                            <div class="low">
-                                                                <span>{{$food->calo}}</span><small>&nbsp;(g)</small>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-12">
-                                                            <span>Protein</span>
-                                                            <div class="normal">
-                                                                <span>{{$food->protein}}</span><small>&nbsp;(g)</small>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-12">
-                                                            <span>Dietary fiber</span>
-                                                            <div class="very-high">
-                                                                <span>{{$food->dietary_fiber}}</span><small>&nbsp;(g)</small>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-12">
-                                                            <span>Carbohydrate</span>
-                                                            <div class="high">
-                                                                <span>{{$food->carbohydrate}}</span><small>&nbsp;(g)</small>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-12">
-                                                            <span>Total fat</span>
-                                                            <div class="very-low">
-                                                                <span>{{$food->total_fat}}</span><small>&nbsp;(g)</small>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mt-3">
-                                                        <div class="col-sm-12">
-                                                            <span>Vitamins: {{$food->vitamins}}</span>
-                                                        </div>
-                                                        <div class="col-sm-12">
-                                                            <span>Minerals: {{$food->minerals}} </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
+
                                             </div>
                                         </div>
                                     @endforeach

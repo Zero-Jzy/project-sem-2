@@ -133,13 +133,22 @@
                     </div>
 
                 </div>
-                <a type="submit" href="/checkout" class="btn-incard btn3 flex-c-m size18 txt11 trans-0-4 m-10 m-auto" id="checkout">
+                <a type="submit" href="/checkout" class="btn-incard btn3 flex-c-m size18 txt11 trans-0-4 m-10 m-auto"
+                   id="checkout">
                     Checkout
                 </a>
             </div>
         </div>
     </div>
 </aside>
+
+<div class="board-color">
+    <div class="very-high">Very high</div>
+    <div class="high">High</div>
+    <div class="normal">Normal</div>
+    <div class="low">Low</div>
+    <div class="very-low">Very low</div>
+</div>
 
 <script>
     const btnAddFood = $('.btn-add-food');
@@ -266,7 +275,7 @@
         $('.bag-icon').attr('data-food', countFood);
         $('#food-count').html(countFood);
         let listFoodsHtml = foods.map(food => (
-            `<div class="blo3 flex-w flex-col-l-sm m-b-30138">
+            `<div class="blo3 flex-w my-2 flex-col-l-sm m-b-30138">
                     <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
                         <a href="#"><img src="https://res.cloudinary.com/cloud-pj-sem2/image/upload/w_300,h_300,c_lpad,b_auto/${food.image}" alt="${food.name}"></a>
                     </div>
@@ -305,7 +314,7 @@
 
         $('.bag-icon').attr('data-set', countSet);
         $('#set-count').html(countSet);
-        countSet <= 0 ? btnCheckout.attr('href','javascript:void(0)') : btnCheckout.attr('href','/checkout');
+        countSet <= 0 ? btnCheckout.attr('href', 'javascript:void(0)') : btnCheckout.attr('href', '/checkout');
         let listSetsHtml = sets.map(set => (
             `<div>
                     <p>${set.name}</p>
@@ -338,12 +347,12 @@
 
         var totalValue = getTotalValue(arr);
 
-        calo.html(totalValue.calo);
-        protein.html(totalValue.protein);
-        dietary_fiber.html(totalValue.dietary_fiber);
-        carbohydrate.html(totalValue.carbohydrate);
-        total_fat.html(totalValue.total_fat);
-        price.html(totalValue.price);
+        calo.html('Calo: '+totalValue.calo);
+        protein.html('Protein: ' + totalValue.protein);
+        dietary_fiber.html('Dietary Fiber: '+totalValue.dietary_fiber);
+        carbohydrate.html('Carbohydrate: '+totalValue.carbohydrate);
+        total_fat.html('Total fat: '+totalValue.total_fat);
+        price.html('Price: ' + totalValue.price);
     }
 
     function getTotalValue(arr) {
@@ -390,6 +399,7 @@
             renderSetInBag();
         });
     })
+
 
 
 </script>

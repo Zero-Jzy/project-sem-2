@@ -28,22 +28,22 @@
         <div class="container kc-elm kc-css-410377 kc_tabs group tabs_thucdon">
             <div class="kc_wrapper ui-tabs kc_clearfix">
                 <ul class="kc_tabs_nav ui-tabs-nav kc_clearfix d-flex justify-content-between py-5 px-3">
-                    <li class="ui-tabs-active"
-                        style="background: url('https://www.pizzaexpress.vn/wp-content/themes/dinhcode/img/icon_pizza_active.png')center top 10px no-repeat;height: 100px;">
-                        <a href="#pizza" data-prevent="scroll">Pizza</a>
-                    </li>
-                    <li style="background: url('https://www.pizzaexpress.vn/wp-content/themes/dinhcode/img/icon_myi.png') center top 10px no-repeat;">
-                        <a href="#mi-y" data-prevent="scroll">Mì Ý</a></li>
-                    <li style="background: url('https://www.pizzaexpress.vn/wp-content/themes/dinhcode/img/icon_salad.png')center top 10px no-repeat">
-                        <a href="#salad" data-prevent="scroll">Salad</a></li>
-                    <li style="background: url('https://www.pizzaexpress.vn/wp-content/themes/dinhcode/img/icon_khaivi.png')center top 10px no-repeat">
-                        <a href="#khai-vi" data-prevent="scroll">Khai Vị</a></li>
-                    <li style="background: url('https://www.pizzaexpress.vn/wp-content/themes/dinhcode/img/icon_douong.png')center top 10px no-repeat">
-                        <a href="#do-uong" data-prevent="scroll">Đồ Uống</a></li>
-                    <li style="background: url('https://www.pizzaexpress.vn/wp-content/themes/dinhcode/img/icon_combo.png')center top 10px no-repeat">
-                        <a href="#combo" data-prevent="scroll">Combo</a></li>
-                    <li style="background: url('https://www.pizzaexpress.vn/wp-content/uploads/2019/07/icon-phomai-normal.png')center top 10px no-repeat">
-                        <a href="#khac" data-prevent="scroll">Khác</a></li>
+{{--                    <li class="ui-tabs-active"--}}
+{{--                        style="background: url('https://www.pizzaexpress.vn/wp-content/themes/dinhcode/img/icon_pizza_active.png')center top 10px no-repeat;height: 100px;">--}}
+{{--                        <a href="#pizza" data-prevent="scroll">Pizza</a>--}}
+{{--                    </li>--}}
+{{--                    <li style="background: url('https://www.pizzaexpress.vn/wp-content/themes/dinhcode/img/icon_myi.png') center top 10px no-repeat;">--}}
+{{--                        <a href="#mi-y" data-prevent="scroll">Mì Ý</a></li>--}}
+{{--                    <li style="background: url('https://www.pizzaexpress.vn/wp-content/themes/dinhcode/img/icon_salad.png')center top 10px no-repeat">--}}
+{{--                        <a href="#salad" data-prevent="scroll">Salad</a></li>--}}
+{{--                    <li style="background: url('https://www.pizzaexpress.vn/wp-content/themes/dinhcode/img/icon_khaivi.png')center top 10px no-repeat">--}}
+{{--                        <a href="#khai-vi" data-prevent="scroll">Khai Vị</a></li>--}}
+{{--                    <li style="background: url('https://www.pizzaexpress.vn/wp-content/themes/dinhcode/img/icon_douong.png')center top 10px no-repeat">--}}
+{{--                        <a href="#do-uong" data-prevent="scroll">Đồ Uống</a></li>--}}
+{{--                    <li style="background: url('https://www.pizzaexpress.vn/wp-content/themes/dinhcode/img/icon_combo.png')center top 10px no-repeat">--}}
+{{--                        <a href="#combo" data-prevent="scroll">Combo</a></li>--}}
+{{--                    <li style="background: url('https://www.pizzaexpress.vn/wp-content/uploads/2019/07/icon-phomai-normal.png')center top 10px no-repeat">--}}
+{{--                        <a href="#khac" data-prevent="scroll">Khác</a></li>--}}
                 </ul>
                 <div id="pizza"
                      class="kc-elm kc-css-122555 kc_tab ui-tabs-panel kc_ui-tabs-hide kc_clearfix tabs_pizza ui-tabs-body-active kc-section-active"
@@ -58,15 +58,7 @@
                                                 <div class="food-card-content">
                                                     <img
                                                         src="https://res.cloudinary.com/cloud-pj-sem2/image/upload/w_300,h_300,c_lpad,b_auto/{{$set->image}}"/>
-                                                    <div class="info">
-
-
-
-
-
-
-
-
+{{--                                                    <div class="info">--}}
 {{--                                                        <div class="row amount-of-nutrition">--}}
 {{--                                                            <div class="col-sm-6 offset-3" style="margin-left: 25%">--}}
 {{--                                                                <span>Calo</span>--}}
@@ -107,14 +99,10 @@
 {{--                                                                <span>Minerals: {{$set->minerals}} </span>--}}
 {{--                                                            </div>--}}
 {{--                                                        </div>--}}
-
-
-
-
-                                                    </div>
+{{--                                                    </div>--}}
                                                 </div>
                                                 <div class="food-card-footer">
-                                                    <h6 class="py-2">{{$set->name}}</h6>
+                                                    <a href="/menu/set/{{$set->id}}" class="py-2 h6">{{$set->name}}</a>
                                                     <div class="d-flex justify-content-between">
                                                         <p class="price">{{$set->price}}$</p>
                                                         <a class="btn-add btn-add-set" data-id="{{$set->id}}">

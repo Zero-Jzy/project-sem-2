@@ -21,11 +21,13 @@ class SetController extends Controller
      */
     public function index()
     {
-        $set = Set::where('type',1)->get();
+        $sets = Set::where('type', 1)->get();
 
         $data = [
-            'sets' => $set
+            'sets' => $sets
         ];
+
+//        dd($data);
         return view('sets', $data);
     }
 
@@ -50,11 +52,16 @@ class SetController extends Controller
 
         $listFood = $request->get('listFood');
         $totalValue = $request->get('totalValue');
+        $price = 0;
+        foreach ($listFood as $food) {
+            $price += $food['quantity'] * $food['price'];
+        };
 
         $set = Set::create([
             'name' => Carbon::now()->valueOf(),
             'type' => 2,
-            'category_id' => 1
+            'category_id' => 1,
+            'price' => $price
         ]);
 
         foreach ($listFood as $food) {
@@ -62,8 +69,6 @@ class SetController extends Controller
         };
 
         $set->save();
-        Log::info($totalValue);
-
 
         $data = array_merge($set->toArray(), $totalValue);
 
