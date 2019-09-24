@@ -5,7 +5,7 @@
  *
  * (c) Sean Tymon <tymon148@gmail.com>
  *
- * For the full copyright and license information, please view the LICENSE
+ * For the full copyright and license information, please view.blade.php the LICENSE
  * file that was distributed with this source code.
  */
 

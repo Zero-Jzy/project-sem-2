@@ -39,6 +39,9 @@
 
     <link href="https://sandbox.vnpayment.vn/paymentv2/lib/vnpay/vnpay.css" rel="stylesheet"/>
     <link href="{{asset('/css/jumbotron-narrow.css')}}" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="{{ asset('/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/owl.theme.default.min.css') }}">
     <script src="https://sandbox.vnpayment.vn/paymentv2/lib/vnpay/vnpay.js"></script>
 
 
@@ -70,6 +73,10 @@
                             <li>
                                 <a class="{{Request::is(['menu/food','menu/set']) ? 'active' : ''}}"
                                    href="{{route('food.index')}}">Menu</a>
+{{--                                <div class="custom-dropdown">--}}
+{{--                                    <a href="/menu/food">Foods</a>--}}
+{{--                                    <a href="/menu/set">Sets</a>--}}
+{{--                                </div>--}}
                             </li>
                             <li>
                                 <a class="{{Request::is('about-us') ? 'active' : ''}}" href="{{route('about-us')}}">About</a>
@@ -107,7 +114,8 @@
                                              alt="">
                                     </a>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="{{route('profile.index')}}"><i class="fal fa-id-card-alt"></i> <span>My profile</span></a>
+                                        <a class="dropdown-item" href="{{route('profile.index')}}"><i
+                                                class="fal fa-id-card-alt"></i> <span>My profile</span></a>
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                            onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -213,7 +221,7 @@
 
                 <div>
 						<span class="fs-13 color2 m-r-5">
-							<i class="fab fa-twitter"  aria-hidden="true"></i>
+							<i class="fab fa-twitter" aria-hidden="true"></i>
 						</span>
                     <a href="#" class="txt15">
                         @naruto
@@ -369,7 +377,8 @@
 
                 <p class="fieldset">
                     <label class="image-replace cd-password" for="signin-password">Password</label>
-                    <input name="password" class="full-width has-padding has-border" id="signin-password" type="password"
+                    <input name="password" class="full-width has-padding has-border" id="signin-password"
+                           type="password"
                            placeholder="Password">
                     <span class="cd-error-message">Error message here!</span>
                     <a href="#0" class="hide-password">Hide</a>
@@ -383,7 +392,7 @@
                 <p class="fieldset">
                     <input type="button" id="btn-login" class="full-width has-padding btn my-2 btn-login" value="Login">
                     <input type="button" class="full-width has-padding btn my-2 btn-login" value="Login with facebook">
-                    <input type="button" class="full-width has-padding btn my-2 btn-login" value="Login with google">
+                    <input type="button" id="btn-login-google" class="full-width has-padding btn my-2 btn-login" value="Login with google">
                 </p>
 
             </form>
@@ -428,7 +437,8 @@
                     <a href="#0" class="hide-password">Hide</a>
                 </p>
                 <p class="fieldset">
-                    <input type="button" id="btn-register" class="full-width has-padding btn btn-register" value="Register">
+                    <input type="button" id="btn-register" class="full-width has-padding btn btn-register"
+                           value="Register">
                 </p>
             </form>
 
@@ -489,5 +499,9 @@
 <script src="{{asset('/template/js/main.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 <script src="{{asset('/js/my.js')}}"></script>
+
+
+{{--<script src="{{ asset("js/jquery/dist/jquery.min.js") }}"></script>--}}
+
 </body>
 </html>

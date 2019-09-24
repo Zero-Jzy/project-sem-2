@@ -15,12 +15,16 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
+use JD\Cloudder\Facades\Cloudder;
 
 Auth::routes();
 
-Route::get('/', function (){
+Route::get('/', function () {
     return view('home');
 })->name('home');
+
+Route::get('/redirect', 'LoginGoogleController@redirect');
+Route::get('/callback', 'LoginGoogleController@callback');
 
 Route::get('/checkout', function (){
     return view('checkout');
@@ -30,14 +34,14 @@ Route::resource('/order', 'OrderController');
 
 //Route::get('/checkout-shipping',  )
 
-Route::get('/ad', function (){
+Route::get('/ad', function () {
     return view('admin');
 });
 
 Route::view('/ad/{any}', 'admin')
     ->where('any', '.*');
 
-Route::resource('/user','UserController');
+Route::resource('/user', 'UserController');
 
 Route::resource('menu/food', 'FoodController');
 
@@ -45,23 +49,21 @@ Route::resource('menu/set', 'SetController');
 
 Route::resource('profile', 'ProfileController');
 
-
-Route::get('/about-us', function (){
+Route::get('/about-us', function () {
     return view('about-us');
 })->name('about-us');
 
-Route::get('/contact', function (){
+Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
-Route::get('/checkout_success', function (){
+Route::get('/checkout_success', function () {
     $type = Input::get('payment_success');
     $mes = 'Checkout successful!';
-    if($type) $mes = 'Transaction successful!';
+    if ($type) $mes = 'Transaction successful!';
 
-    return view('checkout_success',['mes'=> $mes]);
+    return view('checkout_success', ['mes' => $mes]);
 });
-
 
 
 //Route::get('/test', function (){

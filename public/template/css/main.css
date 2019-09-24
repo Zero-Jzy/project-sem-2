@@ -92,11 +92,6 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 /*[ RESTYLE TAG ]
 ///////////////////////////////////////////////////////////
 */
-* {
-	margin: 0px;
-	padding: 0px;
-	box-sizing: border-box;
-}
 
 body, html {
 	height: 100%;

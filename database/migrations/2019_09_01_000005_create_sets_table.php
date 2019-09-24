@@ -17,9 +17,10 @@ class CreateSetsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->integer('type');
+            $table->decimal('price');
             $table->bigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('set_categories');
-            $table->string('image')->nullable();
+            $table->string('image');
             $table->longText('created_at')->default(\Carbon\Carbon::now()->valueOf());
             $table->longText('updated_at')->nullable();
             $table->integer('status')->default(1);
