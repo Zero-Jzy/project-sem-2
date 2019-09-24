@@ -76,10 +76,16 @@ class SetController extends Controller
     {
         $foods =  $request->get('foods');
 
+        $price = 0;
+        foreach ($foods as $food) {
+            $price += $food['quantity'] * $food['price'];
+        };
+
         $set = Set::create([
             'name' =>  $request->get('name'),
             'type' => 1,
-            'category_id' => (int)$request->get('category_id')
+            'category_id' => (int)$request->get('category_id'),
+            'price' => $price
         ]);
 
         foreach ($foods as $food){

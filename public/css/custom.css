@@ -1,3 +1,8 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
 .footer{
     margin-top: 30px;
 }
@@ -10,6 +15,7 @@
     background-color: #fff;
     width: 16px
 }
+
 
 .scrollbar::-webkit-scrollbar-track {
     background-color: #fff
@@ -520,7 +526,7 @@ xsigin/signup popup
     background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-close.svg") no-repeat center center;
     text-indent: 100%;
     white-space: nowrap;
-    overflow: hidden;
+
 }
 @media only screen and (min-width: 1170px) {
     .cd-close-form {
@@ -549,7 +555,7 @@ xsigin/signup popup
 }
 
 .food-card .food-card-content{
-    position: relative;
+    /*position: relative;*/
 }
 
 .food-card .food-card-content img{
@@ -558,16 +564,16 @@ xsigin/signup popup
 }
 
 .food-card .food-card-content .info{
-    border-radius: .5rem;
-    position: absolute;
-    transition: 400ms;
-    padding: 0 1rem;
-    height: 100%;
-    width: 100%;
-    background: rgba(255,255,255,0.8);
-    top: 0;
-    left: 0;
-    opacity: 0;
+    /*border-radius: .5rem;*/
+    /*position: absolute;*/
+    /*transition: 400ms;*/
+    /*padding: 0 1rem;*/
+    /*height: 100%;*/
+    /*width: 100%;*/
+    /*background: rgba(255,255,255,0.8);*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*opacity: 0;*/
 }
 
 .food-card .food-card-content:hover .info{
@@ -578,7 +584,8 @@ xsigin/signup popup
     padding: .5rem 1rem;
     /* justify-content: space-between; */
     /* display: flex; */
-    z-index: 2;
+    z-index: 1;
+    min-height: 100px;
 }
 
 .food-card-footer h5{
@@ -619,11 +626,12 @@ xsigin/signup popup
 }
 
 .food-card .amount-of-nutrition > div{
-    padding: .3rem .6em;
+    padding: 0 .6em;
 }
 
 .food-card .amount-of-nutrition > div > span{
-    font-size: 14px;
+    font-size: .8em;
+    font-weight: 500;
 }
 
 .food-card .amount-of-nutrition > div > div{
@@ -774,4 +782,174 @@ input[type=number]
 
 .btn-toggle-sidebar i{
     font-size: 24px;
+}
+
+/*css sửa tràn gd trang food'*/
+
+.nna-font-size-14{
+    font-size: .8em;
+    font-weight: 500;
+}
+
+.nna-text-white{
+    color: white;
+}
+
+.nna-text-gray{
+    color: #5c5c5c;
+}
+
+.nna-abs-bottom-10{
+    position: absolute;
+    bottom: 10px;
+}
+/*End sửa tràn giao dien*/
+
+
+/*css detail-set*/
+.newarrival{
+    background: green;
+    width: 50px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+.col-md-7 h2{
+    color: #555;
+}
+
+.price{
+    color: #FE980F;
+    font-size: 1em;
+    font-weight: bold;
+    padding-top: 2px;
+}
+
+.cart{
+    background: #FE980F;
+    color: #FFFFFF;
+    font-size: 15px;
+    margin-left: 20px;
+    padding:6px;
+}
+
+/*.nna-quantity input {*/
+/*    width: 62px;*/
+/*    height: 30px;*/
+/*    line-height: 1.65;*/
+/*    float: left;*/
+/*    display: block;*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*    padding-left: 18px;*/
+/*    border: 1px solid #eee;*/
+/*}*/
+
+/*.nna-quantity input:focus {*/
+/*    outline: 0;*/
+/*}*/
+
+/*.nna-quantity-nav {*/
+/*    float: left;*/
+/*    position: relative;*/
+/*    height: 30px;*/
+/*}*/
+
+/*.nna-quantity-button {*/
+/*    position: relative;*/
+/*    cursor: pointer;*/
+/*    border-left: 1px solid #eee;*/
+/*    width: 20px;*/
+/*    text-align: center;*/
+/*    color: #333;*/
+/*    font-size: 13px;*/
+/*    font-family: "Trebuchet MS", Helvetica, sans-serif !important;*/
+/*    line-height: 1.7;*/
+/*    -webkit-transform: translateX(-100%);*/
+/*    transform: translateX(-100%);*/
+/*    -webkit-user-select: none;*/
+/*    -moz-user-select: none;*/
+/*    -ms-user-select: none;*/
+/*    -o-user-select: none;*/
+/*    user-select: none;*/
+/*    height: 50%;*/
+/*    line-height: 15px;*/
+/*}*/
+
+/*.nna-quantity-button.quantity-up {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    border-bottom: 1px solid #eee;*/
+/*}*/
+
+/*.nna-quantity-button.quantity-down {*/
+/*    position: absolute;*/
+/*    bottom: -1px;*/
+/*}*/
+/*carousel*/
+
+.nna-carousel{
+  /*margin-top:70px;*/
+  /*  margin-bottom: 70px;*/
+    margin: 70px;
+}
+.nna-container{
+margin: 8%;
+}
+.inner{
+    overflow: hidden;
+}
+.inner image{
+    transition:all 1.5s ease ;
+}
+.inner:hover img{
+    transform: scale(1.5);
+}
+/*!*băng trượt phần dưới*/
+.owl-prev{
+    left: -30px;
+}
+.owl-next{
+    right: -30px;
+}
+.owl-prev, .owl-next{
+    position: absolute;
+    top: 30%;
+}
+.owl-prev  span, .owl-next span{
+    font-size: 60px;
+    color: #787878;
+}
+.owl-theme .owl-nav [class*="owl-"]:hover{
+    background-color:transparent ;
+}
+
+
+.board-color{
+    position: fixed;
+    left: 0;
+    top: 55%;
+}
+.board-color > div{
+    text-align: center;
+    width: 100px;
+    padding: 5px;
+    font-weight: 500;
+    color: #2a2a2a;
+}
+
+.custom-dropdown{
+    position: absolute;
+    top: 70px;
+    left: -24px;
+    width: 140px;
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.custom-dropdown a{
+    text-transform: uppercase;
 }
