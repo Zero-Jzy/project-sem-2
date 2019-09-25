@@ -10,7 +10,7 @@
                                 <img src="{{$user->profile->avatar}}" height="45" width="45"
                                      alt="">
                             </p>
-                            <p class="name">Tài khoản của</p>
+                            <p class="name">Account </p>
                             <h6>{{$user->profile->first_name .' '. $user->profile->last_name}}</h6>
                         </div>
                         <div class="">
@@ -54,7 +54,7 @@
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Email</label>
                                     <div class="col-sm-10">
-                                        <input type="text" readonly class="form-control" value="vuhonghoaianh1609@gmail.com">
+                                        <input type="text" readonly class="form-control" value="{{$user->email}}">
                                     </div>
                                 </div>
                                 <div class="form-group row">

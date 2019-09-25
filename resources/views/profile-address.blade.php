@@ -10,7 +10,7 @@
                                 <img src="{{$user->profile->avatar}}" height="45" width="45"
                                      alt="">
                             </p>
-                            <p class="name">Tài khoản của</p>
+                            <p class="name">Account</p>
                             <h6>{{$user->profile->first_name .' '. $user->profile->last_name}}</h6>
                         </div>
                         <div class="">
@@ -158,7 +158,7 @@
                                         <label class="col-sm-2 col-form-label">Province</label>
                                         {{--                                    <label for="sel1">Thành phố:</label>--}}
                                         <div class="col-md-10">
-                                            <select name="tinh" class="form-control" id="tinh">
+                                            <select name="city" class="form-control" id="tinh">
 
                                             </select>
                                         </div>
@@ -167,7 +167,7 @@
                                         <label class="col-sm-2 col-form-label">Districts</label>
                                         {{--                                    <label for="sel1">Thành phố:</label>--}}
                                         <div class="col-md-10">
-                                            <select name="huyen" class="form-control" id="huyen">
+                                            <select name="District" class="form-control" id="huyen">
 
                                             </select>
                                         </div>
@@ -186,7 +186,7 @@
                                                class="col-lg-2 col-md-2 control-label visible-md-block visible-lg-block">Address:</label>
                                         <div class="col-lg-10 col-md-10">
                                         <textarea class="form-control" name="address" cols="30" rows="10"
-                                                  placeholder="Nhập địa chỉ"></textarea>
+                                                  placeholder="Enter the address"></textarea>
                                             <i class="form-control-feedback" style="display: none;"></i>
                                         </div>
                                     </div>

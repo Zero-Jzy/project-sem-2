@@ -68,6 +68,7 @@ class ProfileController extends Controller
             'phone' => $phone,
             'slug' => $slug,
             'addressTxt' => $addressTxt
+
         ]);
 
         return redirect()->back();
@@ -105,6 +106,7 @@ class ProfileController extends Controller
     public function update(Request $request, $id)
     {
         //
+
     }
 
     /**
