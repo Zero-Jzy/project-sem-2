@@ -119,7 +119,7 @@ class MyCreateSetForm extends Component {
                     </Col>
                     <Col sm={12}>
                         <Form.Item label="Category">
-                            {getFieldDecorator('category', {
+                            {getFieldDecorator('category_id', {
                                 rules: [{required: true, message: 'Please select dish category!'}],
                             })(
                                 <Select

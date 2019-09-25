@@ -70,7 +70,6 @@ class OrderController extends Controller
             if ($order['type'] === 'VNPAY') {
                 return $this->createPayment($order);
             }
-            Log::info($listSet);
             $address = Address::find($address_id);
             $data = ['order'=> $address, 'list' => $listSet,'amount' => $amount];
             Mail::send('send', $data, function($message) {

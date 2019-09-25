@@ -11,7 +11,7 @@
                     class="img-fluid" alt="Responsive image">
             </div>
             <div class="col-md-6">
-                <p class="newarrival text-center">NEW</p>
+{{--                <p class="newarrival text-center">NEW</p>--}}
                 <h4><b>Five flavored fried chicken</b></h4>
                 <p class="price"> USD $15.00</p>
                 <b>Nutritional Ingredients</b>
@@ -35,113 +35,6 @@
             </div>
         </div>
     </div>
-
-    {{--    <div class="container">--}}
-    {{--        <div class="row justify-content-center">--}}
-    {{--            <div class="col-sm-4 col-md-3">--}}
-    {{--                <div class="food-card">--}}
-    {{--                    <div class="food-card-content">--}}
-    {{--                        <img--}}
-    {{--                            src="https://res.cloudinary.com/cloud-pj-sem2/image/upload/w_300,h_300,c_lpad,b_auto/pu1geam0w9yo5no4zuyj.jpg"/>--}}
-    {{--                        <div class="info">--}}
-    {{--                            <div class="row amount-of-nutrition">--}}
-    {{--                                <div class="col-sm-6 offset-3" style="Fmargin-left: 25%">--}}
-    {{--                                    <span class="nna-text-bold nna-font-size-14">Calo</span>--}}
-    {{--                                    <div class="low">--}}
-    {{--                                                                    <span--}}
-    {{--                                                                        class="nna-font-size-14">123344</span><small>&nbsp;(g)</small>--}}
-    {{--                                    </div>--}}
-    {{--                                </div>--}}
-    {{--                                <div class="col-sm-6">--}}
-    {{--                                                                <span--}}
-    {{--                                                                    class="nna-text-bold nna-font-size-14">Protein</span>--}}
-    {{--                                    <div class="normal">--}}
-    {{--                                                                    <span--}}
-    {{--                                                                        class="nna-font-size-14">2344354</span><small>&nbsp;(g)</small>--}}
-    {{--                                    </div>--}}
-    {{--                                </div>--}}
-    {{--                                <div class="col-sm-6">--}}
-    {{--                                    <span class="nna-text-bold nna-font-size-14">Dietary fiber</span>--}}
-    {{--                                    <div class="very-high">--}}
-    {{--                                                                    <span--}}
-    {{--                                                                        class="nna-font-size-14">2344354</span><small>&nbsp;(g)</small>--}}
-    {{--                                    </div>--}}
-    {{--                                </div>--}}
-    {{--                                <div class="col-sm-6">--}}
-    {{--                                    <span class="nna-text-bold nna-font-size-14">Carbohydrate</span>--}}
-    {{--                                    <div class="high">--}}
-    {{--                                                                    <span--}}
-    {{--                                                                        class="nna-font-size-14">2344354</span><small>&nbsp;(g)</small>--}}
-    {{--                                    </div>--}}
-    {{--                                </div>--}}
-    {{--                                <div class="col-sm-6">--}}
-    {{--                                                                <span--}}
-    {{--                                                                    class="nna-text-bold nna-font-size-14">Total fat</span>--}}
-    {{--                                    <div class="very-low">--}}
-    {{--                                        <span--}}
-    {{--                                            class="nna-font-size-14">2344354</span><small>&nbsp;(g)</small>--}}
-    {{--                                    </div>--}}
-    {{--                                </div>--}}
-    {{--                            </div>--}}
-    {{--                            <div class="row mt-3">--}}
-    {{--                                <div class="col-sm-12">--}}
-    {{--                                                                <span--}}
-    {{--                                                                    class="nna-font-size-14 nna-text-bold nna-text-gray">Vitamins:2344354</span>--}}
-    {{--                                </div>--}}
-    {{--                                <div class="col-sm-12">--}}
-    {{--                                                                <span--}}
-    {{--                                                                    class="nna-font-size-14 nna-text-bold nna-text-gray">Minerals:2344354</span>--}}
-    {{--                                </div>--}}
-    {{--                            </div>--}}
-    {{--                        </div>--}}
-    {{--                    </div>--}}
-    {{--                    <div class="food-card-footer">--}}
-    {{--                        <h6 class="py-2">2344354</h6>--}}
-    {{--                        <div class="d-flex justify-content-between nna-abs-bottom-10">--}}
-    {{--                            <p class="price">2344354$</p>--}}
-    {{--                            <a class="btn-add btn-add-food ml-3" data-id="2344354">--}}
-    {{--                                <i class="fal fa-plus"></i>--}}
-    {{--                            </a>--}}
-    {{--                        </div>--}}
-
-    {{--                    </div>--}}
-    {{--                </div>--}}
-    {{--            </div>--}}
-    {{--            <div class="col-md-4">--}}
-    {{--                <div class="card shadow" style="width: 20rem;">--}}
-    {{--                    <div class="inner">--}}
-    {{--                        <img--}}
-    {{--                            src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2019/08/931/524/golden-retriever-istock.jpg?ve=1&tl=1"--}}
-    {{--                            class="card-img-top" alt="2">--}}
-    {{--                    </div>--}}
-
-    {{--                    <div class="card-body ">--}}
-    {{--                        <h5 class="card-title">Design</h5>--}}
-    {{--                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting--}}
-    {{--                            industry.</p>--}}
-    {{--                        <a href="#" class="btn btn-success">Learn More...</a>--}}
-    {{--                    </div>--}}
-    {{--                </div>--}}
-    {{--            </div>--}}
-    {{--            <div class="col-md-4">--}}
-    {{--                <div class="card shadow" style="width: 20rem;">--}}
-    {{--                    <div class="inner">--}}
-    {{--                        <img--}}
-    {{--                            src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2019/08/931/524/golden-retriever-istock.jpg?ve=1&tl=1"--}}
-    {{--                            class="card-img-top" alt="3">--}}
-    {{--                    </div>--}}
-
-    {{--                    <div class="card-body ">--}}
-    {{--                        <h5 class="card-title">Design</h5>--}}
-    {{--                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting--}}
-    {{--                            industry.</p>--}}
-    {{--                        <a href="#" class="btn btn-success">Learn More...</a>--}}
-    {{--                    </div>--}}
-    {{--                </div>--}}
-    {{--            </div>--}}
-
-    {{--        </div>--}}
-    {{--    </div>--}}
 
     <div class="container mt-5 mb-5">
         <div class="owl-carousel owl-theme">

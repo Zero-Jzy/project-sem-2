@@ -43,8 +43,6 @@
     <link rel="stylesheet" href="{{ asset('/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/owl.theme.default.min.css') }}">
     <script src="https://sandbox.vnpayment.vn/paymentv2/lib/vnpay/vnpay.js"></script>
-
-
 </head>
 <body class="animsition">
 <header>
@@ -108,9 +106,12 @@
                             @auth
                                 <li>
                                     <a class="dropdown-toggle" data-toggle="dropdown">
-                                        <span>{{ Auth::user()->profile->first_name . ' ' . Auth::user()->profile->last_name }}</span>
+                                        @php
+                                            $name = Auth::user()->profile->first_name . ' ' . Auth::user()->profile->last_name
+                                        @endphp
+                                        <span>{{strlen($name) < 15 ? $name : substr($name,0,15)." ..."}}</span>
                                         <img class="avatar"
-                                             src="{{ Auth::user()->avatar ? Auth::user()->avatar : 'https://iupac.org/wp-content/uploads/2018/05/default-avatar.png'}}"
+                                             src="{{Auth::user()->profile->avatar}}"
                                              alt="">
                                     </a>
                                     <div class="dropdown-menu">

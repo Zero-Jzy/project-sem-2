@@ -58,7 +58,7 @@ class SetController extends Controller
         };
 
         $set = Set::create([
-            'name' =>'mon an default',
+            'name' =>'Set name',
             'type' => 2,
             'category_id' => 1,
             'image' => 'food_default_z6gsw3.png',

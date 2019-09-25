@@ -49,6 +49,8 @@ Route::resource('menu/set', 'SetController');
 
 Route::resource('profile', 'ProfileController');
 
+//Route::get('/son', 'DashboaedController@number_of_users');
+
 Route::get('/about-us', function () {
     return view('about-us');
 })->name('about-us');

@@ -9,7 +9,7 @@ if (['/login', '/register', '/profile', '/checkout_success', '/checkout'].indexO
     rightNavbar.css('color', '#000')
 }
 
-if(path.includes('menu')){
+if (path.includes('menu')) {
     itemHeader.css('color', 'black');
     rightNavbar.css('color', '#000')
 }
@@ -286,9 +286,19 @@ $('#btn-login').click(function () {
     });
 });
 
+function renderErrors(errors) {
+    let errFields = Object.keys(errors);
+    for (let field of errFields) {
+        let errField = $(`input[name=${field}]`).next();
+        errField.html(errors[field][0]).addClass('is-visible')
+    }
+};
+
 $('#btn-login-google').click(function () {
-    window.location.href='/redirect'
+    alert(1);
+    window.location.href = '/redirect'
 });
+
 
 function renderErrors(errors){
     let errFields = Object.keys(errors);
@@ -352,16 +362,17 @@ let searchParams = new URLSearchParams(window.location.search)
 let category_id = searchParams.get('category');
 
 $('.list-food-category > li').each(function () {
-    if(!category_id){
+    if (!category_id) {
         category_id = '0';
     }
 
     let id = $(this).attr('data-id');
 
     console.log(id, category_id);
-    if(id === category_id){
+    if (id === category_id) {
         $(this).addClass('ui-tabs-active')
-    };
+    }
+    ;
 });
 
 function renderErrors(errors) {
