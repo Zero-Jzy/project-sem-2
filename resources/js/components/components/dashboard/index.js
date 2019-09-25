@@ -1,6 +1,7 @@
 import React from "react";
 import {Row, Col} from 'antd';
 import NumberCard from "./NumberCard";
+import SetSold from "./SetSold";
 import Highstock from '../chart/Hightstock'
 
 export default function Dashboard() {
@@ -17,7 +18,7 @@ export default function Dashboard() {
                     <Highstock/>
                 </Col>
                 <Col span={6}>
-
+                    <SetSold/>
                 </Col>
             </Row>
         </div>

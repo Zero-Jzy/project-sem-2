@@ -14,6 +14,9 @@
                             <h6>{{$user->profile->first_name .' '. $user->profile->last_name}}</h6>
                         </div>
                         <div class="">
+                            {{--                            <button class="btn btn-default dropdown-toggle btn-block" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">Danh mục--}}
+                            {{--                                <span class="caret"></span>--}}
+                            {{--                            </button>--}}
                             <ul class="nav nav-tabs" style="width: 100%;">
                                 <li style="padding-top: 30px" class="">
                                     <a class="nav-link active" data-toggle="tab" href="#content"
@@ -201,6 +204,30 @@
         </div>
     </section>
     <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#dmModal">
+        Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="dmModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
 

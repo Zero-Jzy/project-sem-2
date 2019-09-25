@@ -7,7 +7,7 @@
     <!--===============================================================================================-->
     <link rel="icon" type="image/png" href="{{asset('/template/images/icons/favicon.png')}}"/>
     <!--===============================================================================================-->
-{{--    <link rel="stylesheet" type="text/css" href="{{asset('/template/vendor/bootstrap/css/bootstrap.min.css')}}">--}}
+    <link rel="stylesheet" type="text/css" href="{{asset('/template/vendor/bootstrap/css/bootstrap.min.css')}}">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css"
           href="{{asset('/template/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
@@ -35,7 +35,9 @@
     <link rel="stylesheet" type="text/css" href="{{asset('/css/custom.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('/css/menu.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('/css/checkout.css')}}">
+
     <script type="text/javascript" src="{{asset('/template/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('/template/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
 
     <link href="https://sandbox.vnpayment.vn/paymentv2/lib/vnpay/vnpay.css" rel="stylesheet"/>
     <link href="{{asset('/css/jumbotron-narrow.css')}}" rel="stylesheet"/>
@@ -461,8 +463,7 @@
 <!--===============================================================================================-->
 <script type="text/javascript" src="{{asset('/template/vendor/animsition/js/animsition.min.js')}}"></script>
 <!--===============================================================================================-->
-{{--<script type="text/javascript" src="{{asset('/template/vendor/bootstrap/js/popper.js')}}"></script>--}}
-{{--<script type="text/javascript" src="{{asset('/template/vendor/bootstrap/js/bootstrap.min.js')}}"></script>--}}
+<script type="text/javascript" src="{{asset('/template/vendor/bootstrap/js/popper.js')}}"></script>
 <!--===============================================================================================-->
 <script type="text/javascript" src="{{asset('/template/vendor/select2/select2.min.js')}}"></script>
 <!--===============================================================================================-->
@@ -485,6 +486,6 @@
 <script src="{{asset('/js/app.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 <script src="{{asset('/js/my.js')}}"></script>
-{{--<script src="{{ asset("js/jquery/dist/jquery.min.js") }}"></script>--}}
+
 </body>
 </html>

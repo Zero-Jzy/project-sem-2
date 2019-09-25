@@ -24,7 +24,8 @@ class DatabaseSeeder extends Seeder
             CategoryFoodSeeder::class,
             CategorySetSeeder::class,
             SetSeeder::class,
-            FoodSetSeeder::class
+            FoodSetSeeder::class,
+            OrderSeeder::class
         ]);
 
         DB::statement("ALTER SEQUENCE users_id_seq RESTART WITH 1001");
