@@ -38,12 +38,12 @@ class DashboardController extends Controller
             ->groupBy('set_id')
             ->get();
 
-        $totalSetType2 = 100 - $chart_data->sum('total');
+        $totalSetType22 = 100 - $chart_data->sum('total');
 
 //        $nameSet =  $chart_data['set_id'];
         $res = [
             'totalSetType1' => $chart_data->sum('total'),
-            'totalSetType2' => $totalSetType2
+            'totalSetType2' => $totalSetType22
         ];
         return $res;
     }
