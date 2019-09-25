@@ -19,8 +19,7 @@
                 <a class="{{Request::is('menu/set') ? 'active' : ''}}" href="{{route('set.index')}}">Sets</a>
             </div>
 
-            <div class="divider_inner divider_line3" style="
-        width: 30%;
+            <div class="divider_inner divider_line3" style=" width: 30%;
     margin: 0 auto;
         position: relative;
         /*background: url('https://www.pizzaexpress.vn/wp-content/themes/dinhcode/img/line_title.png');*/

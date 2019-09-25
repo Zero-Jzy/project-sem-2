@@ -462,6 +462,11 @@ xsigin/signup popup
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
 }
+.img-fluid{
+    width: 432px;
+    height: 364px;
+}
+
 
 .cd-form .cd-error-message.is-visible {
     opacity: 1;
@@ -821,12 +826,13 @@ input[type=number]
 .price{
     color: #FE980F;
     font-size: 1em;
+
     font-weight: bold;
     padding-top: 2px;
 }
 
 .cart{
-    background: #FE980F;
+    background: #fe3e25;
     color: #FFFFFF;
     font-size: 15px;
     margin-left: 20px;
