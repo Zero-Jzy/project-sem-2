@@ -58,9 +58,10 @@ class SetController extends Controller
         };
 
         $set = Set::create([
-            'name' => Carbon::now()->valueOf(),
+            'name' =>'Set name',
             'type' => 2,
             'category_id' => 1,
+            'image' => 'food_default_z6gsw3.png',
             'price' => $price
         ]);
 

@@ -52,6 +52,8 @@ class FoodController extends Controller
             });
         }
 
+
+
         $res['keys'] = $foods->get()->map(function ($values) {
             return $values->id;
         });

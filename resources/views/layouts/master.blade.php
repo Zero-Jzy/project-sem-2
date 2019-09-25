@@ -7,7 +7,7 @@
     <!--===============================================================================================-->
     <link rel="icon" type="image/png" href="{{asset('/template/images/icons/favicon.png')}}"/>
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{asset('/template/vendor/bootstrap/css/bootstrap.min.css')}}">
+{{--    <link rel="stylesheet" type="text/css" href="{{asset('/template/vendor/bootstrap/css/bootstrap.min.css')}}">--}}
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css"
           href="{{asset('/template/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
@@ -93,9 +93,12 @@
                             @auth
                                 <li>
                                     <a class="dropdown-toggle" data-toggle="dropdown">
-                                        <span>{{ Auth::user()->profile->first_name . ' ' . Auth::user()->profile->last_name }}</span>
+                                        @php
+                                            $name = Auth::user()->profile->first_name . ' ' . Auth::user()->profile->last_name
+                                        @endphp
+                                        <span>{{strlen($name) < 15 ? $name : substr($name,0,15)." ..."}}</span>
                                         <img class="avatar"
-                                             src="{{ Auth::user()->avatar ? Auth::user()->avatar : 'https://iupac.org/wp-content/uploads/2018/05/default-avatar.png'}}"
+                                             src="{{Auth::user()->profile->avatar}}"
                                              alt="">
                                     </a>
                                     <div class="dropdown-menu">
@@ -132,10 +135,7 @@
         </div>
     </div>
 </header>
-
 @yield('content')
-
-
 <footer class="bg1">
     <div class="container p-t-40 p-b-70">
         <div class="row">
@@ -377,7 +377,7 @@
                 <p class="fieldset">
                     <input type="button" id="btn-login" class="full-width has-padding btn my-2 btn-login" value="Login">
                     <input type="button" class="full-width has-padding btn my-2 btn-login" value="Login with facebook">
-                    <input type="button" class="full-width has-padding btn my-2 btn-login" value="Login with google">
+                    <input type="button" id="btn-login-google" class="full-width has-padding btn my-2 btn-login" value="Login with google">
                 </p>
 
             </form>
@@ -461,8 +461,8 @@
 <!--===============================================================================================-->
 <script type="text/javascript" src="{{asset('/template/vendor/animsition/js/animsition.min.js')}}"></script>
 <!--===============================================================================================-->
-<script type="text/javascript" src="{{asset('/template/vendor/bootstrap/js/popper.js')}}"></script>
-<script type="text/javascript" src="{{asset('/template/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+{{--<script type="text/javascript" src="{{asset('/template/vendor/bootstrap/js/popper.js')}}"></script>--}}
+{{--<script type="text/javascript" src="{{asset('/template/vendor/bootstrap/js/bootstrap.min.js')}}"></script>--}}
 <!--===============================================================================================-->
 <script type="text/javascript" src="{{asset('/template/vendor/select2/select2.min.js')}}"></script>
 <!--===============================================================================================-->
