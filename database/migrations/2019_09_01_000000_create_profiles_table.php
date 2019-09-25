@@ -21,7 +21,7 @@ class CreateProfilesTable extends Migration
             $table->string('last_name');
             $table->text('avatar')->default('https://discovery-park.co.uk/wp-content/uploads/2017/06/avatar-default.png');
             $table->string('phone')->nullable();
-            $table->integer('age')->nullable();
+            $table->date('dob')->nullable();
             $table->enum('gender', ['M', 'F', 'O'])->nullable();
             $table->longText('created_at')->default(\Carbon\Carbon::now()->valueOf());
             $table->longText('updated_at')->nullable();
