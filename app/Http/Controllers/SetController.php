@@ -23,6 +23,7 @@ class SetController extends Controller
     {
         $sets = Set::where('type', 1)->get();
 
+
         $data = [
             'sets' => $sets
         ];
@@ -85,7 +86,33 @@ class SetController extends Controller
      */
     public function show($id)
     {
-        return view('detail-set');
+        $set = Set::with('foods')->where('id', $id)->first()->toArray();
+        $set['price'] = 0;
+        $set['calo'] = 0;
+        $set['protein'] = 0;
+        $set['dietary_fiber'] = 0;
+        $set['carbohydrate'] = 0;
+        $set['total_fat'] = 0;
+
+        $set['vitamins'] = '';
+        $set['minerals'] = '';
+        foreach ($set['foods'] as $food) {
+            $set['price'] += $food['price'];
+            $set['calo'] += $food['calo'];
+            $set['protein'] += $food['protein'];
+            $set['dietary_fiber'] += $food['dietary_fiber'];
+            $set['carbohydrate'] += $food['carbohydrate'];
+            $set['total_fat'] += $food['total_fat'];
+            $set['vitamins'] .= ',' . $food['vitamins'];
+            $set['minerals'] .= ',' . $food['minerals'];
+//            $set->calo += $food->calo;
+//            $set->price += $food->price;
+        }
+
+//        echo '<pre>';
+//        print_r($set);
+//        echo '<pre>';
+        return view('detail-set', ['set' => $set]);
     }
 
     /**

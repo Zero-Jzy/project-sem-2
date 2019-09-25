@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Address;
+use App\Profile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
@@ -23,6 +24,14 @@ class ProfileController extends Controller
     {
         $user = Auth::user();
         return view('profile-user', ['user' => $user]);
+    }
+
+
+
+    public function profileAddress()
+    {
+        $user = Auth::user();
+        return view('profile-address', ['user' => $user]);
     }
 
     /**
@@ -60,6 +69,7 @@ class ProfileController extends Controller
             'phone' => $phone,
             'slug' => $slug,
             'addressTxt' => $addressTxt
+
         ]);
 
         return redirect()->back();
@@ -96,7 +106,13 @@ class ProfileController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+//        $profile = Profile::update
+        $profile = Profile::find($id);
+
+        $profile->update($request->all());
+
+//        return redirect()->back();
+
     }
 
     /**

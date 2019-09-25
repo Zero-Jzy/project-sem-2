@@ -10,6 +10,7 @@ import UserTable from './components/table/UserTable'
 import FoodTable from './components/table/FoodTable';
 import SetTable from "./components/table/SetTable";
 import TestTable from './components/table/TestTable';
+import OrderTable from './components/table/OrderTable';
 import UserDetail from './components/UserDetail';
 import FormTest from './components/FormTest'
 import LoginForm from "./components/auth/Login";
@@ -50,7 +51,7 @@ export default class Admin extends React.Component {
                                 <PrivateRoute exact path="/ad/set" component={SetTable}/>
                                 <PrivateRoute exact path="/ad/user" component={UserTable}/>
                                 <PrivateRoute exact path="/ad/test" component={TestTable}/>
-                                <PrivateRoute exact path="/ad/form" component={FormTest}/>
+                                <PrivateRoute exact path="/ad/order" component={OrderTable}/>
                                 <PrivateRoute exact path="/ad/user/:id" component={UserDetail}/>
                             </MasterLayout>
                         </Route>
