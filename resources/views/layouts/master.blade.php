@@ -7,7 +7,7 @@
     <!--===============================================================================================-->
     <link rel="icon" type="image/png" href="{{asset('/template/images/icons/favicon.png')}}"/>
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{asset('/template/vendor/bootstrap/css/bootstrap.min.css')}}">
+{{--    <link rel="stylesheet" type="text/css" href="{{asset('/template/vendor/bootstrap/css/bootstrap.min.css')}}">--}}
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css"
           href="{{asset('/template/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
@@ -40,6 +40,7 @@
     <link href="https://sandbox.vnpayment.vn/paymentv2/lib/vnpay/vnpay.css" rel="stylesheet"/>
     <link href="{{asset('/css/jumbotron-narrow.css')}}" rel="stylesheet"/>
 
+    <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/owl.theme.default.min.css') }}">
     <script src="https://sandbox.vnpayment.vn/paymentv2/lib/vnpay/vnpay.js"></script>
@@ -87,20 +88,6 @@
                 </div>
                 <!-- Right Navbar -->
                 <div class="right-navbar">
-                    {{--    @if (Route::has('login'))--}}
-                    {{--        <div class="top-right links">--}}
-                    {{--            @auth--}}
-                    {{--                <a href="{{ url('/home') }}">Home</a>--}}
-                    {{--            @else--}}
-                    {{--                <a href="{{ route('login') }}">Login</a>--}}
-
-                    {{--                @if (Route::has('register'))--}}
-                    {{--                    <a href="{{ route('register') }}">Register</a>--}}
-                    {{--                @endif--}}
-                    {{--            @endauth--}}
-                    {{--        </div>--}}
-                    {{--    @endif--}}
-
                     @if (Route::has('login'))
                         <ul class="top-right links">
                             @auth
@@ -148,10 +135,7 @@
         </div>
     </div>
 </header>
-
 @yield('content')
-
-
 <footer class="bg1">
     <div class="container p-t-40 p-b-70">
         <div class="row">
@@ -477,8 +461,8 @@
 <!--===============================================================================================-->
 <script type="text/javascript" src="{{asset('/template/vendor/animsition/js/animsition.min.js')}}"></script>
 <!--===============================================================================================-->
-<script type="text/javascript" src="{{asset('/template/vendor/bootstrap/js/popper.js')}}"></script>
-<script type="text/javascript" src="{{asset('/template/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+{{--<script type="text/javascript" src="{{asset('/template/vendor/bootstrap/js/popper.js')}}"></script>--}}
+{{--<script type="text/javascript" src="{{asset('/template/vendor/bootstrap/js/bootstrap.min.js')}}"></script>--}}
 <!--===============================================================================================-->
 <script type="text/javascript" src="{{asset('/template/vendor/select2/select2.min.js')}}"></script>
 <!--===============================================================================================-->
@@ -498,11 +482,9 @@
 <script type="text/javascript" src="{{asset('/template/vendor/lightbox2/js/lightbox.min.js')}}"></script>
 <!--===============================================================================================-->
 <script src="{{asset('/template/js/main.js')}}"></script>
+<script src="{{asset('/js/app.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 <script src="{{asset('/js/my.js')}}"></script>
-
-
 {{--<script src="{{ asset("js/jquery/dist/jquery.min.js") }}"></script>--}}
-
 </body>
 </html>

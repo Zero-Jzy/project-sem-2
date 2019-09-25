@@ -14,19 +14,19 @@
                             <h6>{{$user->profile->first_name .' '. $user->profile->last_name}}</h6>
                         </div>
                         <div class="">
-                            {{--                            <button class="btn btn-default dropdown-toggle btn-block" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">Danh mục--}}
-                            {{--                                <span class="caret"></span>--}}
-                            {{--                            </button>--}}
                             <ul class="nav nav-tabs" style="width: 100%;">
                                 <li style="padding-top: 30px" class="">
                                     <a class="nav-link active" data-toggle="tab" href="#content"
-                                       style="display: flex;align-items: center;"><i class="fas fa-user"
-                                                                                     style="flex: 0 0 20%;text-align: center;padding-right: 26px;"></i>Account</a>
+                                       style="display: flex;align-items: center;">
+                                        <i class="fas fa-user" style="flex: 0 0 20%;text-align: center;padding-right: 26px;"></i>
+                                        Thông tin tài khoản
+                                    </a>
                                 </li>
                                 <li style="padding-top: 30px" class="">
                                     <a class="nav-link" data-toggle="tab" href="#content1"
-                                       style="display: flex;align-items: center;"><i class="fas fa-map-marker-alt"
-                                                                                     style="flex: 0 0 20%;text-align: center;padding-right: 26px;"></i>Address</a>
+                                       style="display: flex;align-items: center;">
+                                        <i class="fas fa-map-marker-alt" style="flex: 0 0 20%;text-align: center;padding-right: 26px;"></i>
+                                        Sổ địa chỉ</a>
                                 </li>
                             </ul>
                         </div>
@@ -200,6 +200,7 @@
             </div>
         </div>
     </section>
+    <!-- Button trigger modal -->
 
     <script>
 
