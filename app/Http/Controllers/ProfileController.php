@@ -25,6 +25,14 @@ class ProfileController extends Controller
         return view('profile-user', ['user' => $user]);
     }
 
+
+
+    public function profileAddress()
+    {
+        $user = Auth::user();
+        return view('profile-address', ['user' => $user]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

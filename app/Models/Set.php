@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Set extends Model
 {
 
-    protected $fillable = ['name', 'type', 'category_id'];
+    protected $fillable = ['name', 'type', 'category_id','image', 'price'];
+
     public function orders(){
         return $this->belongsToMany(Order::class, 'order_detail', 'set_id', 'order_id')
             ->withPivot('quantity');

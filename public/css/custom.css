@@ -1,3 +1,8 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
 .footer{
     margin-top: 30px;
 }
@@ -547,7 +552,6 @@ xsigin/signup popup
 
 /*Start food-card css*/
 .food-card{
-    min-height: 330px;
     position: relative;
     background: white;
     margin-bottom: 20px;
@@ -565,16 +569,16 @@ xsigin/signup popup
 }
 
 .food-card .food-card-content .info{
-    border-radius: .5rem;
-    position: absolute;
-    transition: 400ms;
-    padding: 0 1rem;
-    height: 100%;
-    width: 100%;
-    background: rgba(255,255,255,0.8);
-    top: 0;
-    left: 0;
-    opacity: 0;
+    /*border-radius: .5rem;*/
+    /*position: absolute;*/
+    /*transition: 400ms;*/
+    /*padding: 0 1rem;*/
+    /*height: 100%;*/
+    /*width: 100%;*/
+    /*background: rgba(255,255,255,0.8);*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*opacity: 0;*/
 }
 
 .food-card .food-card-content:hover .info{
@@ -627,12 +631,12 @@ xsigin/signup popup
 }
 
 .food-card .amount-of-nutrition > div{
-    padding: .3rem .6em;
+    padding: 0 .6em;
 }
 
 .food-card .amount-of-nutrition > div > span{
-    font-size: 14px;
-    font-weight: 600;
+    font-size: .8em;
+    font-weight: 500;
 }
 
 .food-card .amount-of-nutrition > div > div{
@@ -786,12 +790,10 @@ input[type=number]
 }
 
 /*css sửa tràn gd trang food'*/
-.nna-text-bold{
-    font-weight: 600;
-}
 
 .nna-font-size-14{
-    font-size: 14px;
+    font-size: .8em;
+    font-weight: 500;
 }
 
 .nna-text-white{
@@ -810,9 +812,6 @@ input[type=number]
 
 
 /*css detail-set*/
-.slide-thumbnail{
-    margin-top: 100px;
-}
 .newarrival{
     background: green;
     width: 50px;
@@ -825,17 +824,11 @@ input[type=number]
 }
 
 .price{
-    color: #fe3e25;
-    font-size: 23px;
+    color: #FE980F;
+    font-size: 1em;
+
     font-weight: bold;
     padding-top: 2px;
-}
-input{
-    border:1px solid #ccc;
-    font-weight: bold;
-    height: 33px;
-    text-align: center;
-    width: 30px;
 }
 
 .cart{
@@ -938,3 +931,203 @@ margin: 8%;
 }
 
 
+.board-color{
+    position: fixed;
+    left: 0;
+    top: 55%;
+}
+.board-color > div{
+    text-align: center;
+    width: 100px;
+    padding: 5px;
+    font-weight: 500;
+    color: #2a2a2a;
+}
+
+.custom-dropdown{
+    position: absolute;
+    top: 70px;
+    left: -24px;
+    width: 140px;
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.custom-dropdown a{
+    text-transform: uppercase;
+}
+
+.address-box{
+    padding: 20px;
+    display: flex;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+/*.content-right {*/
+/*    font-family: Sriracha, sans-serif !important;*/
+/*}*/
+.wrap {
+
+    min-height: 500px;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.container-full {
+    width: 1270px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+}
+
+.menu-left {
+    /*width: 250px;*/
+    padding-right: 0;
+    padding-left: 0;
+    /*float: left;*/
+    /*margin-right: 10px;*/
+    padding-bottom: 20px;
+}
+
+.wrap .profiles {
+    background: 0 0;
+    color: #fff;
+    padding: 10px 5px 5px;
+}
+
+.wrap .profiles .image {
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+
+.wrap .profiles .name {
+    font-size: 13px;
+    margin-bottom: 5px;
+    color: #242424;
+    margin-top: 5px;
+    font-weight: 300;
+}
+
+.wrap .profiles h6 {
+    margin: 0;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    color: #242424;
+}
+
+.content-right {
+    /*width: 975px;*/
+    /*float: left;*/
+    margin-top: 5px;
+    position: relative;
+    padding: 20px;
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+    border-radius: 10px;
+}
+
+.wrap h1.have-margin {
+    margin-bottom: 15px;
+    font-size: 19px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    color: #242424;
+}
+
+.wrap .account-profile .form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.wrap .account-profile .form-group .control-label {
+    float: left;
+    width: 20%;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+.wrap .account-profile .form-group .input-wrap {
+    float: left;
+    width: 405px;
+}
+
+ul.nav.nav-tabs {
+    padding-top: 30px;
+    flex-direction: column;
+    border: none;
+}
+
+ul.nav.nav-tabs > li {
+    padding-top: 0 !important;
+}
+
+ul.nav.nav-tabs > li a.nav-link {
+    border: none;
+}
+
+ul.nav.nav-tabs > li a.active {
+    border: none;
+    color: #ec1d25;
+}
+
+ul.nav.nav-tabs > li a:hover {
+    border: none;
+    color: #ec1d25;
+}
+
+.address-box {
+    display: flex;
+    /* border: 1px solid black; */
+    /*justify-content: space-between;*/
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.35);
+}
+
+.address-box input[type="radio"] {
+    margin: 0 15px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%)
+    /* font-size: 24px; */
+}
+
+.address-box h5 {
+    font-weight: 550;
+}
+
+.address-box p {
+    margin-bottom: 5px;
+}
+
+.box-form-address {
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.35);
+    display: none;
+    padding: 30px 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.box-form-address .btn-close {
+    position: absolute;
+    right: 1%;
+    top: 1%;
+    font-size: 24px;
+}
