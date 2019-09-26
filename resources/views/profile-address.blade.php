@@ -74,7 +74,7 @@
                             </div>
                             <div class="add-new-address" style="text-align: center">
 
-                                <button onclick="openModalAddress()" id="btn-add-address">
+                                <button onclick="openModalAddress()">
                                     <i class="far fa-plus fa-2x"></i>
                                 </button>
                             </div>
