@@ -18,6 +18,7 @@ class CreateSetsTable extends Migration
             $table->string('name');
             $table->integer('type');
             $table->decimal('price');
+            $table->text('description');
             $table->bigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('set_categories');
             $table->string('image');

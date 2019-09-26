@@ -21,7 +21,10 @@ class SetSeeder extends Seeder
                     'category_id' => 1,
                     'type' => 1,
                     'image' => 'pu1geam0w9yo5no4zuyj.jpg',
-                    'price' => rand(2,5)
+                    'price' => rand(2,5),
+                    'description'=>'Meals include: chicken, boiled greens, rice.
+                     The meal provides enough nutrients and essential fiber for the body.'
+
                 ),
             1 =>
                 array (
@@ -30,7 +33,9 @@ class SetSeeder extends Seeder
                     'category_id' => 2,
                     'type' => 1,
                     'image' => 'ypjsqs280nahdt9uphco.jpg',
-                    'price' => rand(2,5)
+                    'price' => rand(2,5),
+                     'description'=>'đây là description'
+
                 ),
             2 =>
                 array (
@@ -39,7 +44,8 @@ class SetSeeder extends Seeder
                     'category_id' => 3,
                     'type' => 1,
                     'image' => 'bbtqehjqvjcg0hrcisq0.jpg',
-                    'price' => rand(2,5)
+                    'price' => rand(2,5),
+                    'description'=>'đây là description'
                 ),
             3 =>
                 array (
@@ -48,7 +54,8 @@ class SetSeeder extends Seeder
                     'category_id' => 2,
                     'type' => 1,
                     'image' => 'p6w6x5a1zlufgbc25yyf.jpg',
-                    'price' => rand(2,5)
+                    'price' => rand(2,5),
+                    'description'=>'đây là description'
                 ),
             4 =>
                 array (
@@ -57,7 +64,9 @@ class SetSeeder extends Seeder
                     'category_id' => 1,
                     'type' => 1,
                     'image' => 'lwtwmgjlfhzunyleys85.jpg',
-                    'price' => rand(2,5)
+                    'price' => rand(2,5),
+                    'description'=>'đây là description'
+
                 ),
             5 =>
                 array (
@@ -66,7 +75,8 @@ class SetSeeder extends Seeder
                     'category_id' => 3,
                     'type' => 1,
                     'image' => 'v5qqlso9glhtus3gncb0.jpg',
-                    'price' => rand(2,5)
+                    'price' => rand(2,5),
+                    'description'=>'đây là description'
                 ),
             6 =>
                 array (
@@ -75,7 +85,8 @@ class SetSeeder extends Seeder
                     'category_id' => 2,
                     'type' => 1,
                     'image' => 'rohforomjjwmlzj2yaow.jpg',
-                    'price' => rand(2,5)
+                    'price' => rand(2,5),
+                    'description'=>'đây là description'
                 ),
             7 =>
                 array (
@@ -84,7 +95,8 @@ class SetSeeder extends Seeder
                     'category_id' => 1,
                     'type' => 1,
                     'image' => 'cgqhlicghps5esdajvd0.jpg',
-                    'price' => rand(2,5)
+                    'price' => rand(2,5),
+                    'description'=>'đây là description'
                 ),
             8 =>
                 array (
@@ -93,7 +105,8 @@ class SetSeeder extends Seeder
                     'category_id' => 1,
                     'type' => 1,
                     'image' => 'cfiac8ocokj3xckaqhql.jpg',
-                    'price' => rand(2,5)
+                    'price' => rand(2,5),
+                    'description'=>'đây là description'
                 ),
             9 =>
                 array (
@@ -102,7 +115,8 @@ class SetSeeder extends Seeder
                     'category_id' => 3,
                     'type' => 1,
                     'image' => 'mosmdiqdektc6gwkuxql.jpg',
-                    'price' => rand(2,5)
+                    'price' => rand(2,5),
+                    'description'=>'đây là description'
                 ),
             10 =>
                 array (
@@ -111,7 +125,8 @@ class SetSeeder extends Seeder
                     'category_id' => 1,
                     'type' => 1,
                     'image' => 'wmbh76uwzmhxdtsogjkg.jpg',
-                    'price' => rand(2,5)
+                    'price' => rand(2,5),
+                    'description'=>'đây là description'
                 ),
             11 =>
                 array (
@@ -120,7 +135,9 @@ class SetSeeder extends Seeder
                     'category_id' => 2,
                     'type' => 1,
                     'image' => 'j6g0ednhkehhglbrxuoc.jpg',
-                    'price' => rand(2,5)
+                    'price' => rand(2,5),
+                    'description'=>'đây là description'
+
                 ),
             12 =>
                 array (
@@ -129,7 +146,8 @@ class SetSeeder extends Seeder
                     'category_id' => 1,
                     'type' => 1,
                     'image' => 'aukvzqz8uibjfbedivn2.jpg',
-                    'price' => rand(2,5)
+                    'price' => rand(2,5),
+                    'description'=>'đây là description'
                 ),
             13 =>
                 array (
@@ -138,7 +156,8 @@ class SetSeeder extends Seeder
                     'category_id' => 3,
                     'type' => 1,
                     'image' => 'nyipfcldxplgfjqcaoxu.jpg',
-                    'price' => rand(2,5)
+                    'price' => rand(2,5),
+                    'description'=>'đây là description'
                 ),
             14 =>
                 array (
@@ -147,7 +166,8 @@ class SetSeeder extends Seeder
                     'category_id' => 1,
                     'type' => 1,
                     'image' => 'qvahsf02mni6lnqki8ph.jpg',
-                    'price' => rand(2,5)
+                    'price' => rand(2,5),
+                    'description'=>'đây là description'
                 ),
             15 =>
                 array (
@@ -156,7 +176,8 @@ class SetSeeder extends Seeder
                     'category_id' => 2,
                     'type' => 1,
                     'image' => 'fjctutq81yp5pgdbvnzn.jpg',
-                    'price' => rand(2,5)
+                    'price' => rand(2,5),
+                    'description'=>'đây là description'
                 ),
             16 =>
                 array (
@@ -165,7 +186,8 @@ class SetSeeder extends Seeder
                     'category_id' => 2,
                     'type' => 1,
                     'image' => 'loism3qiuhnltrvtftip.jpg',
-                    'price' => rand(2,5)
+                    'price' => rand(2,5),
+                    'description'=>'đây là description'
                 ),
             17 =>
                 array (
@@ -174,7 +196,8 @@ class SetSeeder extends Seeder
                     'category_id' => 1,
                     'type' => 1,
                     'image' => 'dwp822dx3nttwi6xgkr4.jpg',
-                    'price' => rand(2,5)
+                    'price' => rand(2,5),
+                    'description'=>'đây là description'
                 ),
             18 =>
                 array (
@@ -183,7 +206,8 @@ class SetSeeder extends Seeder
                     'category_id' => 3,
                     'type' => 1,
                     'image' => 'exqjswohtjnrwlwjstry.jpg',
-                    'price' => rand(2,5)
+                    'price' => rand(2,5),
+                    'description'=>'đây là description'
                 ),
             19 =>
                 array (
@@ -192,7 +216,8 @@ class SetSeeder extends Seeder
                     'category_id' => 2,
                     'type' => 1,
                     'image' => 'bedj7jvbnx5ggcvvtbkd.jpg',
-                    'price' => rand(2,5)
+                    'price' => rand(2,5),
+                    'description'=>'đây là description'
                 ),
             20 =>
                 array (
@@ -201,7 +226,8 @@ class SetSeeder extends Seeder
                     'category_id' => 1,
                     'type' => 1,
                     'image' => 'beu9yd5l1jga6ztmqxxt.jpg',
-                    'price' => rand(2,5)
+                    'price' => rand(2,5),
+                    'description'=>'đây là description'
                 ),
         ));
     }

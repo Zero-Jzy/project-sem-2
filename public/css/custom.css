@@ -466,10 +466,10 @@ xsigin/signup popup
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
 }
-/*.img-fluid{*/
-/*    width: 432px;*/
-/*    height: 364px;*/
-/*}*/
+.nna-img-fluid{
+
+    height: 437px;
+}
 
 
 .cd-form .cd-error-message.is-visible {
@@ -829,19 +829,21 @@ input[type=number]
 }
 
 .price{
-    color: #FE980F;
-    font-size: 1em;
+    color: #ff100a;
+    /*font-size: 1em;*/
+    font-size: 24px;
 
     font-weight: bold;
     padding-top: 2px;
 }
 
 .cart{
-    background: #fe3e25;
+    background: #ff100a;
     color: #FFFFFF;
     font-size: 15px;
     margin-left: 20px;
     padding:6px;
+    height: 32px;
 }
 
 /*.nna-quantity input {*/
