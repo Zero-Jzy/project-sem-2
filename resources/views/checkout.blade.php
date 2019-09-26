@@ -121,7 +121,8 @@
                             {{--                                                            </div>--}}
                             {{--                                                        </form>--}}
                             @foreach(Auth::user()->addresses as $index => $address)
-                                <div class="address-box my-3">
+                                @if($address->status === 0) @continue @endif
+                                <div class="address-box my-3 position-relative">
                                     <div>
                                         <input @if($index ===0) checked @endif address-id="{{$address->id}}"
                                                name="address" type="radio">
@@ -132,14 +133,22 @@
                                         </address>
                                         <p>Phone: {{$address->phone}}</p>
                                     </div>
+                                    <form method="POST" action="{{route('profile.destroy', $address->id)}}">
+                                        @csrf
+                                        @method('DELETE')
+                                        <div class="form-group">
+                                            <button class="btn btn-link"
+                                                    style="position: absolute; bottom: 5%;right: 2%"
+                                            >
+                                                delete
+                                            </button>
+                                        </div>
+                                    </form>
 
-                                    <button class="btn btn-link">
-                                        delete
-                                    </button>
                                 </div>
                             @endforeach
                             <div class="btn btn-outline-danger">
-                                <button id="btn-add-address">
+                                <button onclick="openModalAddress()">
                                     Add address
                                 </button>
                             </div>
@@ -162,7 +171,7 @@
                             </div>
                             <div class="card-footer">
                                 <a href="/menu/set" class="btn btn-outline-danger">
-                                    <button id="btn-add-address">
+                                    <button>
                                         Continue
                                     </button>
                                 </a>
@@ -212,10 +221,6 @@
     </div>
     <script>
         $(document).ready(function () {
-            const add_address = $('#btn-add-address');
-            add_address.click(function () {
-                window.location.href = '/profile'
-            });
             let listSet = Array.from(new Map(JSON.parse(localStorage.getItem('sets_in_bag'))).values());
             let htmlContent = '';
             let content = '';

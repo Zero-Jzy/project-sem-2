@@ -3,6 +3,10 @@ body{
     margin: 0;
 }
 
+ul{
+    margin-bottom: 0;
+}
+
 .footer{
     margin-top: 30px;
 }
@@ -462,10 +466,10 @@ xsigin/signup popup
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
 }
-.img-fluid{
-    width: 432px;
-    height: 364px;
-}
+/*.img-fluid{*/
+/*    width: 432px;*/
+/*    height: 364px;*/
+/*}*/
 
 
 .cd-form .cd-error-message.is-visible {
@@ -560,7 +564,8 @@ xsigin/signup popup
 }
 
 .food-card .food-card-content{
-    /*position: relative;*/
+    position: relative;
+    overflow: hidden;
 }
 
 .food-card .food-card-content img{
@@ -568,17 +573,17 @@ xsigin/signup popup
     width: 100%;
 }
 
-.food-card .food-card-content .info{
-    /*border-radius: .5rem;*/
-    /*position: absolute;*/
-    /*transition: 400ms;*/
-    /*padding: 0 1rem;*/
-    /*height: 100%;*/
-    /*width: 100%;*/
-    /*background: rgba(255,255,255,0.8);*/
-    /*top: 0;*/
-    /*left: 0;*/
-    /*opacity: 0;*/
+.food-card .food-card-content .info {
+    border-radius: .5rem;
+    position: absolute;
+    transition: 400ms;
+    padding: 0 1rem;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    top: 0;
+    left: 0;
+    opacity: 0;
 }
 
 .food-card .food-card-content:hover .info{
@@ -1130,4 +1135,12 @@ ul.nav.nav-tabs > li a:hover {
     right: 1%;
     top: 1%;
     font-size: 24px;
+}
+
+
+.error-mes-address{
+    color: red;
+    position: absolute;
+    left: 3%;
+    font-size: 14px;
 }

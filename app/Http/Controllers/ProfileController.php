@@ -7,6 +7,7 @@ use App\Profile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Validator;
 
 class ProfileController extends Controller
 {
@@ -25,7 +26,6 @@ class ProfileController extends Controller
         $user = Auth::user();
         return view('profile-user', ['user' => $user]);
     }
-
 
 
     public function profileAddress()
@@ -48,10 +48,29 @@ class ProfileController extends Controller
      * Store a newly created resource in storage.
      *
      * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
+     * @return string
      */
     public function store(Request $request)
     {
+
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'phone' => 'required',
+            'email' => 'required',
+            'huyen' => 'required',
+            'tinh' => 'required',
+            'xa' => 'required',
+            'address' => 'required',
+        ], [
+            'huyen.required' => 'The province field is required.',
+            'tinh.required' => 'The districts field is required.',
+            'xa.required' => 'The wards field is required.',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json($validator->errors(), 400);
+        }
+
         $name = $request->get('name');
         $phone = $request->get('phone');
         $profile_id = $request->get('profile_id');
@@ -60,6 +79,8 @@ class ProfileController extends Controller
         $xa = explode('--', $request->get('xa'));
         $address = $request->get('address');
 
+
+        Log::info($request);
         $slug = $tinh[0] . '/' . $huyen[0] . '/' . $xa[0];
         $addressTxt = $address . ', ' . $xa[1] . ', ' . $huyen[1] . ', ' . $tinh[1];
 
@@ -72,7 +93,7 @@ class ProfileController extends Controller
 
         ]);
 
-        return redirect()->back();
+        return "success";
     }
 
     /**
@@ -123,6 +144,9 @@ class ProfileController extends Controller
      */
     public function destroy($id)
     {
-        //
+//        dd($id);
+        Address::whereId($id)->update(['status' => 0]);
+
+        return redirect()->back();
     }
 }
