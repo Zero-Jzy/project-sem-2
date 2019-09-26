@@ -36,8 +36,6 @@ class OrderSeeder extends Seeder
             Log::info($sets[0]);
             for ($k = 1; $k <= $count; $k++) {
                 if ($sets[$k - 1] === null) {
-                    Log::info($sets[$k - 1]);
-                    Log::info($k - 1);
                     return;
                 }
                 $itemOdD = [

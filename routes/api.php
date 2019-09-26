@@ -30,6 +30,16 @@ Route::get('/hanh-chinh-viet-nam', function () {
     return response(file_get_contents($path));
 });
 
+Route::get('test_data',function (){
+    $data = DB::table('orders')
+        ->select(DB::raw('DATE(created_at) as date'), DB::raw('sum(amount) as totalAmount'))
+        ->groupBy('date')
+        ->orderBy('date')
+        ->get();
+
+    return $data;
+});
+
 Route::post('upload', 'Api\UploadImageController@upload');
 Route::resource('food', 'Api\FoodController');
 Route::resource('set', 'Api\SetController');
