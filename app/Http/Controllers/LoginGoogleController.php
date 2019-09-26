@@ -41,7 +41,7 @@ class LoginGoogleController extends Controller
                 $user->profile()->save($profile);
                 Auth::loginUsingId($user->id);
             }
-            return redirect()->to('/');
+            return redirect()->to('/menu/food');
         }
         catch (Exception $e) {
             return 'error';

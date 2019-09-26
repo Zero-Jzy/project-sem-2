@@ -21,11 +21,25 @@ class OrderController extends Controller
 //        $nameSearch = $data['name'] ?? false;
 //        $sortField = $data['sortField'] ?? false;
 //        $sortOrder = $data['sortOrder'] ?? false;
+        $filterAddress = $data['filterAddress'] ?? false;
+        $filterDate = json_decode($data['filterDate'] ?? '{}', true);
         $page = ($data['page'] ?? 1) - 1;
 
-        $orders = Order::with('user.profile','address','sets');
+        $orders = Order::with('user.profile', 'address', 'sets');
 
         $res['totalCount'] = $orders->count();
+
+        if ($filterAddress) {
+            $orders->whereHas('address', function($q) use ($filterAddress) {
+                return $q->where('slug','like', $filterAddress.'%');
+            });
+        }
+
+        if (!empty($filterDate)) {
+            $from = date("Y-m-d H:i:s", $filterDate['start'] / 1000);
+            $to = date("Y-m-d H:i:s", $filterDate['end'] / 1000);
+            $orders->whereBetween('created_at', [$from, $to]);
+        }
 
 
         $res['keys'] = $orders->get()->map(function ($values) {
@@ -52,7 +66,7 @@ class OrderController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -63,7 +77,7 @@ class OrderController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -74,7 +88,7 @@ class OrderController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -85,8 +99,8 @@ class OrderController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -97,7 +111,7 @@ class OrderController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

@@ -4,12 +4,13 @@ import axios from 'axios';
 
 import CreateFoodModal from '../model/CreateFoodModal'
 import CreateSetModel from '../model/CreateSetModel'
-import {Table, Dropdown, Menu, Icon, Button, Select, Cascader, Modal, Input} from 'antd';
+import {Table, Dropdown, Menu, Icon, Button, DatePicker, Select, Cascader, Modal, Input} from 'antd';
 import Highlighter from "react-highlight-words";
+import hanhchinhvn from "../../hanhchinhvn";
 
 const {Option} = Select;
 const {confirm} = Modal;
-
+const {RangePicker} = DatePicker;
 export default class OrderTable extends Component {
     state = {
         data: [],
@@ -17,9 +18,11 @@ export default class OrderTable extends Component {
         loading: false,
         results: 10,
         selectedRowKeys: [],
+        filterDate: {},
+        filters: {},
+        sorter: {},
         keys: [],
-        optionAction: '',
-        showModelCreateSet: false,
+        searchAddress: '',
         searchText: ''
     };
 
@@ -51,8 +54,8 @@ export default class OrderTable extends Component {
     );
 
     getColumnSearchProps = dataIndex => ({
-        filterDropdown: ({ setSelectedKeys, selectedKeys, confirm, clearFilters }) => (
-            <div style={{ padding: 8 }}>
+        filterDropdown: ({setSelectedKeys, selectedKeys, confirm, clearFilters}) => (
+            <div style={{padding: 8}}>
                 <Input
                     ref={node => {
                         this.searchInput = node;
@@ -61,24 +64,24 @@ export default class OrderTable extends Component {
                     value={selectedKeys[0]}
                     onChange={e => setSelectedKeys(e.target.value ? [e.target.value] : [])}
                     onPressEnter={() => this.handleSearch(selectedKeys, confirm)}
-                    style={{ width: 188, marginBottom: 8, display: 'block' }}
+                    style={{width: 188, marginBottom: 8, display: 'block'}}
                 />
                 <Button
                     type="primary"
                     onClick={() => this.handleSearch(selectedKeys, confirm)}
                     icon="search"
                     size="small"
-                    style={{ width: 90, marginRight: 8 }}
+                    style={{width: 90, marginRight: 8}}
                 >
                     Search
                 </Button>
-                <Button onClick={() => this.handleReset(clearFilters)} size="small" style={{ width: 90 }}>
+                <Button onClick={() => this.handleReset(clearFilters)} size="small" style={{width: 90}}>
                     Reset
                 </Button>
             </div>
         ),
         filterIcon: filtered => (
-            <Icon type="search" style={{ color: filtered ? '#1890ff' : undefined }} />
+            <Icon type="search" style={{color: filtered ? '#1890ff' : undefined}}/>
         ),
         onFilter: (value, record) =>
             record[dataIndex]
@@ -92,7 +95,7 @@ export default class OrderTable extends Component {
         },
         render: text => (
             <Highlighter
-                highlightStyle={{ backgroundColor: '#ffc069', padding: 0 }}
+                highlightStyle={{backgroundColor: '#ffc069', padding: 0}}
                 searchWords={[this.state.searchText]}
                 autoEscape
                 textToHighlight={text.toString()}
@@ -102,12 +105,12 @@ export default class OrderTable extends Component {
 
     handleSearch = (selectedKeys, confirm) => {
         confirm();
-        this.setState({ searchText: selectedKeys[0] });
+        this.setState({searchText: selectedKeys[0]});
     };
 
     handleReset = clearFilters => {
         clearFilters();
-        this.setState({ searchText: '' });
+        this.setState({searchText: ''});
     };
 
     handleTableChange = (pagination, filters, sorter) => {
@@ -120,7 +123,7 @@ export default class OrderTable extends Component {
             results: pagination.pageSize,
             page: pagination.current,
             sortField: sorter.field,
-            sortOrder:  sorter.order ? sorter.order.replace('end','') : sorter.order,
+            sortOrder: sorter.order ? sorter.order.replace('end', '') : sorter.order,
             ...filters,
         });
     };
@@ -165,17 +168,53 @@ export default class OrderTable extends Component {
         })
     };
 
-    handleCancelCreateSet = e => {
-        this.setState({
-            showModelCreateSet: false,
+    handleSearchAddress = (values) => {
+        var {pagination, filters, sorter, filterDate} = this.state;
+        var filterAddress = '';
+        if (values.length > 0) {
+            filterAddress = values.join('/')
+        }
+        this.setState({filterAddress});
+        this.fetch({
+            page: pagination.current,
+            sortField: sorter.field,
+            sortOrder: sorter.order && sorter.order.substr(0, sorter.order.length - 3),
+            filters,
+            filterDate,
+            filterAddress
+        });
+    };
+
+    handleData = (date, dateString) => {
+        var {pagination, filters, sorter, searchAddress} = this.state;
+        var filterDate = [];
+        if (date.length > 0) {
+            filterDate = {
+                start: date[0].valueOf(),
+                end: date[1].valueOf()
+            }
+        }
+        this.setState({filterDate});
+        this.fetch({
+            // results: pagination.pageSize,
+            page: pagination.current,
+            sortField: sorter ? sorter.field : null,
+            sortOrder: sorter.order && sorter.order.replace('end'),
+            filters,
+            filterDate,
+            searchAddress
         });
     };
 
     columns = [
         {
+            title: 'Id',
+            dataIndex: 'id',
+        },
+        {
             title: 'User',
             dataIndex: 'username',
-            render: (username,record) => `${record.user.profile.first_name} ${record.user.profile.last_name}`
+            render: (username, record) => `${record.user.profile.first_name} ${record.user.profile.last_name}`
         },
         {
             title: 'Set',
@@ -201,6 +240,10 @@ export default class OrderTable extends Component {
             dataIndex: 'status'
         },
         {
+            title: 'Created at',
+            dataIndex: 'created_at'
+        },
+        {
             title: 'Operation',
             fixed: 'right',
             render: () => (
@@ -216,7 +259,7 @@ export default class OrderTable extends Component {
     ];
 
     render() {
-        const { selectedRowKeys, data } = this.state;
+        const {selectedRowKeys, data} = this.state;
         const rowSelection = {
             selectedRowKeys,
             onChange: this.handleSelectChange,
@@ -232,7 +275,15 @@ export default class OrderTable extends Component {
         return (
             <div style={{margin: 25, padding: 25, background: "white"}}>
                 <div className="table_header">
-
+                    <Cascader
+                        style={{width: 400}}
+                        // defaultValue={['hanoi', 'caugiay', 'dichvong']}
+                        placeholder="Search by address"
+                        options={hanhchinhvn}
+                        onChange={this.handleSearchAddress}
+                        changeOnSelect
+                    />
+                    <RangePicker onChange={this.handleData}/>
                 </div>
                 <Table
                     columns={this.columns}
@@ -252,16 +303,14 @@ export default class OrderTable extends Component {
                             placeholder="Select action"
                             disabled={this.state.selectedRowKeys.length <= 0}
                             style={{width: 120}}
-                            onChange={this.handleChangeAction}
                         >
-                            <Option value="create_set">Create set</Option>
-                            <Option value="delete">Delete</Option>
+                            <Option value="1">Action 1</Option>
+                            <Option value="2">ACtion 2</Option>
                         </Select>
                         <Button onClick={this.handleAction}
                                 disabled={this.state.selectedRowKeys.length <= 0}>Go</Button>
                     </div>
                 </div>
-                <CreateSetModel/>
             </div>
 
         );

@@ -22,7 +22,8 @@ class FoodController extends Controller
 
         if ($category_id) {
             $foods->whereHas('categories', function($q) use ($category_id) {
-                return $q->where('id', $category_id);
+
+                return $q->where('id','like', $category_id);
             });
         }
 
