@@ -376,14 +376,10 @@ function renderErrors(errors) {
 
 function openModalAddress() {
     Swal.fire({
-        title: 'Auto close alert!',
-        width: 700,
+        title: 'Add new address',
+        width: 730,
         showConfirmButton: false,
         html: ` <form id="form-add-address">
-                  <ul class="errors_address_form">
-                  
-                  </ul>
- 
                   <input  type="hidden" name="_token" value="${token}">
                 <div class="form-group row">
                     <label for="name" class="col-sm-2 col-form-label">Full name</label>
@@ -487,16 +483,6 @@ function beforeOpen() {
         var htmlTxt = data.map(e => `<option value="${e.value}--${e.label}">${e.label}</option>`).join('');
         select.innerHTML = `<option value="">Select ${type}</option>` + htmlTxt
     }
-
-    $('#btn-add-address').click(function () {
-        $('.box-form-address').show();
-        $(this).hide();
-    });
-
-    $('.btn-close').click(function () {
-        $('#btn-add-address').show();
-        $('.box-form-address').hide();
-    })
 
     $('#form-add-address').submit(function (e) {
         e.preventDefault();

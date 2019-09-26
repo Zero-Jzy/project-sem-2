@@ -276,7 +276,7 @@
 
                         if (res === 'done') {
                             localStorage.removeItem('sets_in_bag');
-                            window.location.href = '/checkout_success';
+                            window.location.href = `/checkout_success`;
                             return;
                         }
 
