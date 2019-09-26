@@ -25,6 +25,9 @@ Route::post('/login', 'Api\AuthAdController@login');
 
 Route::post('/upload-image', 'Api\UploadImageController@upload');
 
+Route::get('/dashboard','Api\DashboardController@getDataTotal');
+Route::get('/getData','Api\DashboardController@getDataToTime');
+
 Route::get('/hanh-chinh-viet-nam', function () {
     $path = storage_path() . "/json/hanhchinhvietnam.json";
     return response(file_get_contents($path));
