@@ -58,7 +58,7 @@
 
             </div>
             <div class="total-box">
-                <div style="height: 30px">
+                <div style="">
                     <h5 class="text-center text-uppercase" style="line-height: 50px">Total</h5>
                 </div>
                 <div class="total-content total-food">
@@ -101,7 +101,7 @@
 
             </div>
             <div class="total-box">
-                <div style="height: 30px">
+                <div>
                     <h5 class="text-center text-uppercase" style="line-height: 50px">Total</h5>
                 </div>
                 <div class="total-content total-set">
@@ -133,10 +133,10 @@
                     </div>
 
                 </div>
-                <a type="submit" href="/checkout" class="btn-incard btn3 flex-c-m size18 txt11 trans-0-4 m-10 m-auto"
+                <button type="submit" href="/checkout" class="btn-incard btn3 flex-c-m size18 txt11 trans-0-4 m-10 m-auto"
                    id="checkout">
                     Checkout
-                </a>
+                </button>
             </div>
         </div>
     </div>
