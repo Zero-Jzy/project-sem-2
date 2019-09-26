@@ -38,12 +38,12 @@ class OrderController extends Controller
      * Store a newly created resource in storage.
      *
      * @param \Illuminate\Http\Request $request
-     * @return string
+     * @return array
      */
     public function store(Request $request)
     {
         DB::beginTransaction();
-        try{
+        try {
             $user_id = Auth::user()->id;
             $listSet = $request->get('listSet');
             $address_id = $request->get('address_id');
@@ -71,15 +71,15 @@ class OrderController extends Controller
                 return $this->createPayment($order);
             }
             $address = Address::find($address_id);
-            $data = ['order'=> $address, 'list' => $listSet,'amount' => $amount];
-            Mail::send('send', $data, function($message) {
+            $data = ['order' => $address, 'list' => $listSet, 'amount' => $amount];
+            Mail::send('send', $data, function ($message) {
                 $message->to(Auth::user()->email, Auth::user()->firstname)->subject('Thong bao xac nhan don hang');
-                $message->from('boydola.nvs@gmail.com','Pato');
+                $message->from('boydola.nvs@gmail.com', 'Pato');
             });
 
             DB::commit();
-            return 'done';}
-            catch (Exception $e) {
+            return ['status' => 'success', 'orderId'=> $order->id];
+        } catch (Exception $e) {
             report($e);
             DB::rollBack();
             return false;

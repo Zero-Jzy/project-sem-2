@@ -11,6 +11,7 @@
 |
 */
 
+use App\Order;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Log;
@@ -26,7 +27,7 @@ Route::get('/', function () {
 Route::get('/redirect', 'LoginGoogleController@redirect');
 Route::get('/callback', 'LoginGoogleController@callback');
 
-Route::get('/checkout', function (){
+Route::get('/checkout', function () {
     return view('checkout');
 })->name('checkout')->middleware('auth');
 
@@ -46,7 +47,7 @@ Route::resource('/user', 'UserController');
 Route::resource('menu/food', 'FoodController');
 
 Route::resource('menu/set', 'SetController');
-Route::get('profile/address','ProfileController@profileAddress');
+Route::get('profile/address', 'ProfileController@profileAddress');
 Route::resource('profile', 'ProfileController');
 
 Route::get('/about-us', function () {
@@ -59,11 +60,28 @@ Route::get('/contact', function () {
 
 Route::get('/checkout_success', function () {
     $type = Input::get('payment_success');
-    $mes = 'Checkout successful!';
-    if ($type) $mes = 'Transaction successful!';
+    $orderID = null;
 
-    return view('checkout_success', ['mes' => $mes]);
+    if ($type) {
+        $mes = 'Transaction successful!';
+        $orderID = Input::get('vnp_TxnRef');
+    } else {
+        $mes = 'Checkout successful!';
+        $orderID = Input::get('orderId');
+    };
+
+    $order = Order::with('user.profile', 'address','sets')->where('id', $orderID)->get();
+    return view('checkout_success', ['order' => $order[0], 'mes' => $mes]);
+
+//
+//    echo '<pre>';
+//    print_r($order[0]);
+//    echo '</pre>';
+//    dd($order);
+
+
 });
+
 
 
 //Route::get('/test', function (){

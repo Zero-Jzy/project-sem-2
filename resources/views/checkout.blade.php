@@ -260,9 +260,9 @@
                     },
                     success: function (res) {
 
-                        if (res === 'done') {
+                        if (res.status === 'success') {
                             localStorage.removeItem('sets_in_bag');
-                            window.location.href = `/checkout_success`;
+                            window.location.href = `/checkout_success?orderId=${res.orderId}`;
                             return;
                         }
 
