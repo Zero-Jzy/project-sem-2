@@ -36,7 +36,6 @@ Route::get('test_data',function (){
         ->groupBy('date')
         ->orderBy('date')
         ->get();
-
     return $data;
 });
 
