@@ -33,10 +33,9 @@ class OrderSeeder extends Seeder
         for ($j = 1; $j <= 1000; $j++) {
             $count = rand(2, 4);
             $sets = array_rand(range(1,21),$count);
-            Log::info($sets[0]);
             for ($k = 1; $k <= $count; $k++) {
-                if ($sets[$k - 1] === null) {
-                    return;
+                if ($sets[$k - 1] <= 0 || $sets[$k - 1] >= 22) {
+                    break;
                 }
                 $itemOdD = [
                     'order_id' => $j,
@@ -50,8 +49,8 @@ class OrderSeeder extends Seeder
         DB::table('orders')->truncate();
         DB::table('orders')->insert($dataOrder);
 
-        DB::table('order_detail')->truncate();
-        DB::table('order_detail')->insert($dataOrderDetail);
+        DB::table('order_details')->truncate();
+        DB::table('order_details')->insert($dataOrderDetail);
     }
 
 }

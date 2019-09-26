@@ -12,27 +12,26 @@ function SetSold() {
     };
 
     useEffect(() => {
-        axios.get('api/test_data')
+        axios.get('/api/get-data-percent')
             .then(res => {
-                setData([
-                    {name: 'test', percent: 10},
-                    {name: 'test', percent: 10},
-                    {name: 'test', percent: 10},
-                    {name: 'test', percent: 10},
-                    {name: 'test', percent: 10},
-                    {name: 'test', percent: 10},
-                    {name: 'test', percent: 10},
-                    {name: 'test', percent: 10},
-                    {name: 'test', percent: 10},
-                    {name: 'test', percent: 10}
-                    ])
+                let data = res.data.data;
+                data.push({
+                    'percent': '' + Math.round(res.data.percent2 * 100) / 100,
+                    'set': {
+                        'name': 'Other'
+                    }
+                });
+                console.log(data);
+                setData(data);
+
             })
     }, []);
 
     const columns = [
         {
             title: 'name',
-            dataIndex: 'name'
+            dataIndex: 'set.name',
+            render: name => `${name.length < 20 ? name : name.slice(0,20) + ' ...' }`
         },
         {
             title: 'percent',

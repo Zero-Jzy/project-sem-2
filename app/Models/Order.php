@@ -15,16 +15,12 @@ class Order extends Model
 
     public function sets()
     {
-        return $this->belongsToMany(Set::class, 'order_detail', 'order_id', 'set_id')
+        return $this->belongsToMany(Set::class, 'order_details', 'order_id', 'set_id')
             ->withPivot('quantity');
     }
 
     public function address(){
         return $this->belongsTo(Address::class);
-    }
-
-    public function profile_user(){
-        return $this->guessBelongsToRelation(User::class, Profile::class);
     }
 
 }
