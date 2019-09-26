@@ -10,7 +10,7 @@ class Set extends Model
     protected $fillable = ['name', 'type', 'category_id','image', 'price'];
 
     public function orders(){
-        return $this->belongsToMany(Order::class, 'order_detail', 'set_id', 'order_id')
+        return $this->belongsToMany(Order::class, 'order_details', 'set_id', 'order_id')
             ->withPivot('quantity');
     }
 

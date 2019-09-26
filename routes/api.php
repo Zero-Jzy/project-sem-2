@@ -25,8 +25,9 @@ Route::post('/login', 'Api\AuthAdController@login');
 
 Route::post('/upload-image', 'Api\UploadImageController@upload');
 
-Route::get('/dashboard','Api\DashboardController@getDataTotal');
-Route::get('/getData','Api\DashboardController@getDataToTime');
+Route::get('/dashboard/total','Api\DashboardController@getDataTotal');
+
+Route::get('/get-data-percent','Api\DashboardController@getDataToTime');
 
 Route::get('/hanh-chinh-viet-nam', function () {
     $path = storage_path() . "/json/hanhchinhvietnam.json";
@@ -37,9 +38,9 @@ Route::get('test_data',function (){
     $data = DB::table('orders')
         ->select(DB::raw('DATE(created_at) as date'), DB::raw('sum(amount) as totalAmount'))
         ->groupBy('date')
+        ->orderBy('date')
         ->get();
-
-    return \Carbon\Carbon::now()->valueOf();
+    return $data;
 });
 
 Route::post('upload', 'Api\UploadImageController@upload');

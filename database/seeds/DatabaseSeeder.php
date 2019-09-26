@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             ProfileSeeder::class,
             AdminSeeder::class,
-//            AddressSeeder::class,
+            AddressSeeder::class,
             FoodSeeder::class,
             FoodCategorySeeder::class,
             CategoryFoodSeeder::class,
@@ -32,6 +32,8 @@ class DatabaseSeeder extends Seeder
         DB::statement("ALTER SEQUENCE profiles_id_seq RESTART WITH 1001");
         DB::statement("ALTER SEQUENCE foods_id_seq RESTART WITH 1001");
         DB::statement("ALTER SEQUENCE sets_id_seq RESTART WITH 1001");
+        DB::statement("ALTER SEQUENCE addresses_id_seq RESTART WITH 1001");
+        DB::statement("ALTER SEQUENCE orders_id_seq RESTART WITH 1001");
 
     }
 }
