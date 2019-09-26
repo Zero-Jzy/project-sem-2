@@ -131,10 +131,9 @@
                             <span class="minerals"></span>
                         </div>
                     </div>
-
                 </div>
-                <a type="submit" href="/checkout" class="btn-incard btn3 flex-c-m size18 txt11 trans-0-4 m-10 m-auto"
-                   id="checkout">
+                <a href="javascript:void(0)" class="btn-incard btn3 flex-c-m size18 txt11 trans-0-4 m-10 m-auto"
+                   id="rd_checkout">
                     Checkout
                 </a>
             </div>
@@ -275,7 +274,7 @@
         $('.bag-icon').attr('data-food', countFood);
         $('#food-count').html(countFood);
         let listFoodsHtml = foods.map(food => (
-            `<div class="blo3 flex-w my-2 flex-col-l-sm m-b-30138">
+            `<div class="blo3 flex-w m-2 flex-col-l-sm m-b-30138">
                     <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
                         <a href="#"><img src="https://res.cloudinary.com/cloud-pj-sem2/image/upload/w_300,h_300,c_lpad,b_auto/${food.image}" alt="${food.name}"></a>
                     </div>
@@ -316,7 +315,7 @@
         $('#set-count').html(countSet);
         countSet <= 0 ? btnCheckout.attr('href', 'javascript:void(0)') : btnCheckout.attr('href', '/checkout');
         let listSetsHtml = sets.map(set => (
-            `<div class="blo3 flex-w my-2 flex-col-l-sm m-b-30138">
+            `<div class="blo3 flex-w m-2 flex-col-l-sm m-b-30138">
                 <div style="width: 120px;height: 90px;" class="pic-blo3 bo-rad-10 hov-img-zoom m-r-28">
                     <a href="/menu/set/${set.id}"><img src="https://res.cloudinary.com/cloud-pj-sem2/image/upload/w_300,h_300,c_lpad,b_auto/${set.image}" alt="${set.name}"></a>
                 </div>
@@ -336,7 +335,7 @@
                     </div>
                 </div>
                 <div class="ml-auto mr-4 my-2">
-                    <button onclick="updateQuantityFood(${set.id}, deleteFood)">
+                    <button onclick="updateQuantitySet(${set.id}, deleteFood)">
                         <i class="fal fa-times"></i>
                     </button>
                 </div>
@@ -359,18 +358,17 @@
 
         var totalValue = getTotalValue(arr);
 
-        calo.html('Calo: '+totalValue.calo);
+        calo.html('Calo: ' + totalValue.calo);
         protein.html('Protein: ' + totalValue.protein);
-        dietary_fiber.html('Dietary Fiber: '+totalValue.dietary_fiber);
-        carbohydrate.html('Carbohydrate: '+totalValue.carbohydrate);
-        total_fat.html('Total fat: '+totalValue.total_fat);
+        dietary_fiber.html('Dietary Fiber: ' + totalValue.dietary_fiber);
+        carbohydrate.html('Carbohydrate: ' + totalValue.carbohydrate);
+        total_fat.html('Total fat: ' + totalValue.total_fat);
         price.html('Price: ' + totalValue.price);
     }
 
     function getTotalValue(arr) {
         return arr.reduce((a, item) => {
             let quantity = item.quantity;
-
             return {
                 calo: a.calo + parseInt(item.calo) * quantity,
                 protein: a.protein + parseInt(item.protein) * quantity,
@@ -381,6 +379,27 @@
             }
         }, {calo: 0, protein: 0, dietary_fiber: 0, carbohydrate: 0, total_fat: 0, price: 0});
     }
+
+    $('#rd_checkout').click(function () {
+        closeBag()
+        if (!isLogged) {
+            Swal.fire({
+                title: 'Please login?',
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'Login now!',
+                cancelButtonColor: '#d33',
+            }).then((result) => {
+                if (result.value) {
+                    showLoginForm()
+                }
+            })
+        }
+        if (setsInBag.size <= 0) return;
+
+        window.location = '/checkout'
+    })
 
     $('#btn-create-set').click(function () {
         if (foodsInBag.size <= 0) return;
@@ -411,8 +430,7 @@
             localStorage.sets_in_bag = JSON.stringify(Array.from(setsInBag.entries()));
             renderSetInBag();
         });
-    })
-
+    });
 
 
 </script>

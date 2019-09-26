@@ -247,7 +247,20 @@
             $('#checkout').click(function () {
                 let type_payment = $("input[name='type_payment']:checked").val();
                 if (!type_payment) alert('Please chose type payments.');
+                if (!listSet) {
+                    alert('Not thing to checkout!');
+                    return
+                };
                 let address_id = $("input[name='address']:checked").attr('address-id');
+                if (!address_id) {
+                    Swal.fire({
+                        type: 'error',
+                        text: 'Please add address!'
+                    }).then(() => {
+                        openModalAddress();
+                    });
+                    return;
+                };
 
                 $.ajax({
                     method: 'post',
@@ -259,13 +272,11 @@
                         'type_payment': type_payment
                     },
                     success: function (res) {
-
                         if (res.status === 'success') {
                             localStorage.removeItem('sets_in_bag');
                             window.location.href = `/checkout_success?orderId=${res.orderId}`;
                             return;
                         }
-
                         if (res.code === '00') {
                             localStorage.removeItem('sets_in_bag');
                             if (window.vnpay) {
