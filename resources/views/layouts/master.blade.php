@@ -31,6 +31,8 @@
     <link rel="stylesheet" type="text/css" href="{{asset('/template/css/util.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('/template/css/main.css')}}">
     <!--===============================================================================================-->
+    <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
+
     <link rel="stylesheet" type="text/css" href="{{asset('/fontawesome/css/all.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('/css/custom.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('/css/menu.css')}}">
@@ -42,7 +44,6 @@
     <link href="https://sandbox.vnpayment.vn/paymentv2/lib/vnpay/vnpay.css" rel="stylesheet"/>
     <link href="{{asset('/css/jumbotron-narrow.css')}}" rel="stylesheet"/>
 
-    <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/owl.theme.default.min.css') }}">
     <script src="https://sandbox.vnpayment.vn/paymentv2/lib/vnpay/vnpay.js"></script>
@@ -456,6 +457,7 @@
 {{-- =============================== END MODAL ===============================--}}
 
 <input id="current-user-logged" type="hidden" value="{{Auth::check() ? Auth::user()->id : null }}">
+<input id="profile_id" type="hidden" value="{{Auth::check() ? Auth::user()->profile->id : null }}">
 
 <!--===============================================================================================-->
 <script type="text/javascript" src="{{asset('/lib/sweetalert2.all.min.js')}}"></script>
@@ -485,7 +487,10 @@
 <script src="{{asset('/template/js/main.js')}}"></script>
 <script src="{{asset('/js/app.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script>
+    const token = '{{csrf_token()}}';
+    const profile_id = $('#profile_id').val();
+</script>
 <script src="{{asset('/js/my.js')}}"></script>
-
 </body>
 </html>
