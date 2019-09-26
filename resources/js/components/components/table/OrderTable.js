@@ -26,7 +26,6 @@ export default class OrderTable extends Component {
         searchText: ''
     };
 
-
     componentDidMount() {
         this.fetch();
     }
@@ -63,19 +62,19 @@ export default class OrderTable extends Component {
                     placeholder={`Search ${dataIndex}`}
                     value={selectedKeys[0]}
                     onChange={e => setSelectedKeys(e.target.value ? [e.target.value] : [])}
-                    onPressEnter={() => this.handleSearch(selectedKeys, confirm)}
+                    onPressEnter={() => this.handleSearch(selectedKeys, confirm, dataIndex)}
                     style={{width: 188, marginBottom: 8, display: 'block'}}
                 />
                 <Button
                     type="primary"
-                    onClick={() => this.handleSearch(selectedKeys, confirm)}
+                    onClick={() => this.handleSearch(selectedKeys, confirm, dataIndex)}
                     icon="search"
                     size="small"
                     style={{width: 90, marginRight: 8}}
                 >
                     Search
                 </Button>
-                <Button onClick={() => this.handleReset(clearFilters)} size="small" style={{width: 90}}>
+                <Button onClick={() => this.handleReset(clearFilters, dataIndex)} size="small" style={{width: 90}}>
                     Reset
                 </Button>
             </div>
@@ -83,34 +82,40 @@ export default class OrderTable extends Component {
         filterIcon: filtered => (
             <Icon type="search" style={{color: filtered ? '#1890ff' : undefined}}/>
         ),
-        onFilter: (value, record) =>
-            record[dataIndex]
-                .toString()
-                .toLowerCase()
-                .includes(value.toLowerCase()),
         onFilterDropdownVisibleChange: visible => {
             if (visible) {
                 setTimeout(() => this.searchInput.select());
             }
         },
-        render: text => (
-            <Highlighter
+        render: text => {
+            return !this.isSearch(dataIndex) ? (<span>{text}</span>) : (<Highlighter
                 highlightStyle={{backgroundColor: '#ffc069', padding: 0}}
-                searchWords={[this.state.searchText]}
+                searchWords={[this.state.searchText[dataIndex]]}
                 autoEscape
                 textToHighlight={text.toString()}
-            />
-        ),
+            />)
+        },
     });
 
-    handleSearch = (selectedKeys, confirm) => {
-        confirm();
-        this.setState({searchText: selectedKeys[0]});
+    isSearch = (dataIndex) => {
+        return Object.keys(this.state.searchText).indexOf(dataIndex) !== -1;
     };
 
-    handleReset = clearFilters => {
+    handleSearch = (selectedKeys, confirm, dataIndex) => {
+        confirm();
+        this.setState({
+            searchText: {...this.state.searchText, [dataIndex]: selectedKeys[0]}
+        });
+    };
+
+    handleReset = (clearFilters, dataIndex) => {
         clearFilters();
-        this.setState({searchText: ''});
+
+        this.setState(state => {
+
+        });
+
+        this.setState({searchText: {...this.state.searchText, [dataIndex]: ''}});
     };
 
     handleTableChange = (pagination, filters, sorter) => {
@@ -207,14 +212,14 @@ export default class OrderTable extends Component {
     };
 
     columns = [
-        {
-            title: 'Id',
-            dataIndex: 'id',
-        },
+        // {
+        //     title: 'Id',
+        //     dataIndex: 'id',
+        // },
         {
             title: 'User',
             dataIndex: 'username',
-            render: (username, record) => `${record.user.profile.first_name} ${record.user.profile.last_name}`
+            render: (username, record) => `${record.user.profile.first_name} ${record.user.profile.last_name}`,
         },
         {
             title: 'Set',

@@ -92,7 +92,7 @@ class OrderController extends Controller
         $vnp_TmnCode = "EB3XMLQV"; //Mã website tại VNPAY
         $vnp_HashSecret = "RUWYVMQXGGPAXVFSBPADIFHBJCWBTSYJ"; //Chuỗi bí mật
         $vnp_Url = "http://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-        $vnp_ReturnUrl = "http://laravel-ex-test.herokuapp.com/checkout_success?payment_success=true";
+        $vnp_ReturnUrl = "http://localhost:8000/checkout_success?payment_success=true";
 
         $vnp_TxnRef = $order['id']; //Mã đơn hàng. Trong thực tế Merchant cần insert đơn hàng vào DB và gửi mã này sang VNPAY
         $vnp_OrderInfo = "demo thanh toan vnpay";
@@ -115,6 +115,7 @@ class OrderController extends Controller
             "vnp_OrderType" => $vnp_OrderType,
             "vnp_ReturnUrl" => $vnp_ReturnUrl,
             "vnp_TxnRef" => $vnp_TxnRef,
+            "vnp_IpnUrl" => "http://localhost:8000/test_ipn",
         );
 
         if (isset($vnp_BankCode) && $vnp_BankCode != "") {
