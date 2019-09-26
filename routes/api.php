@@ -33,18 +33,22 @@ Route::get('/hanh-chinh-viet-nam', function () {
     return response(file_get_contents($path));
 });
 
+Route::get('test_data',function (){
+    $data = DB::table('orders')
+        ->select(DB::raw('DATE(created_at) as date'), DB::raw('sum(amount) as totalAmount'))
+        ->groupBy('date')
+        ->get();
 
-Route::post('/upload', 'Api\UploadImageController@upload');
+    return \Carbon\Carbon::now()->valueOf();
+});
 
-
+Route::post('upload', 'Api\UploadImageController@upload');
 Route::resource('food', 'Api\FoodController');
-
-Route::resource('/set', 'Api\SetController');
+Route::resource('set', 'Api\SetController');
+Route::resource('order', 'Api\OrderController');
 
 Route::group(['middleware' => 'jwt.auth'], function () {
     Route::resource('/user', 'Api\UserController');
-
     Route::post('/logout', 'Api\AuthAdController@logout');
-//    Route::get('/dataStock', 'Api\UserController@getDataStock');
 });
 

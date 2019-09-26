@@ -83,6 +83,12 @@ class MasterLayout extends Component {
                                     <span>Sets</span>
                                 </Link>
                             </Menu.Item>
+                            <Menu.Item key="/ad/order">
+                                <Link to="/ad/order">
+                                    <Icon type='shopping-cart'/>
+                                    <span>Orders</span>
+                                </Link>
+                            </Menu.Item>
                             {/*<Menu.Item key="ad/form">*/}
                             {/*    <Link to="/ad/form">*/}
                             {/*        <Icon type="form"/>*/}

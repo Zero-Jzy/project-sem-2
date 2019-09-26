@@ -31,11 +31,15 @@
     <link rel="stylesheet" type="text/css" href="{{asset('/template/css/util.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('/template/css/main.css')}}">
     <!--===============================================================================================-->
+    <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
+
     <link rel="stylesheet" type="text/css" href="{{asset('/fontawesome/css/all.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('/css/custom.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('/css/menu.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('/css/checkout.css')}}">
+
     <script type="text/javascript" src="{{asset('/template/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('/template/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
 
     <link href="https://sandbox.vnpayment.vn/paymentv2/lib/vnpay/vnpay.css" rel="stylesheet"/>
     <link href="{{asset('/css/jumbotron-narrow.css')}}" rel="stylesheet"/>
@@ -87,20 +91,6 @@
                 </div>
                 <!-- Right Navbar -->
                 <div class="right-navbar">
-                    {{--    @if (Route::has('login'))--}}
-                    {{--        <div class="top-right links">--}}
-                    {{--            @auth--}}
-                    {{--                <a href="{{ url('/home') }}">Home</a>--}}
-                    {{--            @else--}}
-                    {{--                <a href="{{ route('login') }}">Login</a>--}}
-
-                    {{--                @if (Route::has('register'))--}}
-                    {{--                    <a href="{{ route('register') }}">Register</a>--}}
-                    {{--                @endif--}}
-                    {{--            @endauth--}}
-                    {{--        </div>--}}
-                    {{--    @endif--}}
-
                     @if (Route::has('login'))
                         <ul class="top-right links">
                             @auth
@@ -148,10 +138,7 @@
         </div>
     </div>
 </header>
-
 @yield('content')
-
-
 <footer class="bg1">
     <div class="container p-t-40 p-b-70">
         <div class="row">
@@ -470,6 +457,7 @@
 {{-- =============================== END MODAL ===============================--}}
 
 <input id="current-user-logged" type="hidden" value="{{Auth::check() ? Auth::user()->id : null }}">
+<input id="profile_id" type="hidden" value="{{Auth::check() ? Auth::user()->profile->id : null }}">
 
 <!--===============================================================================================-->
 <script type="text/javascript" src="{{asset('/lib/sweetalert2.all.min.js')}}"></script>
@@ -478,7 +466,6 @@
 <script type="text/javascript" src="{{asset('/template/vendor/animsition/js/animsition.min.js')}}"></script>
 <!--===============================================================================================-->
 <script type="text/javascript" src="{{asset('/template/vendor/bootstrap/js/popper.js')}}"></script>
-<script type="text/javascript" src="{{asset('/template/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
 <!--===============================================================================================-->
 <script type="text/javascript" src="{{asset('/template/vendor/select2/select2.min.js')}}"></script>
 <!--===============================================================================================-->
@@ -498,11 +485,12 @@
 <script type="text/javascript" src="{{asset('/template/vendor/lightbox2/js/lightbox.min.js')}}"></script>
 <!--===============================================================================================-->
 <script src="{{asset('/template/js/main.js')}}"></script>
+<script src="{{asset('/js/app.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script>
+    const token = '{{csrf_token()}}';
+    const profile_id = $('#profile_id').val();
+</script>
 <script src="{{asset('/js/my.js')}}"></script>
-
-
-{{--<script src="{{ asset("js/jquery/dist/jquery.min.js") }}"></script>--}}
-
 </body>
 </html>
