@@ -129,8 +129,8 @@ class ProfileController extends Controller
     {
 //        $profile = Profile::update
         $profile = Profile::find($id);
-
         $profile->update($request->all());
+
 
 //        return redirect()->back();
 
