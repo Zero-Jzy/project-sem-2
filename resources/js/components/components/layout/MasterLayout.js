@@ -73,34 +73,40 @@ class MasterLayout extends Component {
                             </Menu.Item>
                             <Menu.Item key="/ad/food">
                                 <Link to="/ad/food">
-                                    <Icon type="none"/>
+                                    <Icon type='border'/>
                                     <span>Foods</span>
                                 </Link>
                             </Menu.Item>
                             <Menu.Item key="/ad/set">
                                 <Link to="/ad/set">
-                                    <Icon type="none"/>
+                                    <Icon type='border'/>
                                     <span>Sets</span>
                                 </Link>
                             </Menu.Item>
-                            <Menu.Item key="ad/form">
-                                <Link to="/ad/form">
-                                    <Icon type="form"/>
-                                    <span>From</span>
+                            <Menu.Item key="/ad/order">
+                                <Link to="/ad/order">
+                                    <Icon type='shopping-cart'/>
+                                    <span>Orders</span>
                                 </Link>
                             </Menu.Item>
-                            <SubMenu
-                                key="sub2"
-                                title={
-                                    <span>
-                                    <Icon type="android"/>
-                                    <span>:v</span>
-                                  </span>
-                                }
-                            >
-                                <Menu.Item key="6">Tom</Menu.Item>
-                                <Menu.Item key="7">Bill</Menu.Item>
-                            </SubMenu>
+                            {/*<Menu.Item key="ad/form">*/}
+                            {/*    <Link to="/ad/form">*/}
+                            {/*        <Icon type="form"/>*/}
+                            {/*        <span>From</span>*/}
+                            {/*    </Link>*/}
+                            {/*</Menu.Item>*/}
+                            {/*<SubMenu*/}
+                            {/*    key="sub2"*/}
+                            {/*    title={*/}
+                            {/*        <span>*/}
+                            {/*        <Icon type="android"/>*/}
+                            {/*        <span>:v</span>*/}
+                            {/*      </span>*/}
+                            {/*    }*/}
+                            {/*>*/}
+                            {/*    <Menu.Item key="6">Tom</Menu.Item>*/}
+                            {/*    <Menu.Item key="7">Bill</Menu.Item>*/}
+                            {/*</SubMenu>*/}
                         </Menu>
                         <div className="switch-theme-box">
                             <span style={{color: '#666'}}>

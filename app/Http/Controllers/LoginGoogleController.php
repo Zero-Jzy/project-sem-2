@@ -30,7 +30,7 @@ class LoginGoogleController extends Controller
             else {
                 $user = User::create([
                     'email' => $googleUser->email,
-                    'password' => md5(rand(1,10000))
+                    'password' => bcrypt(rand(1,10000))
                 ]);
                 $profile = Profile::create([
                     'user_id' => $user->id,

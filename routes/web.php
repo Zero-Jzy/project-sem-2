@@ -46,8 +46,9 @@ Route::resource('/user', 'UserController');
 Route::resource('menu/food', 'FoodController');
 
 Route::resource('menu/set', 'SetController');
-
+Route::get('profile/address','ProfileController@profileAddress');
 Route::resource('profile', 'ProfileController');
+
 
 Route::get('/about-us', function () {
     return view('about-us');

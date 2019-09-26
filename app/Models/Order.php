@@ -19,4 +19,12 @@ class Order extends Model
             ->withPivot('quantity');
     }
 
+    public function address(){
+        return $this->belongsTo(Address::class);
+    }
+
+    public function profile_user(){
+        return $this->guessBelongsToRelation(User::class, Profile::class);
+    }
+
 }

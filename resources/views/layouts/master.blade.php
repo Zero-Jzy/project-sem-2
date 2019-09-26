@@ -7,7 +7,7 @@
     <!--===============================================================================================-->
     <link rel="icon" type="image/png" href="{{asset('/template/images/icons/favicon.png')}}"/>
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{asset('/template/vendor/bootstrap/css/bootstrap.min.css')}}">
+{{--    <link rel="stylesheet" type="text/css" href="{{asset('/template/vendor/bootstrap/css/bootstrap.min.css')}}">--}}
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css"
           href="{{asset('/template/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
@@ -31,6 +31,8 @@
     <link rel="stylesheet" type="text/css" href="{{asset('/template/css/util.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('/template/css/main.css')}}">
     <!--===============================================================================================-->
+    <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
+
     <link rel="stylesheet" type="text/css" href="{{asset('/fontawesome/css/all.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('/css/custom.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('/css/menu.css')}}">
@@ -43,8 +45,6 @@
     <link rel="stylesheet" href="{{ asset('/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/owl.theme.default.min.css') }}">
     <script src="https://sandbox.vnpayment.vn/paymentv2/lib/vnpay/vnpay.js"></script>
-
-
 </head>
 <body class="animsition">
 <header>
@@ -89,28 +89,17 @@
                 </div>
                 <!-- Right Navbar -->
                 <div class="right-navbar">
-                    {{--    @if (Route::has('login'))--}}
-                    {{--        <div class="top-right links">--}}
-                    {{--            @auth--}}
-                    {{--                <a href="{{ url('/home') }}">Home</a>--}}
-                    {{--            @else--}}
-                    {{--                <a href="{{ route('login') }}">Login</a>--}}
-
-                    {{--                @if (Route::has('register'))--}}
-                    {{--                    <a href="{{ route('register') }}">Register</a>--}}
-                    {{--                @endif--}}
-                    {{--            @endauth--}}
-                    {{--        </div>--}}
-                    {{--    @endif--}}
-
                     @if (Route::has('login'))
                         <ul class="top-right links">
                             @auth
                                 <li>
                                     <a class="dropdown-toggle" data-toggle="dropdown">
-                                        <span>{{ Auth::user()->profile->first_name . ' ' . Auth::user()->profile->last_name }}</span>
+                                        @php
+                                            $name = Auth::user()->profile->first_name . ' ' . Auth::user()->profile->last_name
+                                        @endphp
+                                        <span>{{strlen($name) < 15 ? $name : substr($name,0,15)." ..."}}</span>
                                         <img class="avatar"
-                                             src="{{ Auth::user()->avatar ? Auth::user()->avatar : 'https://iupac.org/wp-content/uploads/2018/05/default-avatar.png'}}"
+                                             src="{{Auth::user()->profile->avatar}}"
                                              alt="">
                                     </a>
                                     <div class="dropdown-menu">
@@ -147,10 +136,7 @@
         </div>
     </div>
 </header>
-
 @yield('content')
-
-
 <footer class="bg1">
     <div class="container p-t-40 p-b-70">
         <div class="row">
@@ -469,6 +455,7 @@
 {{-- =============================== END MODAL ===============================--}}
 
 <input id="current-user-logged" type="hidden" value="{{Auth::check() ? Auth::user()->id : null }}">
+<input id="profile_id" type="hidden" value="{{Auth::check() ? Auth::user()->profile->id : null }}">
 
 <!--===============================================================================================-->
 <script type="text/javascript" src="{{asset('/lib/sweetalert2.all.min.js')}}"></script>
@@ -476,8 +463,8 @@
 <!--===============================================================================================-->
 <script type="text/javascript" src="{{asset('/template/vendor/animsition/js/animsition.min.js')}}"></script>
 <!--===============================================================================================-->
-<script type="text/javascript" src="{{asset('/template/vendor/bootstrap/js/popper.js')}}"></script>
-<script type="text/javascript" src="{{asset('/template/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+{{--<script type="text/javascript" src="{{asset('/template/vendor/bootstrap/js/popper.js')}}"></script>--}}
+{{--<script type="text/javascript" src="{{asset('/template/vendor/bootstrap/js/bootstrap.min.js')}}"></script>--}}
 <!--===============================================================================================-->
 <script type="text/javascript" src="{{asset('/template/vendor/select2/select2.min.js')}}"></script>
 <!--===============================================================================================-->
@@ -497,11 +484,14 @@
 <script type="text/javascript" src="{{asset('/template/vendor/lightbox2/js/lightbox.min.js')}}"></script>
 <!--===============================================================================================-->
 <script src="{{asset('/template/js/main.js')}}"></script>
+<script src="{{asset('/js/app.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script>
+    const token = '{{csrf_token()}}';
+    const profile_id = $('#profile_id').val();
+</script>
 <script src="{{asset('/js/my.js')}}"></script>
 
-
 {{--<script src="{{ asset("js/jquery/dist/jquery.min.js") }}"></script>--}}
-
 </body>
 </html>
