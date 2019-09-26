@@ -47,6 +47,7 @@
     <link rel="stylesheet" href="{{ asset('/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/owl.theme.default.min.css') }}">
     <script src="https://sandbox.vnpayment.vn/paymentv2/lib/vnpay/vnpay.js"></script>
+
 </head>
 <body class="animsition">
 <header>
@@ -455,12 +456,13 @@
     </div> <!-- cd-user-model-container -->
 </div> <!-- cd-user-model -->
 {{-- =============================== END MODAL ===============================--}}
-
 <input id="current-user-logged" type="hidden" value="{{Auth::check() ? Auth::user()->id : null }}">
 <input id="profile_id" type="hidden" value="{{Auth::check() ? Auth::user()->profile->id : null }}">
+<input name="checkLogin" type="hidden" value="{{Auth::check()}}">
 
 <!--===============================================================================================-->
 <script type="text/javascript" src="{{asset('/lib/sweetalert2.all.min.js')}}"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
 <!--===============================================================================================-->
 <script type="text/javascript" src="{{asset('/template/vendor/animsition/js/animsition.min.js')}}"></script>
@@ -479,18 +481,25 @@
 <script type="text/javascript">
     $('.parallax100').parallax100();
 </script>
+<script src="{{asset('/template/js/main.js')}}"></script>
+
+<script src="{{asset('/js/my.js')}}"></script>
+
 <!--===============================================================================================-->
 <script type="text/javascript" src="{{asset('/template/vendor/countdowntime/countdowntime.js')}}"></script>
 <!--===============================================================================================-->
 <script type="text/javascript" src="{{asset('/template/vendor/lightbox2/js/lightbox.min.js')}}"></script>
 <!--===============================================================================================-->
-<script src="{{asset('/template/js/main.js')}}"></script>
 <script src="{{asset('/js/app.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 <script>
     const token = '{{csrf_token()}}';
     const profile_id = $('#profile_id').val();
+
+
+    $('#btn-login-google').click(function () {
+        window.location.href = '/redirect'
+    });
 </script>
-<script src="{{asset('/js/my.js')}}"></script>
 </body>
 </html>

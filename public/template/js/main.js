@@ -1,6 +1,4 @@
 
-(function ($) {
-    "use strict";
 
     /*[ Load page ]
     ===========================================================*/
@@ -142,12 +140,7 @@
 
     $(btnToggleSideBar).on('click', function () {
         if (show) {
-            $(sidebar).removeClass('show-sidebar');
-            $(ovlSideBar).removeClass('show-overlay-sidebar');
-            show = false;
-            $(this).css('top','15%');
-            bagIcon.show();
-            closeIcon.hide();
+            closeBag()
         } else {
             $(sidebar).addClass('show-sidebar');
             $(ovlSideBar).addClass('show-overlay-sidebar');
@@ -159,13 +152,17 @@
     });
 
     ovlSideBar.click(function () {
+        closeBag()
+    });
+
+    function closeBag(){
         $(sidebar).removeClass('show-sidebar');
         $(ovlSideBar).removeClass('show-overlay-sidebar');
         $(btnToggleSideBar).css('top','15%');
         bagIcon.show();
         closeIcon.hide();
         show = false;
-    });
+    }
 
     // var ovlSideBar = $('.overlay-sidebar');
     // var btnShowSidebar = $('.btn-show-sidebar');
@@ -228,6 +225,3 @@
         });
     });
 
-
-
-})(jQuery);

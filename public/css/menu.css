@@ -24,6 +24,11 @@
 /*    opacity: 1;*/
 /*}*/
 
+a {
+    text-decoration: none;
+
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -53,7 +58,7 @@ ul.products > li {
 .kc_wrapper.ui-tabs.kc_clearfix ul li a {
     padding-top: 32 px;
     display: inline-block;
-    font-size: 30px;
+    font-size: 16px;
     color: #9b9b9b;
     /*color: #c00a27;*/
     font-family: Sriracha;
