@@ -58,7 +58,7 @@
 
             </div>
             <div class="total-box">
-                <div style="height: 30px">
+                <div style="">
                     <h5 class="text-center text-uppercase" style="line-height: 50px">Total</h5>
                 </div>
                 <div class="total-content total-food">
@@ -101,7 +101,7 @@
 
             </div>
             <div class="total-box">
-                <div style="height: 30px">
+                <div>
                     <h5 class="text-center text-uppercase" style="line-height: 50px">Total</h5>
                 </div>
                 <div class="total-content total-set">
