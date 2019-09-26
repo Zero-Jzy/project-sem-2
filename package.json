@@ -29,6 +29,7 @@
         "jwt-decode": "^2.2.0",
         "lodash": "^4.17.5",
         "moment": "^2.24.0",
+        "randomcolor": "^0.5.4",
         "react": "^16.8.6",
         "react-countup": "^4.2.1",
         "react-dom": "^16.8.6",
