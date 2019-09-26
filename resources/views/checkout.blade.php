@@ -181,9 +181,6 @@
                 </div>
             </div>
 
-            {{--            <div id="cart-body col-md-5">--}}
-            {{--            </div>--}}
-
             <div class="checkout-pay">
                 <div class="row pb-sm-5">
                     <div class="col-md-4">Type payment</div>
@@ -207,17 +204,6 @@
                 </div>
             </div>
 
-
-            {{--            <div>--}}
-
-            {{--                <input name="type_payment" value="COD" checked type="radio"/><label for="">thanh toan khi nhan--}}
-            {{--                    hang</label>--}}
-
-            {{--                <input name="type_payment" value="VNPAY" type="radio"/><label for="">thanh toan vnpay</label>--}}
-
-            {{--                <button id="checkout" style="border: black solid 1px">Checkout</button>--}}
-            {{--            </div>--}}
-        </div>
     </div>
     <script>
         $(document).ready(function () {
