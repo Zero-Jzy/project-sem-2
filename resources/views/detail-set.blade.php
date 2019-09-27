@@ -5,7 +5,7 @@
             <div class="col-md-6">
                 <img
                     src="https://res.cloudinary.com/cloud-pj-sem2/image/upload/w_300,h_300,c_lpad,b_auto/{{$set['image']}}"
-                    class="img-fluid" alt="Responsive image">
+                    class="nna-img-fluid" alt="Responsive image">
             </div>
             <div class="col-md-6">
 
@@ -14,13 +14,21 @@
                 <p class="price"> USD ${{$set['price']}}</p>
 
                 <b>Nutritional Ingredients</b>
-                <p><b>- Calo:</b>{{$set['calo']}}</p>
-                <p><b>- Protein:</b>{{$set['protein']}}</p>
-                <p><b>- Dietary fiber:</b>{{$set['dietary_fiber']}}</p>
-                <p><b>- Carbohydrate:</b> {{$set['carbohydrate']}}</p>
-                <p><b>- Total fat:</b>{{$set['total_fat']}}</p>
+                <p><b>- Calo:</b> {{$set['calo']}},
+                    <b>Protein:</b>{{$set['protein']}},
+                    <b>Dietary fiber:</b>{{$set['dietary_fiber']}},</p>
+
+
+{{--                <p><b>- Protein:</b>{{$set['protein']}}</p>--}}
+{{--                <p><b>- Dietary fiber:</b>{{$set['dietary_fiber']}}</p>--}}
+                <p><b>- Carbohydrate:</b> {{$set['carbohydrate']}},
+                    <b>Total fat:</b>{{$set['total_fat']}}
+                </p>
+{{--                <p><b>- Total fat:</b>{{$set['total_fat']}}</p>--}}
                 <p><b>- Vitamins:</b> {{$set['vitamins']}}</p>
                 <p><b>- Minerals:</b>{{$set['minerals']}}</p>
+                <p><b>- Description:</b>{{$set['description']}}</p>
+
                 {{--                <label>Quantity:</label>--}}
                 {{--                <div class="ann-quantity">--}}
                 {{--                    <input onchange="updateQuantityFood(1, withValue, this.value)" type="number" min="0" step="0" data-id="0" value="0">--}}
@@ -81,7 +89,8 @@
                                                                 <span
                                                                     class="nna-text-bold nna-font-size-14">Total fat</span>
                                         <div class="very-low">
-                                            <span class="nna-font-size-14">{{$set['total_fat']}}</span><small>&nbsp;(g)</small>
+                                            <span
+                                                class="nna-font-size-14">{{$set['total_fat']}}</span><small>&nbsp;(g)</small>
                                         </div>
                                     </div>
                                 </div>
